@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=length
+comment0.target=ZorroBug(int)
+comment1.target=void\ act()
+comment2.params=newDirection
+comment2.target=void\ motionHandler(int)
+numComments=3
