@@ -1,0 +1,2 @@
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program2_Solution\Giant_cSharp\bin\Debug\Giant_cSharp.exe.config
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program2_Solution\Giant_cSharp\obj\Debug\Giant_cSharp.csprojResolveAssemblyReference.cache
