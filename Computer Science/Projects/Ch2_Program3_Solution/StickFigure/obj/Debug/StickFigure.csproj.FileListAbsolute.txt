@@ -1,0 +1,5 @@
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.exe.config
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.exe
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.pdb
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.exe
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.pdb

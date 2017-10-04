@@ -1,0 +1,5 @@
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program6_Solution\ItsMyDayMan\bin\Debug\ItsMyDayMan.exe.config
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program6_Solution\ItsMyDayMan\bin\Debug\ItsMyDayMan.exe
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program6_Solution\ItsMyDayMan\bin\Debug\ItsMyDayMan.pdb
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program6_Solution\ItsMyDayMan\obj\Debug\ItsMyDayMan.exe
+H:\Lawrence1005939\Computer Science\Projects\Ch2_Program6_Solution\ItsMyDayMan\obj\Debug\ItsMyDayMan.pdb
