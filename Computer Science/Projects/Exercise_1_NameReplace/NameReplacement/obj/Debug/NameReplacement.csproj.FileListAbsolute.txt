@@ -1,5 +1,0 @@
-H:\Lawrence1005939\Computer Science\Projects\Exercise_1_NameReplace\NameReplacement\bin\Debug\NameReplacement.exe.config
-H:\Lawrence1005939\Computer Science\Projects\Exercise_1_NameReplace\NameReplacement\bin\Debug\NameReplacement.exe
-H:\Lawrence1005939\Computer Science\Projects\Exercise_1_NameReplace\NameReplacement\bin\Debug\NameReplacement.pdb
-H:\Lawrence1005939\Computer Science\Projects\Exercise_1_NameReplace\NameReplacement\obj\Debug\NameReplacement.exe
-H:\Lawrence1005939\Computer Science\Projects\Exercise_1_NameReplace\NameReplacement\obj\Debug\NameReplacement.pdb
