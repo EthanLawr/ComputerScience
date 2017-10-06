@@ -1,0 +1,6 @@
+H:\Computer Science 2016-2017\Projects\Day1_Per45_IntroStuff_Solution\Day1_Per45_IntroStuff\bin\Debug\Day1_Per45_IntroStuff.exe.config
+H:\Computer Science 2016-2017\Projects\Day1_Per45_IntroStuff_Solution\Day1_Per45_IntroStuff\bin\Debug\Day1_Per45_IntroStuff.exe
+H:\Computer Science 2016-2017\Projects\Day1_Per45_IntroStuff_Solution\Day1_Per45_IntroStuff\bin\Debug\Day1_Per45_IntroStuff.pdb
+H:\Computer Science 2016-2017\Projects\Day1_Per45_IntroStuff_Solution\Day1_Per45_IntroStuff\obj\Debug\Day1_Per45_IntroStuff.csprojResolveAssemblyReference.cache
+H:\Computer Science 2016-2017\Projects\Day1_Per45_IntroStuff_Solution\Day1_Per45_IntroStuff\obj\Debug\Day1_Per45_IntroStuff.exe
+H:\Computer Science 2016-2017\Projects\Day1_Per45_IntroStuff_Solution\Day1_Per45_IntroStuff\obj\Debug\Day1_Per45_IntroStuff.pdb
