@@ -1,0 +1,6 @@
+H:\Computer Science 2016-2017\Projects\Day1_Per45_StepInto_Solution\Day1_Per45_StepInto\bin\Debug\Day1_Per45_StepInto.exe.config
+H:\Computer Science 2016-2017\Projects\Day1_Per45_StepInto_Solution\Day1_Per45_StepInto\bin\Debug\Day1_Per45_StepInto.exe
+H:\Computer Science 2016-2017\Projects\Day1_Per45_StepInto_Solution\Day1_Per45_StepInto\bin\Debug\Day1_Per45_StepInto.pdb
+H:\Computer Science 2016-2017\Projects\Day1_Per45_StepInto_Solution\Day1_Per45_StepInto\obj\Debug\Day1_Per45_StepInto.csprojResolveAssemblyReference.cache
+H:\Computer Science 2016-2017\Projects\Day1_Per45_StepInto_Solution\Day1_Per45_StepInto\obj\Debug\Day1_Per45_StepInto.exe
+H:\Computer Science 2016-2017\Projects\Day1_Per45_StepInto_Solution\Day1_Per45_StepInto\obj\Debug\Day1_Per45_StepInto.pdb
