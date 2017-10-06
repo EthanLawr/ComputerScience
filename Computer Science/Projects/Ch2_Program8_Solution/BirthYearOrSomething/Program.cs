@@ -14,11 +14,11 @@ namespace BirthYearOrSomething
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
-            var date = "\t" + System.IO.File.GetLastWriteTime("Path.GetFileName(fileName)");
+            var date = "\t   " + System.IO.File.GetLastWriteTime("Path.GetFileName(fileName)");
             //Gives the date and time of when the file was last saved
-            string period = "\tPeriod 4,5,6";
+            string period = "\t   Period 4,5,6";
             //Shows what periods the class is from
-            string teacher = "\tMr. Lynch";
+            string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
             string purpose = "\nPurpose: To make vertical birthyear with one WriteLine";
             string endheader = "\n********************************************************************************";
