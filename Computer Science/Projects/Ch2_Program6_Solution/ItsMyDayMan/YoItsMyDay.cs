@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.IO;
 
 namespace ItsMyDayMan
 {
@@ -14,8 +15,8 @@ namespace ItsMyDayMan
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
-            var date = "\t   " + System.IO.File.GetLastWriteTime("Path.GetFileName(fileName)");
-            //Gives the date and time of when the file was last saved
+            var date = "\t   " + DateTime.Now;
+            //Gives the date and time of when the file was last used
             string period = "\t   Period 4,5,6";
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
@@ -53,7 +54,6 @@ namespace ItsMyDayMan
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
-
             Console.WriteLine("Today is the FIRST day of the rest of your life"
             + "\nLive it to the FULLEST\nYou may not get a second chance...");
             /*+ used for the collumn limit presented by Mr. Lynch
