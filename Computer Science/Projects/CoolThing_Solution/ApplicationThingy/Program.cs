@@ -17,36 +17,49 @@ namespace ApplicationThingy
             //int timer = 30; I considered a timer function but that ended up being way over my head.
             int num01 = randomgen.Next(11);
             int num02 = randomgen.Next(11);
-            int playeranswer;
-            int answer;
+            int mortyanswer;
+            string morty2answer;
+            int rickanswer;
             int numofquestions;
             int numofquestionsleft;
             int numofcorrect = 0;
-
 
             Console.Write("How many questions would you like to answer? ");
             numofquestions = Convert.ToInt32(Console.ReadLine());
             Thread.Sleep(500);
             numofquestionsleft = numofquestions;
+     
             // This is the loop which handles the actual question/answer core of the game.
             // Answering a question correctly increases your score.
             while (numofquestionsleft > 0)
             {
-
+                Console.Clear();
+                HeaderTQ();
                 Console.Write("What is " + num01 + " times " + num02 + "? ");
-                answer = num01 * num02;
-                playeranswer = Convert.ToInt32(Console.ReadLine());
+                rickanswer = num01 * num02;
+                try
                 {
-                    Console.WriteLine("Please enter a valid number!");
+                    mortyanswer = Convert.ToInt32(Console.ReadLine());
                 }
-                if (answer == playeranswer)
+                catch (Exception)
                 {
-                    Console.WriteLine(playeranswer + " is correct!");
+                    morty2answer = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine("Your answer was:" + morty2answer);
+                }
+                finally
+                {
+                    Console.WriteLine("Your answer cannot be that!");
+                }
+                mortyanswer = Convert.ToInt32(Console.ReadLine());
+
+                if (rickanswer == mortyanswer)
+                {
+                    Console.WriteLine(mortyanswer + " is correct!");
                     numofcorrect++;
                 }
                 else
                 {
-                    Console.WriteLine(playeranswer + " is incorrect! Try again.");
+                    Console.WriteLine(mortyanswer + " is incorrect! Try again.");
                 }
 
                 ContinueThing();
@@ -103,6 +116,25 @@ namespace ApplicationThingy
             Console.WriteLine(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
+            Console.ResetColor(); //Resets the color for non header lines
+            #endregion Header
+        }
+        public static void HeaderTQ()
+        {
+            #region HeaderTQ
+            Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
+            string name = "Ethan Lawrence";
+            //Allows me to type my name in a shorter amount of time
+            var date = "\t   " + DateTime.Now;
+            //Gives the date and time of when the file was last used
+            string period = "\t   Period 4,5,6";
+            //Shows what periods the class is from
+            string teacher = "\t    Mr. Lynch";
+            //Shows my teacher's last name
+            string purpose = "\nPurpose: To create 3 lines in the console!";
+            //Shows the purpose of the current project
+            string endheader = "\n********************************************************************************";
+            Console.WriteLine(name + date + period + teacher + purpose + endheader);
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
         }

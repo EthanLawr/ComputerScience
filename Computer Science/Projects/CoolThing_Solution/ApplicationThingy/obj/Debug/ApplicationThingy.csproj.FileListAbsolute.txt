@@ -4,3 +4,9 @@ H:\Lawrence1005939\Computer Science\Projects\CoolThing_Solution\ApplicationThing
 H:\Lawrence1005939\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\bin\Debug\ApplicationThingy.pdb
 H:\Lawrence1005939\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\obj\Debug\ApplicationThingy.exe
 H:\Lawrence1005939\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\obj\Debug\ApplicationThingy.pdb
+H:\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\bin\Debug\ApplicationThingy.exe.config
+H:\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\obj\Debug\ApplicationThingy.exe
+H:\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\obj\Debug\ApplicationThingy.pdb
+H:\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\bin\Debug\ApplicationThingy.exe
+H:\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\bin\Debug\ApplicationThingy.pdb
+H:\Computer Science\Projects\CoolThing_Solution\ApplicationThingy\obj\Debug\ApplicationThingy.csprojResolveAssemblyReference.cache
