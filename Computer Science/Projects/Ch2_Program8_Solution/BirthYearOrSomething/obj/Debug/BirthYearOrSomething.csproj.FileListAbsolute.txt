@@ -3,3 +3,9 @@ H:\Lawrence1005939\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSo
 H:\Lawrence1005939\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\bin\Debug\BirthYearOrSomething.pdb
 H:\Lawrence1005939\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\obj\Debug\BirthYearOrSomething.exe
 H:\Lawrence1005939\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\obj\Debug\BirthYearOrSomething.pdb
+H:\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\bin\Debug\BirthYearOrSomething.exe.config
+H:\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\obj\Debug\BirthYearOrSomething.exe
+H:\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\obj\Debug\BirthYearOrSomething.pdb
+H:\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\bin\Debug\BirthYearOrSomething.exe
+H:\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\bin\Debug\BirthYearOrSomething.pdb
+H:\Computer Science\Projects\Ch2_Program8_Solution\BirthYearOrSomething\obj\Debug\BirthYearOrSomething.csprojResolveAssemblyReference.cache

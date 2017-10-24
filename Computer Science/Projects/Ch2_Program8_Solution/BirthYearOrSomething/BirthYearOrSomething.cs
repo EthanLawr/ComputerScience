@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace StickFigure
+namespace BirthYearOrSomething
 {
-    class StickMANYEAHHHH
+    class BirthYearOrSomething
     {
         static void Main(string[] args)
         {
@@ -20,9 +20,7 @@ namespace StickFigure
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            //Shows my teacher's last name
-            string purpose = "\nPurpose: To create a stickman!";
-            //Shows the purpose of the current project
+            string purpose = "\nPurpose: To make vertical birthyear with one WriteLine";
             string endheader = "\n********************************************************************************";
             //Ends the header
             Console.WriteLine(name); //Writes my name
@@ -55,10 +53,12 @@ namespace StickFigure
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            Console.WriteLine(" (^;^)\n   |\n./ | \\.\n   |\n_/  \\_");
-            //Double backslashes used to make singular slashes
-            //Singular writeline used to make the program fast as possible
-            //Extra spaces used to make it look like a stickman and not a blob
+            Console.WriteLine("2\n0\n0\n1");
+            /*
+            Using \n for a new line on each
+            Using less than 90 chars within a line
+            Using one Console WriteLine as instructed
+            */
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
@@ -68,4 +68,4 @@ namespace StickFigure
             Console.ReadKey(); //Lets the Command Console stay until a key is pressed 
         }
     }
-}
+};

@@ -3,3 +3,9 @@ H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\b
 H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.pdb
 H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.exe
 H:\Lawrence1005939\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.pdb
+H:\ComputerScience-master\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.exe.config
+H:\ComputerScience-master\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.exe
+H:\ComputerScience-master\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.pdb
+H:\ComputerScience-master\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.exe
+H:\ComputerScience-master\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\bin\Debug\StickFigure.pdb
+H:\ComputerScience-master\Computer Science\Projects\Ch2_Program3_Solution\StickFigure\obj\Debug\StickFigure.csprojResolveAssemblyReference.cache

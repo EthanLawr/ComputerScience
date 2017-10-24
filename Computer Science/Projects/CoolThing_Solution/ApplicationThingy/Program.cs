@@ -18,7 +18,6 @@ namespace ApplicationThingy
             int num01 = randomgen.Next(11);
             int num02 = randomgen.Next(11);
             int mortyanswer;
-            string morty2answer;
             int rickanswer;
             int numofquestions;
             int numofquestionsleft;
@@ -37,19 +36,7 @@ namespace ApplicationThingy
                 HeaderTQ();
                 Console.Write("What is " + num01 + " times " + num02 + "? ");
                 rickanswer = num01 * num02;
-                try
-                {
-                    mortyanswer = Convert.ToInt32(Console.ReadLine());
-                }
-                catch (Exception)
-                {
-                    morty2answer = Convert.ToString(Console.ReadLine());
-                    Console.WriteLine("Your answer was:" + morty2answer);
-                }
-                finally
-                {
-                    Console.WriteLine("Your answer cannot be that!");
-                }
+                error
                 mortyanswer = Convert.ToInt32(Console.ReadLine());
 
                 if (rickanswer == mortyanswer)
