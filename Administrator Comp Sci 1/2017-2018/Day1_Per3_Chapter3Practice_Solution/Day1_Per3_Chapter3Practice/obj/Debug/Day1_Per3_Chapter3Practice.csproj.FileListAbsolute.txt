@@ -1,0 +1,6 @@
+H:\Computer Science 2017-2018\Projects\Day1_Per3_Chapter3Practice_Solution\Day1_Per3_Chapter3Practice\bin\Debug\Day1_Per3_Chapter3Practice.exe.config
+H:\Computer Science 2017-2018\Projects\Day1_Per3_Chapter3Practice_Solution\Day1_Per3_Chapter3Practice\bin\Debug\Day1_Per3_Chapter3Practice.exe
+H:\Computer Science 2017-2018\Projects\Day1_Per3_Chapter3Practice_Solution\Day1_Per3_Chapter3Practice\bin\Debug\Day1_Per3_Chapter3Practice.pdb
+H:\Computer Science 2017-2018\Projects\Day1_Per3_Chapter3Practice_Solution\Day1_Per3_Chapter3Practice\obj\Debug\Day1_Per3_Chapter3Practice.csprojResolveAssemblyReference.cache
+H:\Computer Science 2017-2018\Projects\Day1_Per3_Chapter3Practice_Solution\Day1_Per3_Chapter3Practice\obj\Debug\Day1_Per3_Chapter3Practice.exe
+H:\Computer Science 2017-2018\Projects\Day1_Per3_Chapter3Practice_Solution\Day1_Per3_Chapter3Practice\obj\Debug\Day1_Per3_Chapter3Practice.pdb
