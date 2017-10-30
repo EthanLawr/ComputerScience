@@ -60,8 +60,8 @@ namespace Ch3_Program4
             decimal decimalOne = 39.43M;
 
 
-            Console.WriteLine("This is {0} C{1:D1} and I have flowers for sale for"
-                + "{2:C2}", name, integerOne + doubleOne + floatOne, decimalOne);
+            Console.WriteLine("This is {0} C{1:D1}{3} and I have flowers for sale for"
+                + " {2:C2} with ", name, integerOne, doubleOne, floatOne, decimalOne);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
