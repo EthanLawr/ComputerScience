@@ -4,17 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Ch3_Program4
+namespace Ch3_Program10
 {
-    class VariableStuff
+    class theLyfeOfPi
     {
         static void Main(string[] args)
         {
-            int originalWidth = Console.WindowWidth;
-            int originalHeight = Console.WindowHeight;
-            Console.SetWindowSize(originalWidth, originalHeight*2);
-            //Eliminating the need to use the scroll bar
-            
             #region Header
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
@@ -25,7 +20,7 @@ namespace Ch3_Program4
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To use variables!";
+            string purpose = "\nPurpose: To use PI in equations!";
             //Shows the purpose of the current project
             string endheader = "\n********************************************************************************";
             //Ends the header
@@ -59,41 +54,7 @@ namespace Ch3_Program4
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            int integerOne = 100; //Integer one is used through out the program
-            double doubleOne = 100.01; //Double example!
-            float floatOne = 100.00000001F; //Automatically rounds!
-            decimal decimalOne = 100.0001M; //Decimal example!
-            string numberFormat = "Standard Numeric Format Specifiers";
-            //Used for the collumn length
-
-            //Base Numbers
-            Console.WriteLine("The following Variables are represented:\nInt: {0}"
-                + "\nDouble: {1}\nFloat: {2}\nDecimal: {3}\n\n"
-                , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
-
-            //Integer
-            Console.WriteLine("These {4} are represented using an integer:"
-                + "\nCurrency: {0:C}\nScientific: {0:E2}\nFixed: {0:F2}"
-                + "\nNumber: {0:N2}\n\n"
-                , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
-
-            //Double
-            Console.WriteLine("These {4} are represented using a double:"
-                + "\nCurrency: {1:C}\nScientific: {1:E2}\nFixed: {1:F2}\n"
-                + "Number: {1:N2}\n\n"
-                , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
-
-            //Float
-            Console.WriteLine("\nThese {4} are represented using a float:"
-                + "\nCurrency: {2:C}\nScientific: {2:E2}\nFixed: {2:F2}\n"
-                + "Number: {2:N2}\n\n"
-                , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
-
-            //Decimal
-            Console.WriteLine("These {4} are represented using a decimal:"
-                + "\nCurrency: {3:C}\nScientific: {3:E2}\nFixed: {3:F2}"
-                + "Number: {3:N2}\n\n"
-                , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
+            const double equationOfPi = Math.PI;
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
