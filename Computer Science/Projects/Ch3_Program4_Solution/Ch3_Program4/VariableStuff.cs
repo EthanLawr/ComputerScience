@@ -54,14 +54,17 @@ namespace Ch3_Program4
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            int integerOne = 1;
-            double doubleOne = 99 + 1;
-            float floatOne = 36.24F;
-            decimal decimalOne = 39.43M;
-
-
-            Console.WriteLine("This is {0} C{1:D1}{3} and I have flowers for sale for"
-                + " {2:C2} with ", name, integerOne, doubleOne, floatOne, decimalOne);
+            int integerOne = 1000; //Integer one is used through out the program
+            double doubleOne = 1000.01; //Double example!
+            float floatOne = 1000.00000001F; //Automatically rounds!
+            decimal decimalOne = 1000.0001M; //Decimal example!
+            string numberFormat = "Standard Numeric Format Specifiers";
+            //Used for the collumn length
+            Console.WriteLine("The following Variables are represented:\n\tInt: {0}"
+                + "\nDouble: {1}\nFloat: {2}\nDecimal: {3}\n\n\nThe following {4}"
+                + "are represented:\nCurrency: {0:C}\nDecimal: {0:D4}\nScientific:"
+                + "{0:E2}\nFixed: {0:F2}\nNumber: {0:N2}", integerOne, doubleOne
+                , floatOne, decimalOne, numberFormat);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
