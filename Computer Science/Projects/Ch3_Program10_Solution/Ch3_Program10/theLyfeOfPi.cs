@@ -54,7 +54,13 @@ namespace Ch3_Program10
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            const double equationOfPi = Math.PI;
+            double DiameterThingy = 134.00001;
+            double PIE_IS_GOOD = Math.PI * DiameterThingy;
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("If the diamater is {0:N0} units, then the"
+            + " circumference is {1:N5}", DiameterThingy, PIE_IS_GOOD);
+            Console.ResetColor();
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan

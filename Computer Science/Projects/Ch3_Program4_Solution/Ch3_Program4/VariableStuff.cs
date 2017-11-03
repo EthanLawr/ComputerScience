@@ -66,6 +66,7 @@ namespace Ch3_Program4
             string numberFormat = "Standard Numeric Format Specifiers";
             //Used for the collumn length
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             //Base Numbers
             Console.WriteLine("The following Variables are represented:\nInt: {0}"
                 + "\nDouble: {1}\nFloat: {2}\nDecimal: {3}\n\n"
@@ -94,6 +95,7 @@ namespace Ch3_Program4
                 + "\nCurrency: {3:C}\nScientific: {3:E2}\nFixed: {3:F2}"
                 + "Number: {3:N2}\n\n"
                 , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
+            Console.ResetColor();
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
