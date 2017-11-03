@@ -56,14 +56,12 @@ namespace Ch3_Program10
 
             double DiameterThingy = 134.00001;
             //Declared variable to use in a later variable
-            double PIE_IS_GOOD = Math.PI * DiameterThingy;
+            double PieIsGood = Math.PI * DiameterThingy;
             //Shows the circumference
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
-            Console.WriteLine("If the diamater is {0:N0} units, then the"
-            + " circumference is {1:N5}", DiameterThingy, PIE_IS_GOOD);
-            Console.ResetColor();
+            
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
