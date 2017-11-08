@@ -1,6 +1,0 @@
-H:\Computer Science 2017-2018\Projects\Day1_Per45_FirstProgram_Solution\Day1_Per45_FirstProgram\bin\Debug\Day1_Per45_FirstProgram.exe.config
-H:\Computer Science 2017-2018\Projects\Day1_Per45_FirstProgram_Solution\Day1_Per45_FirstProgram\bin\Debug\Day1_Per45_FirstProgram.exe
-H:\Computer Science 2017-2018\Projects\Day1_Per45_FirstProgram_Solution\Day1_Per45_FirstProgram\bin\Debug\Day1_Per45_FirstProgram.pdb
-H:\Computer Science 2017-2018\Projects\Day1_Per45_FirstProgram_Solution\Day1_Per45_FirstProgram\obj\Debug\Day1_Per45_FirstProgram.csprojResolveAssemblyReference.cache
-H:\Computer Science 2017-2018\Projects\Day1_Per45_FirstProgram_Solution\Day1_Per45_FirstProgram\obj\Debug\Day1_Per45_FirstProgram.exe
-H:\Computer Science 2017-2018\Projects\Day1_Per45_FirstProgram_Solution\Day1_Per45_FirstProgram\obj\Debug\Day1_Per45_FirstProgram.pdb
