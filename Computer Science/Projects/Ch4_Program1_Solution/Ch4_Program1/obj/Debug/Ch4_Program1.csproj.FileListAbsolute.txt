@@ -1,0 +1,6 @@
+H:\Computer Science\Projects\Ch4_Program1_Solution\Ch4_Program1\bin\Debug\Ch4_Program1.exe.config
+H:\Computer Science\Projects\Ch4_Program1_Solution\Ch4_Program1\bin\Debug\Ch4_Program1.exe
+H:\Computer Science\Projects\Ch4_Program1_Solution\Ch4_Program1\bin\Debug\Ch4_Program1.pdb
+H:\Computer Science\Projects\Ch4_Program1_Solution\Ch4_Program1\obj\Debug\Ch4_Program1.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch4_Program1_Solution\Ch4_Program1\obj\Debug\Ch4_Program1.exe
+H:\Computer Science\Projects\Ch4_Program1_Solution\Ch4_Program1\obj\Debug\Ch4_Program1.pdb

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Ch3_Program10
+namespace Ch4_Program1
 {
-    class theLyfeOfPi
+    class SquareFeetOfHouse
     {
         static void Main(string[] args)
         {
@@ -20,9 +20,10 @@ namespace Ch3_Program10
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To use PI in equations!";
+            string purpose = "\nPurpose: To find the square feet of a house!";
             //Shows the purpose of the current project
-            string endheader = "\n********************************************************************************";
+            string endheader = "\n*********************************************" +
+                "***********************************\n\n";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name
@@ -54,16 +55,19 @@ namespace Ch3_Program10
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            const double DIAMETER_THINGY = 134.00001;
-            //Declared variable to use in a later variable
-            const double PIE_IS_GOOD = Math.PI * DIAMETER_THINGY;
-            //Shows the circumference
+            int lengthInFeet = 36;
+            //Declared Length
+            int widthInFeet = 27;
+            //Declared Width
+            int totalSquareFeet = widthInFeet * lengthInFeet;
+            //Total Square Feet declared
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
-            Console.WriteLine("\n\nIf the diameter of a circle is {0:N5} units, "
-                + "then the circumference is  \t{1:N5} units.", DIAMETER_THINGY
-                , PIE_IS_GOOD);
+            Console.WriteLine($"If the length is {lengthInFeet} feet and the"
+            + $" width of the house is {widthInFeet} feet, then the total" 
+            + $"  amount of square feet is {totalSquareFeet}.");
+            Console.ResetColor();
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
@@ -72,6 +76,8 @@ namespace Ch3_Program10
             #endregion Footer
 
             Console.ReadKey();
+
+
         }
     }
 }
