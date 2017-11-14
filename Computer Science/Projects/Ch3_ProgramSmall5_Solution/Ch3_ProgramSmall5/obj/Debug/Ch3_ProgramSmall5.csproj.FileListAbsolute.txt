@@ -1,1 +1,6 @@
 H:\Computer Science\Projects\Ch3_ProgramSmall5_Solution\Ch3_ProgramSmall5\bin\Debug\Ch3_ProgramSmall5.exe.config
+H:\Computer Science\Projects\Ch3_ProgramSmall5_Solution\Ch3_ProgramSmall5\obj\Debug\Ch3_ProgramSmall5.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch3_ProgramSmall5_Solution\Ch3_ProgramSmall5\bin\Debug\Ch3_ProgramSmall5.exe
+H:\Computer Science\Projects\Ch3_ProgramSmall5_Solution\Ch3_ProgramSmall5\bin\Debug\Ch3_ProgramSmall5.pdb
+H:\Computer Science\Projects\Ch3_ProgramSmall5_Solution\Ch3_ProgramSmall5\obj\Debug\Ch3_ProgramSmall5.exe
+H:\Computer Science\Projects\Ch3_ProgramSmall5_Solution\Ch3_ProgramSmall5\obj\Debug\Ch3_ProgramSmall5.pdb
