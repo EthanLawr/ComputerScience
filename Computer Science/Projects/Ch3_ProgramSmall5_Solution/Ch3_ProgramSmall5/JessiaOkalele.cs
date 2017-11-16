@@ -65,18 +65,21 @@ namespace Ch3_ProgramSmall5
             //Time for calculations
 
             decimal incomeReceived = (decimal) salesThisWeek * INCOME_RECEIVED_PERCENT;
-            decimal federalTax = (decimal)salesThisWeek * FEDERAL_TAX_PERCENT;
-            decimal socialSecurity = (decimal)salesThisWeek * SOCIAL_SECURITY_PERCENT;
-            decimal retirementPlan = (decimal)salesThisWeek * RETIREMENT_PLAN_PERCENT;
+            decimal federalTax = incomeReceived * FEDERAL_TAX_PERCENT;
+            decimal socialSecurity = incomeReceived * SOCIAL_SECURITY_PERCENT;
+            decimal retirementPlan = incomeReceived * RETIREMENT_PLAN_PERCENT;
+            decimal finalIncome = incomeReceived - (federalTax + socialSecurity
+                + retirementPlan);
             #endregion
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
             Console.WriteLine("Name: {0}\nSales Earned This Week: {1:C}\n\nIncome"
-                + " Recieved This Week: {2:C}\nFederal Tax Cost: {3:C}\nSocial Security"
-                + "Cost: {4:C}\nRetirement Plan Cost: {5:C}", employeeName, salesThisWeek
-                , incomeReceived, federalTax, socialSecurity, retirementPlan);
+                + " Recieved This Week: {2:C}\n\nFederal Tax Cost: {3:C}\nSocial Security"
+                + "Cost: {4:C}\nRetirement Plan Cost: {5:C}\n\nFinalized Income: {6:C}"
+                , employeeName, salesThisWeek, incomeReceived, federalTax, 
+                socialSecurity, retirementPlan, finalIncome);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
