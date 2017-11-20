@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Ch3_Program2
+namespace Ch3_Program7
 {
-    class TemperatureCalcs
+    class CoinExchangeThing
     {
         static void Main(string[] args)
         {
@@ -20,7 +20,7 @@ namespace Ch3_Program2
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To calculate temperatures!";
+            string purpose = "\nPurpose: To find your total change!";
             //Shows the purpose of the current project
             string endheader = "\n***********************************"
                 + "*********************************************\n\n";
@@ -55,17 +55,49 @@ namespace Ch3_Program2
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            int celsius = 12;
-           
-            //Declared variable to use in a later variable
-            double fahrenheitConversion = ((double)9 / 5) * celsius + 32.00;
-            //Shows the conversion
+            #region Variables
+            //Total Change
+            const decimal TOTAL_CHANGE = 0.92M;
+
+            //What the coins are worth
+
+            //Quarters are worth 25 cents
+            const decimal WORTH_OF_A_QUARTER = 0.25M;
+
+            //Dimes are worth 10 cents
+            const decimal WORTH_OF_A_DIME = 0.10M;
+
+            //Nickels are worth 5 cents
+            const decimal WORTH_OF_A_NICKEL = 0.05M;
+
+            //Pennys are worth 1 cent
+            const decimal WORTH_OF_A_PENNY = 0.01M;
+
+            //How many coins of each there are
+
+            //Amount of Quarters
+            int amountOfQuarters = (int)(TOTAL_CHANGE / WORTH_OF_A_QUARTER);
+
+            //Amount of Dimes
+            int amountOfDimes = (int)((TOTAL_CHANGE % WORTH_OF_A_QUARTER) / 
+                WORTH_OF_A_DIME);
+
+            //Amount of Nickels
+            int amountOfNickels = (int)(((TOTAL_CHANGE % WORTH_OF_A_QUARTER) % 
+                WORTH_OF_A_DIME) / WORTH_OF_A_NICKEL);
+
+            //Amount of Pennies
+            int amountOfPennies = (int)((((TOTAL_CHANGE % WORTH_OF_A_QUARTER) % 
+                WORTH_OF_A_DIME) % WORTH_OF_A_NICKEL)/ WORTH_OF_A_PENNY);
+            #endregion
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
-            Console.WriteLine("\n\nIf the temperature is {0} degrees celsius, "
-                + "then the fahrenheit conversion is  \t{1:N2} degrees fahrenheit."
-                , celsius, fahrenheitConversion);
+            Console.WriteLine("If there is {0:C} total change in american "
+                + "currency...\nthen there are {1} quarter(s), {2} dime(s),"
+                + "{3} nickel(s), and {4} penn(ies) of change." , TOTAL_CHANGE,
+                amountOfQuarters, amountOfDimes, amountOfNickels, amountOfPennies);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
