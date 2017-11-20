@@ -55,20 +55,24 @@ namespace Ch3_Program52a
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            int length = 84;
+            #region Variables
+
+            const int LENGTH = 82;
             //Declared Length
-            int width = 137;
+            const int WIDTH = 143;
             //Declared Width
-            int perimeter = (width * 2) * (length * 2);
-            int area = width * length;
-            //Calculations
+            int perimeter = (WIDTH * 2) + (LENGTH * 2);
+            //Formula to find perimeter
+            int area = WIDTH * LENGTH;
+            //Formula to find the area
+            #endregion
+     
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
-            Console.WriteLine($"If the length is {length} units and the"
-            + $" width of the rectangle is {width} units...\nthen the "
+            Console.WriteLine($"If the length is {LENGTH} units and the"
+            + $" width of the rectangle is {WIDTH} units...\nthen the "
             + $"perimeter is {perimeter} units and the area is {area} units.");
-            Console.ResetColor();
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
