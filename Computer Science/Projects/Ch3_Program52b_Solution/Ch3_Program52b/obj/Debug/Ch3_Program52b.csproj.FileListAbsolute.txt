@@ -1,6 +1,0 @@
-H:\Computer Science\Projects\Ch3_Program52b_Solution\Ch3_Program52b\bin\Debug\Ch3_Program52b.exe.config
-H:\Computer Science\Projects\Ch3_Program52b_Solution\Ch3_Program52b\obj\Debug\Ch3_Program52b.csprojResolveAssemblyReference.cache
-H:\Computer Science\Projects\Ch3_Program52b_Solution\Ch3_Program52b\bin\Debug\Ch3_Program52b.exe
-H:\Computer Science\Projects\Ch3_Program52b_Solution\Ch3_Program52b\bin\Debug\Ch3_Program52b.pdb
-H:\Computer Science\Projects\Ch3_Program52b_Solution\Ch3_Program52b\obj\Debug\Ch3_Program52b.exe
-H:\Computer Science\Projects\Ch3_Program52b_Solution\Ch3_Program52b\obj\Debug\Ch3_Program52b.pdb
