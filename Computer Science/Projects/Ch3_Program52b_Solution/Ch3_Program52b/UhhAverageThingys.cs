@@ -56,25 +56,25 @@ namespace Ch3_Program52b
             #endregion Header
 
             #region Variable Thing
-            int numberOne = 100; int numberTwo = 83; int numberThree = 93;
-            int numberFour = 97; int numberFive = 87;
+            const int NUMBER_ONE = 369; const int NUMBER_THREE = 562;
+            const int NUMBER_TWO = 821; const int NUMBER_FOUR = 475; 
             //Declared variables to use in later variables
-            int numbersTotalSum = numberOne + numberTwo + numberThree
-                + numberFour + numberFive;
+            int numbersTotalSum = NUMBER_ONE + NUMBER_TWO + NUMBER_THREE
+                + NUMBER_FOUR;
             //Added variables into one variable
-            const int NUMBER_OF_NUMBERS = 5;
+            const int NUMBER_OF_NUMBERS = 4;
             //Amount of variables stated before
-            double averageNumberThing = numbersTotalSum / NUMBER_OF_NUMBERS;
-            //Average Numbers
+            double averageNumberThing = ((double)numbersTotalSum / NUMBER_OF_NUMBERS);
+            //Average of the Numbers
             #endregion
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
             Console.WriteLine("If the given numbers are {0}, {1}, {2},"
-                + "and {3}, and there are {4} numbers...\n and they add up to {5}..."
-                + " \nthen the average is {6}. ", numberOne,
-                numberTwo, numberThree, numberFour, NUMBER_OF_NUMBERS, 
+                + " and {3}, and there are {4} numbers...\nAnd they add up to {5}..."
+                + " \nthen the average is {6:N2}. ", NUMBER_ONE,
+                NUMBER_TWO, NUMBER_THREE, NUMBER_FOUR, NUMBER_OF_NUMBERS, 
                 numbersTotalSum, averageNumberThing);
 
             #region Footer
