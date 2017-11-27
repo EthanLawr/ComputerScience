@@ -1,0 +1,6 @@
+H:\Computer Science\Projects\Ch3_Program54a_Solution\Ch3_Program54a\bin\Debug\Ch3_Program54a.exe.config
+H:\Computer Science\Projects\Ch3_Program54a_Solution\Ch3_Program54a\bin\Debug\Ch3_Program54a.exe
+H:\Computer Science\Projects\Ch3_Program54a_Solution\Ch3_Program54a\bin\Debug\Ch3_Program54a.pdb
+H:\Computer Science\Projects\Ch3_Program54a_Solution\Ch3_Program54a\obj\Debug\Ch3_Program54a.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch3_Program54a_Solution\Ch3_Program54a\obj\Debug\Ch3_Program54a.exe
+H:\Computer Science\Projects\Ch3_Program54a_Solution\Ch3_Program54a\obj\Debug\Ch3_Program54a.pdb
