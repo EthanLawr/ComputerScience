@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Ch3_Program54a
+namespace Ch3_Program54c
 {
-    class MilesPerGallonAvg
+    class CirclesThing
     {
         static void Main(string[] args)
         {
-            int originalWidth = Console.WindowWidth;
-            int originalHeight = Console.WindowHeight;
-            Console.SetWindowSize(originalWidth + 25, originalHeight);
-
             #region Header
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
@@ -24,12 +20,10 @@ namespace Ch3_Program54a
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To calculate the average miles per "
-                + "gallon in each vehicle!";
+            string purpose = "\nPurpose: To find the radius and circumferense of a cirlce!";
             //Shows the purpose of the current project
-            string endheader = "\n***********************************"
-                + "**************************************************"
-                + "********************\n\n";
+            string endheader = "\n*********************************************" +
+                "***********************************\n\n";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name
@@ -60,59 +54,24 @@ namespace Ch3_Program54a
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
-            
+
             #region Variables
-            int vwGallons = 9;
-            //Declared Gallons
-            int vwMiles = 286;
-            //Declared Miles
-            double vwMpg = ((double)vwMiles / vwGallons);
-            //Formula to find Miles per Gallon
-
-            int firebirdGallons = 40;
-            //Declared Gallons
-            int firebirdMiles = 412;
-            //Declared Miles
-            double firebirdMpg = ((double)firebirdMiles / firebirdGallons);
-            //Formula to find Miles per Gallon
-
-            int subaruGallons = 18;
-            //Declared Gallons
-            int subaruMiles = 361;
-            //Declared Miles
-            double subaruMpg = ((double)subaruMiles / subaruGallons);
-            //Formula to find Miles per Gallon
-
-            int cutlassGallons = 11;
-            //Declared Gallons
-            int cutlassMiles = 161;
-            //Declared Miles
-            double cutlassMpg = ((double)cutlassMiles / cutlassGallons);
-            //Formula to find Miles per Gallon
+            const double pie = Math.PI;
+            //Pi defined
+            decimal radiusOfCircle = 3.713M;
+            //Radius defined
+            decimal circumferenceOfCircle = radiusOfCircle * (decimal)pie * 2M;
+            //Circumference Formula is Pi * Radius * 2
+            decimal areaOfCircle = (decimal)pie * (radiusOfCircle * radiusOfCircle);
+            //Area Formula is Pi * Radius Squared
             #endregion
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
-            Console.WriteLine("Vehicle\t\t\tMiles\t\tGallons\t\tMiles per "
-                + "Gallon (Average)\n");
-            //Collumn titles
-            
-            Console.WriteLine("1970 VW Bug\t\t{0}\t\t{1}\t\t{2}", vwMiles,
-               vwGallons, vwMpg);
-            //1970 VW Bug
-
-            Console.WriteLine("1979 Firebird\t\t{0}\t\t{1}\t\t{2}", firebirdMiles,
-                firebirdGallons, firebirdMpg);
-            //1979 Firebird
-
-            Console.WriteLine("1990 Subaru\t\t{0}\t\t{1}\t\t{2}", subaruMiles,
-                subaruGallons, subaruMpg);
-            //1990 Subaru
-
-            Console.WriteLine("1975 Cutlass\t\t{0}\t\t{1}\t\t{2}", cutlassMiles,
-                cutlassGallons, cutlassMpg);
-            //1975 Cutlass
+            Console.WriteLine("If the radius of a circle is {0}...\nThen the"
+                + " circumference is {1:N3} and the area is {2:N3}.", radiusOfCircle,
+                circumferenceOfCircle, areaOfCircle);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
