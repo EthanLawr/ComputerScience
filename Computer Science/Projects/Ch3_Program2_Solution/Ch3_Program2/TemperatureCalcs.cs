@@ -55,8 +55,7 @@ namespace Ch3_Program2
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            int celsius = 12;
-           
+            int celsius = 100;
             //Declared variable to use in a later variable
             double fahrenheitConversion = ((double)9 / 5) * celsius + 32.00;
             //Shows the conversion

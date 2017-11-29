@@ -57,9 +57,9 @@ namespace Ch3_Program52a
 
             #region Variables
 
-            const int LENGTH = 82;
+            int LENGTH = 82;
             //Declared Length
-            const int WIDTH = 143;
+            int WIDTH = 143;
             //Declared Width
             int perimeter = (WIDTH * 2) + (LENGTH * 2);
             //Formula to find perimeter
