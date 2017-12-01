@@ -4,11 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Ch3_Program6
+namespace Ch3_Program58b
 {
-    class TestAverages
+    class RootsOfEquations
     {
         static void Main(string[] args)
+        {
+            Header(); //Header
+
+            int numberSolved = 5;
+            //X Number
+
+            int numberOne = 10;
+            //A Number
+            int numberTwo = 12;
+            //B Number
+            int numberThree = 13;
+            //C Number
+            double sqrtpart = (12 * 12) - (4 * 10 * 13);
+            double answer = (12 + Math.Round(Math.Sqrt(sqrtpart))) / (2 * 10);
+            //numberOne(numberSolved ^ 2) + numberTwo * numberSolved + numberThree;
+
+            Console.WriteLine("{0}\n{1:N5}", answer, Math.Round(Math.Sqrt(2)));
+
+            Footer(); //Footer
+            Console.ReadLine();
+        }
+        public static void Header()
         {
             #region Header
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
@@ -20,10 +42,11 @@ namespace Ch3_Program6
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To calculate test score averages!";
+            string purpose = "\nPurpose: To create a program that solves quadratic! "
+                + "solutions";
             //Shows the purpose of the current project
-            string endheader = "\n***********************************"
-                + "*********************************************\n\n";
+            string endheader = "\n************************************************"
+                + "********************************";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name
@@ -54,34 +77,14 @@ namespace Ch3_Program6
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
-
-            int testScoreOne = 100; int testScoreTwo = 84; int testScoreThree = 93;
-            int testScoreFour = 97; int testScoreFive = 78;
-            //Declared variables to use in later variables
-            int combinedTestScores = testScoreOne + testScoreTwo + testScoreThree
-                + testScoreFour + testScoreFive;
-            //Added variables into one variable
-            const int NUMBER_OF_TESTS = 5;
-            //Amount of variables stated before
-            double averageTestScore = (double)combinedTestScores / NUMBER_OF_TESTS;
-            //Average Test Scores
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style stuff or something
-
-            Console.WriteLine("If the given test score percents are {0}, {1}, {2},"
-                + " {3}, and {4}...\nand there are {5}\ttests...\nand they add up to {6}..."
-                + "\nthen the average test score is {7} percent", testScoreOne, 
-                testScoreTwo, testScoreThree, testScoreFour, testScoreFive, 
-                NUMBER_OF_TESTS, combinedTestScores, averageTestScore);
-
+        }
+        public static void Footer()
+        {
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
             #endregion Footer
-
-            Console.ReadKey();
         }
     }
 }

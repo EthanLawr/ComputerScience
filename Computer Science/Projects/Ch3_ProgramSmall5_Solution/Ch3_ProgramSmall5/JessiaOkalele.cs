@@ -57,7 +57,7 @@ namespace Ch3_ProgramSmall5
 
             #region Declared Variables
             string employeeName = "Jessica Oakley";
-            double salesThisWeek = 28000;
+            double salesThisWeek = 50000;
             const decimal INCOME_RECEIVED_PERCENT = 0.07M;
             const decimal FEDERAL_TAX_PERCENT = 0.18M;
             const decimal SOCIAL_SECURITY_PERCENT = 0.06M;
