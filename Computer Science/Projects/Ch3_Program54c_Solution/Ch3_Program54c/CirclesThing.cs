@@ -20,7 +20,7 @@ namespace Ch3_Program54c
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To find the radius and circumferense of a cirlce!";
+            string purpose = "\nPurpose: To find the radius and circumferense of a circle!";
             //Shows the purpose of the current project
             string endheader = "\n*********************************************" +
                 "***********************************\n\n";

@@ -56,24 +56,24 @@ namespace Ch3_Program6
             #endregion Header
 
             int testScoreOne = 100; int testScoreTwo = 83; int testScoreThree = 93;
-            int testScoreFour = 97; int testScoreFive = 87;
+            int testScoreFour = 97; int testScoreFive = 78;
             //Declared variables to use in later variables
-            int CombinedTestScores = testScoreOne + testScoreTwo + testScoreThree
+            int combinedTestScores = testScoreOne + testScoreTwo + testScoreThree
                 + testScoreFour + testScoreFive;
             //Added variables into one variable
             const int NUMBER_OF_TESTS = 5;
             //Amount of variables stated before
-            double average_Test_Score = CombinedTestScores / NUMBER_OF_TESTS;
+            double averageTestScore = (double)combinedTestScores / NUMBER_OF_TESTS;
             //Average Test Scores
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
             Console.WriteLine("If the given test score percents are {0}, {1}, {2},"
-                + " {3}, and {4} and there are {5}\ttests... and they add up to {6}..."
-                + " then the average test score is {7} percent", testScoreOne, 
+                + " {3}, and {4}...\nand there are {5}\ttests...\nand they add up to {6}..."
+                + "\nthen the average test score is {7} percent", testScoreOne, 
                 testScoreTwo, testScoreThree, testScoreFour, testScoreFive, 
-                NUMBER_OF_TESTS, CombinedTestScores, average_Test_Score);
+                NUMBER_OF_TESTS, combinedTestScores, averageTestScore);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan

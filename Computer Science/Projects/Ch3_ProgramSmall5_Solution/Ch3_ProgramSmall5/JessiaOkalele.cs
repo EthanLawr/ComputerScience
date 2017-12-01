@@ -55,13 +55,14 @@ namespace Ch3_ProgramSmall5
             Console.ResetColor(); //Resets the color for non header lines
             #endregion Header
 
-            #region Declared Things
+            #region Declared Variables
             string employeeName = "Jessica Oakley";
             double salesThisWeek = 28000;
             const decimal INCOME_RECEIVED_PERCENT = 0.07M;
             const decimal FEDERAL_TAX_PERCENT = 0.18M;
             const decimal SOCIAL_SECURITY_PERCENT = 0.06M;
             const decimal RETIREMENT_PLAN_PERCENT = 0.10M;
+            //Declared all constants and naming and sales
             //Time for calculations
 
             decimal incomeReceived = (decimal) salesThisWeek * INCOME_RECEIVED_PERCENT;
@@ -70,16 +71,17 @@ namespace Ch3_ProgramSmall5
             decimal retirementPlan = incomeReceived * RETIREMENT_PLAN_PERCENT;
             decimal finalIncome = incomeReceived - (federalTax + socialSecurity
                 + retirementPlan);
+            //All calculations and formulas
             #endregion
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 
-            Console.WriteLine("Name: {0}\nSales Earned This Week: {1:C}\n\nIncome"
-                + " Recieved This Week: {2:C}\n\nFederal Tax Cost: {3:C}\nSocial Security"
-                + "Cost: {4:C}\nRetirement Plan Cost: {5:C}\n\nFinalized Income: {6:C}"
-                , employeeName, salesThisWeek, incomeReceived, federalTax, 
-                socialSecurity, retirementPlan, finalIncome);
+            Console.WriteLine("Employee Name: {0}\n\nSales Earned This Week: \t{1:C}"
+                + "\n\nIncome Recieved This Week: \t{2:C}\n\nFederal Tax Cost: \t\t{3:C}"
+                + "\nSocial Security Cost: \t\t{4:C}\nRetirement Plan Cost: \t\t{5:C}"
+                + "\n\nFinalized Income: \t\t{6:C}", employeeName, salesThisWeek,
+                incomeReceived, federalTax, socialSecurity, retirementPlan, finalIncome);
 
             #region Footer
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
