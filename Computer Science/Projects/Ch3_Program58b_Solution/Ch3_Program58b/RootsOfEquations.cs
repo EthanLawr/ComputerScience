@@ -12,20 +12,27 @@ namespace Ch3_Program58b
         {
             Header(); //Header
 
-            int numberSolved = 5;
-            //X Number
-
-            int numberOne = 10;
+            #region variables
+            //Be sure to not have negatives
+            double numberOne = 10.00;
             //A Number
-            int numberTwo = 12;
+            double numberTwo = 50.00;
             //B Number
-            int numberThree = 13;
+            double numberThree = 10.00;
             //C Number
-            double sqrtpart = (12 * 12) - (4 * 10 * 13);
-            double answer = (12 + Math.Round(Math.Sqrt(sqrtpart))) / (2 * 10);
-            //numberOne(numberSolved ^ 2) + numberTwo * numberSolved + numberThree;
+            double mathSqrtFomula = Math.Pow(numberTwo, 2) - (4 * numberOne * numberThree);
+            //Square root part
+            double answer = (numberTwo + Math.Sqrt(mathSqrtFomula)) / 2 * numberOne;
+            //The formula
+            #endregion
 
-            Console.WriteLine("{0}\n{1:N5}", answer, Math.Round(Math.Sqrt(2)));
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Style stuff or something
+
+            Console.WriteLine("If number one is:\t{0:N2}...\nNumber two is:\t\t{1:N2}..."
+                + "\nAnd number three is:\t{2:N2}...\n\nThen the root of the numbers in a "
+                + "quadratic equation is {3:N2}", numberOne, numberTwo, numberThree, 
+                answer);
 
             Footer(); //Footer
             Console.ReadLine();
@@ -46,7 +53,7 @@ namespace Ch3_Program58b
                 + "solutions";
             //Shows the purpose of the current project
             string endheader = "\n************************************************"
-                + "********************************";
+                + "********************************\n\n";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name
