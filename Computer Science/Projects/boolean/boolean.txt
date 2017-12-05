@@ -1,0 +1,25 @@
+Ch 3 My Boolean Program: (LARGE PROGRAM GRADE)
+
+Create a program that initializes 5 integer variables with the 5 numbers below.
+
+	myInt1=100, myInt2=97, myInt3=32, myInt4=5, myInt5=61.
+
+Perform the following comparisons:
+Is value a equal to value b? (compare 1 with 2, then 2 with 3, …, 5 with 1) (5 total comparisons)
+
+Is value a less than value b? (compare 1 with 2, then 2 with 3, …, 5 with 1) (5 total comparisons)
+
+Is any value equal to 1, 10, or 100? (do for each value; 5 total tests)
+	Logical Comparison Operators & Bool type (short-circuit OR)
+	Use Regions to make your code easier to work with
+
+Sample Output Shown Below
+https://i.imgur.com/lomvPBE.png
+
+
+	ADDITIONAL PROGRAMMING ASSIGNMENTS
+	(See PDF scan of these assignments on website) (CSharp - Chapter 3 – Additional Programs.pdf)
+	Program 54a, 54b, 54c, 52a, 58b
+	You can assign these to those that have finished early.
+
+
