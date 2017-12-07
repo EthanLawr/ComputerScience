@@ -1,0 +1,24 @@
+Darth Vader - 1,2,3,4,5,6
+Anakin Skywalker - 1,2,3,4,5,6
+Luke Skywalker - 3,4,5,6,7,8
+Han Solo - 4,5,6,7
+Leia Organa - 3,4,5,6,7,8
+Obi-Wan Kenobi - 1,2,3,4,5,6
+C-3P0 - 1,2,3,4,5,6,7,8
+R2-D2 - 1,2,3,4,5,6,7,8
+Chewbacca - 4,5,6,3,7,8
+Yoda - 3,4,5,6
+Sheev Palpatine - 1,2,3,5,6
+Lando Calrissian - 5,6
+Padme Amidala - 1,2,3
+Qui-Gon Jinn - 1,2
+Kylo Ren - 7,8
+Rey - 7,8
+Finn - 7,8
+BB-8 - 7
+Poe Dameron - 7,8
+Mace Windu - 1,2,3
+Ki-Adi-Muni - 1,2,3
+Count Dooku - 2,3
+Darth Maul - 1
+Jar Jar Binks - 1,2,3

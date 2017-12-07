@@ -1,6 +1,0 @@
-H:\Computer Science\Projects\Chapter3_Project2_Solution\Chapter3_Project2\bin\Debug\Chapter3_Project2.exe.config
-H:\Computer Science\Projects\Chapter3_Project2_Solution\Chapter3_Project2\obj\Debug\Chapter3_Project2.csprojResolveAssemblyReference.cache
-H:\Computer Science\Projects\Chapter3_Project2_Solution\Chapter3_Project2\bin\Debug\Chapter3_Project2.exe
-H:\Computer Science\Projects\Chapter3_Project2_Solution\Chapter3_Project2\bin\Debug\Chapter3_Project2.pdb
-H:\Computer Science\Projects\Chapter3_Project2_Solution\Chapter3_Project2\obj\Debug\Chapter3_Project2.exe
-H:\Computer Science\Projects\Chapter3_Project2_Solution\Chapter3_Project2\obj\Debug\Chapter3_Project2.pdb

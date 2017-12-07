@@ -7,19 +7,20 @@ using System.Threading;
 class MainClass {
   public static void Main (string[] args) {
     
-    #region Header
+            #region Header
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
-            var date = "\t" + System.IO.File.GetLastWriteTime("Path.GetFileName(fileName)");
-            //Gives the date and time of when the file was last saved
-            string period = "\tPeriod 4,5,6";
+            var date = "\t   " + DateTime.Now;
+            //Gives the date and time of when the file was last used
+            string period = "\t   Period 4,5,6";
             //Shows what periods the class is from
-            string teacher = "\tMr. Lynch";
+            string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: blah blah";
+            string purpose = "\nPurpose: stuff!";
             //Shows the purpose of the current project
-            string endheader = "\n********************************************************************************";
+            string endheader = "\n*********************************************" +
+                "***********************************\n\n";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name

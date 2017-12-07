@@ -92,7 +92,7 @@ namespace Ch3_Program4
 
             //Decimal
             Console.WriteLine("These {4} are represented using a decimal:"
-                + "\nCurrency: {3:C}\nScientific: {3:E2}\nFixed: {3:F2}"
+                + "\nCurrency: {3:C}\nScientific: {3:E2}\nFixed: {3:F2}\n"
                 + "Number: {3:N2}\n\n"
                 , integerOne, doubleOne, floatOne, decimalOne, numberFormat);
             Console.ResetColor();
