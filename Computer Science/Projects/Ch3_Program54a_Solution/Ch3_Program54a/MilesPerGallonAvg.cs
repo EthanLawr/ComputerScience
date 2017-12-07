@@ -96,8 +96,10 @@ namespace Ch3_Program54a
 
             Console.WriteLine("Vehicle\t\t\tMiles\t\tGallons\t\tMiles per "
                 + "Gallon (Average)\n");
+            Console.WriteLine("-------\t\t\t-----\t\t-------\t\t----------"
+                + "----------------\n");
             //Collumn titles
-            
+
             Console.WriteLine("1970 VW Bug\t\t{0}\t\t{1}\t\t{2}", vwMiles,
                vwGallons, vwMpg);
             //1970 VW Bug

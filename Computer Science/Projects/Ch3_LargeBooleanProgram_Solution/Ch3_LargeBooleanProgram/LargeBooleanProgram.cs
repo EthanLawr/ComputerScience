@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Ch3_LargeBooleanProgram
 {
-    class Program
+    class LargeBooleanProgram
     {
         static void Main(string[] args)
         {
