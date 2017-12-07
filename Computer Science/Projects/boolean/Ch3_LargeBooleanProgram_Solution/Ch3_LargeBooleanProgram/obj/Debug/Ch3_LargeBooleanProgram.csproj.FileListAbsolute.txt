@@ -1,6 +1,0 @@
-H:\Computer Science\Projects\Ch3_LargeBooleanProgram_Solution\Ch3_LargeBooleanProgram\bin\Debug\Ch3_LargeBooleanProgram.exe.config
-H:\Computer Science\Projects\Ch3_LargeBooleanProgram_Solution\Ch3_LargeBooleanProgram\bin\Debug\Ch3_LargeBooleanProgram.exe
-H:\Computer Science\Projects\Ch3_LargeBooleanProgram_Solution\Ch3_LargeBooleanProgram\bin\Debug\Ch3_LargeBooleanProgram.pdb
-H:\Computer Science\Projects\Ch3_LargeBooleanProgram_Solution\Ch3_LargeBooleanProgram\obj\Debug\Ch3_LargeBooleanProgram.csprojResolveAssemblyReference.cache
-H:\Computer Science\Projects\Ch3_LargeBooleanProgram_Solution\Ch3_LargeBooleanProgram\obj\Debug\Ch3_LargeBooleanProgram.exe
-H:\Computer Science\Projects\Ch3_LargeBooleanProgram_Solution\Ch3_LargeBooleanProgram\obj\Debug\Ch3_LargeBooleanProgram.pdb
