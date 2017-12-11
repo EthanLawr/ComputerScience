@@ -57,7 +57,7 @@ namespace Ch3_ProgramSmall7
 
             #region Variables
             //Total Change
-            const decimal TOTAL_CHANGE = 0.32M;
+            decimal TOTAL_CHANGE = 0.32M;
 
             //What the coins are worth
             //Quarters are worth 25 cents
