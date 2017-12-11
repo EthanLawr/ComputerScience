@@ -57,35 +57,27 @@ namespace Ch3_ProgramSmall7
 
             #region Variables
             //Total Change
-            const decimal TOTAL_CHANGE = 0.92M;
+            const decimal TOTAL_CHANGE = 0.32M;
 
             //What the coins are worth
-
             //Quarters are worth 25 cents
             const decimal WORTH_OF_A_QUARTER = 0.25M;
-
             //Dimes are worth 10 cents
             const decimal WORTH_OF_A_DIME = 0.10M;
-
             //Nickels are worth 5 cents
             const decimal WORTH_OF_A_NICKEL = 0.05M;
-
             //Pennys are worth 1 cent
             const decimal WORTH_OF_A_PENNY = 0.01M;
 
             //How many coins of each there are
-
             //Amount of Quarters
             int amountOfQuarters = (int)(TOTAL_CHANGE / WORTH_OF_A_QUARTER);
-
             //Amount of Dimes
             int amountOfDimes = (int)((TOTAL_CHANGE % WORTH_OF_A_QUARTER) /
                 WORTH_OF_A_DIME);
-
             //Amount of Nickels
             int amountOfNickels = (int)(((TOTAL_CHANGE % WORTH_OF_A_QUARTER) %
                 WORTH_OF_A_DIME) / WORTH_OF_A_NICKEL);
-
             //Amount of Pennies
             int amountOfPennies = (int)((((TOTAL_CHANGE % WORTH_OF_A_QUARTER) %
                 WORTH_OF_A_DIME) % WORTH_OF_A_NICKEL) / WORTH_OF_A_PENNY);
