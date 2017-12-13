@@ -10,7 +10,34 @@ namespace Ch3_Program54b
     {
         static void Main(string[] args)
         {
-            #region Header
+            Header();
+
+            #region Variable Thing
+            int numberOne = 369, numberTwo = 821,
+                numberThree = 562, numberFour = 475,
+                //Declared variables to use in later variables
+                numbersTotalSum = numberOne + numberTwo + numberThree
+                + numberFour,          //Added variables into one variable
+                numberOfNumbers = 4;    //Amount of variables stated before
+
+            double averageNumberThing = ((double)numbersTotalSum / numberOfNumbers);
+            //Average of the Numbers
+            #endregion
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Style stuff or something
+
+            Console.WriteLine("If the given numbers are {0}, {1}, {2},"
+                + " and {3}, and there are {4} numbers...\nAnd they add up to {5}..."
+                + " \nthen the average is {6:N2}. ", numberOne,
+                numberTwo, numberThree, numberFour, numberOfNumbers,
+                numbersTotalSum, averageNumberThing);
+
+            Footer();
+            Console.ReadKey();
+        }
+        public static void Header()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
@@ -22,8 +49,8 @@ namespace Ch3_Program54b
             //Shows my teacher's last name
             string purpose = "\nPurpose: To calculate averages and sums!";
             //Shows the purpose of the current project
-            string endheader = "\n***********************************"
-                + "*********************************************\n\n";
+            string endheader = "\n************************************************"
+                + "********************************\n\n";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name
@@ -53,37 +80,12 @@ namespace Ch3_Program54b
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
-            #endregion Header
-
-            #region Variable Thing
-            const int NUMBER_ONE = 369; const int NUMBER_THREE = 562;
-            const int NUMBER_TWO = 821; const int NUMBER_FOUR = 475;
-            //Declared variables to use in later variables
-            int numbersTotalSum = NUMBER_ONE + NUMBER_TWO + NUMBER_THREE
-                + NUMBER_FOUR;
-            //Added variables into one variable
-            const int NUMBER_OF_NUMBERS = 4;
-            //Amount of variables stated before
-            double averageNumberThing = ((double)numbersTotalSum / NUMBER_OF_NUMBERS);
-            //Average of the Numbers
-            #endregion
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style stuff or something
-
-            Console.WriteLine("If the given numbers are {0}, {1}, {2},"
-                + " and {3}, and there are {4} numbers...\nAnd they add up to {5}..."
-                + " \nthen the average is {6:N2}. ", NUMBER_ONE,
-                NUMBER_TWO, NUMBER_THREE, NUMBER_FOUR, NUMBER_OF_NUMBERS,
-                numbersTotalSum, averageNumberThing);
-
-            #region Footer
+        }
+        public static void Footer()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
-            #endregion Footer
-
-            Console.ReadKey();
         }
     }
 }

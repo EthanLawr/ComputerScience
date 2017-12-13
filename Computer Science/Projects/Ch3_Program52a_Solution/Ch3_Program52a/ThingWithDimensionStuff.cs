@@ -13,17 +13,12 @@ namespace Ch3_Program52a
             Header();
 
             #region Variables
-
-            int length = 82;
-            //Declared Length
-            int width = 143;
-            //Declared Width
-            int perimeter = (width * 2) + (length * 2);
-            //Formula to find perimeter
-            int area = width * length;
-            //Formula to find the area
+            int length = 82,                            //Declared Length
+                width = 143,                            //Declared Width
+                perimeter = (width * 2) + (length * 2), //Formula to find perimeter
+                area = width * length;                  //Formula to find the area
             #endregion
-     
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             //Style stuff or something
 

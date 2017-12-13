@@ -14,31 +14,23 @@ namespace Ch3_Program54a
             Header();
             
             #region Variables
-            int vwGallons = 9;
-            //Declared Gallons
-            int vwMiles = 286;
-            //Declared Miles
+            int vwGallons = 9,              //Declared Gallons 
+                vwMiles = 286;              //Declared Miles
             double vwMpg = ((double)vwMiles / vwGallons);
             //Formula to find Miles per Gallon
 
-            int firebirdGallons = 40;
-            //Declared Gallons
-            int firebirdMiles = 412;
-            //Declared Miles
+            int firebirdGallons = 40,       //Declared Gallons
+                firebirdMiles = 412;        //Declared Miles
             double firebirdMpg = ((double)firebirdMiles / firebirdGallons);
             //Formula to find Miles per Gallon
 
-            int subaruGallons = 18;
-            //Declared Gallons
-            int subaruMiles = 361;
-            //Declared Miles
+            int subaruGallons = 18,         //Declared Gallons
+                subaruMiles = 361;          //Declared Miles
             double subaruMpg = ((double)subaruMiles / subaruGallons);
             //Formula to find Miles per Gallon
 
-            int cutlassGallons = 11;
-            //Declared Gallons
-            int cutlassMiles = 161;
-            //Declared Miles
+            int cutlassGallons = 11,        //Declared Gallons
+                cutlassMiles = 161;         //Declared Miles
             double cutlassMpg = ((double)cutlassMiles / cutlassGallons);
             //Formula to find Miles per Gallon
             #endregion

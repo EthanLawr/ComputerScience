@@ -3,3 +3,4 @@ H:\Computer Science\Projects\Ch3_Program54b_Solution\Ch3_Program54b\bin\Debug\Ch
 H:\Computer Science\Projects\Ch3_Program54b_Solution\Ch3_Program54b\bin\Debug\Ch3_Program54b.pdb
 H:\Computer Science\Projects\Ch3_Program54b_Solution\Ch3_Program54b\obj\Debug\Ch3_Program54b.exe
 H:\Computer Science\Projects\Ch3_Program54b_Solution\Ch3_Program54b\obj\Debug\Ch3_Program54b.pdb
+H:\Computer Science\Projects\Ch3_Program54b_Solution\Ch3_Program54b\obj\Debug\Ch3_Program54b.csprojResolveAssemblyReference.cache
