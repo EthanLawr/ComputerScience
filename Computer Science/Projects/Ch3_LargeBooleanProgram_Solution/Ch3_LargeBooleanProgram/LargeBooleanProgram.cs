@@ -13,9 +13,9 @@ namespace Ch3_LargeBooleanProgram
             ConsoleSize(); //Adjusts the size of the console
             Header(); //Header
 
-            #region variables
+            #region Variables
             int integerOne = 100, integerTwo = 97, integerThree = 32, integerFour = 5,
-                integerFive = 61;
+                integerFive = 63;
             //Declared integers
 
             bool intOneTwo = integerOne == integerTwo,          //int1 == int2
@@ -32,17 +32,13 @@ namespace Ch3_LargeBooleanProgram
                  lessFiveOne = integerFive < integerOne;        //int5 < int1
             //Seeing if any of the declared integers are less than others
 
-            bool testIntOne = integerOne == (1 | 10 | 100),     //int1 = 1, 10, or 100
-                 testIntTwo = integerTwo == (1 | 10 | 100),     //int2 = 1, 10, or 100
-                 testIntThree = integerThree == (1 | 10 | 100), //int3 = 1, 10, or 100
-                 testIntFour = integerFour == (1 | 10 | 100),   //int4 = 1, 10, or 100
-                 testIntFive = integerFive == (1 | 10 | 100);   //int5 = 1, 10, or 100
-                                                                //Seeomg of any of the declared integers are equal to 1, 10, or 100
+            bool boolFalse = false, boolTrue = true;
+            //For if any of the later declared integers are equal to 1, 10, or 100
             #endregion
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style stuff or something
-
+            //Style Color to go with the Header and Footer
+             
             Console.WriteLine("Num1\tOpt\tNum2\t\tis\tResult"); //Titles of Collumns
             Console.WriteLine("----\t---\t----\t\t--\t------"); //Seperator
 
@@ -58,11 +54,11 @@ namespace Ch3_LargeBooleanProgram
             Console.WriteLine("{0}\t=\t{1}\t\tis\t{2}", integerFive, integerOne, 
                 intFiveOne); 
             Console.WriteLine("\n");    //Spacer
-            /*  int1 == int2
-                int2 == int3
-                int3 == int4
-                int4 == int5
-                int5 == int1   */
+            /*  integerOne   == integerTwo
+                integerTwo   == integerThree
+                integerThree == integerFour
+                integerFour  == integerFive
+                integerFive  == integerOne   */
             #endregion
 
             #region Less Than Integers Display
@@ -77,24 +73,137 @@ namespace Ch3_LargeBooleanProgram
             Console.WriteLine("{0}\t<\t{1}\t\tis\t{2}", integerFive, integerOne, 
                 lessFiveOne);
             Console.WriteLine("\n");    //Spacer
-            /*  int1 < int2
-                int2 < int3
-                int3 < int4
-                int4 < int5
-                int5 < int1   */
+            /*  is integerOne   <  integerTwo
+                is integerTwo   <  integerThree
+                is integerThree <  integerFour
+                is integerFour  <  integerFive
+                is integerFive  <  integerOne   */
             #endregion
 
             #region Equal to 1, 10, or 100
-            Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerOne, testIntOne);
-            Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerTwo, testIntTwo);
-            Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerThree, testIntThree);
-            Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFour, testIntFour);
-            Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFive, testIntFive);
-            /*  int1 = 1, 10, or 100
-                int2 = 1, 10, or 100
-                int3 = 1, 10, or 100
-                int4 = 1, 10, or 100
-                int5 = 1, 10, or 100    */
+            #region IntegerOne
+            if (integerOne == 1)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerOne, 
+                    boolTrue);
+            }   //Is IntegerOne equal to 1?
+            else if (integerOne == 10)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerOne, 
+                    boolTrue);
+            }   //Is IntegerOne equal to 10?
+            else if (integerOne == 100)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerOne, 
+                    boolTrue);
+            }   //Is IntegerOne equal to 100?
+            else
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerOne, 
+                    boolFalse);
+                //Is IntegerOne not equal to 1, 10, or 100?
+            }
+            #endregion
+
+            #region IntegerTwo
+            if (integerTwo == 1)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerTwo, 
+                    boolTrue);
+            }   //Is IntegerTwo equal to 1?
+            else if (integerTwo == 10)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerTwo, 
+                    boolTrue);
+            }   //Is IntegerTwo equal to 10?
+            else if (integerTwo == 100)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerTwo, 
+                    boolTrue);
+            }   //Is IntegerTwo equal to 100?
+            else
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerTwo, 
+                    boolFalse);
+                //Is IntegerTwo not equal to 1, 10, or 100?
+            }
+            #endregion
+
+            #region IntegerThree
+            if (integerThree == 1)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerThree, 
+                    boolTrue);
+            }   //Is IntegerThree equal to 1?
+            else if (integerThree == 10)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerThree, 
+                    boolTrue);
+            }   //Is IntegerThree equal to 10?
+            else if (integerThree == 100)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerThree, 
+                    boolTrue);
+            }   //Is IntegerThree equal to 100?
+            else
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerThree, 
+                    boolFalse); //Is IntegerThree not equal to 1, 10, or 100?
+            }
+            #endregion
+
+            #region IntegerFour
+            if (integerFour == 1)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFour, 
+                    boolTrue);
+            }   //Is IntegerFour equal to 1?
+            else if (integerFour == 10)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFour, 
+                    boolTrue);
+            }   //Is IntegerFour equal to 10?
+            else if (integerFour == 100)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFour, 
+                    boolTrue);
+            }   //Is IntegerFour equal to 100?
+            else
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFour, 
+                    boolFalse);
+                //Is IntegerFour not equal to 1, 10, or 100?
+            }
+            #endregion
+
+            #region IntegerFive
+            if (integerFive == 1)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFive, 
+                    boolTrue);
+            }   //Is IntegerFive equal to 1?
+            else if (integerFive == 10)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFive, 
+                    boolTrue);
+            }   //Is IntegerFive equal to 10?
+            else if (integerFive == 100)
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFive, 
+                    boolTrue);
+            }   //Is IntegerFive equal to 100?
+            else
+            {
+                Console.WriteLine("{0}\t=\t1, 10, or 100\tis\t{1}", integerFive, 
+                    boolFalse);
+                //Is IntegerFive not equal to 1, 10, or 100?
+            }
+            #endregion
+            /*  is integerOne   =  1, 10, or 100
+                is integerTwo   =  1, 10, or 100
+                is integerThree =  1, 10, or 100
+                is integerFour  =  1, 10, or 100
+                is integerFive  =  1, 10, or 100    */
             #endregion
 
             Footer(); //Footer
@@ -157,5 +266,6 @@ namespace Ch3_LargeBooleanProgram
             int origWidth = Console.WindowWidth, origHeight = Console.WindowHeight;
             Console.SetWindowSize(Console.WindowWidth, Console.WindowHeight*2);
         }
+
     }
 }
