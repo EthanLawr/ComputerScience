@@ -10,11 +10,70 @@ namespace Ch3_Program54a
     {
         static void Main(string[] args)
         {
-            int originalWidth = Console.WindowWidth;
-            int originalHeight = Console.WindowHeight;
-            Console.SetWindowSize(originalWidth + 25, originalHeight);
+            ConsoleSize();
+            Header();
+            
+            #region Variables
+            int vwGallons = 9;
+            //Declared Gallons
+            int vwMiles = 286;
+            //Declared Miles
+            double vwMpg = ((double)vwMiles / vwGallons);
+            //Formula to find Miles per Gallon
 
-            #region Header
+            int firebirdGallons = 40;
+            //Declared Gallons
+            int firebirdMiles = 412;
+            //Declared Miles
+            double firebirdMpg = ((double)firebirdMiles / firebirdGallons);
+            //Formula to find Miles per Gallon
+
+            int subaruGallons = 18;
+            //Declared Gallons
+            int subaruMiles = 361;
+            //Declared Miles
+            double subaruMpg = ((double)subaruMiles / subaruGallons);
+            //Formula to find Miles per Gallon
+
+            int cutlassGallons = 11;
+            //Declared Gallons
+            int cutlassMiles = 161;
+            //Declared Miles
+            double cutlassMpg = ((double)cutlassMiles / cutlassGallons);
+            //Formula to find Miles per Gallon
+            #endregion
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Style stuff or something
+
+            Console.WriteLine("Vehicle\t\t\tMiles\t\tGallons\t\tMiles per "
+                + "Gallon (Average)\n");
+            Console.WriteLine("-------\t\t\t-----\t\t-------\t\t----------"
+                + "----------------\n");
+            //Collumn titles
+
+            Console.WriteLine("1970 VW Bug\t\t{0}\t\t{1}\t\t{2:N2}", vwMiles,
+               vwGallons, vwMpg);
+            //1970 VW Bug
+
+            Console.WriteLine("1979 Firebird\t\t{0}\t\t{1}\t\t{2:N2}", firebirdMiles,
+                firebirdGallons, firebirdMpg);
+            //1979 Firebird
+
+            Console.WriteLine("1990 Subaru\t\t{0}\t\t{1}\t\t{2:N2}", subaruMiles,
+                subaruGallons, subaruMpg);
+            //1990 Subaru
+
+            Console.WriteLine("1975 Cutlass\t\t{0}\t\t{1}\t\t{2:N2}", cutlassMiles,
+                cutlassGallons, cutlassMpg);
+            //1975 Cutlass
+
+            Footer();
+
+            Console.ReadKey();
+        }
+        public static void Header()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
@@ -59,70 +118,17 @@ namespace Ch3_Program54a
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
-            #endregion Header
-            
-            #region Variables
-            int vwGallons = 9;
-            //Declared Gallons
-            int vwMiles = 286;
-            //Declared Miles
-            double vwMpg = ((double)vwMiles / vwGallons);
-            //Formula to find Miles per Gallon
-
-            int firebirdGallons = 40;
-            //Declared Gallons
-            int firebirdMiles = 412;
-            //Declared Miles
-            double firebirdMpg = ((double)firebirdMiles / firebirdGallons);
-            //Formula to find Miles per Gallon
-
-            int subaruGallons = 18;
-            //Declared Gallons
-            int subaruMiles = 361;
-            //Declared Miles
-            double subaruMpg = ((double)subaruMiles / subaruGallons);
-            //Formula to find Miles per Gallon
-
-            int cutlassGallons = 11;
-            //Declared Gallons
-            int cutlassMiles = 161;
-            //Declared Miles
-            double cutlassMpg = ((double)cutlassMiles / cutlassGallons);
-            //Formula to find Miles per Gallon
-            #endregion
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style stuff or something
-
-            Console.WriteLine("Vehicle\t\t\tMiles\t\tGallons\t\tMiles per "
-                + "Gallon (Average)\n");
-            Console.WriteLine("-------\t\t\t-----\t\t-------\t\t----------"
-                + "----------------\n");
-            //Collumn titles
-
-            Console.WriteLine("1970 VW Bug\t\t{0}\t\t{1}\t\t{2}", vwMiles,
-               vwGallons, vwMpg);
-            //1970 VW Bug
-
-            Console.WriteLine("1979 Firebird\t\t{0}\t\t{1}\t\t{2}", firebirdMiles,
-                firebirdGallons, firebirdMpg);
-            //1979 Firebird
-
-            Console.WriteLine("1990 Subaru\t\t{0}\t\t{1}\t\t{2}", subaruMiles,
-                subaruGallons, subaruMpg);
-            //1990 Subaru
-
-            Console.WriteLine("1975 Cutlass\t\t{0}\t\t{1}\t\t{2}", cutlassMiles,
-                cutlassGallons, cutlassMpg);
-            //1975 Cutlass
-
-            #region Footer
+        }
+        public static void Footer()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
-            #endregion Footer
-
-            Console.ReadKey();
+        }
+        public static void ConsoleSize()
+        {
+            int origWidth = Console.WindowWidth, origHeight = Console.WindowHeight;
+            Console.SetWindowSize(Console.WindowWidth + 25, Console.WindowHeight);
         }
     }
 }

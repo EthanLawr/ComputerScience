@@ -10,7 +10,32 @@ namespace Ch3_Program52a
     {
         static void Main(string[] args)
         {
-            #region Header
+            Header();
+
+            #region Variables
+
+            int length = 82;
+            //Declared Length
+            int width = 143;
+            //Declared Width
+            int perimeter = (width * 2) + (length * 2);
+            //Formula to find perimeter
+            int area = width * length;
+            //Formula to find the area
+            #endregion
+     
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Style stuff or something
+
+            Console.WriteLine("If the length is {0} units and the width of the rectangle"
+                + "is {1} units...\nthen the perimeter is {2} units and the area is {3}"
+                + " units.", length, width, perimeter, area);
+
+            Footer();
+            Console.ReadKey();
+        }
+        public static void Header()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
@@ -20,10 +45,10 @@ namespace Ch3_Program52a
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To calculate dimensions!";
+            string purpose = "\nPurpose: To calculate dimensions with length and width!";
             //Shows the purpose of the current project
-            string endheader = "\n***********************************"
-                + "*********************************************\n\n";
+            string endheader = "\n************************************************"
+                + "********************************\n\n";
             //Ends the header
             Console.WriteLine(name); //Writes my name
             Thread.Sleep(50); //Sustains my name
@@ -53,34 +78,12 @@ namespace Ch3_Program52a
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
-            #endregion Header
-
-            #region Variables
-
-            int LENGTH = 82;
-            //Declared Length
-            int WIDTH = 143;
-            //Declared Width
-            int perimeter = (WIDTH * 2) + (LENGTH * 2);
-            //Formula to find perimeter
-            int area = WIDTH * LENGTH;
-            //Formula to find the area
-            #endregion
-     
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style stuff or something
-
-            Console.WriteLine($"If the length is {LENGTH} units and the"
-            + $" width of the rectangle is {WIDTH} units...\nthen the "
-            + $"perimeter is {perimeter} units and the area is {area} units.");
-
-            #region Footer
+        }
+        public static void Footer()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
-            #endregion Footer
-
-            Console.ReadKey();
         }
     }
 }
