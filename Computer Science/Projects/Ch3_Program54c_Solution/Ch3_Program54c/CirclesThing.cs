@@ -10,7 +10,31 @@ namespace Ch3_Program54c
     {
         static void Main(string[] args)
         {
-            #region Header
+            Header();
+
+            #region Variables
+            const double PIE = Math.PI;
+            //Pi defined
+            decimal radiusOfCircle = 3.713M;
+            //Radius defined
+            decimal circumferenceOfCircle = radiusOfCircle * (decimal)PIE * 2M;
+            //Circumference Formula is Pi * Radius * 2
+            decimal areaOfCircle = (decimal)PIE * (radiusOfCircle * radiusOfCircle);
+            //Area Formula is Pi * Radius Squared
+            #endregion
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Style stuff or something
+
+            Console.WriteLine("If the radius of a circle is {0}...\nThen the"
+                + " circumference is {1:N3} and the area is {2:N3}.", radiusOfCircle,
+                circumferenceOfCircle, areaOfCircle);
+
+            Footer();
+            Console.ReadKey();
+        }
+        public static void Header()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
@@ -53,33 +77,12 @@ namespace Ch3_Program54c
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
-            #endregion Header
-
-            #region Variables
-            const double pie = Math.PI;
-            //Pi defined
-            decimal radiusOfCircle = 3.713M;
-            //Radius defined
-            decimal circumferenceOfCircle = radiusOfCircle * (decimal)pie * 2M;
-            //Circumference Formula is Pi * Radius * 2
-            decimal areaOfCircle = (decimal)pie * (radiusOfCircle * radiusOfCircle);
-            //Area Formula is Pi * Radius Squared
-            #endregion
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style stuff or something
-
-            Console.WriteLine("If the radius of a circle is {0}...\nThen the"
-                + " circumference is {1:N3} and the area is {2:N3}.", radiusOfCircle,
-                circumferenceOfCircle, areaOfCircle);
-
-            #region Footer
+        }
+        public static void Footer()
+        {
             Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
-            #endregion Footer
-
-            Console.ReadKey();
         }
     }
 }
