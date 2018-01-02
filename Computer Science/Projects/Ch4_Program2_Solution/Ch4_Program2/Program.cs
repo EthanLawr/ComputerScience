@@ -12,37 +12,60 @@ namespace Ch4_Program2
         {
             Header();
             MagentaFont();                                           //Magenta coloring
-            Console.WriteLine("Would you like to take this survey? (yes/no)");
+            Console.WriteLine("Would you like to take this survey? (yes/no)\n");
             YellowFont();                                            //Yellow coloring
             string yesOrNo = Convert.ToString(Console.ReadLine());
-            if (yesOrNo == "no")
+            string yesOrNoFormatting = yesOrNo.ToLower();
+
+            #region No
+            if (yesOrNoFormatting == "no")  //Answer is no
             {
-                MagentaFont();                                       //Magenta coloring
-                Console.WriteLine("\n\nThats just too bad! Have a nice day!");
+                AnswerIsNo();
             }
-            else
-            if (yesOrNo == "yes")
+            #endregion
+
+            #region No Shortened
+            else if (yesOrNoFormatting == "n")  //Answer is no
             {
-                MagentaFont();                                       //Magenta coloring
-                Console.Write("What is your favorite saying?\n");
-                YellowFont();                                        //Yellow coloring
+                AnswerIsNo();
+            }
+            #endregion
+
+            #region Yes
+            else if (yesOrNoFormatting == "yes") //Answer is yes
+            {
+                QuestionTwo();                                      //Second Question of the survey
                 string favoriteSaying = Convert.ToString(Console.ReadLine());
-                Loading();
-                SecondHeader();
-                MagentaFont();                                       //Magenta coloring
-                Console.WriteLine("You entered your favorite saying as:\n");
-                YellowFont();                                        //Yellow coloring
+                Loading();                                           //Loading Process
+                EndSurveyGivenAnswer();                              //Header and responses
                 Console.Write("{0}\n\n", favoriteSaying);
-                MagentaFont();                                       //Magenta coloring
-                Console.Write("Thank you for taking this survey!");
+                EndSurvey();                                         //Ending survey message
             }
-            else Console.WriteLine("\n\nThats an invalid answer!");
-                Footer();
-                
+            #endregion
+
+            #region Yes Shortened
+            else if (yesOrNoFormatting == "y") //Answer is yes
+            {
+                QuestionTwo();                                      //Second Question of the survey
+                string favoriteSaying = Convert.ToString(Console.ReadLine());
+                Loading();                                           //Loading Process
+                EndSurveyGivenAnswer();                              //Header and responses
+                Console.Write("{0}\n\n", favoriteSaying);
+                EndSurvey();                                         //Ending survey message
+            }
+            #endregion
+
+            #region Invalid Answer
+            else
+            {
+                AnswerIsInvalid();                                  //Invalid Answer Sequence
+            }
+            #endregion
+
         }
         public static void Header()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
+            CyanFont(); //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
             var date = "\t   " + DateTime.Now;
@@ -88,14 +111,14 @@ namespace Ch4_Program2
         }
         public static void Footer()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan; //Color Set to Cyan
+            CyanFont(); //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
             Console.ReadLine();
         }
         public static void SecondHeader()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan; //Sets the color to Cyan
+            CyanFont(); //Sets the color to Cyan
             string name = "Ethan Lawrence";
             //Allows me to type my name in a shorter amount of time
             var date = "\t   " + DateTime.Now;
@@ -117,7 +140,7 @@ namespace Ch4_Program2
         }
         public static void Loading()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            CyanFont(); //Cyan Coloring
             Console.Write("\n\nLoading Results");
             Thread.Sleep(500);
             Console.Write(".");
@@ -128,6 +151,11 @@ namespace Ch4_Program2
             Thread.Sleep(500);
             Console.Clear();
         }
+        public static void CyanFont()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+        }
         public static void MagentaFont()
         {
             Console.ResetColor();
@@ -137,6 +165,38 @@ namespace Ch4_Program2
         {
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Yellow;
+        }
+        public static void AnswerIsNo()
+        {
+            MagentaFont();                                       //Magenta coloring
+            Console.WriteLine("\n\nThats just too bad! Have a nice day!");
+            Footer();
+        }
+        public static void AnswerIsInvalid()
+        {
+            CyanFont();
+            Console.WriteLine("\n\nThats an invalid answer! Restart the Program"
+                + " and answer correctly to continue!");
+            Footer();
+        }
+        public static void QuestionTwo()
+        {
+            MagentaFont();                                       //Magenta coloring
+            Console.Write("What is your favorite saying?\n");    //Question
+            YellowFont();                                        //Yellow coloring
+        }
+        public static void EndSurvey()
+        {
+            MagentaFont();                                       //Magenta coloring
+            Console.Write("Thank you for taking this survey!");
+            Footer();
+        }
+        public static void EndSurveyGivenAnswer()
+        {
+            SecondHeader();                                      //Header Reset
+            MagentaFont();                                       //Magenta coloring
+            Console.WriteLine("You entered your favorite saying as:\n");
+            YellowFont();                                        //Yellow coloring
         }
     }
 }
