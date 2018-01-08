@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clog = System.Console;
+using Colour = System.ConsoleColor;
 
 namespace Ch4_Program2.ChapterFour
 {
@@ -6,18 +7,18 @@ namespace Ch4_Program2.ChapterFour
     {
         public static void CyanFont()
         {
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Clog.ResetColor();
+            Clog.ForegroundColor = Colour.Cyan;
         }
         public static void MagentaFont()
         {
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Clog.ResetColor();
+            Clog.ForegroundColor = Colour.Magenta;
         }
         public static void YellowFont()
         {
-            Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Clog.ResetColor();
+            Clog.ForegroundColor = Colour.Yellow;
         }
     }
 }
