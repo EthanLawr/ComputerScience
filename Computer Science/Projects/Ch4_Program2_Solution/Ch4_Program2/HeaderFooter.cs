@@ -52,6 +52,7 @@ namespace Ch4_Program2.ChapterFour
             SW.Sleep(150); //"Loading" Time
             Clog.ResetColor(); //Resets the color for non header lines
         }
+
         public static void Footer()
         {
             CyanFont(); //Color Set to Cyan
@@ -59,6 +60,7 @@ namespace Ch4_Program2.ChapterFour
             Clog.ResetColor(); //Color Reset of the text
             Clog.ReadLine();
         }
+
         public static void SecondHeader()
         {
             CyanFont(); //Sets the color to Cyan

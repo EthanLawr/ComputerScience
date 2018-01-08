@@ -10,11 +10,13 @@ namespace Ch4_Program2.ChapterFour
             Clog.ResetColor();
             Clog.ForegroundColor = Colour.Cyan;
         }
+
         public static void MagentaFont()
         {
             Clog.ResetColor();
             Clog.ForegroundColor = Colour.Magenta;
         }
+
         public static void YellowFont()
         {
             Clog.ResetColor();

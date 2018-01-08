@@ -11,6 +11,7 @@ namespace Ch4_Program2.ChapterFour
             Clog.WriteLine("\n\nThats just too bad! Have a nice day!");
             HeaderFooter.Footer(); 
         }
+
         public static void AnswerIsInvalid()
         {
             CyanFont();
@@ -18,18 +19,21 @@ namespace Ch4_Program2.ChapterFour
                 + " and answer correctly to continue!");
             HeaderFooter.Footer();
         }
+
         public static void QuestionTwo()
         {
             MagentaFont();                                       //Magenta coloring
             Clog.Write("What is your favorite saying?\n");    //Question
             YellowFont();                                        //Yellow coloring
         }
+
         public static void EndSurvey()
         {
             MagentaFont();                                       //Magenta coloring
             Clog.Write("Thank you for taking this survey!");
             HeaderFooter.Footer();
         }
+
         public static void EndSurveyGivenAnswer()
         {
             HeaderFooter.SecondHeader();                                      //Header Reset
@@ -37,6 +41,7 @@ namespace Ch4_Program2.ChapterFour
             Clog.WriteLine("You entered your favorite saying as:\n");
             YellowFont();                                        //Yellow coloring
         }
+
         public static void Loading()
         {
             CyanFont(); //Cyan Coloring
