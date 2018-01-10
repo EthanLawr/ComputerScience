@@ -23,7 +23,7 @@ namespace Ch4_Program2.ChapterFour
         public static void QuestionTwo()
         {
             MagentaFont();                                       //Magenta coloring
-            Clog.Write("What is your favorite saying?\n");    //Question
+            Clog.Write("\nWhat is your favorite saying?\n\n");   //Question
             YellowFont();                                        //Yellow coloring
         }
 

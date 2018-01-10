@@ -58,7 +58,7 @@ namespace Ch4_Program2.ChapterFour
             CyanFont(); //Color Set to Cyan
             Clog.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Clog.ResetColor(); //Color Reset of the text
-            Clog.ReadLine();
+            Clog.ReadKey();
         }
 
         public static void SecondHeader()

@@ -15,8 +15,7 @@ namespace Ch4_Program2.ChapterFour
             Clog.WriteLine("Would you like to take this survey? (yes/no)\n");
             YellowFont();                                            //Yellow coloring
             string yesOrNo = Cvrt.ToString(Clog.ReadLine());
-            char[] charsToTrim = { '*', ' '};
-            string yesOrNoFormatting = (yesOrNo.Trim(charsToTrim)).ToLower();
+            string yesOrNoFormatting = (yesOrNo.Trim(' ')).ToLower();
 
 
             #region No
