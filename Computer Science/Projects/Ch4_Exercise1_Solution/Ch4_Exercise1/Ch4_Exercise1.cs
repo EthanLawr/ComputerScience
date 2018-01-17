@@ -12,25 +12,15 @@ namespace Ch4_Exercise1
         {
             HeaderFooter.Header(); //Header
             Colors.MagentaFont(); //Magenta Font
-            string firstName = AskUserForString("your first name\n"); //Whats your first name
-            string middleName = AskUserForString("your middle name\n"); //Whats your middle name
-            string lastName = AskUserForString("your last name\n"); //Whats your last name
-            HeaderFooter.Loading(); //Loading
-            Console.Clear(); //Console cleared!
-            HeaderFooter.SecondHeader(); //Second header after the reset
-            Colors.YellowFont(); //Yellow font added
-            Console.WriteLine("Your name is {0} {1} {2}.", firstName, middleName, lastName); //Bep. Your answers.
-
+            Statement("Ethan", $"{DateTime.Now}", "1"); //Void method
             Console.WriteLine("\n\n"); // Spacing!
             HeaderFooter.Footer(); //Footer 
         }
-        public static string AskUserForString(string x)
+        public static void Statement(string x, string y, string z)
         {
-            Console.WriteLine("Please enter {0}", x); /*x serves as a placehoder for whatever you want to 
-            insert from the Main(); */
-            string input = Console.ReadLine();
-            //Any variable defined inside a Method only exists in that method
-            return input;
+            Console.WriteLine("Author: {0}", x);
+            Console.WriteLine("Date: {0}", y);
+            Console.WriteLine("Day: {0} ", z);
         }
     }
 }
