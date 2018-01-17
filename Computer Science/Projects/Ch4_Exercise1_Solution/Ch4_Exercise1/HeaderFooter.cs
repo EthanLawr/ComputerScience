@@ -17,8 +17,8 @@ namespace Ch4_Exercise1
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To create a program that uses methods "
-                + "variables";
+            string purpose = "\nPurpose: To create a program that uses method "
+                + "variables (with void)";
             //Shows the purpose of the current project
             string endheader = "\n************************************************"
                 + "********************************\n\n";
@@ -72,8 +72,8 @@ namespace Ch4_Exercise1
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To create a program that uses methods "
-                + "variables";
+            string purpose = "\nPurpose: To create a program that uses method "
+                + "variables (with void)";
             //Shows the purpose of the current project
             string endheader = "\n************************************************"
                 + "********************************\n\n";
