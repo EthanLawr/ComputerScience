@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Ch4_Program4
@@ -94,7 +91,7 @@ namespace Ch4_Program4
             Thread.Sleep(500);
             Console.Write(".");
             Thread.Sleep(500);
-            Console.Write(".\n");
+            Console.Write(".\n\n");
             Thread.Sleep(500);
         }
     }

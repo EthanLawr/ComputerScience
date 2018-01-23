@@ -53,10 +53,10 @@ namespace Ch4_Exercise1
             Clog.ResetColor(); //Resets the color for non header lines
         }
 
-        public static void Footer()
+        public static void Footer(string x)
         {
             CyanFont(); //Color Set to Cyan
-            Clog.WriteLine("\n\n\nPress any key to continue..."); //Footer
+            Clog.WriteLine("\n\n\nPress {0} to continue...", x); //Footer
             Clog.ResetColor(); //Color Reset of the text
             Clog.ReadKey();
         }
