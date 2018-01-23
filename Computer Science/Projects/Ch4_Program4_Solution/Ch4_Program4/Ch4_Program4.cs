@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Ch4_Program4
@@ -24,15 +21,16 @@ namespace Ch4_Program4
                     break; 
                 } catch (FormatException) //Trying to error it eh?
                 {
-                    Thread.Sleep(500);
+                    Thread.Sleep(300);
                     Console.Clear();
                     RedFont(); //Red!
-                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Buddy."); 
+                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Buddy.");
                     //Try again buddy. Do not be a knucklehead.
                     Thread.Sleep(500); //Oh yes. You must wait to return.
                 }
             }
         }
+
         public static double AskUserForDouble(string x)
         {
             MagentaFont(); //Robots are magenta. Apparantly they like pink.
@@ -43,6 +41,7 @@ namespace Ch4_Program4
             double inputDouble = Convert.ToDouble(input);
             return inputDouble;
         }
+
         public static void AreaOfHouse(double x, double y)
         {
             MagentaFont();
@@ -56,6 +55,7 @@ namespace Ch4_Program4
             Console.WriteLine("Then the area of the house is {0:N2} feet squared."
                 , AreaCalculationResult); //Shows the area
         }
+
         public static double AreaCalculation(double x, double y)
         {
             double areaInFeet = x * y; //Simple return with multiplication

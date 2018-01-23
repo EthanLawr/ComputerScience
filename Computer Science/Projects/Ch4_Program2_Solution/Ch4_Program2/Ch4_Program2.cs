@@ -23,7 +23,7 @@ namespace Ch4_Program2.ChapterFour
             }
             #endregion
 
-            #region No Shortened
+            #region N
             else if (yesOrNoFormatting == "n")  //Answer is no
             {
                 Responses.AnswerIsNo();
@@ -46,7 +46,7 @@ namespace Ch4_Program2.ChapterFour
             }
             #endregion
 
-            #region Yes Shortened
+            #region Y
             else if (yesOrNoFormatting == "y") //Answer is yes
             {
                 Responses.QuestionTwo();                  //Second Question of the survey
@@ -70,6 +70,7 @@ namespace Ch4_Program2.ChapterFour
             #endregion
 
         }
+
         public static string SecondQuestion(string x)
         {
             MagentaFont();

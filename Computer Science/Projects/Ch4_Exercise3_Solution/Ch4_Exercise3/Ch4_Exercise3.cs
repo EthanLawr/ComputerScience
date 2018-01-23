@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ch4_Exercise3
 {
-    class Program
+    class Ch4_Exercise3
     {
         static void Main(string[] args)
         {
@@ -36,14 +36,14 @@ namespace Ch4_Exercise3
         {
             if (a > b)
             {
-                double numberCalculations = Math.Sqrt(b);
+                double numberCalculations = Math.Round(Math.Sqrt(b));
                 Console.WriteLine("If your numbers are {0} and {1} then"
-                    + " your smallest possible square root is {2:N2}", a, b, numberCalculations);
+                    + " your smallest possible square root is {2}", a, b, numberCalculations);
             } else
             {
-                double numberCalculations = Math.Sqrt(a);
+                double numberCalculations = Math.Round(Math.Sqrt(a));
                 Console.WriteLine("If your numbers are {0} and {1} then"
-                    + " your smallest possible square root is {2:N2}", a, b, numberCalculations);
+                    + " your smallest possible square root is {2}", a, b, numberCalculations);
             }
         }
     }
