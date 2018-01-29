@@ -30,5 +30,6 @@ namespace Ch4_Exercise2
             string input = Console.ReadLine();
             return input;
         }
+
     }
 }

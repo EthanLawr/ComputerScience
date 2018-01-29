@@ -36,12 +36,12 @@ namespace Ch4_Exercise3
         {
             if (a > b)
             {
-                double numberCalculations = Math.Round(Math.Sqrt(b));
+                double numberCalculations = Math.Round(Math.Sqrt(b),2);
                 Console.WriteLine("If your numbers are {0} and {1} then"
                     + " your smallest possible square root is {2}", a, b, numberCalculations);
             } else
             {
-                double numberCalculations = Math.Round(Math.Sqrt(a));
+                double numberCalculations = Math.Round(Math.Sqrt(a),2);
                 Console.WriteLine("If your numbers are {0} and {1} then"
                     + " your smallest possible square root is {2}", a, b, numberCalculations);
             }
