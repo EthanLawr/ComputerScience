@@ -35,13 +35,14 @@ namespace Ch4_Program2.ChapterFour
             {
                 Responses.QuestionTwo();                  //Second Question of the survey
                 string favoriteSaying = Convert.ToString(Console.ReadLine());
+                string favoriteSayingFormatting = favoriteSaying.Trim(charsToTrim);
                 Responses.Loading();                                  //Loading Process
                 Responses.EndSurveyGivenAnswer();
                 YellowFont();                                            //Header and responses
-                Console.WriteLine("\n*******************************************" 
-                    + "*************************************{0}\n***************"
+                Console.WriteLine("\n*******************************************"
+                    + "*************************************\t\t\t\t   {0}\n****"
                     + "*********************************************************"
-                    + "********", favoriteSaying);
+                    + "*******************", favoriteSayingFormatting);
                 Responses.EndSurvey();                                //Ending survey message
             }
             #endregion
@@ -51,13 +52,14 @@ namespace Ch4_Program2.ChapterFour
             {
                 Responses.QuestionTwo();                  //Second Question of the survey
                 string favoriteSaying = Convert.ToString(Console.ReadLine());
+                string favoriteSayingFormatting = favoriteSaying.Trim(charsToTrim);
                 Responses.Loading();                                  //Loading Process
                 Responses.EndSurveyGivenAnswer();
                 YellowFont();                                            //Header and responses
                 Console.WriteLine("\n*******************************************"
-                    + "*************************************{0}\n***************"
+                    + "*************************************\t\t\t\t   {0}\n****"
                     + "*********************************************************"
-                    + "********", favoriteSaying);
+                    + "*******************", favoriteSayingFormatting);
                 Responses.EndSurvey();                                //Ending survey message
             }
             #endregion

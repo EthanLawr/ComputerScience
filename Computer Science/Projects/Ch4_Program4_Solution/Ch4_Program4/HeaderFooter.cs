@@ -16,7 +16,7 @@ namespace Ch4_Program4
             //Shows what periods the class is from
             string teacher = "\t    Mr. Lynch";
             //Shows my teacher's last name
-            string purpose = "\nPurpose: To create a program that uses methods "
+            string purpose = "\nPurpose: To create a program that uses method "
                 + "variables without void";
             //Shows the purpose of the current project
             string endheader = "\n************************************************"

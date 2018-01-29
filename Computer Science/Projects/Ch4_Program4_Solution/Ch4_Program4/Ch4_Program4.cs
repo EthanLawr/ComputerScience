@@ -11,9 +11,13 @@ namespace Ch4_Program4
             {
                 try
                 {
+                    
                     HeaderFooter.Header(); //Header
+
+                    #region Variables
                     double lengthOfHouse = AskUserForDouble("length"); //Input the length!
                     double widthOfHouse = AskUserForDouble("width"); //Input the width!
+                    #endregion
 
                     AreaOfHouse(lengthOfHouse, widthOfHouse);
                     //Display and calculation (many methods in one line)
@@ -24,9 +28,9 @@ namespace Ch4_Program4
                     Thread.Sleep(300);
                     Console.Clear();
                     RedFont(); //Red!
-                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Buddy.");
+                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
                     //Try again buddy. Do not be a knucklehead.
-                    Thread.Sleep(500); //Oh yes. You must wait to return.
+                    Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
                 }
             }
         }
@@ -47,11 +51,15 @@ namespace Ch4_Program4
             MagentaFont();
             Console.WriteLine("If the length of the house is {0:N2} feet, \nAnd the width"
                 + " of the house is {1:N2} feet...\n", x, y); //Declares the dimensions
+
+            #region Area Calculation
             double AreaCalculationResult = AreaCalculation(x, y); //Calculation method
             MagentaFont(); //Reinstates font
             Console.WriteLine("Calculating {0:N2} times {1:N2}", x, y); //Shows the calculation
             HeaderFooter.Loading(); //"Loading"
             MagentaFont(); //Reinstates font
+            #endregion 
+
             Console.WriteLine("Then the area of the house is {0:N2} feet squared."
                 , AreaCalculationResult); //Shows the area
         }
@@ -61,7 +69,8 @@ namespace Ch4_Program4
             double areaInFeet = x * y; //Simple return with multiplication
             return areaInFeet; //Return statement!
         }
-        static void TypeLine(string x)
+
+        private static void TypeLine(string x)
         {
             for (int i = 0; i < x.Length; i++) //Loop
             {
