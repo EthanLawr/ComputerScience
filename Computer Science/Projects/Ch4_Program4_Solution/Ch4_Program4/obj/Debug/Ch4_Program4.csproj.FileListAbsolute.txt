@@ -1,6 +1,0 @@
-H:\Computer Science\Projects\Ch4_Program4_Solution\Ch4_Program4\bin\Debug\Ch4_Program4.exe.config
-H:\Computer Science\Projects\Ch4_Program4_Solution\Ch4_Program4\bin\Debug\Ch4_Program4.exe
-H:\Computer Science\Projects\Ch4_Program4_Solution\Ch4_Program4\bin\Debug\Ch4_Program4.pdb
-H:\Computer Science\Projects\Ch4_Program4_Solution\Ch4_Program4\obj\Debug\Ch4_Program4.exe
-H:\Computer Science\Projects\Ch4_Program4_Solution\Ch4_Program4\obj\Debug\Ch4_Program4.pdb
-H:\Computer Science\Projects\Ch4_Program4_Solution\Ch4_Program4\obj\Debug\Ch4_Program4.csprojResolveAssemblyReference.cache
