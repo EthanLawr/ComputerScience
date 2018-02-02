@@ -31,6 +31,7 @@ namespace Ch4_Program4
                     TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
                     //Try again buddy. Do not be a knucklehead.
                     Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
+                    
                 }
             }
         }
