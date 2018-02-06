@@ -1,13 +1,10 @@
 ﻿using System;
-using Ch4_Program8;
 namespace Ch4_Program8
 {
     public class Colors { 
 
         public static void CyanFont()
         {
-            Ch4_Program8.AskUserForDouble("hi");
-
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Cyan;
         }

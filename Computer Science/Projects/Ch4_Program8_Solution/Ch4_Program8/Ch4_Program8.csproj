@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Colors.cs" />
-    <Compile Include="HeaderFooter.cs" />
+    <Compile Include="TaskShortener.cs" />
     <Compile Include="Ch4_Program8.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
