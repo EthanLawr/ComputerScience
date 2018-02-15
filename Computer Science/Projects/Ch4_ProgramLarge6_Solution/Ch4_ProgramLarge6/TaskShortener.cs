@@ -12,39 +12,15 @@ namespace Ch4_ProgramLarge6
                 + "earnings from selling bars", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
-        private static void ConsoleWait(int x)
-        {
-            Thread.Sleep(x);
-            Console.Clear();
-        }
         #endregion
 
         #region Headers and Footers
         public static void Header()
         {
             CyanFont(); //Sets the color to Cyan
-            Console.WriteLine(name); //Writes my name
-            ConsoleWait(50);
-            Thread.Sleep(70); //"Loading" time
-            Console.WriteLine(name + date);
-            //Writes my name and the date w/ the time
-            ConsoleWait(70);
-            Thread.Sleep(90); //"Loading" time
-            Console.WriteLine(name + date + period);
-            //Writes my name, the date w/ the time, and the period
-            ConsoleWait(90);
-            Thread.Sleep(110); //"Loading" Time
-            Console.WriteLine(name + date + period + teacher);
-            //Writes my name, the date w/ the time, period, and teacher name
-            ConsoleWait(110);
-            Thread.Sleep(130);
-            Console.WriteLine(name + date + period + teacher + purpose);
-            //Writes my name, the date w/ the time, period, teacher name, and purpose
-            ConsoleWait(130);
-            Thread.Sleep(150); //"Loading" Time
-            Console.WriteLine(name + date + period + teacher + purpose + endheader);
+            TypeLineFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
-            ConsoleWait(150);
+            Thread.Sleep(150);
         }
 
         public static void Footer()
@@ -80,14 +56,16 @@ namespace Ch4_ProgramLarge6
 
         public static void ErrorCatch()
         {
-            ConsoleWait(300);
+            Thread.Sleep(300);
+            Console.Clear();
             RedFont(); //Red!
-            TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
+            TypeLineSlow("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
             //Try again buddy. Do not be a knucklehead.
             Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
         }
 
-        private static void TypeLine(string x)
+        #region Typing Individual Chars
+        public static void TypeLineSlow(string x)
         {
             for (int i = 0; i < x.Length; i++) //Loop
             {
@@ -95,6 +73,25 @@ namespace Ch4_ProgramLarge6
                 Thread.Sleep(150); // Sleep for 150 milliseconds
             }
         }
+
+        public static void TypeLine(string x)
+        {
+            for (int i = 0; i < x.Length; i++) //Loop
+            {
+                Console.Write(x[i]);
+                Thread.Sleep(60); // Sleep for 150 milliseconds
+            }
+        }
+
+        public static void TypeLineFast(string x)
+        {
+            for (int i = 0; i < x.Length; i++) //Loop
+            {
+                Console.Write(x[i]);
+                Thread.Sleep(20); // Sleep for 150 milliseconds
+            }
+        }
+        #endregion
 
         #region Ask User for....
         public static int AskUserForInt(string x)
