@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Threading;
 
-namespace Ch4_ProgramLarge6
+namespace Ch4_LargeStringProgram
 {
     class TaskShortener : Colors
     {
 
         #region Global Variables
         private static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", 
-            purpose = "\nPurpose: To create a program that calculates left over "
-            + "change", 
-            endheader = "\n*************************************"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that calculates "
+                + "earnings from selling bars", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
         #endregion

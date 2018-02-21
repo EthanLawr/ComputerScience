@@ -1,0 +1,1 @@
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\bin\Debug\Ch4_LargeStringProgram.exe.config

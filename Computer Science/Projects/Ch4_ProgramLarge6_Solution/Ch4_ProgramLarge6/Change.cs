@@ -9,15 +9,15 @@ namespace Ch4_ProgramLarge6
         
         static void Main(string[] args)
         {
-
-            for (int i = 0; i < 100; i++)                                        //Error looping
+            for (int i = 0; i < 1; i++)                                  //Error looping
             {
                 try
                 {
                     TaskShortener.Header();
 
                     //Asks the amount of change you have
-                    decimal totalChange = TaskShortener.AskUserForDecimal("the total change you have");
+                    decimal totalChange = TaskShortener.AskUserForDecimal("the total change "
+                        + "you have");
                     
                     //Limits the amount of change that can be calculated
                     #region Change Limiter
@@ -43,10 +43,10 @@ namespace Ch4_ProgramLarge6
         public static void TotalChangeCalc(decimal x)
         {
             //Declaring what each is worth
-            #region Calculations
+            #region Stated Values
             var coinTypes = new[]
             {
-                new { type = "Twenty Dollar Bills", coinWorth = 20.00m }, //20$ Bills
+                new { type = "Twenty Dollar Bills", coinWorth = 20.00m} , //20$ Bills
                 new { type = "Ten Dollar Bills",    coinWorth = 10.0m },  //10$ Bills
                 new { type = "Five Dollar Bills",   coinWorth = 5.00m },  //5$ Bills
                 new { type = "One Dollar Bills",    coinWorth = 1.00m },  //1$ Bills
@@ -62,9 +62,12 @@ namespace Ch4_ProgramLarge6
             {
                 //Reusing X over and over and getting remainders until the answer is acheived
                 int countedChange = (int)(x / coin.coinWorth); 
-                x -= countedChange * coin.coinWorth; 
+                x -= countedChange * coin.coinWorth;
+                Console.ResetColor();
                 LimeFont();
-                TaskShortener.TypeLineFast($"{countedChange} {coin.type}\n"); //Displays the stuff
+                TaskShortener.TypeLineSuperFast($"{countedChange} {coin.type}\n");
+
+                //Displays the stuff
             }
             #endregion
         }
