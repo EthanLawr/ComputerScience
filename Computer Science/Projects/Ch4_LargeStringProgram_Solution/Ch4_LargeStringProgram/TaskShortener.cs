@@ -3,11 +3,11 @@ using System.Threading;
 
 namespace Ch4_LargeStringProgram
 {
-    class TaskShortener : Colors
+    internal class TaskShortener : Colors
     {
 
         #region Global Variables
-        private static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
+        internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
             teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that calculates "
                 + "earnings from selling bars", endheader = "\n*************************************"
                 + "*******************************************\n\n";
@@ -15,7 +15,7 @@ namespace Ch4_LargeStringProgram
         #endregion
 
         #region Headers and Footers
-        public static void Header()
+        internal static void Header()
         {
             CyanFont(); //Sets the color to Cyan
             TypeLineFast(name + date + period + teacher + purpose + endheader);
@@ -23,7 +23,7 @@ namespace Ch4_LargeStringProgram
             Thread.Sleep(150);
         }
 
-        public static void Footer()
+        internal static void Footer()
         {
             CyanFont(); //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
@@ -31,7 +31,7 @@ namespace Ch4_LargeStringProgram
             Console.ReadKey();
         }
 
-        public static void SecondHeader()
+        internal static void SecondHeader()
         {
             CyanFont(); //Sets the color to Cyan
             Console.WriteLine(name + date + period + teacher + purpose + endheader);
@@ -41,7 +41,14 @@ namespace Ch4_LargeStringProgram
         }
         #endregion
 
-        public static void Loading()
+        internal static void ConsoleChangeSize()
+        {
+            int origWidth = Console.WindowWidth;
+            int origHeight = Console.WindowHeight;
+            Console.SetWindowSize((int)(origWidth * 1.5), (int)(origHeight * 1.5));
+        }
+
+        internal static void Loading()
         {
             CyanFont(); //Cyan Coloring
             Console.Write("\n\nLoading Results");
@@ -54,7 +61,7 @@ namespace Ch4_LargeStringProgram
             Thread.Sleep(500);
         }
 
-        public static void ErrorCatch()
+        internal static void ErrorCatch()
         {
             Thread.Sleep(300);
             Console.Clear();
@@ -65,7 +72,7 @@ namespace Ch4_LargeStringProgram
         }
 
         #region Typing Individual Chars
-        public static void TypeLineSlow(string x)
+        internal static void TypeLineSlow(string x)
         {
             for (int i = 0; i < x.Length; i++) //Loop
             {
@@ -74,7 +81,7 @@ namespace Ch4_LargeStringProgram
             }
         }
 
-        public static void TypeLine(string x)
+        internal static void TypeLine(string x)
         {
             for (int i = 0; i < x.Length; i++) //Loop
             {
@@ -83,7 +90,7 @@ namespace Ch4_LargeStringProgram
             }
         }
 
-        public static void TypeLineFast(string x)
+        internal static void TypeLineFast(string x)
         {
             for (int i = 0; i < x.Length; i++) //Loop
             {
@@ -92,7 +99,7 @@ namespace Ch4_LargeStringProgram
             }
         }
 
-        public static void TypeLineSuperFast(string x)
+        internal static void TypeLineSuperFast(string x)
         {
             for (int i = 0; i < x.Length; i++) //Loop
             {
@@ -103,7 +110,7 @@ namespace Ch4_LargeStringProgram
         #endregion
 
         #region Ask User for....
-        public static int AskUserForInt(string x)
+        internal static int AskUserForInt(string x)
         {
             MagentaFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter the {0}\t\t", x);
@@ -114,7 +121,7 @@ namespace Ch4_LargeStringProgram
             return inputInt;
         }
 
-        public static double AskUserForDouble(string x)
+        internal static double AskUserForDouble(string x)
         {
             MagentaFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter {0}\t\t", x);
@@ -125,7 +132,7 @@ namespace Ch4_LargeStringProgram
             return inputDouble;
         }
 
-        public static string AskUserForString(string x)
+        internal static string AskUserForString(string x)
         {
             MagentaFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter {0}\t\t", x);
@@ -135,7 +142,7 @@ namespace Ch4_LargeStringProgram
             return input;
         }
 
-        public static decimal AskUserForDecimal(string x)
+        internal static decimal AskUserForDecimal(string x)
         {
             MagentaFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter {0}\t\t", x);
