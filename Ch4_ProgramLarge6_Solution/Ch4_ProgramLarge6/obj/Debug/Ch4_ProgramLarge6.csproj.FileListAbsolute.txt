@@ -1,0 +1,6 @@
+H:\Computer Science\Projects\Ch4_ProgramLarge6_Solution\Ch4_ProgramLarge6\bin\Debug\Ch4_ProgramLarge6.exe.config
+H:\Computer Science\Projects\Ch4_ProgramLarge6_Solution\Ch4_ProgramLarge6\obj\Debug\Ch4_ProgramLarge6.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch4_ProgramLarge6_Solution\Ch4_ProgramLarge6\bin\Debug\Ch4_ProgramLarge6.exe
+H:\Computer Science\Projects\Ch4_ProgramLarge6_Solution\Ch4_ProgramLarge6\bin\Debug\Ch4_ProgramLarge6.pdb
+H:\Computer Science\Projects\Ch4_ProgramLarge6_Solution\Ch4_ProgramLarge6\obj\Debug\Ch4_ProgramLarge6.exe
+H:\Computer Science\Projects\Ch4_ProgramLarge6_Solution\Ch4_ProgramLarge6\obj\Debug\Ch4_ProgramLarge6.pdb

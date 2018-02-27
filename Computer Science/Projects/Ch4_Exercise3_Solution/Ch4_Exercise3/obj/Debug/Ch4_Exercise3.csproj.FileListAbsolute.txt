@@ -1,0 +1,6 @@
+H:\Computer Science\Projects\Ch4_Exercise3_Solution\Ch4_Exercise3\bin\Debug\Ch4_Exercise3.exe.config
+H:\Computer Science\Projects\Ch4_Exercise3_Solution\Ch4_Exercise3\bin\Debug\Ch4_Exercise3.exe
+H:\Computer Science\Projects\Ch4_Exercise3_Solution\Ch4_Exercise3\bin\Debug\Ch4_Exercise3.pdb
+H:\Computer Science\Projects\Ch4_Exercise3_Solution\Ch4_Exercise3\obj\Debug\Ch4_Exercise3.exe
+H:\Computer Science\Projects\Ch4_Exercise3_Solution\Ch4_Exercise3\obj\Debug\Ch4_Exercise3.pdb
+H:\Computer Science\Projects\Ch4_Exercise3_Solution\Ch4_Exercise3\obj\Debug\Ch4_Exercise3.csprojResolveAssemblyReference.cache

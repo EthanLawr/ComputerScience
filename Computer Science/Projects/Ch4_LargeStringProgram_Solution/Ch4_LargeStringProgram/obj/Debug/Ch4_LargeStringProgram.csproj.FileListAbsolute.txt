@@ -1,0 +1,6 @@
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\bin\Debug\Ch4_LargeStringProgram.exe.config
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\bin\Debug\Ch4_LargeStringProgram.exe
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\bin\Debug\Ch4_LargeStringProgram.pdb
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\obj\Debug\Ch4_LargeStringProgram.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\obj\Debug\Ch4_LargeStringProgram.exe
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\obj\Debug\Ch4_LargeStringProgram.pdb

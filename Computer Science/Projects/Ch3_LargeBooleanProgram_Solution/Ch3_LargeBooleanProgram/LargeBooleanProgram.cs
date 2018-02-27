@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Ch3_LargeBooleanProgram
@@ -36,11 +33,7 @@ namespace Ch3_LargeBooleanProgram
             //For if any of the later declared integers are equal to 1, 10, or 100
             #endregion
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            //Style Color to go with the Header and Footer
-             
-            Console.WriteLine("Num1\tOpt\tNum2\t\tis\tResult"); //Titles of Collumns
-            Console.WriteLine("----\t---\t----\t\t--\t------"); //Seperator
+            FormattingTheProgram(); //Styling and formatting
 
             #region Equal Integers Display
             Console.WriteLine("{0}\t=\t{1}\t\tis\t{2}", integerOne, integerTwo, 
@@ -266,6 +259,13 @@ namespace Ch3_LargeBooleanProgram
             int origWidth = Console.WindowWidth, origHeight = Console.WindowHeight;
             Console.SetWindowSize(Console.WindowWidth, Console.WindowHeight*2);
         }
+        public static void FormattingTheProgram()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Style Color to go with the Header and Footer
 
+            Console.WriteLine("Num1\tOpt\tNum2\t\tis\tResult"); //Titles of Collumns
+            Console.WriteLine("----\t---\t----\t\t--\t------"); //Seperator
+        }
     }
 }
