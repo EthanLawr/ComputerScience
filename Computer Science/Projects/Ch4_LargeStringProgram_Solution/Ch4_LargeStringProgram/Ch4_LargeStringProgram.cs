@@ -15,6 +15,7 @@ namespace Ch4_LargeStringProgram
 
                     #region String Questions
                     //Asks you to enter whatever strings you want
+                    
                     string trimMeOnce = TaskShortener.AskUserForString("String number "
                             + "1"),
                         trimMeTwice = TaskShortener.AskUserForString("String number "
@@ -54,6 +55,7 @@ namespace Ch4_LargeStringProgram
             #endregion
 
             #region Display
+            RedFont();
             Console.WriteLine(trimOnceFormatting);
             Console.WriteLine(trimTwiceFormatting);
             Console.WriteLine(trimThriceFormatting);

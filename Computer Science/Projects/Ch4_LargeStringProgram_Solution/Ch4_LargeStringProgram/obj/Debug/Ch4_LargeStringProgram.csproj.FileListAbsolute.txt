@@ -4,3 +4,4 @@ H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProg
 H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\obj\Debug\Ch4_LargeStringProgram.csprojResolveAssemblyReference.cache
 H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\obj\Debug\Ch4_LargeStringProgram.exe
 H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\obj\Debug\Ch4_LargeStringProgram.pdb
+H:\Computer Science\Projects\Ch4_LargeStringProgram_Solution\Ch4_LargeStringProgram\bin\Debug\Colorful.Console.dll
