@@ -1,6 +1,6 @@
 using System;
 
-namespace Ch4_LargeStringProgram
+namespace ---------------------------------------------------------------------------
 {
     internal class Colors
     {
