@@ -16,21 +16,18 @@ namespace Ch4_LargeStringProgram
                     #region String Questions
                     //Asks you to enter whatever strings you want
                     
-                    string trimMeOnce = TaskShortener.AskUserForString("String number "
-                            + "1"),
-                        trimMeTwice = TaskShortener.AskUserForString("String number "
-                            + "2"),
-                        trimMeThrice = TaskShortener.AskUserForString("String number "
-                            + "3"),
-                        trimMeFource = TaskShortener.AskUserForString("String number "
-                            + "4"),
-                        trimMeFice = TaskShortener.AskUserForString("String number "
-                            + "5");
+                    string trimMeOnce = " I pledge allegiance to the Flag ",
+                        trimMeTwice = "of the *weather is nice*United States of America",
+                        trimMeThrice = "and to the Republic for which it stands",
+                        trimMeFource = "one *Na*tion under* God, indiv*isible,",
+                        trimMeFice = "WITH LIBERTY AND JUSTICE FOR ALL.";
                     #endregion
 
-                    //Many refs so that theres only really one method, no outs needed!
-                    CharReplication(trimMeOnce, ref trimMeTwice, ref trimMeThrice, 
-                        ref trimMeFource, ref trimMeFice);
+                    CharTrimmer(trimMeOnce);
+                    CharRemoval(trimMeTwice);
+                    CharOperations(trimMeThrice);
+                    CharReplacement(trimMeFource);
+                    CharLowerCasing(trimMeFice);
 
                     TaskShortener.Footer();
                     break;
@@ -42,26 +39,40 @@ namespace Ch4_LargeStringProgram
             }
         }
 
-        internal static void CharReplication(string v, ref string w, ref string x,
-            ref string y, ref string z)
+        internal static void CharTrimmer(string x)
         {
-            #region Variables
             char[] charsToTrim = { '*', ' ' }; //Chars that are filtered out
-            string trimOnceFormatting = (v.Trim(charsToTrim)), //Good ol trimming!
-                trimTwiceFormatting = w.Remove(y.IndexOf('*'), y.LastIndexOf('*')), //Removal
-                trimThriceFormatting = x + ',', //Comma!
-                trimFourceFormatting = y.Replace('*', ' '), //Replacement
-                trimFiceFormatting = z.ToLower(); //Lowercase!
-            #endregion
-
-            #region Display
-            RedFont();
+            string trimOnceFormatting = x.Trim(charsToTrim); //Good ol trimming!
+            RedFont(); //Fonts!
             Console.WriteLine(trimOnceFormatting);
+        }
+
+        internal static void CharRemoval(string x)
+        {
+            string trimTwiceFormatting = x.Remove(x.IndexOf('*'), x.LastIndexOf('*') - 6); //Removal
+            RedFont(); //Fonts!
             Console.WriteLine(trimTwiceFormatting);
+        }
+
+        internal static void CharOperations(string x)
+        {
+            string trimThriceFormatting = x + ','; //Comma!
+            RedFont(); //Fonts!
             Console.WriteLine(trimThriceFormatting);
+        }
+
+        internal static void CharReplacement(string x)
+        {
+            string trimFourceFormatting = x.Replace('*', ' '); //Replacement
+            RedFont(); //Fonts!
             Console.WriteLine(trimFourceFormatting);
+        }
+
+        internal static void CharLowerCasing(string x)
+        {
+            string trimFiceFormatting = x.ToLower(); //Lowercase!*/
+            RedFont(); //Fonts!
             Console.WriteLine(trimFiceFormatting);
-            #endregion
         }
     }
 }
