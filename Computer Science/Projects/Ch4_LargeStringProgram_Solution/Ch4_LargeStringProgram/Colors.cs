@@ -1,32 +1,40 @@
 ﻿using System;
-
+using Colorful;
+using Console = System.Console;
+using CConsole = Colorful.Console;
+using System.Drawing;
 namespace Ch4_LargeStringProgram
 {
     internal class Colors
     {
         internal static void CyanFont()
         {
-            Console.ResetColor(); Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ResetColor(); CConsole.ForegroundColor = Color.LightSkyBlue;
         }
 
         internal static void RedFont()
         {
-            Console.ResetColor(); Console.ForegroundColor = ConsoleColor.Red;
+            Console.ResetColor(); CConsole.ForegroundColor = Color.Tomato;
         }
 
-        internal static void MagentaFont()
+        internal static void PinkFont()
         {
-            Console.ResetColor(); Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ResetColor(); CConsole.ForegroundColor = Color.HotPink;
         }
 
         internal static void YellowFont()
         {
-            Console.ResetColor(); Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ResetColor(); CConsole.ForegroundColor = Color.Wheat;
         }
 
-        internal static void LimeFont()
+        internal static void GreenFont()
         {
-            Console.ResetColor(); Console.ForegroundColor = ConsoleColor.Green;
+            Console.ResetColor(); CConsole.ForegroundColor = Color.SpringGreen;
+        }
+        internal static void GradientWriteSunset(string x)
+        {
+            CConsole.WriteWithGradient(x, Color.Yellow, Color.Fuchsia, 15);
+            Console.ResetColor();
         }
     }
 }

@@ -17,8 +17,7 @@ namespace Ch4_LargeStringProgram
         #region Headers and Footers
         internal static void Header()
         {
-            CyanFont(); //Sets the color to Cyan
-            TypeLineFast(name + date + period + teacher + purpose + endheader);
+            GradientWriteSunset(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150);
         }
@@ -112,7 +111,7 @@ namespace Ch4_LargeStringProgram
         #region Ask User for....
         internal static int AskUserForInt(string x)
         {
-            MagentaFont(); //Robots are magenta. Apparantly they like pink.
+            GreenFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter the {0}\t\t", x);
             YellowFont(); //Humans are yellow. Atleast in this.
             string input = Console.ReadLine(); //Reads the inputs
@@ -123,7 +122,7 @@ namespace Ch4_LargeStringProgram
 
         internal static double AskUserForDouble(string x)
         {
-            MagentaFont(); //Robots are magenta. Apparantly they like pink.
+            PinkFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter {0}\t\t", x);
             YellowFont(); //Humans are yellow. Atleast in this.
             string input = Console.ReadLine(); //Reads the inputs
@@ -134,7 +133,7 @@ namespace Ch4_LargeStringProgram
 
         internal static string AskUserForString(string x)
         {
-            MagentaFont(); //Robots are magenta. Apparantly they like pink.
+            PinkFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter {0}\t\t", x);
             YellowFont(); //Humans are yellow. Atleast in this.
             string input = Console.ReadLine(); //Reads the inputs
@@ -144,7 +143,7 @@ namespace Ch4_LargeStringProgram
 
         internal static decimal AskUserForDecimal(string x)
         {
-            MagentaFont(); //Robots are magenta. Apparantly they like pink.
+            PinkFont(); //Robots are magenta. Apparantly they like pink.
             Console.Write("Please enter {0}\t\t", x);
             YellowFont(); //Humans are yellow. Atleast in this.
             string input = Console.ReadLine(); //Reads the inputs
