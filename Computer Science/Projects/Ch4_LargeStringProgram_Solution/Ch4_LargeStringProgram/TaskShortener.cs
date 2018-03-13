@@ -13,8 +13,8 @@ namespace Ch4_LargeStringProgram
     {
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that calculates "
-                + "earnings from selling bars", endheader = "\n*************************************"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that edits "
+                + "strings", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
         #endregion
