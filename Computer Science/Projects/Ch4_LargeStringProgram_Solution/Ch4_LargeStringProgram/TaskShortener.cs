@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Reflection;
+using System.IO;
+using System.Diagnostics;
 using System.Threading;
 
 namespace Ch4_LargeStringProgram
 {
     internal class TaskShortener : Colors
     {
-
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
             teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that calculates "
@@ -17,6 +22,7 @@ namespace Ch4_LargeStringProgram
         #region Headers and Footers
         internal static void Header()
         {
+            Console.Title = "Ch4_LargeStringProgram";
             GradientWriteSunset(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150);
