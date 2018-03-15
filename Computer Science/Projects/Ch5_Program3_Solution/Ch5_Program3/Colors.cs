@@ -1,6 +1,4 @@
-﻿using System;
-using Colorful;
-using Console = System.Console;
+﻿using Console = System.Console;
 using CConsole = Colorful.Console;
 using System.Drawing;
 

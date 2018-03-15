@@ -10,14 +10,15 @@ namespace Ch5_Program3
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 2; i++)                                  //Error looping
+            #region Threads
+            Thread tid1 = new Thread(new ThreadStart(TetrisSong));
+            tid1.Start(); //Runs a song while you run the program.
+            #endregion
+            for (int i = 0; i < 1; i++)                                  //Error looping
             {
                 try
                 {
-                    #region Threads
-                    Thread tid1 = new Thread(new ThreadStart(TetrisSong));
-                    tid1.Start(); //Runs a song while you run the program.
-                    #endregion
+
 
                     Header();
 
@@ -66,11 +67,13 @@ namespace Ch5_Program3
             }
             else if (x > y)
             {
-                Console.WriteLine("{0} is bigger than {1}", x, y);
+                Console.WriteLine("The first number ({0}) is bigger than the second" 
+                    +   " number ({1})", x, y);
             }
             else if (x < y)
             {
-                Console.WriteLine("{0} is bigger than {1}", x, y);
+                Console.WriteLine("The second number ({0}) is bigger than the first"
+                    +   " number ({1})", y, x);
             }
             #endregion
 
