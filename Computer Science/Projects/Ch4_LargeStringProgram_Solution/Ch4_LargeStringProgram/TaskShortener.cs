@@ -38,8 +38,8 @@ namespace Ch4_LargeStringProgram
 
         internal static void SecondHeader()
         {
-            CyanFont(); //Sets the color to Cyan
-            Console.WriteLine(name + date + period + teacher + purpose + endheader);
+            Console.Clear();
+            GradientWriteSunset(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines

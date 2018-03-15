@@ -25,9 +25,21 @@ namespace Ch4_LargeStringProgram
                     //Strings after going through a method
                     #region Strings Formatted
                     CharTrimmer(trimMeOnce);
+                    TaskShortener.Loading();
+
+                    TaskShortener.SecondHeader();
                     CharRemoval(trimMeTwice);
+                    TaskShortener.Loading();
+
+                    TaskShortener.SecondHeader();
                     CharOperations(trimMeThrice);
+                    TaskShortener.Loading();
+
+                    TaskShortener.SecondHeader();
                     CharReplacement(trimMeFource);
+                    TaskShortener.Loading();
+
+                    TaskShortener.SecondHeader();
                     CharLowerCasing(trimMeFice);
                     #endregion
 
