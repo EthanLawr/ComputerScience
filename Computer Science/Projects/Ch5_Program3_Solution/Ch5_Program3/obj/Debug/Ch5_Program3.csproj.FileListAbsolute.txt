@@ -1,0 +1,7 @@
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\bin\Debug\Ch5_Program3.exe.config
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\bin\Debug\Ch5_Program3.exe
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\bin\Debug\Ch5_Program3.pdb
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\bin\Debug\Colorful.Console.dll
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\obj\Debug\Ch5_Program3.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\obj\Debug\Ch5_Program3.exe
+H:\Computer Science\Projects\Ch5_Program3_Solution\Ch5_Program3\obj\Debug\Ch5_Program3.pdb

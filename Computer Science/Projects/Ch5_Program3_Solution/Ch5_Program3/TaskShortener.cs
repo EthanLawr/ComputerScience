@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Reflection;
-using System.IO;
-using System.Diagnostics;
 using System.Threading;
 
-namespace Ch4_LargeStringProgram
+namespace Ch5_Program3
 {
     internal class TaskShortener : Colors
     {
+        // 12 - Globals     20 - Headers    78 - Typing     116 - Asking    161 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that edits "
-                + "strings", endheader = "\n*************************************"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that tests"
+                + " conditional values", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
         #endregion
@@ -22,8 +20,9 @@ namespace Ch4_LargeStringProgram
         #region Headers and Footers
         internal static void Header()
         {
-            Console.Title = "Ch4_LargeStringProgram";
-            GradientWriteSunset(name + date + period + teacher + purpose + endheader);
+            CyanFont();
+            Console.Title = "Ch5_Program3";
+            TypeLineSuperFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150);
         }
@@ -38,8 +37,8 @@ namespace Ch4_LargeStringProgram
 
         internal static void SecondHeader()
         {
-            Console.Clear();
-            GradientWriteSunset(name + date + period + teacher + purpose + endheader);
+            CyanFont(); //Sets the color to Cyan
+            Console.WriteLine(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
             Console.ResetColor(); //Resets the color for non header lines
@@ -159,6 +158,7 @@ namespace Ch4_LargeStringProgram
         }
         #endregion
 
+        #region Songs
         internal static void TetrisSong()
         {
             Console.Beep(658, 125);
@@ -277,6 +277,186 @@ namespace Ch4_LargeStringProgram
             Console.Beep(880, 1000);
             Console.Beep(838, 2000);
         }
-
+        internal static void MarioSong()
+        {
+            Console.Beep(659, 125);
+            Console.Beep(659, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(523, 125);
+            Console.Beep(659, 125);
+            Thread.Sleep(125);
+            Console.Beep(784, 125);
+            Thread.Sleep(375);
+            Console.Beep(392, 125);
+            Thread.Sleep(375);
+            Console.Beep(523, 125);
+            Thread.Sleep(250);
+            Console.Beep(392, 125);
+            Thread.Sleep(250);
+            Console.Beep(330, 125);
+            Thread.Sleep(250);
+            Console.Beep(440, 125);
+            Thread.Sleep(125);
+            Console.Beep(494, 125);
+            Thread.Sleep(125);
+            Console.Beep(466, 125);
+            Thread.Sleep(42);
+            Console.Beep(440, 125);
+            Thread.Sleep(125);
+            Console.Beep(392, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(125);
+            Console.Beep(784, 125);
+            Thread.Sleep(125);
+            Console.Beep(880, 125);
+            Thread.Sleep(125);
+            Console.Beep(698, 125);
+            Console.Beep(784, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(125);
+            Console.Beep(523, 125);
+            Thread.Sleep(125);
+            Console.Beep(587, 125);
+            Console.Beep(494, 125);
+            Thread.Sleep(125);
+            Console.Beep(523, 125);
+            Thread.Sleep(250);
+            Console.Beep(392, 125);
+            Thread.Sleep(250);
+            Console.Beep(330, 125);
+            Thread.Sleep(250);
+            Console.Beep(440, 125);
+            Thread.Sleep(125);
+            Console.Beep(494, 125);
+            Thread.Sleep(125);
+            Console.Beep(466, 125);
+            Thread.Sleep(42);
+            Console.Beep(440, 125);
+            Thread.Sleep(125);
+            Console.Beep(392, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(125);
+            Console.Beep(784, 125);
+            Thread.Sleep(125);
+            Console.Beep(880, 125);
+            Thread.Sleep(125);
+            Console.Beep(698, 125);
+            Console.Beep(784, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(125);
+            Console.Beep(523, 125);
+            Thread.Sleep(125);
+            Console.Beep(587, 125);
+            Console.Beep(494, 125);
+            Thread.Sleep(375);
+            Console.Beep(784, 125);
+            Console.Beep(740, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(42);
+            Console.Beep(622, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(415, 125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Thread.Sleep(125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Console.Beep(587, 125);
+            Thread.Sleep(250);
+            Console.Beep(784, 125);
+            Console.Beep(740, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(42);
+            Console.Beep(622, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(698, 125);
+            Thread.Sleep(125);
+            Console.Beep(698, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(625);
+            Console.Beep(784, 125);
+            Console.Beep(740, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(42);
+            Console.Beep(622, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(415, 125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Thread.Sleep(125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Console.Beep(587, 125);
+            Thread.Sleep(250);
+            Console.Beep(622, 125);
+            Thread.Sleep(250);
+            Console.Beep(587, 125);
+            Thread.Sleep(250);
+            Console.Beep(523, 125);
+            Thread.Sleep(1125);
+            Console.Beep(784, 125);
+            Console.Beep(740, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(42);
+            Console.Beep(622, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(415, 125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Thread.Sleep(125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Console.Beep(587, 125);
+            Thread.Sleep(250);
+            Console.Beep(784, 125);
+            Console.Beep(740, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(42);
+            Console.Beep(622, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(698, 125);
+            Thread.Sleep(125);
+            Console.Beep(698, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(625);
+            Console.Beep(784, 125);
+            Console.Beep(740, 125);
+            Console.Beep(698, 125);
+            Thread.Sleep(42);
+            Console.Beep(622, 125);
+            Thread.Sleep(125);
+            Console.Beep(659, 125);
+            Thread.Sleep(167);
+            Console.Beep(415, 125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Thread.Sleep(125);
+            Console.Beep(440, 125);
+            Console.Beep(523, 125);
+            Console.Beep(587, 125);
+            Thread.Sleep(250);
+            Console.Beep(622, 125);
+            Thread.Sleep(250);
+            Console.Beep(587, 125);
+            Thread.Sleep(250);
+            Console.Beep(523, 125);
+        }
+        #endregion
     }
 }
