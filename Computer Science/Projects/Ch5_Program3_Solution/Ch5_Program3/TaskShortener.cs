@@ -6,13 +6,13 @@ using System.Threading;
 
 namespace Ch5_Program3
 {
-    internal class TaskShortener : Colors
+    class TaskShortener : Colors
     {
         // 12 - Globals     20 - Headers    78 - Typing     116 - Asking    161 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To create a program that tests"
-                + " conditional values", endheader = "\n*************************************"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To display average grades"
+                + "", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
         #endregion

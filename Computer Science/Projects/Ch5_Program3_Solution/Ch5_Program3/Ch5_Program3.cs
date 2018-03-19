@@ -23,11 +23,14 @@ namespace Ch5_Program3
                     Header();
 
                     #region Important Code
-                    double equality = AskUserForDouble("a positive number"); //Asks for a double
-                    double equalityTwo = AskUserForDouble("a second number"); //Asks a second time
-                    SuperCheck(equality, equalityTwo); //Checks the numbers
-                    #endregion
+                    double scoreOne = AskUserForDouble("one grade");
+                    /*   scoreTwo = AskUserForDouble("a second grade"),
+                       scoreThree = AskUserForDouble("a third grade"),
+                       scoreFour = AskUserForDouble("a fourth grade"),
+                       scoreFive = AskUserForDouble("a fifth grade");*/
 
+                    SuperCheckOne(scoreOne);
+                    #endregion
                     Footer();
                     break;
                 }
@@ -39,41 +42,33 @@ namespace Ch5_Program3
                 #endregion
             }
         }
-
-        internal static void SuperCheck(double x, double y)
+        internal static void SuperCheckOne(double x)
         {
-            Loading();
             GreenFont();
 
-            #region Negative/Zero Checks
-            if (x <= 0 & y <= 0)
+            #region Checks
+            if (Enumerable.Range(90, 100).Contains((int)x))
             {
-                Console.WriteLine("Please enter a value higher than 0 for both numbers.");
+                Console.Write("You have an A!");
             }
-            else if (x <= 0)
+            else if (Enumerable.Range(80, 89).Contains((int)x))
             {
-                Console.WriteLine("Please enter a value higher than 0 for your first number.");
+                Console.Write("You have a B!");
             }
-            else if (y <= 0)
+            else if (Enumerable.Range(70, 79).Contains((int)x))
             {
-                Console.WriteLine("Please enter a value higher than 0 for your second number.");
+                Console.Write("You have a C!");
             }
-            #endregion
-
-            #region Greater than, less than, or equal check
-            else if (x == y)
+            else if (Enumerable.Range(60, 69).Contains((int)x))
             {
-                Console.WriteLine("Please enter two different values. Knucklehead.");
+                Console.Write("You have a D!");
             }
-            else if (x > y)
+            else if (Enumerable.Range(0, 59).Contains((int)x))
             {
-                Console.WriteLine("The first number ({0}) is bigger than the second" 
-                    +   " number ({1})", x, y);
-            }
-            else if (x < y)
+                Console.Write("You have an F!");
+            } else
             {
-                Console.WriteLine("The second number ({0}) is bigger than the first"
-                    +   " number ({1})", y, x);
+                Console.Write("Please enter a valid score!");
             }
             #endregion
 
