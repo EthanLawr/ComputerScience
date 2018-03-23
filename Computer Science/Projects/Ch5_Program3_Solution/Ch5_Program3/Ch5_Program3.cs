@@ -11,7 +11,7 @@ namespace Ch5_Program3
         static void Main(string[] args)
         {
             #region Threads
-            Thread tid1 = new Thread(new ThreadStart(TetrisSong));
+            Thread tid1 = new Thread(new ThreadStart(MarioSong));
             tid1.Start(); //Runs a song while you run the program.
             #endregion
             for (int i = 0; i < 1; i++)                                  //Error looping
@@ -31,9 +31,12 @@ namespace Ch5_Program3
 
                     double averageGrade = Calculations(scoreOne, scoreTwo, scoreThree, 
                         scoreFour, scoreFive);
+                    double roundedAverage = Rounding(averageGrade);
 
                     SuperCheckTwo(averageGrade);
-                    Console.Write(" Your average grade is also {0:N2}.", averageGrade);
+
+                    Console.Write(" Your average grade is also {0:N2}.\nYour rounded score"
+                        + " is: {1}", averageGrade, roundedAverage);
                     #endregion
 
                     Footer();
@@ -46,6 +49,11 @@ namespace Ch5_Program3
                 }
                 #endregion
             }
+        }
+        internal static double Rounding(double x)
+        {
+            double roundedNumber = Math.Round(x);
+            return roundedNumber;
         }
         internal static double Calculations(double v, double w, double x, double y, double z)
         {
