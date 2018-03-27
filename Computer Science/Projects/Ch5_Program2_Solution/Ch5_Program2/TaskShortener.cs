@@ -11,7 +11,7 @@ namespace Ch5_Program2
         // 12 - Globals     20 - Headers    78 - Typing     116 - Asking    161 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To display average grades"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To display a month by numbering"
                 + "", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;

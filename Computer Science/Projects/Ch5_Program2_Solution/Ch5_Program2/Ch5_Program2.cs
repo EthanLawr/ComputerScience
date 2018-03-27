@@ -19,7 +19,6 @@ namespace Ch5_Program2
                 try
                 {
 
-
                     Header();
 
                     #region Important Code
@@ -81,7 +80,7 @@ namespace Ch5_Program2
                     Console.WriteLine("December - 31 days");
                     break;
                 default:
-                    Console.WriteLine("Please enter a valid month");
+                    Console.WriteLine("Please enter a valid month, as {0} is not valid...", x);
                     break;
             }
         }
