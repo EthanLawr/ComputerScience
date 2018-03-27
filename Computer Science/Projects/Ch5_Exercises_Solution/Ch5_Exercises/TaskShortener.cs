@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace Ch5_Program3
+namespace Ch5_Exercises
 {
     class TaskShortener : Colors
     {
         // 12 - Globals     20 - Headers    78 - Typing     116 - Asking    161 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To display average grades"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To display Chapter 5 Exercises"
                 + "", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
@@ -117,7 +117,7 @@ namespace Ch5_Program3
         internal static int AskUserForInt(string x)
         {
             GreenFont(); //Robots are magenta. Apparantly they like pink.
-            Console.Write("Please enter the {0}\t\t", x);
+            Console.Write("Please enter {0}\t\t", x);
             YellowFont(); //Humans are yellow. Atleast in this.
             string input = Console.ReadLine(); //Reads the inputs
             Console.WriteLine(); //Spacing
@@ -133,10 +133,6 @@ namespace Ch5_Program3
             string input = Console.ReadLine(); //Reads the inputs
             Console.WriteLine(); //Spacing
             double inputDouble = Convert.ToDouble(input);
-            if(inputDouble < 0 || inputDouble > 100)
-            {
-                inputDouble = AskUserForDouble("a valid number");
-            }
             return inputDouble;
         }
 
