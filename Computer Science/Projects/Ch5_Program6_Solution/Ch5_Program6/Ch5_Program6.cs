@@ -76,6 +76,7 @@ namespace Ch5_Program6
             }
 
         }
+
         internal static double rectangleCalculation(double h, double l, double w)
         {
             Console.WriteLine("Calculating {0} * {1} * {2}", h, l, w);
@@ -94,9 +95,9 @@ namespace Ch5_Program6
 
         internal static double cylinderCalculation(double h, double r)
         {
-            Console.WriteLine("Calculating (4/3)(Pi){0}^3", r);
+            Console.WriteLine("Calculating (Pi){0}^2*{1}", r, h);
             Loading();
-            double volume = (4 / 3) * Math.PI * Math.Pow(r, 3);
+            double volume = Math.PI * Math.Pow(r, 2) * h;
             return volume;
         }
     }
