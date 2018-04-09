@@ -30,5 +30,9 @@ namespace Ch5_Program10
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.SpringGreen;
         }
+        internal static void ErrorFont()
+        {
+            Console.ResetColor(); CConsole.ForegroundColor = Color.Crimson;
+        }
     }
 }

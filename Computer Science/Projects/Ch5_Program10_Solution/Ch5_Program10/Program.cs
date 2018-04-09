@@ -19,7 +19,7 @@ namespace Ch5_Program10
                 try
                 {
 
-
+                    ConsoleChangeSize();
                     Header();
 
                     #region Important Code
@@ -41,14 +41,8 @@ namespace Ch5_Program10
                         number5 = SwitchMethod(set5), number6 = SwitchMethod(set6),
                         number7 = SwitchMethod(set7), number8 = SwitchMethod(set8), 
                         number9 = SwitchMethod(set9);
-                    TestThing(number1, number2, number3, number4, number5, number6, number7, number8, number9);
-                    string phoneNumber = number1 + number2 + number3 + number4 + 
-                        number5 + number6 + number7 + number8 + number9;
-                    //Puts the numbers into one string if its a digit
-                    string result = new string(phoneNumber.Where(ch => char.IsDigit(ch)).ToArray()); 
-                    //Edits the newly made string
-                    result = result.Insert(0, "(").Insert(4, ") ").Insert(9, " - ");
-                    Console.WriteLine(result);
+                    PhoneFormat(number1, number2, number3, number4, number5, number6, 
+                        number7, number8, number9);
                     #endregion
 
                     Footer();
@@ -57,7 +51,13 @@ namespace Ch5_Program10
                 #region Catch
                 catch (FormatException) //Trying to error it eh?
                 {
-                    ErrorCatch();
+                    Thread.Sleep(300);
+                    Console.Clear();
+                    ErrorFont(); //Red!
+                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
+                    //Try again buddy. Do not be a knucklehead.
+                    Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
+                    Console.Clear();
                 }
                 #endregion
             }
@@ -141,9 +141,16 @@ namespace Ch5_Program10
 
 
         }
-        public static string TestThing(string x)
-        {
 
+        public static void PhoneFormat(string a, string b, string c, string d, string e, 
+            string f, string g, string h, string i)
+        {
+            string phoneNumber = a + b + c + d + e + f + g + h + i;
+            //Puts the numbers into one string if its a digit
+            string result = new string(phoneNumber.Where(ch => char.IsDigit(ch)).ToArray());
+            //Edits the newly made string
+            result = result.Insert(0, "(").Insert(4, ") ").Insert(9, " - ");
+            Console.WriteLine(result);
         }
     }
 }
