@@ -48,31 +48,31 @@ namespace Ch5_Program1
             GreenFont();
 
             #region Negative/Zero Checks
-            if (x <= 0 & y <= 0)
+            if (x <= 0 & y <= 0) //Checks if they are invalid
             {
                 Console.WriteLine("Please enter a value higher than 0 for both numbers.");
             }
-            else if (x <= 0)
+            else if (x <= 0) //Checks if x is invalid
             {
                 Console.WriteLine("Please enter a value higher than 0 for your first number.");
             }
-            else if (y <= 0)
+            else if (y <= 0) //Checks if y is invalid
             {
                 Console.WriteLine("Please enter a value higher than 0 for your second number.");
             }
             #endregion
 
             #region Greater than, less than, or equal check
-            else if (x == y)
+            else if (x == y) //Checks if they are equal
             {
                 Console.WriteLine("Please enter two different values. Knucklehead.");
             }
-            else if (x > y)
+            else if (x > y) //Checks if x is greater
             {
                 Console.WriteLine("The first number ({0}) is bigger than the second"
                     + " number ({1})", x, y);
             }
-            else if (x < y)
+            else if (x < y) //Checks if y is greater
             {
                 Console.WriteLine("The second number ({0}) is bigger than the first"
                     + " number ({1})", y, x);

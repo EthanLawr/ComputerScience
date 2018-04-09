@@ -23,28 +23,31 @@ namespace Ch5_Program10
                     Header();
 
                     #region Important Code
-                    string set1 = AskUserForString("Enter 1 letter or number"), 
-                        set2 = AskUserForString("Enter 1 letter or number"), 
-                        set3 = AskUserForString("Enter 1 letter or number"), 
-                        set4 = AskUserForString("Enter 1 letter or number"), 
-                        set5 = AskUserForString("Enter 1 letter or number"), 
-                        set6 = AskUserForString("Enter 1 letter or number"), 
-                        set7 = AskUserForString("Enter 1 letter or number"),
-                        set8 = AskUserForString("Enter 1 letter or number"),
-                        set9 = AskUserForString("Enter 1 letter or number");
+                    string set1 = AskUserForString("1 letter or number"), //Asks for numbers/letters
+                        set2 = AskUserForString("1 letter or number"), 
+                        set3 = AskUserForString("1 letter or number"),
+                        set4 = AskUserForString("1 letter or number"),
+                        set5 = AskUserForString("1 letter or number"),
+                        set6 = AskUserForString("1 letter or number"),
+                        set7 = AskUserForString("1 letter or number"),
+                        set8 = AskUserForString("1 letter or number"),
+                        set9 = AskUserForString("1 letter or number");
                     //
                     //result = result.Insert(3, " - ").Insert(9, " - ");
                     //Console.WriteLine(result); 
                     Loading();
-                    string number1 = SwitchMethod(set1), number2 = SwitchMethod(set2), 
+                    string number1 = SwitchMethod(set1), number2 = SwitchMethod(set2), //Sends values to method
                         number3 = SwitchMethod(set3),number4 = SwitchMethod(set4), 
                         number5 = SwitchMethod(set5), number6 = SwitchMethod(set6),
                         number7 = SwitchMethod(set7), number8 = SwitchMethod(set8), 
                         number9 = SwitchMethod(set9);
+                    TestThing(number1, number2, number3, number4, number5, number6, number7, number8, number9);
                     string phoneNumber = number1 + number2 + number3 + number4 + 
                         number5 + number6 + number7 + number8 + number9;
-                    string result = new string(phoneNumber.Where(ch => char.IsDigit(ch)).ToArray());
-                    result = result.Insert(1, "(").Insert(4, ")").Insert(9, " - ");
+                    //Puts the numbers into one string if its a digit
+                    string result = new string(phoneNumber.Where(ch => char.IsDigit(ch)).ToArray()); 
+                    //Edits the newly made string
+                    result = result.Insert(0, "(").Insert(4, ") ").Insert(9, " - ");
                     Console.WriteLine(result);
                     #endregion
 
@@ -61,8 +64,8 @@ namespace Ch5_Program10
         }
         public static string SwitchMethod(string x)
         {
-            string letter = x.ToLower();
-            string y = "*";
+            string letter = x.ToLower(); //Faster checking
+            string y = "0";
             switch (letter)
             {
                 case "0":
@@ -130,17 +133,17 @@ namespace Ch5_Program10
                     y = letter.Replace(letter, "9");
                     break;
                 default:
-                    Console.WriteLine("knucklehead, not a letter");
-                    Console.WriteLine("an '*' will show up");
+                    y = letter.Replace(letter, "0"); //If invalid number make a 0!
                     break;
-                    //used cases, next will use to.lower
-                    //Lynch helped
 
             }
             return y;
 
 
         }
+        public static string TestThing(string x)
+        {
 
+        }
     }
 }
