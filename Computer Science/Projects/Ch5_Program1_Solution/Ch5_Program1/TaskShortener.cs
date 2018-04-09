@@ -65,16 +65,6 @@ namespace Ch5_Program1
             Thread.Sleep(500);
         }
 
-        internal static void ErrorCatch()
-        {
-            Thread.Sleep(300);
-            Console.Clear();
-            RedFont(); //Red!
-            TypeLineSlow("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
-            //Try again buddy. Do not be a knucklehead.
-            Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
-        }
-
         #region Typing Individual Chars
         internal static void TypeLineSlow(string x)
         {

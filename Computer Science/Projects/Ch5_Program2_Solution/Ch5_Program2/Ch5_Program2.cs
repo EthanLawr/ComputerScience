@@ -24,7 +24,7 @@ namespace Ch5_Program2
                     #region Important Code
                     int month = AskUserForInt("a number that corresponds to a month (1 to 12)");
 
-                    SuperCheck(month);
+                    SuperCheck(month); //Checks the month by numbers
 
                     #endregion
 
@@ -34,7 +34,13 @@ namespace Ch5_Program2
                 #region Catch
                 catch (FormatException) //Trying to error it eh?
                 {
-                    ErrorCatch();
+                    Thread.Sleep(300);
+                    Console.Clear();
+                    RedFont(); //Red!
+                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
+                    //Try again buddy. Do not be a knucklehead.
+                    Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
+                    Console.Clear();
                 }
                 #endregion
             }

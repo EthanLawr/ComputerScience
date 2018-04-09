@@ -14,7 +14,7 @@ namespace Ch5_Program3
             Thread tid1 = new Thread(new ThreadStart(MarioSong));
             tid1.Start(); //Runs a song while you run the program.
             #endregion
-            for (int i = 0; i < 1; i++)                                  //Error looping
+            for (int i = 0; i < 5; i++)                                  //Error looping
             {
                 try
                 {
@@ -30,10 +30,10 @@ namespace Ch5_Program3
                        scoreFive = AskUserForDouble("a fifth grade");
 
                     double averageGrade = Calculations(scoreOne, scoreTwo, scoreThree, 
-                        scoreFour, scoreFive);
-                    double roundedAverage = Rounding(averageGrade);
+                        scoreFour, scoreFive); //Calculate those grades
+                    double roundedAverage = Rounding(averageGrade); //Rounds the grades
 
-                    SuperCheckTwo(averageGrade);
+                    SuperCheckTwo(averageGrade); //Checks the grades
 
                     Console.Write(" Your average grade is also {0:N2}.\nYour rounded score"
                         + " is: {1}", averageGrade, roundedAverage);
@@ -45,20 +45,26 @@ namespace Ch5_Program3
                 #region Catch
                 catch (FormatException) //Trying to error it eh?
                 {
-                    ErrorCatch();
+                    Thread.Sleep(300);
+                    Console.Clear();
+                    RedFont(); //Red!
+                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
+                    //Try again buddy. Do not be a knucklehead.
+                    Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
+                    Console.Clear();
                 }
                 #endregion
             }
         }
         internal static double Rounding(double x)
         {
-            double roundedNumber = Math.Round(x);
+            double roundedNumber = Math.Round(x); //Rounded
             return roundedNumber;
         }
         internal static double Calculations(double v, double w, double x, double y, double z)
         {
-            double totalSum = v + w + x + y + z;
-            double averageGrade = totalSum / 5;
+            double totalSum = v + w + x + y + z; //Sum
+            double averageGrade = totalSum / 5; //Average
             return averageGrade;
         }
 
