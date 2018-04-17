@@ -123,9 +123,10 @@ namespace Ch5_Program3
             string input = Console.ReadLine(); //Reads the inputs
             Console.WriteLine(); //Spacing
             double inputDouble = Convert.ToDouble(input);
-            if(inputDouble < 0 || inputDouble > 100)
+            if (inputDouble > 100 || inputDouble < 0)
             {
-                inputDouble = AskUserForDouble("a valid number");
+                Console.WriteLine("{0} is not valid...", inputDouble);
+                inputDouble = AskUserForDouble(x);
             }
             return inputDouble;
         }

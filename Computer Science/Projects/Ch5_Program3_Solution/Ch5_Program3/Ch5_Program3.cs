@@ -23,7 +23,7 @@ namespace Ch5_Program3
                     Header();
 
                     #region Important Code
-                    double scoreOne = AskUserForDouble("one grade"),
+                    double scoreOne = AskUserForDouble("one grade"), //Asks for the grades
                        scoreTwo = AskUserForDouble("a second grade"),
                        scoreThree = AskUserForDouble("a third grade"),
                        scoreFour = AskUserForDouble("a fourth grade"),
@@ -71,7 +71,6 @@ namespace Ch5_Program3
         internal static void SuperCheckTwo(double x)
         {
             GreenFont();
-
             #region Checks
             if (x <= 100 && x >= 89.6) //Checks for A scores
             {
@@ -89,7 +88,7 @@ namespace Ch5_Program3
             {
                 Console.Write("You have a D!");
             }
-            else if (x <= 59.5) //Checks for F scores
+            else if (x <= 59.5 && x >= 0) //Checks for F scores
             {
                 Console.Write("You have an F!");
             }
