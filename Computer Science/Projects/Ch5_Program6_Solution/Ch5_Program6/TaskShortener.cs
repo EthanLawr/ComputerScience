@@ -123,6 +123,11 @@ namespace Ch5_Program6
             string input = Console.ReadLine(); //Reads the inputs
             Console.WriteLine(); //Spacing
             double inputDouble = Convert.ToDouble(input);
+            if (inputDouble < 0)
+            {
+                Console.WriteLine("{0} is not valid...", inputDouble);
+                inputDouble = AskUserForDouble(x);
+            }
             return inputDouble;
         }
 
