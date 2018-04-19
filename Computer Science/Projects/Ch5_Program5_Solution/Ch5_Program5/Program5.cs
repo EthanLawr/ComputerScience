@@ -9,6 +9,7 @@ namespace Ch5_Program5
     {
         static void Main(string[] args)
         {
+            ConsoleChangeSize();
             #region Threads
             Thread tid1 = new Thread(new ThreadStart(TetrisSong));
             tid1.Start(); //Runs a song while you run the program.
@@ -84,9 +85,11 @@ namespace Ch5_Program5
         internal static void Formatter(string x, double y, int z)
         {
             if (x == "knucklehead") { }
-            int ChargeInt = Convert.ToInt16(x);
-            Console.WriteLine("With {0} purchases, at the price of {1:C2}, you will be charged {2:C2}",
-                z, y, (double)ChargeInt);
+            double ChargeInt = Convert.ToDouble(x);
+            double total = ChargeInt + y*z;
+            Console.WriteLine("With {0} purchases, at the price of {1:C2}, you will be charged {2:C2}, " 
+                + "making a   total cost of {3:C2}.",
+                z, y, ChargeInt, total);
         }
     }
 }

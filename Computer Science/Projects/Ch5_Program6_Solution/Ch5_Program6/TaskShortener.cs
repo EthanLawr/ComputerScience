@@ -21,7 +21,7 @@ namespace Ch5_Program6
         internal static void Header()
         {
             CyanFont();
-            Console.Title = "Ch5_Program1";
+            Console.Title = "Ch5_Program6";
             TypeLineSuperFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150);
@@ -33,6 +33,7 @@ namespace Ch5_Program6
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
             Console.ReadKey();
+            Environment.Exit(0);
         }
 
         internal static void SecondHeader()

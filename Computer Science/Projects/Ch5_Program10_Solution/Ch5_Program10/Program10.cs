@@ -11,7 +11,7 @@ namespace Ch5_Program10
         static void Main(string[] args)
         {
             #region Threads
-            Thread tid1 = new Thread(new ThreadStart(TetrisSong));
+            Thread tid1 = new Thread(new ThreadStart(MarioSong));
             tid1.Start(); //Runs a song while you run the program.
             #endregion
             for (int i = 0; i < 1; i++)                                  //Error looping
@@ -31,7 +31,8 @@ namespace Ch5_Program10
                         set6 = AskUserForString("1 letter or number"),
                         set7 = AskUserForString("1 letter or number"),
                         set8 = AskUserForString("1 letter or number"),
-                        set9 = AskUserForString("1 letter or number");
+                        set9 = AskUserForString("1 letter or number"),
+                        set10 = AskUserForString("1 letter or number");
                     //
                     //result = result.Insert(3, " - ").Insert(9, " - ");
                     //Console.WriteLine(result); 
@@ -40,13 +41,12 @@ namespace Ch5_Program10
                         number3 = SwitchMethod(set3),number4 = SwitchMethod(set4), 
                         number5 = SwitchMethod(set5), number6 = SwitchMethod(set6),
                         number7 = SwitchMethod(set7), number8 = SwitchMethod(set8), 
-                        number9 = SwitchMethod(set9);
+                        number9 = SwitchMethod(set9), number10 = SwitchMethod(set10);
                     PhoneFormat(number1, number2, number3, number4, number5, number6, 
-                        number7, number8, number9);
+                        number7, number8, number9, number10);
                     #endregion
 
                     Footer();
-                    break;
                 }
                 #region Catch
                 catch (FormatException) //Trying to error it eh?
@@ -69,73 +69,64 @@ namespace Ch5_Program10
             switch (letter)
             {
                 case "0":
-                    y = letter.Replace(letter, "0");
+                    y = letter.Replace(letter, "0"); //Returns 0
                     break;
                 case "1":
-                    y = letter.Replace(letter, "1"); ;
+                    y = letter.Replace(letter, "1"); //Returns 1
                     break;
                 case "a":
                 case "b":
                 case "c":
                 case "2":
-                    y = letter.Replace(letter, "2"); ;
+                    y = letter.Replace(letter, "2"); //Returns 2
                     break;
-
                 case "d":
                 case "e":
                 case "f":
                 case "3":
-                    y = letter.Replace(letter, "3");
+                    y = letter.Replace(letter, "3"); //Returns 3
                     break;
-
                 case "g":
                 case "h":
                 case "i":
                 case "4":
-                    y = letter.Replace(letter, "4");
+                    y = letter.Replace(letter, "4"); //Returns 4
                     break;
-
                 case "j":
                 case "k":
                 case "l":
                 case "5":
-                    y = letter.Replace(letter, "5");
+                    y = letter.Replace(letter, "5"); //Returns 5
                     break;
-
                 case "m":
                 case "n":
                 case "o":
                 case "6":
-                    y = letter.Replace(letter, "6");
+                    y = letter.Replace(letter, "6"); //Returns 6
                     break;
-
                 case "p":
                 case "q":
                 case "r":
                 case "s":
                 case "7":
-                    y = letter.Replace(letter, "7");
+                    y = letter.Replace(letter, "7"); //Returns 7
                     break;
-
-
                 case "t":
                 case "u":
                 case "v":
                 case "8":
-                    y = letter.Replace(letter, "8");
+                    y = letter.Replace(letter, "8"); //Returns 8
                     break;
-
                 case "w":
                 case "x":
                 case "y":
                 case "z":
                 case "9":
-                    y = letter.Replace(letter, "9");
+                    y = letter.Replace(letter, "9"); //Returns 9
                     break;
                 default:
                     y = letter.Replace(letter, "0"); //If invalid number make a 0!
                     break;
-
             }
             return y;
 
@@ -143,9 +134,9 @@ namespace Ch5_Program10
         }
 
         public static void PhoneFormat(string a, string b, string c, string d, string e, 
-            string f, string g, string h, string i)
+            string f, string g, string h, string i, string j)
         {
-            string phoneNumber = a + b + c + d + e + f + g + h + i;
+            string phoneNumber = a + b + c + d + e + f + g + h + i + j;
             //Puts the numbers into one string if its a digit
             string result = new string(phoneNumber.Where(ch => char.IsDigit(ch)).ToArray());
             //Edits the newly made string
