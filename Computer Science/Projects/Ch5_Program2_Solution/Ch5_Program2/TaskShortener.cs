@@ -21,7 +21,7 @@ namespace Ch5_Program2
         internal static void Header()
         {
             CyanFont();
-            Console.Title = "Ch5_Program3";
+            Console.Title = "Ch5_Program2";
             TypeLineSuperFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150);
@@ -33,6 +33,7 @@ namespace Ch5_Program2
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
             Console.ReadKey();
+            Environment.Exit(0);
         }
 
         internal static void SecondHeader()
@@ -112,6 +113,11 @@ namespace Ch5_Program2
             string input = Console.ReadLine(); //Reads the inputs
             Console.WriteLine(); //Spacing
             int inputInt = Convert.ToInt32(input);
+            if (inputInt < 0 || inputInt > 12)
+            {
+                Console.WriteLine("{0} is not valid...", inputInt);
+                inputInt = AskUserForInt(x);
+            }
             return inputInt;
         }
 

@@ -14,7 +14,7 @@ namespace Ch5_Program1
             Thread tid1 = new Thread(new ThreadStart(TetrisSong));
             tid1.Start(); //Runs a song while you run the program.
             #endregion
-            for (int i = 0; i < 2; i++)                                  //Error looping
+            for (int i = 0; i < 100; i++)                                  //Error looping
             {
                 try
                 {
