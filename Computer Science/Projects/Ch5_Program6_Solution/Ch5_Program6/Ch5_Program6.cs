@@ -30,13 +30,9 @@ namespace Ch5_Program6
                     
                     double volume = shapeCheck(shapeChosen); //Gets the shape and calculates its volume
                     if (volume <= 0) //Did you pick no shape? Or did you enter an invalid number
-                    {
                         Console.WriteLine("Try again. Enter something valid.");
-                    }
                     else
-                    {
                         Console.WriteLine("The shape is {0} inches cubed", volume);
-                    }
                     #endregion
 
                     Footer();
@@ -63,10 +59,10 @@ namespace Ch5_Program6
 
             if (shapeWanted == "rectangular prisim" || shapeWanted == "rp") //Is it a rectangular prisim?
             {
-                double height = AskUserForDouble("the height in inches.");
-                double length = AskUserForDouble("the length in inches.");
-                double width = AskUserForDouble("the width in inches.");
-                double volume = rectangleCalculation(height, length, width);
+                double height = AskUserForDouble("the height in inches."),
+                 length = AskUserForDouble("the length in inches."),
+                 width = AskUserForDouble("the width in inches."),
+                 volume = rectangleCalculation(height, length, width);
                 return volume;
             }
             else if (shapeWanted == "sphere" || shapeWanted == "s") //Is it a sphere?
@@ -77,9 +73,9 @@ namespace Ch5_Program6
             }
             else if (shapeWanted == "cylinder" || shapeWanted == "c") //Is it a cylinder?
             {
-                double height = AskUserForDouble("the height in inches.");
-                double radius = AskUserForDouble("the radius in inches.");
-                double volume = cylinderCalculation(height, radius);
+                double height = AskUserForDouble("the height in inches."),
+                 radius = AskUserForDouble("the radius in inches."),
+                 volume = cylinderCalculation(height, radius);
                 return volume;
             } else //Choose one of the options bruh
             {
