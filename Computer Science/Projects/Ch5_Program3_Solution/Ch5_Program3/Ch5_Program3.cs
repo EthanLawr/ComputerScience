@@ -10,21 +10,33 @@ namespace Ch5_Program3
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 2; i++)                                  //Error looping
+            #region Threads
+            Thread tid1 = new Thread(new ThreadStart(MarioSong));
+            tid1.Start(); //Runs a song while you run the program.
+            #endregion
+            for (int i = 0; i < 5; i++)                                  //Error looping
             {
                 try
                 {
-                    #region Threads
-                    Thread tid1 = new Thread(new ThreadStart(TetrisSong));
-                    tid1.Start(); //Runs a song while you run the program.
-                    #endregion
+
 
                     Header();
 
                     #region Important Code
-                    double equality = AskUserForDouble("a positive number"); //Asks for a double
-                    double equalityTwo = AskUserForDouble("a second number"); //Asks a second time
-                    SuperCheck(equality, equalityTwo); //Checks the numbers
+                    double scoreOne = AskUserForDouble("one grade"), //Asks for the grades
+                       scoreTwo = AskUserForDouble("a second grade"),
+                       scoreThree = AskUserForDouble("a third grade"),
+                       scoreFour = AskUserForDouble("a fourth grade"),
+                       scoreFive = AskUserForDouble("a fifth grade"),
+
+                     averageGrade = Calculations(scoreOne, scoreTwo, scoreThree, 
+                        scoreFour, scoreFive), //Calculate those grades
+                     roundedAverage = Rounding(averageGrade); //Rounds the grades
+
+                    SuperCheckTwo(averageGrade); //Checks the grades
+
+                    Console.Write(" Your average grade is also {0:N2}.\nYour rounded score"
+                        + " is: {1}", averageGrade, roundedAverage);
                     #endregion
 
                     Footer();
@@ -33,45 +45,66 @@ namespace Ch5_Program3
                 #region Catch
                 catch (FormatException) //Trying to error it eh?
                 {
-                    ErrorCatch();
+                    Thread.Sleep(300);
+                    Console.Clear();
+                    RedFont(); //Red!
+                    TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tTry again Knucklehead.");
+                    //Try again buddy. Do not be a knucklehead.
+                    Thread.Sleep(500); //Oh yes. You must wait to return you knucklehead.
+                    Console.Clear();
                 }
                 #endregion
             }
         }
-
-        internal static void SuperCheck(double x, double y)
+        internal static double Rounding(double x)
         {
-            Loading();
-            GreenFont();
+            double roundedNumber = Math.Round(x); //Rounded
+            return roundedNumber;
+        }
+        internal static double Calculations(double v, double w, double x, double y, double z)
+        {
+            double totalSum = v + w + x + y + z, //Sum
+             averageGrade = totalSum / 5; //Average
+            return averageGrade;
+        }
 
-            #region Negative/Zero Checks
-            if (x <= 0 & y <= 0)
-            {
-                Console.WriteLine("Please enter a value higher than 0 for both numbers.");
-            }
-            else if (x <= 0)
-            {
-                Console.WriteLine("Please enter a value higher than 0 for your first number.");
-            }
-            else if (y <= 0)
-            {
-                Console.WriteLine("Please enter a value higher than 0 for your second number.");
-            }
+        internal static void SuperCheckTwo(double x)
+        {
+            GreenFont();
+            #region Checks
+            if (x <= 100 && x >= 89.6) //Checks for A scores
+                Console.Write("You have an A!");
+            else if (x <= 89.5 && x >= 79.6) //Checks for B scores
+                Console.Write("You have a B!");
+            else if (x <= 79.5 && x >= 69.6) //Checks for C scores
+                Console.Write("You have a C!");
+            else if (x <= 69.5 && x >= 59.6) //Checks for D scores
+                Console.Write("You have a D!");
+            else if (x <= 59.5 && x >= 0) //Checks for F scores
+                Console.Write("You have an F!");
+            else //You did a dumb...
+                Console.Write("Please enter a valid score!");
             #endregion
 
-            #region Greater than, less than, or equal check
-            else if (x == y)
-            {
-                Console.WriteLine("Please enter two different values. Knucklehead.");
-            }
-            else if (x > y)
-            {
-                Console.WriteLine("{0} is bigger than {1}", x, y);
-            }
-            else if (x < y)
-            {
-                Console.WriteLine("{0} is bigger than {1}", x, y);
-            }
+        }
+
+        internal static void SuperCheckOne(double x)
+        {
+            GreenFont();
+
+            #region Checks
+            if (Enumerable.Range(90, 100).Contains((int)x)) //Checks for A scores
+                Console.Write("You have an A!");
+            else if (Enumerable.Range(80, 89).Contains((int)x)) //Checks for B scores
+                Console.Write("You have a B!");
+            else if (Enumerable.Range(70, 79).Contains((int)x)) //Checks for C scores
+                Console.Write("You have a C!");
+            else if (Enumerable.Range(60, 69).Contains((int)x)) //Checks for D scores
+                Console.Write("You have a D!");
+            else if (Enumerable.Range(0, 59).Contains((int)x)) //Checks for F scores
+                Console.Write("You have an F!");
+            else //You did a dumb...
+                Console.Write("Please enter a valid score!");
             #endregion
 
         }

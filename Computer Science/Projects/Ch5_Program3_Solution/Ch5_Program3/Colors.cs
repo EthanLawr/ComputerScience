@@ -1,8 +1,7 @@
-﻿using System;
-using Colorful;
-using Console = System.Console;
+﻿using Console = System.Console;
 using CConsole = Colorful.Console;
 using System.Drawing;
+//Install-Package Colorful.Console  -ProjectName Ch5_Program1
 
 namespace Ch5_Program3
 {

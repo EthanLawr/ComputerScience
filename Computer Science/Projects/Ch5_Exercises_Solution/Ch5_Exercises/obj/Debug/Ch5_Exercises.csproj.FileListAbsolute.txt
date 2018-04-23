@@ -1,0 +1,7 @@
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\bin\Debug\Ch5_Exercises.exe.config
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\bin\Debug\Ch5_Exercises.exe
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\bin\Debug\Ch5_Exercises.pdb
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\bin\Debug\Colorful.Console.dll
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\obj\Debug\Ch5_Exercises.csprojResolveAssemblyReference.cache
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\obj\Debug\Ch5_Exercises.exe
+H:\Computer Science\Projects\Ch5_Exercises_Solution\Ch5_Exercises\obj\Debug\Ch5_Exercises.pdb

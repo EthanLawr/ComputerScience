@@ -6,7 +6,6 @@ namespace Ch4_LargeStringProgram
     {
         static void Main(string[] args)
         {
-            TaskShortener.ConsoleChangeSize(); //Changes the console size... duh
             for (int i = 0; i < 1; i++)                                  //Error looping
             {
                 try
@@ -16,7 +15,7 @@ namespace Ch4_LargeStringProgram
                     //Strings for later
                     #region String Questions
                     string trimMeOnce = " I pledge allegiance to the Flag ",
-                        trimMeTwice = "of the *weather is nice*United States of America",
+                        trimMeTwice = "of*weather is nice* the United States of America",
                         trimMeThrice = "and to the Republic for which it stands",
                         trimMeFource = "one *Na*tion under* God, indiv*isible,",
                         trimMeFice = "WITH LIBERTY AND JUSTICE FOR ALL.";
