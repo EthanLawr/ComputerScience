@@ -1,0 +1,11 @@
+{
+	"discord": {
+		"token": "fuckoff",
+		"prefix": "evildeathpro.",
+		"defaultColor": "#000001"
+	},
+
+	"strings": {
+		"stan": "Provided by Stan Inc."
+	}
+}
