@@ -21,7 +21,7 @@ namespace cSharpBot
             _client.MessageReceived += MessageReceivedAsync;
             var services = ConfigureServices();
             await services.GetRequiredService<CommandHandlingService>().InitializeAsync(services);
-            await _client.LoginAsync(TokenType.Bot, "NDQwOTY1MzkyODAyNzc1MDQw.DcpZfw.Z8Ko6Sx8_noSUSQFc2LOXTQSzzo");
+            await _client.LoginAsync(TokenType.Bot, Lol fuck off cunt.);
             await _client.StartAsync();
             await Task.Delay(-1);
         }
