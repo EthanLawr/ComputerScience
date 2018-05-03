@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSharpBot", "cSharpBot\cSharpBot.csproj", "{7AEAA100-CDED-468D-A75B-7BA976E35E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AEAA100-CDED-468D-A75B-7BA976E35E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEAA100-CDED-468D-A75B-7BA976E35E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEAA100-CDED-468D-A75B-7BA976E35E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEAA100-CDED-468D-A75B-7BA976E35E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54B3E80C-0210-4EC9-95EA-C3B3879F9DCC}
+	EndGlobalSection
+EndGlobal
