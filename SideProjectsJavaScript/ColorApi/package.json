@@ -1,0 +1,16 @@
+{
+  "name": "colorAPI",
+  "version": "1.0.0",
+  "description": "basic node sample of the colourlovers API",
+  "author": "Evildeathpro",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "main": "basic.js",
+  "dependencies": {
+    "quadratic": "^1.0.3",
+    "snekfetch": "^3.3.0"
+  },
+  "repository": "Evildeathpro/ColourLoversExampleApi"
+}

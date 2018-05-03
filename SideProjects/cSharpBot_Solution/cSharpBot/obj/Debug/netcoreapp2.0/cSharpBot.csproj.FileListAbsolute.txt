@@ -1,0 +1,11 @@
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\bin\Debug\netcoreapp2.0\cSharpBot.deps.json
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\bin\Debug\netcoreapp2.0\cSharpBot.runtimeconfig.json
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\bin\Debug\netcoreapp2.0\cSharpBot.runtimeconfig.dev.json
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\bin\Debug\netcoreapp2.0\cSharpBot.dll
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\obj\Debug\netcoreapp2.0\cSharpBot.csprojResolveAssemblyReference.cache
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\obj\Debug\netcoreapp2.0\cSharpBot.csproj.CoreCompileInputs.cache
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\obj\Debug\netcoreapp2.0\cSharpBot.AssemblyInfoInputs.cache
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\obj\Debug\netcoreapp2.0\cSharpBot.AssemblyInfo.cs
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\bin\Debug\netcoreapp2.0\cSharpBot.pdb
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\obj\Debug\netcoreapp2.0\cSharpBot.dll
+C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\cSharpBot_Solution\cSharpBot\obj\Debug\netcoreapp2.0\cSharpBot.pdb
