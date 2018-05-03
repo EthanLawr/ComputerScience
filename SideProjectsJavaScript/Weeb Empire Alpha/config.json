@@ -1,0 +1,15 @@
+{
+	"discord": {
+		"token": "bot 1 bro",
+		"token2": "bot 2 bro",
+		"prefix": "!-",
+		"defaultColor": "#000001"
+	},
+"tiers": {
+	"one": "359852759991844864"
+
+},
+	"strings": {
+		"stan": "Test"
+	}
+}
