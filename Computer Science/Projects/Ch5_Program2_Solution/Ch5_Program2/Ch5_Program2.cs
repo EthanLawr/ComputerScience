@@ -47,10 +47,10 @@ namespace Ch5_Program2
         }
         internal static void SuperCheck(int x)
         {
-            switch (x)
+            switch (x) //Checks for all 12 months using switch case
             {
                 case 1:
-                    Console.WriteLine("January - 31 days");
+                    Console.WriteLine("January - 31 days"); 
                     break;
                 case 2:
                     Console.WriteLine("February - 28 days");
