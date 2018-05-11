@@ -25,8 +25,7 @@ namespace Ch5_Program5
                     double Purchased = AskUserForDouble("the cost");
                     int Amount = AskUserForInt("how many purchases you made");
                     string Charge = Calculation(Purchased, Amount);
-                    //string ChargeTranslation = Translator(Charge);
-                    Formatter(Charge, Purchased, Amount);
+                    Formatter(Charge, Purchased, Amount); //Display + format
                     #endregion
                     Footer();
                     break;
@@ -48,48 +47,47 @@ namespace Ch5_Program5
         }
         public static string Calculation(double x, int y)
         {
-            if (x >= 0 & x <= 250)
+            if (x >= 0 & x <= 250) // If it costs under 250
             {
                 double Charge = 5 * y;
                 string ChargeString = Convert.ToString(Charge);
                 return ChargeString;
             }
-            else if(x >= 250.1 & x <= 500)
+            else if(x >= 250.1 & x <= 500) // If it costs under 500
             {
                 double Charge = 8 * y;
                 string ChargeString = Convert.ToString(Charge);
                 return ChargeString;
             }
-            else if (x >= 500.1 & x <= 1000)
+            else if (x >= 500.1 & x <= 1000) // If it costs under 1000
             {
                 double Charge = 10 * y;
                 string ChargeString = Convert.ToString(Charge);
                 return ChargeString;
             }
-            else if (x >= 1000.1 & x <= 5000)
+            else if (x >= 1000.1 & x <= 5000) // If it costs under 5000
             {
                 double Charge = 15 * y;
                 string ChargeString = Convert.ToString(Charge);
                 return ChargeString;
             }
-            else if (x >= 5000.1)
+            else if (x >= 5000.1) // If it costs over 5000
             {
                 double Charge = 20 * y;
                 string ChargeString = Convert.ToString(Charge);
                 return ChargeString;
             } else
-            {
                 return "knucklehead";
-            }
         }
         internal static void Formatter(string x, double y, int z)
         {
-            if (x == "knucklehead") { }
-            double ChargeInt = Convert.ToDouble(x);
-            double total = ChargeInt + y*z;
-            Console.WriteLine("With {0} purchases, at the price of {1:C2}, you will be charged {2:C2}, " 
-                + "making a   total cost of {3:C2}.",
-                z, y, ChargeInt, total);
+            if (x != "knucklehead")
+            {
+                double ChargeInt = Convert.ToDouble(x);
+                double total = ChargeInt + y * z; //Total cost
+                Console.WriteLine("With {0} purchases, at the price of {1:C2}, you will be charged {2:C2}, "
+                    + "making for a total cost of {3:C2}.", z, y, ChargeInt, total); //Display
+            }
         }
     }
 }
