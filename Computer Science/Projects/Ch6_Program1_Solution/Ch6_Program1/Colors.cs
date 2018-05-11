@@ -6,11 +6,14 @@ namespace Ch6_Program1
 {
     class Colors
     {
-        internal static void CyanFont()
+        internal static void BlueFont()
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.LightSkyBlue;
         }
-
+        internal static void CyanFont()
+        {
+            Console.ResetColor(); CConsole.ForegroundColor = Color.Cyan;
+        }
         internal static void RedFont()
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.Tomato;

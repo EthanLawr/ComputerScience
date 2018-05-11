@@ -20,7 +20,7 @@ namespace Ch6_Program1
         #region Headers and Footers
         internal static void Header()
         {
-            CyanFont();
+            BlueFont();
             Console.Title = "Ch6_Program1";
             TypeLineSuperFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
@@ -29,7 +29,7 @@ namespace Ch6_Program1
 
         internal static void Footer()
         {
-            CyanFont(); //Color Set to Cyan
+            BlueFont(); //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
             Console.ReadKey();
@@ -38,7 +38,7 @@ namespace Ch6_Program1
 
         internal static void SecondHeader()
         {
-            CyanFont(); //Sets the color to Cyan
+            BlueFont(); //Sets the color to Cyan
             Console.WriteLine(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
@@ -55,7 +55,7 @@ namespace Ch6_Program1
 
         internal static void Loading()
         {
-            CyanFont(); //Cyan Coloring
+            BlueFont(); //Cyan Coloring
             Console.Write("\n\nLoading Results");
             Thread.Sleep(500);
             Console.Write(".");
