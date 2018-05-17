@@ -1,17 +1,20 @@
 ﻿using Console = System.Console;
 using CConsole = Colorful.Console;
 using System.Drawing;
-//Install-Package Colorful.Console  -ProjectName Ch5_Program1
+//Install-Package Colorful.Console  -ProjectName Ch5_Program3
 
 namespace Ch6_Program3
 {
     class Colors
     {
-        internal static void CyanFont()
+        internal static void BlueFont()
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.LightSkyBlue;
         }
-
+        internal static void CyanFont()
+        {
+            Console.ResetColor(); CConsole.ForegroundColor = Color.Cyan;
+        }
         internal static void RedFont()
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.Tomato;
@@ -30,6 +33,10 @@ namespace Ch6_Program3
         internal static void GreenFont()
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.SpringGreen;
+        }
+        internal static void ErrorFont()
+        {
+            Console.ResetColor(); CConsole.ForegroundColor = Color.Crimson;
         }
     }
 }
