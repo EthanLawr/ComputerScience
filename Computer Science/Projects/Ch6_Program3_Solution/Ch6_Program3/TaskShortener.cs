@@ -6,13 +6,13 @@ using System.Threading;
 
 namespace Ch6_Program3
 {
-    class TaskShortener : Colors
+    internal class TaskShortener : Colors
     {
         // 12 - Globals     20 - Headers    78 - Typing     116 - Asking    161 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To learn to use loops"
-                + "", endheader = "\n*************************************"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To get averages"
+                + " ", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
         #endregion
@@ -20,7 +20,7 @@ namespace Ch6_Program3
         #region Headers and Footers
         internal static void Header()
         {
-            CyanFont();
+            BlueFont();
             Console.Title = "Ch6_Program3";
             TypeLineSuperFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
@@ -29,15 +29,16 @@ namespace Ch6_Program3
 
         internal static void Footer()
         {
-            CyanFont(); //Color Set to Cyan
+            BlueFont(); //Color Set to Cyan
             Console.WriteLine("\n\n\nPress any key to continue..."); //Footer
             Console.ResetColor(); //Color Reset of the text
             Console.ReadKey();
+            Environment.Exit(0);
         }
 
         internal static void SecondHeader()
         {
-            CyanFont(); //Sets the color to Cyan
+            BlueFont(); //Sets the color to Cyan
             Console.WriteLine(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150); //"Loading" Time
@@ -54,7 +55,7 @@ namespace Ch6_Program3
 
         internal static void Loading()
         {
-            CyanFont(); //Cyan Coloring
+            BlueFont(); //Cyan Coloring
             Console.Write("\n\nLoading Results");
             Thread.Sleep(500);
             Console.Write(".");
@@ -107,7 +108,7 @@ namespace Ch6_Program3
         internal static int AskUserForInt(string x)
         {
             GreenFont(); //Robots are magenta. Apparantly they like pink.
-            Console.Write("Please enter the {0}\t\t", x);
+            Console.Write("Please enter {0}\t\t", x);
             YellowFont(); //Humans are yellow. Atleast in this.
             string input = Console.ReadLine(); //Reads the inputs
             Console.WriteLine(); //Spacing
