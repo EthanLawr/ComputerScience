@@ -27,18 +27,14 @@ namespace Ch6_Program3
 
                     for (int j = 0; j == 0; f++)
                     {
-                        double h = AskUserForDouble("a grade");
+                        double h = AskUserForDouble("a grade"); // Looped grade asking
                         if (f % 5 == 0)
-                        {
-                            Console.WriteLine("Remember, type -1 to cancel");
-                        }
+                            Console.WriteLine("Remember, type -1 to cancel"); //Reminds user how to cancel
                         if (h == -1)
-                        {
                             break;
-                        }
-                        g += h;
+                        g += h; // Total score added together
                     }
-                    double averageGrade = g / f;
+                    double averageGrade = g / f; //Average
                     string check = SuperCheck(averageGrade); //Checks the grades
 
                     Console.Write("Your average grade is {0:N2}.\nYour letter grade"

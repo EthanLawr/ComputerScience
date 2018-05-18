@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Ch6_Program2
 {
-    class Program : TaskShortener
+    class Triangles : TaskShortener
     {
         static void Main()
         {
@@ -25,7 +25,7 @@ namespace Ch6_Program2
                     {
                         GreenFont();
                         Console.WriteLine("\nPlease enter -1 to end this program\n");
-                        int sideOne = AskUserForInt("one side of a triangle");
+                        int sideOne = AskUserForInt("one side of a triangle"); //Asks for a side of a triangle
                         sideOne = NegativeCheckOne(sideOne);
                         #region Cancellation 1
                         if (sideOne == -1) //Breaks the loop if you enter that number
@@ -36,7 +36,7 @@ namespace Ch6_Program2
                         }
                         
                         #endregion
-                        int sideTwo = AskUserForInt("a second side of a triangle");
+                        int sideTwo = AskUserForInt("a second side of a triangle"); //Asks for a side of a triangle
                         sideTwo = NegativeCheckTwo(sideTwo);
                         #region Cancellation 2
                         if (sideTwo == -1) //Breaks the loop if you enter that number
@@ -47,8 +47,8 @@ namespace Ch6_Program2
                         }
                         while (sideTwo < -1) sideTwo = AskUserForInt("a second side of a triangle");
                         #endregion
-                        int sideThree = AskUserForInt("a third side of a triangle");
-                        sideThree = NegativeCheckThree(sideThree);
+                        int sideThree = AskUserForInt("a third side of a triangle"); //Asks for a side of a triangle
+                        sideThree = NegativeCheckThree(sideThree); //Makes sure you can cancel at any point
                         #region Cancellation 3 
                         if (sideThree == -1) //Breaks the loop if you enter that number
                         {
@@ -58,7 +58,7 @@ namespace Ch6_Program2
                         }
                         while (sideThree < -1) sideThree = AskUserForInt("a third side of a triangle");
                         #endregion
-                        PythagoreanTest(sideOne, sideTwo, sideThree);
+                        PythagoreanTest(sideOne, sideTwo, sideThree); //Tests the triangle
                         
                     }
 

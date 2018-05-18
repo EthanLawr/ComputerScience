@@ -45,8 +45,8 @@ namespace Ch6_Program1
         internal static void RandomNumbers(Random r)
         {
             int[] something = new int[1000];
-            int max = -1;
-            int min = 1001;
+            int max = -1,
+               min = 1001;
             for (int f = 1; f < 101; f++) //Loops for 100 fast random numbers
             {
                 something[f] = r.Next(0, 1000); //Between 0 and 1000 for the random number
