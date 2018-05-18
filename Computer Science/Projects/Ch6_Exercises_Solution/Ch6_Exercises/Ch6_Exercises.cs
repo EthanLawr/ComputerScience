@@ -19,20 +19,19 @@ namespace Ch6_Exercises
 
                     Header();
                     #region Exercise One
-                    for (int j = 10; j > -1;)
+                    for (int j = 10; j > -1; j--)
                     {
                         Console.WriteLine(j);
-                        j--;
                     }
                     #endregion
                     Loading();
                     SecondHeader();
                     #region Exercise Two
-                    int h = 30;
-                    while (h > -1)
+                    int h = 0;
+                    while (h < 30)
                     {
                         Console.WriteLine(h);
-                        h -= 2;
+                        h += 2;
                     }
                     #endregion
 
