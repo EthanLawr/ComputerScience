@@ -14,12 +14,12 @@ namespace Ch6_Program6
             Thread tid1 = new Thread(new ThreadStart(MarioSong));
             tid1.Start(); //Runs a song while you run the program.
             #endregion
+            ConsoleChangeSize();
             for (int i = 0; i < 1; i++)                                  //Error looping
             {
                 try
                 {
 
-                    ConsoleChangeSize();
                     Header();
 
                     #region Important Code
