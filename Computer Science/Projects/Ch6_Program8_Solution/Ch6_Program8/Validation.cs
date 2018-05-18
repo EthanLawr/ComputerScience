@@ -21,7 +21,7 @@ namespace Ch6_Program8
                     Header();
                     #region Important Code
                     int something = AskUserForInt("a number between 10 and 50");
-                    while (something >= 50 || something <= 10)
+                    while (something >= 50 || something <= 10) //If not between 10 - 50 restart!
                     {
                         Thread.Sleep(300); Console.Clear(); ErrorFont();
                         TypeLine("\n\n\n\n\n\n\n\n\n\n\t\t\t\tInvalid response detected. Restarting");
@@ -30,7 +30,7 @@ namespace Ch6_Program8
                         Main();
                     }
                     #endregion
-                    Console.WriteLine("Good job! You entered a valid number!");
+                    Console.WriteLine("Good job! You entered a valid number!"); //Good job yew did et
 
                     Footer();
                 }
