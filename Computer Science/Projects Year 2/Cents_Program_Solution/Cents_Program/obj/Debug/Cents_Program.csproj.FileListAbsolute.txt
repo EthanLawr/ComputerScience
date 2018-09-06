@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\bin\Debug\Cents_Program.exe.config
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\bin\Debug\Cents_Program.exe
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\bin\Debug\Cents_Program.pdb
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\obj\Debug\Cents_Program.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\obj\Debug\Cents_Program.exe
+H:\Comp 2\projects\Cents_Program_Solution\Cents_Program\obj\Debug\Cents_Program.pdb
