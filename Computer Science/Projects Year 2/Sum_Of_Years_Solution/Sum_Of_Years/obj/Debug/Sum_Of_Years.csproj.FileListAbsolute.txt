@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\bin\Debug\Sum_Of_Years.exe.config
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\obj\Debug\Sum_Of_Years.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\bin\Debug\Sum_Of_Years.exe
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\bin\Debug\Sum_Of_Years.pdb
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\obj\Debug\Sum_Of_Years.exe
+H:\Comp 2\projects\Sum_Of_Years_Solution\Sum_Of_Years\obj\Debug\Sum_Of_Years.pdb
