@@ -9,7 +9,7 @@ namespace Flag_Program
     class Flags : TaskShortener
     {
         private static string spacingOne = "                           ",  spacingTwo = "\n                                               ", 
-            starTwo = "\n  *   *   *   *  *  ",  starOne = "\n*  *   *   *   *   *";
+            starTwo = "\n  *   *   *    *  * ",  starOne = "\n*  *   *   *  *  *  ";
         static void Main(string[] args)
         {
             #region Threads
@@ -23,7 +23,7 @@ namespace Flag_Program
                     Header();
                     #region Important Code
                     // Since the description is to make a flag from google, I decided to go with the american flag.
-                    for (int f = 4; f > 0; f--)
+                    for (int f = 3; f > 0; f--)
                     {
                         BlueColor(starOne);
                         RedColor(spacingOne);
@@ -33,7 +33,7 @@ namespace Flag_Program
                         {
                             BlueColor(starOne);
                             RedColor(spacingOne);
-                            for (f = 2;  f != 0; f--)
+                            for (f = 3;  f != 0; f--)
                             {
                                 WhiteColor(spacingTwo);
                                 RedColor(spacingTwo);
