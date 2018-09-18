@@ -1,0 +1,7 @@
+H:\Comp 2\projects\House_Program_Solution\House_Program\bin\Debug\House_Program.exe.config
+H:\Comp 2\projects\House_Program_Solution\House_Program\bin\Debug\House_Program.exe
+H:\Comp 2\projects\House_Program_Solution\House_Program\bin\Debug\House_Program.pdb
+H:\Comp 2\projects\House_Program_Solution\House_Program\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\House_Program_Solution\House_Program\obj\Debug\House_Program.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\House_Program_Solution\House_Program\obj\Debug\House_Program.exe
+H:\Comp 2\projects\House_Program_Solution\House_Program\obj\Debug\House_Program.pdb
