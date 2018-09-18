@@ -22,6 +22,7 @@ namespace Flag_Program
                 {
                     Header();
                     #region Important Code
+                    // Since the description is to make a flag from google, I decided to go with the american flag.
                     for (int f = 4; f > 0; f--)
                     {
                         BlueColor(starOne);

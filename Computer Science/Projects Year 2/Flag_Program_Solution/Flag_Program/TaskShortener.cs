@@ -11,7 +11,7 @@ namespace Flag_Program
         // 13 - Globals     21 - Headers    70 - Typing     108 - Asking    153 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To make flags"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To make a flag from google"
                 + " ", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
