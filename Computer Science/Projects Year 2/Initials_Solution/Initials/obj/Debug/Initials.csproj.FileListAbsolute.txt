@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Initials_Solution\Initials\bin\Debug\Initials.exe.config
+H:\Comp 2\projects\Initials_Solution\Initials\bin\Debug\Initials.exe
+H:\Comp 2\projects\Initials_Solution\Initials\bin\Debug\Initials.pdb
+H:\Comp 2\projects\Initials_Solution\Initials\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Initials_Solution\Initials\obj\Debug\Initials.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Initials_Solution\Initials\obj\Debug\Initials.exe
+H:\Comp 2\projects\Initials_Solution\Initials\obj\Debug\Initials.pdb
