@@ -35,6 +35,10 @@ namespace House_Program
         {
             Console.ResetColor(); CConsole.BackgroundColor = Color.White; CConsole.ForegroundColor = Color.SandyBrown;
         }
+        internal static void redDoor()
+        {
+            Console.ResetColor(); CConsole.BackgroundColor = Color.IndianRed; CConsole.ForegroundColor = Color.SandyBrown;
+        }
         internal static void ErrorFont()
         {
             Console.ResetColor(); CConsole.ForegroundColor = Color.Crimson;
