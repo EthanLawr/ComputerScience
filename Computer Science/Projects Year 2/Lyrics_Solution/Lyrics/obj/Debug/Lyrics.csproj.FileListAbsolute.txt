@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\bin\Debug\Lyrics.exe.config
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\bin\Debug\Lyrics.exe
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\bin\Debug\Lyrics.pdb
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\obj\Debug\Lyrics.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\obj\Debug\Lyrics.exe
+H:\Comp 2\projects\Lyrics_Solution\Lyrics\obj\Debug\Lyrics.pdb
