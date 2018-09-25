@@ -1,0 +1,7 @@
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\bin\Debug\House_Dimensions.exe.config
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\obj\Debug\House_Dimensions.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\bin\Debug\House_Dimensions.exe
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\bin\Debug\House_Dimensions.pdb
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\obj\Debug\House_Dimensions.exe
+H:\Comp 2\projects\House_Dimensions_Solution\House_Dimensions\obj\Debug\House_Dimensions.pdb
