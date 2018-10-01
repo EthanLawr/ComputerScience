@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class TempConverter {
 	// This program will convert Fahrenheit to Celsius with User Input
     // By Ethan Lawrence 10/1/2018
@@ -15,6 +16,7 @@ public class TempConverter {
         celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
         System.out.print("The equivalent in Celsius is ");
         System.out.println(celsius);
+        
 	}
 
 }
