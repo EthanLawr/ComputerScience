@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\bin\Debug\Chapter2_DogRabbitChase.exe.config
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\bin\Debug\Chapter2_DogRabbitChase.exe
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\bin\Debug\Chapter2_DogRabbitChase.pdb
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\obj\Debug\Chapter2_DogRabbitChase.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\obj\Debug\Chapter2_DogRabbitChase.exe
+H:\Comp 2\projects\Chapter2_DogRabbitChase_Solution\Chapter2_DogRabbitChase\obj\Debug\Chapter2_DogRabbitChase.pdb
