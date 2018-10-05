@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Globalization;
 
@@ -7,7 +7,7 @@ namespace Chapter2_Calender
     class Calenders : TaskShortener
     {
         private static int[,] calendar = new int[6, 7]; // Global variable that will change as time goes
-        private static DateTime date;
+        private static DateTime date; // Another global var that will change as time goes
         static void Main(string[] args)
         {
             ConsoleChangeSize();
@@ -60,13 +60,10 @@ namespace Chapter2_Calender
             for (int i = 0; i < calendar.GetLength(0); i++)
             {
                 for (int j = 0; j < calendar.GetLength(1) && currentDay - dayOfWeek + 1 <= days; j++)
+                // Spacing for day #s
                 {
-                    if (i == 0 && y > j) calendar[i, j] = 0;
-                    else
-                    {
-                        calendar[i, j] = currentDay - dayOfWeek + 1;
+                        calendar[i, j] = currentDay - dayOfWeek + 1; // Spacing for start 
                         currentDay++;
-                    }
                 }
             }
         }
