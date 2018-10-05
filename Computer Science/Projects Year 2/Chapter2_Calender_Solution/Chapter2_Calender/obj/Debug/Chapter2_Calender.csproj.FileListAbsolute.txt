@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\bin\Debug\Chapter2_Calender.exe.config
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\obj\Debug\Chapter2_Calender.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\bin\Debug\Chapter2_Calender.exe
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\bin\Debug\Chapter2_Calender.pdb
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\obj\Debug\Chapter2_Calender.exe
+H:\Comp 2\projects\Chapter2_Calender_Solution\Chapter2_Calender\obj\Debug\Chapter2_Calender.pdb
