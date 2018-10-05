@@ -6,7 +6,7 @@ namespace Chapter2_Calender
 {
     class Calenders : TaskShortener
     {
-        private static int[,] calendar = new int[6, 7];
+        private static int[,] calendar = new int[6, 7]; // Global variable that will change as time goes
         private static DateTime date;
         static void Main(string[] args)
         {
@@ -23,7 +23,6 @@ namespace Chapter2_Calender
                     #region Important Code
                     int year = AskUserForInt("the year?");
                     int month = AskUserForInt("the month? (January = 1):");
-
                     date = new DateTime(year, month, 1);//gives you a datetime object for the first day of the month
                     DrawHeader(year, month);
                     FillCalendar(year, month);
