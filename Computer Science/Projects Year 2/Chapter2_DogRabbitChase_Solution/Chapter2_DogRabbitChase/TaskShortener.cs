@@ -10,7 +10,7 @@ namespace Chapter2_DogRabbitChase
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
             teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To calculate a dog vs rabbit chase"
-                + " ", endheader = "\n*************************************"
+                + "", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
         #endregion
