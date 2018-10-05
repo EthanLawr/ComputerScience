@@ -80,12 +80,12 @@ namespace Chapter2_Calender
                 {
                     if (calendar[i, j] > 0)
                     {
-                        if (calendar[i, j] < 10) Console.Write(" " + calendar[i, j] + " ");
-                        else Console.Write(calendar[i, j] + " ");
+                        if (calendar[i, j] < 10) Console.Write(" " + calendar[i, j] + " "); // 10+ days (spacing)
+                        else Console.Write(calendar[i, j] + " "); // First 9 days (spacing)
                     }
-                    else Console.Write("   ");
+                    else Console.Write("   "); //Spacing of numbers (first week)
                 }
-                Console.WriteLine("");
+                Console.WriteLine(""); // Spacing to get to the next week's line
             }
         }
     }
