@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\bin\Debug\Chapter2_BermudaTriangle.exe.config
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\obj\Debug\Chapter2_BermudaTriangle.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\bin\Debug\Chapter2_BermudaTriangle.exe
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\bin\Debug\Chapter2_BermudaTriangle.pdb
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\obj\Debug\Chapter2_BermudaTriangle.exe
+H:\Comp 2\projects\Chapter2_BermudaTriangle_Solution\Chapter2_BermudaTriangle\obj\Debug\Chapter2_BermudaTriangle.pdb

@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\bin\Debug\Chapter2_Mystical6Primes.exe.config
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\obj\Debug\Chapter2_Mystical6Primes.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\bin\Debug\Chapter2_Mystical6Primes.exe
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\bin\Debug\Chapter2_Mystical6Primes.pdb
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\obj\Debug\Chapter2_Mystical6Primes.exe
+H:\Comp 2\projects\Chapter2_Mystical6Primes_Solution\Chapter2_Mystical6Primes\obj\Debug\Chapter2_Mystical6Primes.pdb
