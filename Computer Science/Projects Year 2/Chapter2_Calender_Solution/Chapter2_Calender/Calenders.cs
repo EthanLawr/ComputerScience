@@ -24,9 +24,9 @@ namespace Chapter2_Calender
                     int year = AskUserForInt("the year?");
                     int month = AskUserForInt("the month? (January = 1):");
                     date = new DateTime(year, month, 1);//gives you a datetime object for the first day of the month
-                    DrawHeader(year, month);
-                    FillCalendar(year, month);
-                    DrawCalendar();
+                    MakeDaysOfWeek(year, month);
+                    FillInCalendar(year, month);
+                    MakeCalendar();
             #endregion
             Footer();
                 }
@@ -44,7 +44,7 @@ namespace Chapter2_Calender
                 #endregion
             }
         }
-private static void DrawHeader(int x, int y)
+private static void MakeDaysOfWeek(int x, int y)
         {
             Console.Write("\n\n");
             //gives you the month and year at the top of the calendar
@@ -52,7 +52,7 @@ private static void DrawHeader(int x, int y)
             Console.WriteLine("Mo Tu We Th Fr Sa Su"); // Lists the days
         }
 
-        private static void FillCalendar(int x, int y)
+        private static void FillInCalendar(int x, int y)
         {
             int days = DateTime.DaysInMonth(x, y), currentDay = 1; // Gets the day and days of the month
             var dayOfWeek = (int)date.DayOfWeek;
@@ -67,7 +67,7 @@ private static void DrawHeader(int x, int y)
             }
         }
 
-        private static void DrawCalendar()
+        private static void MakeCalendar()
         {
             for (int i = 0; i < calendar.GetLength(0); i++)
             {
