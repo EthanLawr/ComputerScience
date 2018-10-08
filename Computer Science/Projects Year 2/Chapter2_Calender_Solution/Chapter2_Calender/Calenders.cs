@@ -44,8 +44,7 @@ namespace Chapter2_Calender
                 #endregion
             }
         }
-
-        private static void DrawHeader(int x, int y)
+private static void DrawHeader(int x, int y)
         {
             Console.Write("\n\n");
             //gives you the month and year at the top of the calendar
