@@ -1,0 +1,18 @@
+
+0
+0
+niglet
+Player 2
+0
+0
+0
+7
+O
+@
+O
+X
+X
+X
+O
+@
+X
