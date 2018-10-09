@@ -1,0 +1,1 @@
+Mostly made in my free time, a barebones paint program with a scaleable canvas. I'd recommend a 32x16 sized canvas, as it runs smoothly and provides a good amount of room to paint on.
