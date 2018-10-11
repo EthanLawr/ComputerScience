@@ -23,24 +23,21 @@ namespace Chapter2_DogRabbitChase
                     #region Important Code
                     // 3 jumps, 1 distance jump, 13 rabbit jumps ahead
                     // 2 jumps, 2 distance jump, 0 jump start
-                    int d = 0, f = 0; // F states the amount of jumps
+                    int d = 0;
                     double rres = 0;
-                    for (int r = 13; r >= d; r += 1) // R is 13 for the 13 jump headstart
+                    for (int r = 13; r >= d; r += 3)
                     {
-                        f++;
-                        rres += 1;
-                        if (rres >= 1.5) // Done so that the rabbit jumps more often than the dog
+                        if (r - d <= 0) // Check so that the loop doesn't miscalculate an extra few jumps
                         {
-                            rres -= 1.5;
-                            f++;
-                            d += 2;
-                        }
-
-                        if (r - d <= 0) break;
-                        Console.Write("{0}d{1}r\n", repeat(' ', d), repeat(' ', r - d)); // Repeat allows the amount of jumps to be done automatically
-
+                            Console.WriteLine("{0}DR", repeat(' ', d));
+                            break;
+                        } 
+                        Console.Write("{0}D{1}R\n", repeat(' ', d), repeat(' ', r-d)); // Automatic jump counts and stuff
+                        //Console.Write("{0}D{1}R\n", d, r);
+                        d += 4;
+                        rres += 3; // Jump count
                     }
-                    Console.Write("It took the dog {0} jumps to catch up to the rabbit", f);
+                    Console.Write("The rabbit took {0} jumps before the dog caught up", rres + 13);
                     #endregion
                     Footer();
                 }

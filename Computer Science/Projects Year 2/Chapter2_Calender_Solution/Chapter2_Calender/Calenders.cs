@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading;
 using System.Globalization;
 
@@ -7,7 +7,6 @@ namespace Chapter2_Calender
     class Calenders : TaskShortener
     {
         private static int[,] calendar = new int[6, 7]; // Global variable that will change as time goes
-        private static DateTime date; // Another global var that will change as time goes
         static void Main(string[] args)
         {
             ConsoleChangeSize();
@@ -21,14 +20,17 @@ namespace Chapter2_Calender
                 {
                     Header();
                     #region Important Code
-                    int year = AskUserForInt("the year?");
+                    int day = AskUserForInt("the first day of the month (1 - 7)?");
+                    while (day > 7)
+                    {
+                        day = AskUserForInt("the first day of the month (1 - 7)?") - 1;
+                    }
                     int month = AskUserForInt("the month? (January = 1):");
-                    date = new DateTime(year, month, 1);//gives you a datetime object for the first day of the month
-                    MakeDaysOfWeek(year, month);
-                    FillInCalendar(year, month);
-                    MakeCalendar();
-            #endregion
-            Footer();
+                    DaysAndMonth(month);
+                    CalendarData(day - 1, month);
+                    MakeTheCalendar();
+                    #endregion
+                    Footer();
                 }
                 #region Catch
                 catch (FormatException) //Trying to error it eh?
@@ -44,30 +46,32 @@ namespace Chapter2_Calender
                 #endregion
             }
         }
-private static void MakeDaysOfWeek(int x, int y)
+
+        private static void DaysAndMonth(int x)
         {
             Console.Write("\n\n");
             //gives you the month and year at the top of the calendar
-            Console.WriteLine(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(y) + " " + x); // Translates the number of the month to the month name without a switch
-            Console.WriteLine("Mo Tu We Th Fr Sa Su"); // Lists the days
+            Console.WriteLine(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(x)); // Translates the number of the month to the month name without a switch
+            Console.WriteLine("Sun\tMon\tTue\tWed\tThr\tFri\tSat"); // Lists the days
         }
-
-        private static void FillInCalendar(int x, int y)
+        private static void CalendarData(int x, int y)
         {
-            int days = DateTime.DaysInMonth(x, y), currentDay = 1; // Gets the day and days of the month
-            var dayOfWeek = (int)date.DayOfWeek;
+            int days = DateTime.DaysInMonth(2003, y), currentDay = 1; // Gets the day and days of the month
+            var dayOfWeek = x-1;
             for (int i = 0; i < calendar.GetLength(0); i++)
             {
                 for (int j = 0; j < calendar.GetLength(1) && currentDay - dayOfWeek + 1 <= days; j++)
-                // Spacing for day #s
                 {
-                        calendar[i, j] = currentDay - dayOfWeek + 1; // Spacing for start 
+                    if (i == 0 && y > j) calendar[i, j] = 0;
+                    else
+                    {
+                        calendar[i, j] = currentDay - dayOfWeek;
                         currentDay++;
+                    }
                 }
             }
         }
-
-        private static void MakeCalendar()
+        private static void MakeTheCalendar()
         {
             for (int i = 0; i < calendar.GetLength(0); i++)
             {
@@ -75,12 +79,13 @@ private static void MakeDaysOfWeek(int x, int y)
                 {
                     if (calendar[i, j] > 0)
                     {
-                        if (calendar[i, j] < 10) Console.Write(" " + calendar[i, j] + " "); // 10+ days (spacing)
-                        else Console.Write(calendar[i, j] + " "); // First 9 days (spacing)
+
+                        if (calendar[i, j] < 10) Console.Write("  " + calendar[i, j] + "\t"); // 1 - 9 days (spacing)
+                        else Console.Write(" " + calendar[i, j] + "\t"); // 10+ days (spacing)
                     }
-                    else Console.Write("   "); //Spacing of numbers (first week)
+                    else Console.Write("\t"); //Spacing of numbers (first week)
                 }
-                Console.WriteLine(""); // Spacing to get to the next week's line
+                Console.WriteLine(""); // Spacing to get to week by week enters
             }
         }
     }
