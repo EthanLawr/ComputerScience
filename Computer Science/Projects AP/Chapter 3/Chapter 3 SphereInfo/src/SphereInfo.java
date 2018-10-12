@@ -12,12 +12,12 @@ public class SphereInfo {
 		String units = userInput.nextLine();
         System.out.print("Please enter the radius of the sphere (double): ");
         double radius = userInput.nextDouble(); 
-        double diameter = radius * 2.000, circumference = radius * 3.141 * 2, 
-        		area = radius * 3.141 * radius * 4, volume = 4/3 * 3.141 * radius * radius * radius;
+        double diameter = radius * 2.000, circumference = radius * 3.141 * 2.000, 
+        		area = radius * 3.141 * radius * 4, volume = 4.000/3.000 * 3.141 * radius * radius * radius;
         System.out.println("The diameter is: " + (int)diameter + " " + units + "²" + "\n" +
         		"The circumference is: " + (int)circumference + " " + units + "\n" +
         		"The surface area is: " + (int)area + " " + units + "²" + "\n" +
-        		"The volume is: " + (int)volume + " " + units + "3" + "\n");
+        		"The volume is: " + (int)volume + " " + units + "³" + "\n");
 	}
 
 }
