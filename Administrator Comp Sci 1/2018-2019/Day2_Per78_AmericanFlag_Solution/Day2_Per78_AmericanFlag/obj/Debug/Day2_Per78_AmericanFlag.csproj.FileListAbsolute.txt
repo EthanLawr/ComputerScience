@@ -1,0 +1,6 @@
+H:\Computer Science 2018-2019\Projects\Day2_Per78_AmericanFlag_Solution\Day2_Per78_AmericanFlag\bin\Debug\Day2_Per78_AmericanFlag.exe.config
+H:\Computer Science 2018-2019\Projects\Day2_Per78_AmericanFlag_Solution\Day2_Per78_AmericanFlag\bin\Debug\Day2_Per78_AmericanFlag.exe
+H:\Computer Science 2018-2019\Projects\Day2_Per78_AmericanFlag_Solution\Day2_Per78_AmericanFlag\bin\Debug\Day2_Per78_AmericanFlag.pdb
+H:\Computer Science 2018-2019\Projects\Day2_Per78_AmericanFlag_Solution\Day2_Per78_AmericanFlag\obj\Debug\Day2_Per78_AmericanFlag.csprojResolveAssemblyReference.cache
+H:\Computer Science 2018-2019\Projects\Day2_Per78_AmericanFlag_Solution\Day2_Per78_AmericanFlag\obj\Debug\Day2_Per78_AmericanFlag.exe
+H:\Computer Science 2018-2019\Projects\Day2_Per78_AmericanFlag_Solution\Day2_Per78_AmericanFlag\obj\Debug\Day2_Per78_AmericanFlag.pdb

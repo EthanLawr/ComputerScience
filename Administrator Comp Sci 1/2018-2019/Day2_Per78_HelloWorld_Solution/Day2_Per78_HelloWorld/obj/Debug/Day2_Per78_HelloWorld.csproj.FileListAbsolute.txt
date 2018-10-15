@@ -1,0 +1,6 @@
+H:\Computer Science 2018-2019\Projects\Day2_Per78_HelloWorld_Solution\Day2_Per78_HelloWorld\bin\Debug\Day2_Per78_HelloWorld.exe.config
+H:\Computer Science 2018-2019\Projects\Day2_Per78_HelloWorld_Solution\Day2_Per78_HelloWorld\bin\Debug\Day2_Per78_HelloWorld.exe
+H:\Computer Science 2018-2019\Projects\Day2_Per78_HelloWorld_Solution\Day2_Per78_HelloWorld\bin\Debug\Day2_Per78_HelloWorld.pdb
+H:\Computer Science 2018-2019\Projects\Day2_Per78_HelloWorld_Solution\Day2_Per78_HelloWorld\obj\Debug\Day2_Per78_HelloWorld.csprojResolveAssemblyReference.cache
+H:\Computer Science 2018-2019\Projects\Day2_Per78_HelloWorld_Solution\Day2_Per78_HelloWorld\obj\Debug\Day2_Per78_HelloWorld.exe
+H:\Computer Science 2018-2019\Projects\Day2_Per78_HelloWorld_Solution\Day2_Per78_HelloWorld\obj\Debug\Day2_Per78_HelloWorld.pdb

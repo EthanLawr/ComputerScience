@@ -1,0 +1,6 @@
+H:\Computer Science 2018-2019\Projects\Day1_Per45_AmericanFlag_Solution\Day1_Per45_AmericanFlag\bin\Debug\Day1_Per45_AmericanFlag.exe.config
+H:\Computer Science 2018-2019\Projects\Day1_Per45_AmericanFlag_Solution\Day1_Per45_AmericanFlag\bin\Debug\Day1_Per45_AmericanFlag.exe
+H:\Computer Science 2018-2019\Projects\Day1_Per45_AmericanFlag_Solution\Day1_Per45_AmericanFlag\bin\Debug\Day1_Per45_AmericanFlag.pdb
+H:\Computer Science 2018-2019\Projects\Day1_Per45_AmericanFlag_Solution\Day1_Per45_AmericanFlag\obj\Debug\Day1_Per45_AmericanFlag.csprojResolveAssemblyReference.cache
+H:\Computer Science 2018-2019\Projects\Day1_Per45_AmericanFlag_Solution\Day1_Per45_AmericanFlag\obj\Debug\Day1_Per45_AmericanFlag.exe
+H:\Computer Science 2018-2019\Projects\Day1_Per45_AmericanFlag_Solution\Day1_Per45_AmericanFlag\obj\Debug\Day1_Per45_AmericanFlag.pdb

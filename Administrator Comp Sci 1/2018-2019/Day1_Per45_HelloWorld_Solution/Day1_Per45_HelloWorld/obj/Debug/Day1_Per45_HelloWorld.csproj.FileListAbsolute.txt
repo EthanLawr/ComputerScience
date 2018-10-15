@@ -1,0 +1,6 @@
+H:\Computer Science 2018-2019\Projects\Day1_Per45_HelloWorld_Solution\Day1_Per45_HelloWorld\bin\Debug\Day1_Per45_HelloWorld.exe.config
+H:\Computer Science 2018-2019\Projects\Day1_Per45_HelloWorld_Solution\Day1_Per45_HelloWorld\bin\Debug\Day1_Per45_HelloWorld.exe
+H:\Computer Science 2018-2019\Projects\Day1_Per45_HelloWorld_Solution\Day1_Per45_HelloWorld\bin\Debug\Day1_Per45_HelloWorld.pdb
+H:\Computer Science 2018-2019\Projects\Day1_Per45_HelloWorld_Solution\Day1_Per45_HelloWorld\obj\Debug\Day1_Per45_HelloWorld.csprojResolveAssemblyReference.cache
+H:\Computer Science 2018-2019\Projects\Day1_Per45_HelloWorld_Solution\Day1_Per45_HelloWorld\obj\Debug\Day1_Per45_HelloWorld.exe
+H:\Computer Science 2018-2019\Projects\Day1_Per45_HelloWorld_Solution\Day1_Per45_HelloWorld\obj\Debug\Day1_Per45_HelloWorld.pdb
