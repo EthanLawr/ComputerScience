@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\bin\Debug\Chapter2_GuessingGame.exe.config
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\bin\Debug\Chapter2_GuessingGame.exe
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\bin\Debug\Chapter2_GuessingGame.pdb
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\obj\Debug\Chapter2_GuessingGame.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\obj\Debug\Chapter2_GuessingGame.exe
+H:\Comp 2\projects\Chapter2_GuessingGame_Solution\Chapter2_GuessingGame\obj\Debug\Chapter2_GuessingGame.pdb

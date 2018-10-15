@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\bin\Debug\Chapter2_UlamHypothesis.exe.config
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\bin\Debug\Chapter2_UlamHypothesis.exe
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\bin\Debug\Chapter2_UlamHypothesis.pdb
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\obj\Debug\Chapter2_UlamHypothesis.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\obj\Debug\Chapter2_UlamHypothesis.exe
+H:\Comp 2\projects\Chapter2_UlamHypothesis_Solution\Chapter2_UlamHypothesis\obj\Debug\Chapter2_UlamHypothesis.pdb
