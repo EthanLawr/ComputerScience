@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\bin\Debug\Chapter2_23X.exe.config
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\bin\Debug\Chapter2_23X.exe
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\bin\Debug\Chapter2_23X.pdb
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\obj\Debug\Chapter2_23X.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\obj\Debug\Chapter2_23X.exe
+H:\Comp 2\projects\Chapter2_23X_Solution\Chapter2_23X\obj\Debug\Chapter2_23X.pdb
