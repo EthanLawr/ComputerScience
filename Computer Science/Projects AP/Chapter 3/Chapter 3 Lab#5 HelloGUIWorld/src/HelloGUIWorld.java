@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
@@ -26,6 +27,8 @@ class ColorPanel extends JPanel {
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
     	g.drawRoundRect(10, 10, 200, 200, 30, 30);
-    	g.drawString("Hello GUI World!", 40, 40);
+    	Font font = new Font("Arial", Font.PLAIN, 12);
+    	g.setFont(font);
+    	g.drawString("Hello GUI World!", 30, 30);
     }
 }
