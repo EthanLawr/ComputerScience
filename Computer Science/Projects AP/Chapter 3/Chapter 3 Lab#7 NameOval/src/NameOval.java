@@ -5,14 +5,14 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class GUIMoon {
-	// This program will make a moon in a GUI Window
+public class NameOval {
+	// This program will make an oval with my name in the center
     // By Ethan Lawrence 10/18/2018
 	// elawrence152@gmail.com
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         JFrame theGUI = new JFrame();
-        theGUI.setTitle("GUI Moon Program");
+        theGUI.setTitle("Hello GUI World Program");
         theGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         theGUI.setSize(300, 300);
         theGUI.add(new ColorPanel());
@@ -26,8 +26,9 @@ class ColorPanel extends JPanel {
 	}
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
-    	g.setColor(Color.black);
-    	g.drawArc(10, 10, 150, 150, 285, -210);
-    	g.drawArc(44, 10, 150, 150, 258, -156);
+    	g.drawOval(10, 10, 200, 200);
+    	Font font = new Font("Arial", Font.CENTER_BASELINE, 12);
+    	g.setFont(font);
+    	g.drawString("Ethan Lawrence", 70, 110);
     }
 }

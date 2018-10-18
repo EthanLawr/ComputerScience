@@ -5,29 +5,33 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class GUIMoon {
-	// This program will make a moon in a GUI Window
+public class StudentInfoPrint {
+	// This program will make show info about a student
     // By Ethan Lawrence 10/18/2018
 	// elawrence152@gmail.com
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         JFrame theGUI = new JFrame();
-        theGUI.setTitle("GUI Moon Program");
+        theGUI.setTitle("Student Info Print");
         theGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        theGUI.setSize(300, 300);
+        theGUI.setSize(400, 300);
         theGUI.add(new ColorPanel());
         theGUI.setVisible(true);
+
 	}
 
 }
 class ColorPanel extends JPanel {
 	public ColorPanel() {
 		setBackground(Color.white);
+
 	}
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
-    	g.setColor(Color.black);
-    	g.drawArc(10, 10, 150, 150, 285, -210);
-    	g.drawArc(44, 10, 150, 150, 258, -156);
+    	Font font = new Font("Comic Sans", Font.PLAIN, 20);
+    	g.setFont(font);
+    	g.drawString("Name: Ethan Lawrence", 10, 20);
+    	g.drawString("Graduating Year: 2019", 10, 45);
+    	g.drawString("Cell Phone: (267) - 751 - 9909", 10, 70);
     }
 }
