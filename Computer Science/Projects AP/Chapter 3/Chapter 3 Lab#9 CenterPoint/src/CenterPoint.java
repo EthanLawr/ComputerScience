@@ -17,14 +17,13 @@ public class CenterPoint {
         theGUI.setSize(300, 300);
         theGUI.add(new ColorPanel());
         theGUI.setVisible(true);
-
 	}
 
 }
 class ColorPanel extends JPanel {
 	public ColorPanel() {
-		setBackground(Color.white);
-
+		setBackground(Color.DARK_GRAY);
+		setForeground(Color.cyan);
 	}
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);

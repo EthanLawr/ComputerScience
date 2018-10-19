@@ -26,7 +26,7 @@ class ColorPanel extends JPanel {
 	}
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
-    	g.drawOval(10, 10, 200, 200);
+        g.drawOval(10, 10, 200, 200);
     	Font font = new Font("Arial", Font.CENTER_BASELINE, 12);
     	g.setFont(font);
     	g.drawString("Ethan Lawrence", 70, 110);

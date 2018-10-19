@@ -5,14 +5,14 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class StudentInfoPrint {
-	// This program will make show info about a student
-    // By Ethan Lawrence 10/18/2018
+public class FreeRun {
+	// This program will use the information I have learned so far
+    // By Ethan Lawrence 10/19/2018
 	// elawrence152@gmail.com
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         JFrame theGUI = new JFrame();
-        theGUI.setTitle("Student Info Print");
+        theGUI.setTitle("Free Run");
         theGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         theGUI.setSize(400, 300);
         theGUI.add(new ColorPanel());
@@ -29,9 +29,15 @@ class ColorPanel extends JPanel {
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
     	Font font = new Font("Comic Sans", Font.PLAIN, 20);
+    	int x = getWidth(), y = getHeight(), circle = (x+y)/10;
+    	double radius = circle/2;
     	g.setFont(font);
-    	g.drawString("Name: Ethan Lawrence", 10, 20);
-    	g.drawString("Graduating Year: 2019", 10, 45);
-    	g.drawString("Cell Phone: (267) - 751 - 9909", 10, 70);
+    	g.drawString("(" + x/2 + "," + y/2 + ")", 10, 120);
+    	g.drawOval(x/2 ,y/2, circle, circle );
+    	g.drawString("Radius: " + radius , 10, 20);
+    	g.drawString("Diameter: " + radius*2 , 10, 45);
+    	g.drawString("Area: " + (double)((int)(radius*radius*3.141*1000))/1000, 10, 70);
+    	g.drawString("Circumference: " + (double)((int)(radius*3.141*2*1000))/1000, 10, 95);
+    	
     }
 }
