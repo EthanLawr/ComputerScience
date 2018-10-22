@@ -2,7 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ChessBoard {
-
+	// This program will make a Chess Board
+    // By Ethan Lawrence 10/4/2018
+	// elawrence152@gmail.com
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		JFrame theGUI = new JFrame();

@@ -13,7 +13,7 @@ public class MaritianFlag {
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.red);
 		JPanel panel2 = new JPanel();
-		panel2.setBackground(Color.green);
+		panel2.setBackground(Color.blue);
 		JPanel panel3 = new JPanel();
 		panel3.setBackground(Color.yellow);
 		JPanel panel4 = new JPanel();
