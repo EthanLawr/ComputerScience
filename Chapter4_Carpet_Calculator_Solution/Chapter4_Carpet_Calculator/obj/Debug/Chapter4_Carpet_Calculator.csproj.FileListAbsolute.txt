@@ -1,0 +1,6 @@
+H:\Comp 2\projects\Chapter4_Carpet_Calculator_Solution\Chapter4_Carpet_Calculator\bin\Debug\Chapter4_Carpet_Calculator.exe.config
+H:\Comp 2\projects\Chapter4_Carpet_Calculator_Solution\Chapter4_Carpet_Calculator\bin\Debug\Chapter4_Carpet_Calculator.exe
+H:\Comp 2\projects\Chapter4_Carpet_Calculator_Solution\Chapter4_Carpet_Calculator\bin\Debug\Chapter4_Carpet_Calculator.pdb
+H:\Comp 2\projects\Chapter4_Carpet_Calculator_Solution\Chapter4_Carpet_Calculator\obj\Debug\Chapter4_Carpet_Calculator.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter4_Carpet_Calculator_Solution\Chapter4_Carpet_Calculator\obj\Debug\Chapter4_Carpet_Calculator.exe
+H:\Comp 2\projects\Chapter4_Carpet_Calculator_Solution\Chapter4_Carpet_Calculator\obj\Debug\Chapter4_Carpet_Calculator.pdb
