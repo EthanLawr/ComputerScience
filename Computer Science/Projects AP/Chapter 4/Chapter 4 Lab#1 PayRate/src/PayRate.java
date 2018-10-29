@@ -1,11 +1,11 @@
 import java.util.*;
 public class PayRate {
-	// This program wukk calculate a user's pay
+	// This program wukk calculate the user's pay
     // By Ethan Lawrence 10/29/2018
 	// elawrence152@gmail.com
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        System.out.println("This program will calculate a user's pay.");
+        System.out.println("This program will calculate the user's pay.");
         Scanner UserInput = new Scanner(System.in);
         System.out.print("Please enter how many hours you worked: ");
         double hours = UserInput.nextDouble();
