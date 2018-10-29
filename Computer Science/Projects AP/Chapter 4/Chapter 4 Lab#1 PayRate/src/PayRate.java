@@ -1,6 +1,6 @@
 import java.util.*;
 public class PayRate {
-	// This program wukk calculate the user's pay
+	// This program will calculate the user's pay
     // By Ethan Lawrence 10/29/2018
 	// elawrence152@gmail.com
 	public static void main(String[] args) {
