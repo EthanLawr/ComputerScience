@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\bin\Debug\Chapter4_Program2_StudentInfo.exe.config
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\bin\Debug\Chapter4_Program2_StudentInfo.exe
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\bin\Debug\Chapter4_Program2_StudentInfo.pdb
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\obj\Debug\Chapter4_Program2_StudentInfo.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\obj\Debug\Chapter4_Program2_StudentInfo.exe
+H:\Comp 2\projects\Chapter4_Program2_StudentInfo_Solution\Chapter4_Program2_StudentInfo\obj\Debug\Chapter4_Program2_StudentInfo.pdb
