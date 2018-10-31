@@ -1,0 +1,7 @@
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\bin\Debug\Chapter4_Program3_TakeHomePay.exe.config
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\bin\Debug\Chapter4_Program3_TakeHomePay.exe
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\bin\Debug\Chapter4_Program3_TakeHomePay.pdb
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\bin\Debug\Colorful.Console.dll
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\obj\Debug\Chapter4_Program3_TakeHomePay.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\obj\Debug\Chapter4_Program3_TakeHomePay.exe
+H:\Comp 2\projects\Chapter4_Program3_TakeHomePay_Solution\Chapter4_Program3_TakeHomePay\obj\Debug\Chapter4_Program3_TakeHomePay.pdb
