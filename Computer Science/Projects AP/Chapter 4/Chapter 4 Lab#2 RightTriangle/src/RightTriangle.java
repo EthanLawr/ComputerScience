@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class RightTriangle {
-	// This program will make a calculation for the information of a sphere
-    // By Ethan Lawrence 10/15/2018
+	// This program will find out what type of triangle 3 sides make.
+        // By Ethan Lawrence 11/5/2018
 	// elawrence152@gmail.com
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
