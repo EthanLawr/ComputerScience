@@ -15,10 +15,11 @@ namespace Chapter7_Program1_CountingNumbers
             using (StreamReader superReads = File.OpenText(filePath))
             {
                 string textString;
-                int Low = 0, High = 0, Equal = 0;
+                int Low = 0, High = 0, Equal = 0, Total = 0; ;
                 while ((textString = superReads.ReadLine()) != null)
                 {
                     string[] textSplit = textString.Split(',');
+                    Total = textSplit.Length;
                     for (int i = 0; i < textSplit.Length; i++)
                     {
                         if (int.Parse(textSplit[i]) > 500) High++;
@@ -29,7 +30,8 @@ namespace Chapter7_Program1_CountingNumbers
                         Console.Write($"{textSplit[i]}\t");
                     }
                 }
-                Console.WriteLine($"\n{High} numbers are higher than 500\n{Low} numbers are lower than 500\n{Equal} numbers are equal to 500");
+                Console.WriteLine($"\n\n{High} numbers are higher than 500\n{Low} numbers are lower than 500\n{Equal} numbers are equal to 500\nThere are {Total} " +
+                    "numbers in total.");
             }
             Footer();
         }

@@ -2,14 +2,14 @@
 using System.Threading;
 
 
-namespace Chapter7_Program1_CountingNumbers
+namespace Chapter7_Program2_CarSalesman
 {
     internal class TaskShortener : Colors
     {
         // 13 - Globals     21 - Headers    70 - Typing     108 - Asking    153 - Songs
         #region Global Variables
         internal static string name = "Ethan Lawrence\t   ", period = "\t   Period 4,5,6",
-            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To get data about a text file of numbers"
+            teacher = "\t    Mr. Lynch", purpose = "\nPurpose: To get data about a text file of cars and show sales of it"
                 + "", endheader = "\n*************************************"
                 + "*******************************************\n\n";
         internal static DateTime date = DateTime.Now;
@@ -19,7 +19,7 @@ namespace Chapter7_Program1_CountingNumbers
         internal static void Header()
         {
             CyanFont();
-            Console.Title = "Chapter7_Program1_CountingNumbers";
+            Console.Title = "Chapter7_Program2_CarSalesman";
             TypeLineSuperFast(name + date + period + teacher + purpose + endheader);
             //Writes my name, the date w/ the time, period, teacher name, purpose, and ends the header
             Thread.Sleep(150);
