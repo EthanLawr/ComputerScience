@@ -1,1 +1,6 @@
 H:\Comp 2\projects\Chapter7_Program2_CarSalesman_Solution\Chapter7_Program2_CarSalesman\bin\Debug\Chapter7_Program2_CarSalesman.exe.config
+H:\Comp 2\projects\Chapter7_Program2_CarSalesman_Solution\Chapter7_Program2_CarSalesman\bin\Debug\Chapter7_Program2_CarSalesman.exe
+H:\Comp 2\projects\Chapter7_Program2_CarSalesman_Solution\Chapter7_Program2_CarSalesman\bin\Debug\Chapter7_Program2_CarSalesman.pdb
+H:\Comp 2\projects\Chapter7_Program2_CarSalesman_Solution\Chapter7_Program2_CarSalesman\obj\Debug\Chapter7_Program2_CarSalesman.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter7_Program2_CarSalesman_Solution\Chapter7_Program2_CarSalesman\obj\Debug\Chapter7_Program2_CarSalesman.exe
+H:\Comp 2\projects\Chapter7_Program2_CarSalesman_Solution\Chapter7_Program2_CarSalesman\obj\Debug\Chapter7_Program2_CarSalesman.pdb
