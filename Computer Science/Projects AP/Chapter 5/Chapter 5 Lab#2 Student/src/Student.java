@@ -10,7 +10,8 @@ public class Student {
 	// elawrence152@gmail.com
 	public static void main(String[] args) throws ParseException {
 		JFrame frame = new JFrame();
-		String oldest = "Invalid years given", highestGPA = "lol", coolest = "har";
+		String oldest = "Two people are just as old as each other!", 
+				highestGPA = "Two students have the same GPA", coolest = "Something";
 		Random coolCalc = new Random();
 		int coolFactor = coolCalc.nextInt(5);
 		
