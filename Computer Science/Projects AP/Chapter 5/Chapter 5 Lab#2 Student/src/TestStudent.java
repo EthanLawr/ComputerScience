@@ -1,18 +1,14 @@
-import java.text.ParseException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 public class TestStudent {
-	public static String studentName, studentBirthday, studentSSN, studentMotherMaidenName, studentHomeAddress, studentEmail, 
+	public static String studentName, studentSSN, studentMotherMaidenName, studentHomeAddress, studentEmail, 
 	    studentPhoneNumber;
 	public static double studentGPA;
-	public static int studentDressSize, studentGradYear;
+	public static int studentDressSize,studentBirthday, studentGradYear;
 	
 	// Accessors
 	public String GetStudentName() {
 		return studentName;
 	}
-	public String GetStudentBirthday() {
+	public int GetStudentBirthday() {
 		return studentBirthday;
 	}
 	public String GetStudentSSN() {
@@ -41,7 +37,7 @@ public class TestStudent {
 	}
 	public TestStudent(){
 		studentName = "John Deer";
-		studentBirthday = "07/19/2001";
+		studentBirthday = 2001;
 		studentSSN = "111-11-1111";
 		studentMotherMaidenName = "Deer";
 		studentHomeAddress = "123 Bob Builder's Street PA 18966";
@@ -56,7 +52,7 @@ public class TestStudent {
 		TestStudent.studentName = SomeStudentName;
 	}
 	
-	public TestStudent(String SomeName, String SomeBirthday, String SomeSSN, String SomeMaidenName, String SomeHomeAddress,
+	public TestStudent(String SomeName, int SomeBirthday, String SomeSSN, String SomeMaidenName, String SomeHomeAddress,
 			String SomeEmail, String SomePhoneNumber, double SomeGPA, int SomeDressSize, int SomeGradYear){
 		TestStudent.studentName = SomeName;
 		TestStudent.studentBirthday = SomeBirthday;
@@ -68,12 +64,5 @@ public class TestStudent {
 		TestStudent.studentGPA = SomeGPA;
 		TestStudent.studentDressSize = SomeDressSize;
 		TestStudent.studentGradYear = SomeGradYear;
-	}
-	
-	public LocalDate BirthdayNumber() throws ParseException {
-		DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-	    LocalDate parsedDate = LocalDate.parse(studentBirthday, formatter1);
-	    return parsedDate;
-        
 	}
 }

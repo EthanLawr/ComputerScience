@@ -10,7 +10,7 @@ public class Student {
 	// elawrence152@gmail.com
 	public static void main(String[] args) throws ParseException {
 		JFrame frame = new JFrame();
-		String oldest = "hi", highestGPA = "lol", coolest = "har";
+		String oldest = "Invalid years given", highestGPA = "lol", coolest = "har";
 		Random coolCalc = new Random();
 		int coolFactor = coolCalc.nextInt(5);
 		
@@ -19,7 +19,7 @@ public class Student {
 		
 		// Defining each student
 		TestStudent studentTest = new TestStudent(OptionPaneInput("Please enter a first and last name."), 
-				OptionPaneInput("Please enter a birthday.\nExample: 07/19/2001"), 
+				OptionPaneInputInt("Please enter a birthday.\nExample: 2001"), 
 				OptionPaneInput("Please enter social security number."), OptionPaneInput("Please enter a mother's maiden name."), 
 				OptionPaneInput("Please enter a home address."), OptionPaneInput("Please enter an email."), 
 				OptionPaneInput("Please enter a phone number."), OptionPaneInputDouble("Please enter a GPA."), 
@@ -28,45 +28,47 @@ public class Student {
 
 	
 		TestStudent studentTestTwo = new TestStudent(OptionPaneInput("Please enter a first and last name."), 
-				OptionPaneInput("Please enter a birthday.\nExample: 07/19/2001"), 
+				OptionPaneInputInt("Please enter a birthday.\nExample: 2001"), 
 				OptionPaneInput("Please enter social security number."), OptionPaneInput("Please enter a mother's maiden name."), 
 				OptionPaneInput("Please enter a home address."), OptionPaneInput("Please enter an email."), 
 				OptionPaneInput("Please enter a phone number."), OptionPaneInputDouble("Please enter a GPA."), 
 				OptionPaneInputInt("Please enter a dress size."), OptionPaneInputInt("Please enter your graduation year."));
 		
 		TestStudent studentTestThree = new TestStudent(OptionPaneInput("Please enter a first and last name."), 
-				OptionPaneInput("Please enter a birthday.\nExample: 07/19/2001"), 
+				OptionPaneInputInt("Please enter a birthday.\nExample: 2001"), 
 				OptionPaneInput("Please enter social security number."), OptionPaneInput("Please enter a mother's maiden name."), 
 				OptionPaneInput("Please enter a home address."), OptionPaneInput("Please enter an email."), 
 				OptionPaneInput("Please enter a phone number."), OptionPaneInputDouble("Please enter a GPA."), 
 				OptionPaneInputInt("Please enter a dress size."), OptionPaneInputInt("Please enter your graduation year."));
 		
 		TestStudent studentTestFour = new TestStudent(OptionPaneInput("Please enter a first and last name."), 
-				OptionPaneInput("Please enter a birthday.\nExample: 07/19/2001"), 
+				OptionPaneInputInt("Please enter a birthday.\nExample: 2001"), 
 				OptionPaneInput("Please enter social security number."), OptionPaneInput("Please enter a mother's maiden name."), 
 				OptionPaneInput("Please enter a home address."), OptionPaneInput("Please enter an email."), 
 				OptionPaneInput("Please enter a phone number."), OptionPaneInputDouble("Please enter a GPA."), 
 				OptionPaneInputInt("Please enter a dress size."), OptionPaneInputInt("Please enter your graduation year."));
-		/*
+		
 		// Finding who is the oldest
-		if (studentTest.BirthdayNumber().getYear() > studentTestTwo.BirthdayNumber().getYear() &&
-				studentTestThree.BirthdayNumber().getYear() > studentTestTwo.BirthdayNumber().getYear() && 
-				studentTestFour.BirthdayNumber().getYear() > studentTestTwo.BirthdayNumber().getYear()) {
-			
-		} else if (studentTestTwo.BirthdayNumber().getYear() > studentTest.BirthdayNumber().getYear() &&
-				studentTestThree.BirthdayNumber().getYear() > studentTest.BirthdayNumber().getYear() && 
-				studentTestFour.BirthdayNumber().getYear() > studentTest.BirthdayNumber().getYear()) {
-			
-		} else if (studentTestTwo.BirthdayNumber().getYear() > studentTestThree.BirthdayNumber().getYear() &&
-				studentTest.BirthdayNumber().getYear() > studentTestThree.BirthdayNumber().getYear() && 
-				studentTestFour.BirthdayNumber().getYear() > studentTestThree.BirthdayNumber().getYear()) {
-			
-		} else if (studentTestTwo.BirthdayNumber().getYear() > studentTestFour.BirthdayNumber().getYear() &&
-				studentTest.BirthdayNumber().getYear() > studentTestFour.BirthdayNumber().getYear() && 
-				studentTestThree.BirthdayNumber().getYear() > studentTestFour.BirthdayNumber().getYear()) {
+		if (studentTest.GetStudentBirthday() > studentTestTwo.GetStudentBirthday() &&
+				studentTestThree.GetStudentBirthday() > studentTestTwo.GetStudentBirthday() && 
+				studentTestFour.GetStudentBirthday() > studentTestTwo.GetStudentBirthday()) {
+			oldest = studentTestFour.GetStudentName() + " is the oldest";	
+		} else if (studentTestTwo.GetStudentBirthday() > studentTest.GetStudentBirthday() &&
+				studentTestThree.GetStudentBirthday() > studentTest.GetStudentBirthday() && 
+				studentTestFour.GetStudentBirthday() > studentTest.GetStudentBirthday()) {
+			oldest = studentTestFour.GetStudentName() + " is the oldest";
+		} else if (studentTestTwo.GetStudentBirthday() > studentTestThree.GetStudentBirthday() &&
+				studentTest.GetStudentBirthday() > studentTestThree.GetStudentBirthday() && 
+				studentTestFour.GetStudentBirthday() > studentTestThree.GetStudentBirthday()) {
+			oldest = studentTestFour.GetStudentName() + " is the oldest";
+		} else if (studentTestTwo.GetStudentBirthday() > studentTestFour.GetStudentBirthday() &&
+				studentTest.GetStudentBirthday() > studentTestFour.GetStudentBirthday() && 
+				studentTestThree.GetStudentBirthday() > studentTestFour.GetStudentBirthday()) {
+			oldest = studentTestFour.GetStudentName() + " is the oldest";
+		} else {
 			
 		}
-		*/
+		
 		// Finding who has the highest GPA
 		if (studentTest.GetStudentGPA() > studentTestTwo.GetStudentGPA() && 
 				studentTest.GetStudentGPA() > studentTestThree.GetStudentGPA() &&
@@ -93,7 +95,7 @@ public class Student {
 		else 
 			coolest = studentTestFour.GetStudentName() + " is the coolest.";
 		
-		JOptionPane.showMessageDialog(frame, highestGPA + "\n" +coolest, "Student Info", 0);
+		JOptionPane.showMessageDialog(frame, oldest + "\n" + highestGPA + "\n" +coolest, "Student Info", 0);
 
 	}
 	
