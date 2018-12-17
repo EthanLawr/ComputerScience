@@ -1,0 +1,21 @@
+Activity 1
+1. Can you identify keywords to which your chatbot responds?
+no, mother, father, brother, dog, and cat.
+
+2. Think of several keywords and the responses they might cause.
+Bot/Robot/Ai - This could cause something to say it is not a robot or AI to convince the end user they are talking to a human.
+Bread - Let's get this bread
+Profound words - Stop using language like that!
+
+Activity 2
+1. What happens when a keyword is included in another word? Consider statements like “I know
+all the state capitals” and “I like vegetables smothered in cheese.” Explain the problem with the
+responses to these statements.
+It doesn't respond due to the statements being case sensitive.
+
+Activity 4
+1. Find an example of when this structure does not work well. How can you improve it?
+If you say "I want to say hi" it will respond with "What makes you want to to say hi?"
+This can be fixed by removing the word "to" from the beginning when its used.
+
+Activity 5
