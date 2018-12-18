@@ -5,7 +5,7 @@ public class MagpieRunner5
 
 	public static void main(String[] args)
 	{
-		Magpie5 maggie = new Magpie5();
+		Magpie5FINAL maggie = new Magpie5FINAL();
 		
 		System.out.println (maggie.getGreeting());
 		Scanner in = new Scanner (System.in);
