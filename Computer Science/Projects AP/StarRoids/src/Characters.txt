@@ -1,0 +1,51 @@
+Darth Vader - 3,4,5,6,Rogue One
+Anakin Skywalker - 1,2,3,4,5,6,Rogue One
+Luke Skywalker - 3,4,5,6,7,8
+Han Solo - 4,5,6,7,Solo
+Supreme Leader Snoke - 7,8
+Leia Organa - 3,4,5,6,7,8,Rogue One
+Obi-Wan Kenobi - 1,2,3,4,5,6
+C-3P0 - 1,2,3,4,5,6,7,8,Rogue One
+R2-D2 - 1,2,3,4,5,6,7,8,Rogue One
+Chewbacca - 3,4,5,6,7,8,Solo
+Yoda - 1,2,3,5,6,8
+Sheev Palpatine - 1,2,3,5,6
+Lando Calrissian - 5,6
+Padme Amidala - 1,2,3
+Qui-Gon Jinn - 1,2
+Kylo Ren - 7,8
+Rey - 7,8
+Finn - 7,8
+BB-8 - 7,8
+Poe Dameron - 7,8
+Mace Windu - 1,2,3
+Ki-Adi-Muni - 1,2,3
+Count Dooku - 2,3
+Darth Maul - 1,Solo
+Jar Jar Binks - 1,2,3
+Jyn Erso - Rogue One
+Wilhuff Tarkin - 3,4,Rogue One
+Cassian Andor - Rogue One
+K-2SO - Rogue One
+Orson Krennic - Rogue One
+Chirrut Imwe - Rogue One
+Saw Grerra - Rogue One
+Mon Mothma - Rogue One
+Galen Erso - Rogue One
+Baze Malbus - Rogue One
+Bodhi Rook - Rogue One
+Senator Bail Ordana - Rogue One
+General Merrick - Rogue One
+General Draven - Rogue One
+Admiral Raddus - Rogue One
+Qi,ra - Solo
+Lando Calrissian - Solo
+Enfys Nest - Solo
+Elite Citizen - Solo
+Beckett - Solo
+Val - Solo
+General Grievous - 3
+Jabba the Hutt - 1,4,6
+Boba Fett - 4,5,6
+Greedo - 4
+Admiral Ackbar - 6,7,8
