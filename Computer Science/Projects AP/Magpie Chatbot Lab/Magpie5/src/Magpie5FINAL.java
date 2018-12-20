@@ -53,7 +53,7 @@ public class Magpie5FINAL
 		statement = statement.trim();
 		String lastChar = statement.substring(statement.length() - 1);
 		if (lastChar.equals(".")) statement = statement.substring(0, statement.length() - 1);
-		int psn = findKeyword (statement, "I want", 0);
+		int psn = findKeyword(statement, "I want", 0);
 		String restOfStatement = statement.substring(psn + 6).trim();
 		return "Would you really be happy if you had " + restOfStatement + "?";
 	}
@@ -64,7 +64,7 @@ public class Magpie5FINAL
 		String lastChar = statement.substring(statement.length() - 1);
 		if (lastChar.equals(".")) statement = statement.substring(0, statement.length() - 1);
 		
-		int psnOfYou = findKeyword (statement, "you", 0), psnOfMe = findKeyword (statement, "me", psnOfYou + 3);
+		int psnOfYou = findKeyword(statement, "you", 0), psnOfMe = findKeyword(statement, "me", psnOfYou + 3);
 		
 		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
 		return "What makes you think that I " + restOfStatement + " you?";
@@ -76,7 +76,7 @@ public class Magpie5FINAL
 		String lastChar = statement.substring(statement.length() - 1);
 		if (lastChar.equals(".")) statement = statement.substring(0, statement.length() - 1);
 		
-		int psnOfI = findKeyword (statement, "I", 0), psnOfYou = findKeyword (statement, "you", psnOfI);
+		int psnOfI = findKeyword(statement, "I", 0), psnOfYou = findKeyword(statement, "you", psnOfI);
 		
 		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
 		return "Why do you " + restOfStatement + " me?";
@@ -112,5 +112,6 @@ public class Magpie5FINAL
 		return randomResponses[r.nextInt(randomResponses.length)];
 	}
 	
-	private String[] randomResponses = {"Interesting, tell me more","Hmmm.","Do you really think so?","You don't say."};
+	private String[] randomResponses = {"Interesting, tell me more","Hmmm.","Do you really think so?","You don't say.","How are you today?",
+			"What do you mean?", "Is that really so?", "Why though?", "Wow that's cool."};
 }
