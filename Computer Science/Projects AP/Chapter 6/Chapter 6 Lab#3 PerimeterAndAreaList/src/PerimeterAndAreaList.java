@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class PerimeterAndAreaList {
+	// This program will find the perimeter and area of multiple rectangles
+    // By Ethan Lawrence 01/08/2019
+	// elawrence152@gmail.com
+	public static void main(String[] args) {
+		
+		int j = 0, combinations = 0;
+		
+        //Stating what the program does
+        System.out.println("This program will find the perimeter and area of multiple rectangles.");
+        
+        // Getting the user inputs (as absolute numbers)
+        System.out.print("Please enter the starting height (No greater than 200 and an integer): ");
+        int numberOne = userInputMethod();
+        int numberTwo = numberOne + 10;
+        
+        for (int i = numberOne; i < numberTwo; i++) {
+        	
+        	for (j = numberOne; j < numberTwo; j++) {
+        		combinations++;
+        		// Shows the area and perimeter of each combination in 3 columns
+        		System.out.println("Comination: " + combinations + "\tArea: " + i*j + " \tPerimeter: " + (i*2 + j*2));	
+            }
+        	
+        }
+        
+        // Shows how many combinations there are
+        System.out.println("Total Combinations: " + combinations);
+        
+        
+        
+	}
+	
+	// Method for a nastygram in a user input
+	public static int userInputMethod() {
+        Scanner userInput = new Scanner(System.in);
+        int number = userInput.nextInt();
+
+        // Nastygram to make sure the user inputs a valid number
+        if (number > 200 || number <= 0) number = userInputMethod();
+        
+        return number;
+	}
+	
+}
