@@ -60,6 +60,7 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
@@ -78,7 +79,6 @@
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
-            this.panel44 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel47 = new System.Windows.Forms.Panel();
@@ -87,6 +87,8 @@
             this.panel50 = new System.Windows.Forms.Panel();
             this.panel51 = new System.Windows.Forms.Panel();
             this.panel52 = new System.Windows.Forms.Panel();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.panel53 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // End
@@ -195,6 +197,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.DragLeave += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // radioButton2
             // 
@@ -278,6 +281,7 @@
             this.panel12.Size = new System.Drawing.Size(538, 28);
             this.panel12.TabIndex = 1;
             this.panel12.Visible = false;
+            this.panel12.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel13
             // 
@@ -286,6 +290,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(20, 24);
             this.panel13.TabIndex = 8;
+            this.panel13.Visible = false;
             this.panel13.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel14
@@ -387,6 +392,16 @@
             this.panel24.TabIndex = 12;
             this.panel24.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.LightCoral;
+            this.panel44.Location = new System.Drawing.Point(186, 435);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(20, 67);
+            this.panel44.TabIndex = 9;
+            this.panel44.Visible = false;
+            this.panel44.MouseEnter += new System.EventHandler(this.panel44_MouseEnter);
+            // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -484,7 +499,7 @@
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(357, 24);
             this.panel36.TabIndex = 26;
-            panel36.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel36.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel37
             // 
@@ -493,7 +508,7 @@
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(178, 24);
             this.panel37.TabIndex = 27;
-            panel37.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel37.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel38
             // 
@@ -502,7 +517,7 @@
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(288, 24);
             this.panel38.TabIndex = 28;
-            panel38.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel38.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel39
             // 
@@ -511,7 +526,7 @@
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(62, 24);
             this.panel39.TabIndex = 29;
-            panel39.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel39.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel40
             // 
@@ -520,7 +535,7 @@
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(433, 42);
             this.panel40.TabIndex = 30;
-            panel40.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel40.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel41
             // 
@@ -529,7 +544,7 @@
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(37, 172);
             this.panel41.TabIndex = 31;
-            panel41.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel41.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel42
             // 
@@ -538,7 +553,7 @@
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(360, 42);
             this.panel42.TabIndex = 32;
-            panel42.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel42.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel43
             // 
@@ -547,16 +562,7 @@
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(40, 61);
             this.panel43.TabIndex = 33;
-            panel43.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
-            // 
-            // panel44
-            // 
-            this.panel44.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel44.Location = new System.Drawing.Point(505, 517);
-            this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(133, 10);
-            this.panel44.TabIndex = 34;
-            panel44.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel43.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel45
             // 
@@ -565,7 +571,7 @@
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(316, 23);
             this.panel45.TabIndex = 35;
-            panel45.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel45.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel46
             // 
@@ -574,7 +580,7 @@
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(422, 42);
             this.panel46.TabIndex = 36;
-            panel46.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel46.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel47
             // 
@@ -583,7 +589,7 @@
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(316, 34);
             this.panel47.TabIndex = 37;
-            panel47.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel47.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel48
             // 
@@ -592,7 +598,7 @@
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(26, 99);
             this.panel48.TabIndex = 38;
-            panel48.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel48.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel49
             // 
@@ -601,7 +607,7 @@
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(16, 80);
             this.panel49.TabIndex = 39;
-            panel49.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel49.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel50
             // 
@@ -610,7 +616,7 @@
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(130, 112);
             this.panel50.TabIndex = 40;
-            panel50.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel50.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel51
             // 
@@ -619,7 +625,7 @@
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(26, 99);
             this.panel51.TabIndex = 39;
-            panel51.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel51.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel52
             // 
@@ -628,7 +634,28 @@
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(26, 99);
             this.panel52.TabIndex = 41;
-            panel52.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel52.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(49, 899);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(14, 13);
+            this.radioButton4.TabIndex = 42;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.Visible = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            // 
+            // panel53
+            // 
+            this.panel53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel53.Location = new System.Drawing.Point(347, 565);
+            this.panel53.Name = "panel53";
+            this.panel53.Size = new System.Drawing.Size(26, 51);
+            this.panel53.TabIndex = 10;
+            this.panel53.MouseEnter += new System.EventHandler(this.panel44_MouseEnter);
             // 
             // Form1
             // 
@@ -636,6 +663,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1165, 954);
+            this.Controls.Add(this.panel53);
+            this.Controls.Add(this.panel44);
+            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.panel52);
             this.Controls.Add(this.panel51);
             this.Controls.Add(this.panel50);
@@ -644,7 +674,6 @@
             this.Controls.Add(this.panel47);
             this.Controls.Add(this.panel46);
             this.Controls.Add(this.panel45);
-            this.Controls.Add(this.panel44);
             this.Controls.Add(this.panel43);
             this.Controls.Add(this.panel42);
             this.Controls.Add(this.panel41);
@@ -696,11 +725,12 @@
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Maze Game";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -757,7 +787,6 @@
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Panel panel47;
@@ -766,6 +795,9 @@
         private System.Windows.Forms.Panel panel50;
         private System.Windows.Forms.Panel panel51;
         private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Panel panel53;
     }
 }
 

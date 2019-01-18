@@ -12,6 +12,10 @@ namespace EndOfSemesterProject_Maze2019
 {
     public partial class Form1 : Form
     {
+        private static readonly Random getrandom = new Random();
+        private static int something = 0, something2 = 0;
+        private static string checkPointTimer = "0";
+
         public Form1()
         {
             InitializeComponent();
@@ -26,15 +30,17 @@ namespace EndOfSemesterProject_Maze2019
             panel10.BringToFront();
             panel13.SendToBack();
             panel8.SendToBack();
+            panel44.SendToBack();
+            panel53.SendToBack();
             timer1.Tick += new EventHandler(TimerEventProcessor);
             timer1.Start();
         }
-        private static readonly Random getrandom = new Random();
-        private static int something = 0;
+
         private void TimerEventProcessor(object sender, EventArgs myEventArgs)
         {
             timer1.Interval = 10;
             label1.Text = (double.Parse(label1.Text) + 0.01).ToString();
+
             if (panel8.Left < 100 && getrandom.Next(100) % 2 == 1) panel8.Left += 1;
             if (panel8.Left >= 100) panel8.Left = 0;
 
@@ -48,6 +54,11 @@ namespace EndOfSemesterProject_Maze2019
             if (panel13.Left >= 100) something = 1;
             if (panel13.Left > 10 && getrandom.Next(50) % 2 == 1 && something == 1) panel13.Left -= 1;
             if (panel13.Left <= 10) something = 0;
+
+            if (panel44.Left < 540 && something2 > 600) panel44.Left += 3;
+            if (panel44.Left >= 540) something2 = 0;
+            if (panel44.Left > 150 && getrandom.Next(50) % 2 == 1 && something2 == 0) panel44.Left -= 1;
+            if (panel44.Left <= 150) something2++;
         }
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
@@ -56,9 +67,11 @@ namespace EndOfSemesterProject_Maze2019
             radioButton1.Checked = false;
             radioButton2.Checked = false;
             radioButton3.Checked = false;
+            radioButton4.Checked = false;
             radioButton1.Visible = true;
             radioButton2.Visible = false;
             radioButton3.Visible = false;
+            radioButton4.Visible = false;
             panel10.Visible = false;
             panel6.Visible = true;
             panel7.Visible = false;
@@ -67,13 +80,27 @@ namespace EndOfSemesterProject_Maze2019
             panel11.Visible = false;
             panel12.Visible = false;
             panel13.Visible = false;
+            panel44.Visible = false;
             label1.Text = "0";
             timer1.Start();
         }
 
-        private void label1_Paint(object sender, PaintEventArgs e)
+        private void panel44_MouseEnter(object sender, EventArgs e)
         {
-            
+            timer1.Stop();
+            checkPointTimer = ((double.Parse(label1.Text)) / 2).ToString();
+            Cursor.Position = new Point(50, 50);
+            radioButton4.Checked = true;
+            panel10.Visible = true;
+            panel6.Visible = false;
+            panel7.Visible = true;
+            panel8.Visible = true;
+            panel9.Visible = true;
+            panel11.Visible = true;
+            panel12.Visible = true;
+            panel13.Visible = true;
+            label1.Text = checkPointTimer;
+            timer1.Start();
         }
 
         private void End_Click(object sender, EventArgs e)
@@ -101,13 +128,12 @@ namespace EndOfSemesterProject_Maze2019
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            panel6.Visible = false;
+            radioButton4.Visible = true;
             radioButton2.Visible = false;
             panel11.Visible = true;
             panel12.Visible = true;
             panel10.Visible = true;
             panel13.Visible = true;
-
         }
 
         private void panel10_Paint(object sender, PaintEventArgs e)
@@ -122,9 +148,11 @@ namespace EndOfSemesterProject_Maze2019
             radioButton1.Checked = false;
             radioButton2.Checked = false;
             radioButton3.Checked = false;
+            radioButton4.Checked = false;
             radioButton1.Visible = true;
             radioButton2.Visible = false;
             radioButton3.Visible = false;
+            radioButton4.Visible = false;
             panel10.Visible = false;
             panel6.Visible = true;
             panel7.Visible = false;
@@ -133,8 +161,16 @@ namespace EndOfSemesterProject_Maze2019
             panel11.Visible = false;
             panel12.Visible = false;
             panel13.Visible = false;
+            panel44.Visible = false;
             label1.Text = "0";
             timer1.Start();
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            panel6.Visible = false;
+            radioButton3.Visible = false;
+            panel44.Visible = true;
         }
     }
 }
