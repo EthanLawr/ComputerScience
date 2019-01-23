@@ -83,12 +83,12 @@
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel47 = new System.Windows.Forms.Panel();
             this.panel48 = new System.Windows.Forms.Panel();
-            this.panel49 = new System.Windows.Forms.Panel();
             this.panel50 = new System.Windows.Forms.Panel();
             this.panel51 = new System.Windows.Forms.Panel();
-            this.panel52 = new System.Windows.Forms.Panel();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.panel53 = new System.Windows.Forms.Panel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.panel52 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // End
@@ -594,27 +594,18 @@
             // panel48
             // 
             this.panel48.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel48.Location = new System.Drawing.Point(959, 65);
+            this.panel48.Location = new System.Drawing.Point(946, 140);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(26, 99);
             this.panel48.TabIndex = 38;
             this.panel48.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
-            // 
-            // panel49
-            // 
-            this.panel49.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel49.Location = new System.Drawing.Point(899, 140);
-            this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(16, 80);
-            this.panel49.TabIndex = 39;
-            this.panel49.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // panel50
             // 
             this.panel50.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel50.Location = new System.Drawing.Point(742, 101);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(130, 112);
+            this.panel50.Size = new System.Drawing.Size(130, 72);
             this.panel50.TabIndex = 40;
             this.panel50.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
@@ -626,15 +617,6 @@
             this.panel51.Size = new System.Drawing.Size(26, 99);
             this.panel51.TabIndex = 39;
             this.panel51.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
-            // 
-            // panel52
-            // 
-            this.panel52.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel52.Location = new System.Drawing.Point(1020, 140);
-            this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(26, 99);
-            this.panel52.TabIndex = 41;
-            this.panel52.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
             // radioButton4
             // 
@@ -657,19 +639,38 @@
             this.panel53.TabIndex = 10;
             this.panel53.MouseEnter += new System.EventHandler(this.panel44_MouseEnter);
             // 
+            // panel49
+            // 
+            this.panel49.BackColor = System.Drawing.Color.LightCoral;
+            this.panel49.Location = new System.Drawing.Point(101, 750);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(46, 61);
+            this.panel49.TabIndex = 10;
+            this.panel49.Visible = false;
+            this.panel49.MouseEnter += new System.EventHandler(this.panel44_MouseEnter);
+            // 
+            // panel52
+            // 
+            this.panel52.BackColor = System.Drawing.Color.Magenta;
+            this.panel52.Location = new System.Drawing.Point(23, 40);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(18, 16);
+            this.panel52.TabIndex = 11;
+            this.panel52.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1165, 954);
+            this.Controls.Add(this.panel52);
+            this.Controls.Add(this.panel49);
             this.Controls.Add(this.panel53);
             this.Controls.Add(this.panel44);
             this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.panel52);
             this.Controls.Add(this.panel51);
             this.Controls.Add(this.panel50);
-            this.Controls.Add(this.panel49);
             this.Controls.Add(this.panel48);
             this.Controls.Add(this.panel47);
             this.Controls.Add(this.panel46);
@@ -791,13 +792,13 @@
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Panel panel47;
         private System.Windows.Forms.Panel panel48;
-        private System.Windows.Forms.Panel panel49;
         private System.Windows.Forms.Panel panel50;
         private System.Windows.Forms.Panel panel51;
-        private System.Windows.Forms.Panel panel52;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.Panel panel53;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.Panel panel52;
     }
 }
 

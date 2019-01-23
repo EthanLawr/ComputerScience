@@ -13,7 +13,7 @@ namespace EndOfSemesterProject_Maze2019
     public partial class Form1 : Form
     {
         private static readonly Random getrandom = new Random();
-        private static int something = 0, something2 = 0;
+        private static int something = 0, something2 = 0, something3 = 0;
         private static string checkPointTimer = "0";
 
         public Form1()
@@ -32,6 +32,8 @@ namespace EndOfSemesterProject_Maze2019
             panel8.SendToBack();
             panel44.SendToBack();
             panel53.SendToBack();
+            panel49.SendToBack();
+            panel52.BringToFront();
             timer1.Tick += new EventHandler(TimerEventProcessor);
             timer1.Start();
         }
@@ -59,6 +61,35 @@ namespace EndOfSemesterProject_Maze2019
             if (panel44.Left >= 540) something2 = 0;
             if (panel44.Left > 150 && getrandom.Next(50) % 2 == 1 && something2 == 0) panel44.Left -= 1;
             if (panel44.Left <= 150) something2++;
+
+            if (panel49.Left < 1100 && something3 == 0) panel49.Left += 7;
+            if (panel49.Left >= 1100) something3 = 1;
+            if (panel49.Left > 100 && something3 == 1) panel49.Left -= 5;
+            if (panel49.Left <= 100) something3 = 0;
+
+            if (radioButton4.Checked)
+            {
+                if (getrandom.Next(100) % 3 == 1)
+                {
+                    Point mouse = PointToClient(MousePosition);
+                    if (mouse.X > panel52.Location.X) panel52.Location = new Point(panel52.Location.X + 1, panel52.Location.Y);
+                    if (mouse.X < panel52.Location.X) panel52.Location = new Point(panel52.Location.X - 1, panel52.Location.Y);
+                    if (mouse.Y > panel52.Location.Y) panel52.Location = new Point(panel52.Location.X, panel52.Location.Y + 1);
+                    if (mouse.Y < panel52.Location.Y) panel52.Location = new Point(panel52.Location.X, panel52.Location.Y - 1);
+
+                    if (getrandom.Next(100) % 2 == 1) panel52.Size = new Size(panel52.Width -= getrandom.Next(4), panel52.Height -= getrandom.Next(4));
+                    else panel52.Size = new Size(panel52.Width += getrandom.Next(4), panel52.Height += getrandom.Next(4));
+
+                    if (panel52.Width < 5) panel52.Size = new Size(20, panel52.Height);
+                    if (panel52.Height < 5) panel52.Size = new Size(panel52.Width, 20);
+                    if (panel52.Width > 50) panel52.Size = new Size(20, panel52.Height);
+                    if (panel52.Height > 50) panel52.Size = new Size(panel52.Width, 20);
+
+                }
+            }
+
+            
+
         }
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
@@ -81,6 +112,8 @@ namespace EndOfSemesterProject_Maze2019
             panel12.Visible = false;
             panel13.Visible = false;
             panel44.Visible = false;
+            panel49.Visible = false;
+            panel52.Location = new Point(0,0);
             label1.Text = "0";
             timer1.Start();
         }
@@ -99,6 +132,7 @@ namespace EndOfSemesterProject_Maze2019
             panel11.Visible = true;
             panel12.Visible = true;
             panel13.Visible = true;
+            panel52.Location = new Point(-20, -20);
             label1.Text = checkPointTimer;
             timer1.Start();
         }
@@ -162,6 +196,8 @@ namespace EndOfSemesterProject_Maze2019
             panel12.Visible = false;
             panel13.Visible = false;
             panel44.Visible = false;
+            panel49.Visible = false;
+            panel52.Location = new Point(0, 0);
             label1.Text = "0";
             timer1.Start();
         }
@@ -171,6 +207,9 @@ namespace EndOfSemesterProject_Maze2019
             panel6.Visible = false;
             radioButton3.Visible = false;
             panel44.Visible = true;
+            panel49.Visible = true;
+            panel52.Visible = true;
+            panel52.Location = new Point(0, 0);
         }
     }
 }
