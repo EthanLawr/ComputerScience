@@ -1,0 +1,67 @@
+import java.util.*;
+public class NewtonsMethod{
+    // This program will allow the user to use newtons method for calculating a square root
+    // By Ethan Lawrence 01/23/2019
+	// elawrence152@gmail.com
+     public static void main(String []args){
+        Scanner userInput = new Scanner(System.in);
+        
+        System.out.println("This program will allow the user to use newtons method for calculating a square root");
+        
+        System.out.println("Please enter a number to use the method on.");
+        double y = userInput.nextDouble();
+        double z = y;
+        
+        System.out.println("Please enter how many decimal points you want this number to go to. Type 1,2,3, or 4");
+        int xx = userInputMethod();
+
+
+        System.out.println("Type 1 for the number to be in scientific notation. Type 2 for it to be a decimal.");
+        int xxx = userInputMethod2();
+        
+        for (int i = xx; i > 0; i--) {
+            y = iteration(y, z);
+        }
+        if (xxx == 1) {
+            if (xx == 1) System.out.printf("This number, using newtons method of square roots, is now: %1.1e",y);
+            else if (xx == 2) System.out.printf("This number, using newtons method of square roots, is now: %1.2e",y);
+            else if (xx == 3) System.out.printf("This number, using newtons method of square roots, is now: %1.3e",y);
+            else if (xx == 4) System.out.printf("This number, using newtons method of square roots, is now: %1.4e",y);
+        }
+        else {
+            if (xx == 1) System.out.printf("This number, using newtons method of square roots, is now: %1.1f",y);
+            else if (xx == 2) System.out.printf("This number, using newtons method of square roots, is now: %1.2f",y);
+            else if (xx == 3) System.out.printf("This number, using newtons method of square roots, is now: %1.3f",y);
+            else if (xx == 4) System.out.printf("This number, using newtons method of square roots, is now: %1.4f",y);
+        }
+     }
+     public static double iteration(double x, double userInput) {
+         return 0.5 * (x + (userInput/x));
+     }
+     
+     // Method for a nastygram in a user input
+	 public static int userInputMethod() {
+        Scanner userInput = new Scanner(System.in);
+        int number = userInput.nextInt();
+
+        // Nastygram to make sure the user inputs a valid number
+        if (number > 4 || number < 1) {
+            System.out.print("Please enter a valid number. ");
+            number = userInputMethod();
+        }
+        return number;
+	}
+	
+	// Method for a nastygram in a user input
+	 public static int userInputMethod2() {
+        Scanner userInput = new Scanner(System.in);
+        int number = userInput.nextInt();
+
+        // Nastygram to make sure the user inputs a valid number
+        if (!(number == 2 || number == 1)) {
+            System.out.print("Please enter a valid number. ");
+            number = userInputMethod();
+        }
+        return number;
+	}
+}
