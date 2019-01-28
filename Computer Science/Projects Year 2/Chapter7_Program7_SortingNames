@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+   static void Main()
+   {
+      string[] names = {"Dhoni", "Raina","Jadeja", "Albie"};
+      string[] alpha = new string[26];
+      foreach(string name in names) alpha[name[0] - 65] = name;
+      int i = 0;
+      foreach(string name in alpha)
+      {
+         if (name != null)
+         {
+            names[i] = name;
+            i++;
+         }
+      } 
+      foreach(string name in names) Console.WriteLine(name);
+      Console.ReadKey();
+   } 
+} 
