@@ -89,6 +89,7 @@
             this.panel53 = new System.Windows.Forms.Panel();
             this.panel49 = new System.Windows.Forms.Panel();
             this.panel52 = new System.Windows.Forms.Panel();
+            this.panel54 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // End
@@ -109,7 +110,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Location = new System.Drawing.Point(613, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(16, 476);
+            this.panel1.Size = new System.Drawing.Size(16, 397);
             this.panel1.TabIndex = 1;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
@@ -658,12 +659,22 @@
             this.panel52.TabIndex = 11;
             this.panel52.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             // 
+            // panel54
+            // 
+            this.panel54.BackColor = System.Drawing.Color.LightCoral;
+            this.panel54.Location = new System.Drawing.Point(613, 388);
+            this.panel54.Name = "panel54";
+            this.panel54.Size = new System.Drawing.Size(16, 54);
+            this.panel54.TabIndex = 10;
+            this.panel54.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1165, 954);
+            this.Controls.Add(this.panel54);
             this.Controls.Add(this.panel52);
             this.Controls.Add(this.panel49);
             this.Controls.Add(this.panel53);
@@ -799,6 +810,7 @@
         private System.Windows.Forms.Panel panel53;
         private System.Windows.Forms.Panel panel49;
         private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.Panel panel54;
     }
 }
 

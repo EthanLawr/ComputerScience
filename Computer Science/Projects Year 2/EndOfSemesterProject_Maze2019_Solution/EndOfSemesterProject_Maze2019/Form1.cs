@@ -13,17 +13,16 @@ namespace EndOfSemesterProject_Maze2019
     public partial class Form1 : Form
     {
         private static readonly Random getrandom = new Random();
-        private static int something = 0, something2 = 0, something3 = 0;
+        private static int something = 0, something2 = 0, something3 = 0, something4;
         private static string checkPointTimer = "0";
-
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             End.BringToFront();
+            panel54.SendToBack();
             radioButton3.BringToFront();
             panel9.BringToFront();
             panel11.SendToBack();
@@ -88,8 +87,10 @@ namespace EndOfSemesterProject_Maze2019
                 }
             }
 
-            
-
+            if (something4 > 160) panel54.Visible = false;
+            if (something4 < 190) something4++;
+            if (something4 == 190) something4 = 0; 
+            if (something4 <= 20) panel54.Visible = true;
         }
         private void panel1_MouseEnter(object sender, EventArgs e)
         {
