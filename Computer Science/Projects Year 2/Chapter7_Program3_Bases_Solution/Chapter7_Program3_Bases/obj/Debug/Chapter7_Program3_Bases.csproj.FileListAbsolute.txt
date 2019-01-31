@@ -1,0 +1,6 @@
+H:\Comp 2\projects\Chapter7_Program3_Bases_Solution\Chapter7_Program3_Bases\bin\Debug\Chapter7_Program3_Bases.exe.config
+H:\Comp 2\projects\Chapter7_Program3_Bases_Solution\Chapter7_Program3_Bases\bin\Debug\Chapter7_Program3_Bases.exe
+H:\Comp 2\projects\Chapter7_Program3_Bases_Solution\Chapter7_Program3_Bases\bin\Debug\Chapter7_Program3_Bases.pdb
+H:\Comp 2\projects\Chapter7_Program3_Bases_Solution\Chapter7_Program3_Bases\obj\Debug\Chapter7_Program3_Bases.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter7_Program3_Bases_Solution\Chapter7_Program3_Bases\obj\Debug\Chapter7_Program3_Bases.exe
+H:\Comp 2\projects\Chapter7_Program3_Bases_Solution\Chapter7_Program3_Bases\obj\Debug\Chapter7_Program3_Bases.pdb

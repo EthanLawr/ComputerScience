@@ -21,6 +21,8 @@ namespace EndOfSemesterProject_Maze2019
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Properties.Settings.Default.Setting = double.MaxValue;
+            // Properties.Settings.Default.Save();
             End.BringToFront();
             panel54.SendToBack();
             radioButton3.BringToFront();
@@ -34,6 +36,27 @@ namespace EndOfSemesterProject_Maze2019
             panel49.SendToBack();
             panel52.BringToFront();
             timer1.Tick += new EventHandler(TimerEventProcessor);
+            Cursor.Position = new Point(50, 50);
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            radioButton1.Visible = true;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+            radioButton4.Visible = false;
+            panel10.Visible = false;
+            panel6.Visible = true;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel11.Visible = false;
+            panel12.Visible = false;
+            panel13.Visible = false;
+            panel44.Visible = false;
+            panel49.Visible = false;
+            panel52.Location = new Point(0, 0);
+            label1.Text = "0";
             timer1.Start();
         }
 
@@ -87,7 +110,7 @@ namespace EndOfSemesterProject_Maze2019
                 }
             }
 
-            if (something4 > 160) panel54.Visible = false;
+            if (something4 > 180) panel54.Visible = false;
             if (something4 < 190) something4++;
             if (something4 == 190) something4 = 0; 
             if (something4 <= 20) panel54.Visible = true;
@@ -141,7 +164,16 @@ namespace EndOfSemesterProject_Maze2019
         private void End_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            MessageBox.Show($"Good job! You finished in {label1.Text} seconds!", "You won!", MessageBoxButtons.OK);
+            if (Properties.Settings.Default.Setting > double.Parse(label1.Text))
+            {
+                Properties.Settings.Default.Setting = double.Parse(label1.Text);
+                Properties.Settings.Default.Save();
+                MessageBox.Show($"Good job! You finished in {Properties.Settings.Default.Setting} seconds!\nYou also got the highscore!", "You won!", MessageBoxButtons.OK);
+            } else
+            {
+                MessageBox.Show($"Good job! You finished in {label1.Text} seconds!\nThe highscore is {Properties.Settings.Default.Setting} seconds!", "You won!", MessageBoxButtons.OK);
+            }
+            
             Close();
         }
 
