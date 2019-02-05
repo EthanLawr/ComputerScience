@@ -10,6 +10,7 @@ public class EvenOddArraySorter
         Scanner userInput = new Scanner(System.in);
         int[] evenarr = new int[10], oddarr = new int[10], negativearr = new int[10];
         
+        System.out.println("This program will sort negative, even, and odd numbers.");
         System.out.print("Please enter 10 numbers to sort");
         for (int i = 0; i < evenarr.length; i++) { 
         	evenarr[i]=userInput.nextInt();
