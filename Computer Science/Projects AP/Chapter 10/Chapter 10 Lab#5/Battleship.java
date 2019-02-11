@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class ToyBAttleship {
+public class ToyBattleship {
     public static void main(String args[]) {
         // 5x5 grid battleship 6 attempts to get a ship, 1 square battleship
         int[][] board = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
