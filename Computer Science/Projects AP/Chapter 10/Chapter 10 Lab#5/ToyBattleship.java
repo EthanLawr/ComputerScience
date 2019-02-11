@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class ToyBattleship {
+public class MyClass {
     public static void main(String args[]) {
         // 5x5 grid battleship 6 attempts to get a ship, 1 square battleship
         int[][] board = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
@@ -27,9 +27,9 @@ public class ToyBattleship {
             int userInput = userInputMethod();
             for (int row = 0; row < board.length; row++) {
                 for (int col = 0; col < board[row].length; col++) {
-                    if (board[row][col] == 2 && (col + 1) + (row * 5) == userInput) {
-                        tries++;
-                        System.out.print("Please try again. There was already a missed shot here.");
+                    if (board2[row][col] == 2 && (col + 1) + (row * 5) == userInput) {
+                        i--;
+                        System.out.print("Please try again. There was already a missed shot here. ");
                         break;
                     }
                     else if (board[row][col] == 1 && (col + 1) + (row * 5) == userInput) {
