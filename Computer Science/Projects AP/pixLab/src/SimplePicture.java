@@ -113,12 +113,10 @@ public class SimplePicture implements DigitalPicture
       this.fileName = new String(copyPicture.fileName);
       this.extension = copyPicture.extension;
    }
-   if (copyPicture.title != null)
-      this.title = new String(copyPicture.title);
+   if (copyPicture.title != null) this.title = new String(copyPicture.title);
    if (copyPicture.bufferedImage != null)
    {
-     this.bufferedImage = new BufferedImage(copyPicture.getWidth(),
-                                            copyPicture.getHeight(), BufferedImage.TYPE_INT_RGB);
+     this.bufferedImage = new BufferedImage(copyPicture.getWidth(), copyPicture.getHeight(), BufferedImage.TYPE_INT_RGB);
      this.copyPicture(copyPicture);
    }
  }
@@ -151,20 +149,13 @@ public class SimplePicture implements DigitalPicture
   */
  public void copyPicture(SimplePicture sourcePicture)
  {
-   Pixel sourcePixel = null;
-   Pixel targetPixel = null;
+   Pixel sourcePixel = null, targetPixel = null;
    
    // loop through the columns
-   for (int sourceX = 0, targetX = 0; 
-        sourceX < sourcePicture.getWidth() &&
-        targetX < this.getWidth();
-        sourceX++, targetX++)
+   for (int sourceX = 0, targetX = 0; sourceX < sourcePicture.getWidth() && targetX < this.getWidth(); sourceX++, targetX++)
    {
      // loop through the rows
-     for (int sourceY = 0, targetY = 0; 
-          sourceY < sourcePicture.getHeight() && 
-          targetY < this.getHeight();
-          sourceY++, targetY++)
+     for (int sourceY = 0, targetY = 0; sourceY < sourcePicture.getHeight() &&  targetY < this.getHeight(); sourceY++, targetY++)
      {
        sourcePixel = sourcePicture.getPixel(sourceX,sourceY);
        targetPixel = this.getPixel(targetX,targetY);
@@ -182,13 +173,8 @@ public class SimplePicture implements DigitalPicture
  {
    // loop through all x
    for (int x = 0; x < this.getWidth(); x++)
-   {
      // loop through all y
-     for (int y = 0; y < this.getHeight(); y++)
-     {
-       getPixel(x,y).setColor(color);
-     }
-   }
+     for (int y = 0; y < this.getHeight(); y++) getPixel(x,y).setColor(color);
  }
  
  /**
@@ -244,11 +230,10 @@ public class SimplePicture implements DigitalPicture
   * Method to set the title for the picture
   * @param title the title to use for the picture
   */
- public void setTitle(String title) 
+ public void setTitle(String title)
  {
    this.title = title;
-   if (pictureFrame != null)
-       pictureFrame.setTitle(title);
+   if (pictureFrame != null) pictureFrame.setTitle(title);
  }
  
  /**
@@ -349,8 +334,7 @@ public class SimplePicture implements DigitalPicture
   */
  public Pixel[][] getPixels2D()
  {
-   int width = getWidth();
-   int height = getHeight();
+   int width = getWidth(), height = getHeight();
    Pixel[][] pixelArray = new Pixel[height][width];
    
    // loop through height rows from top to bottom
@@ -383,12 +367,10 @@ public class SimplePicture implements DigitalPicture
  public void show()
  {
     // if there is a current picture frame then use it 
-   if (pictureFrame != null)
-     pictureFrame.updateImageAndShowIt();
+   if (pictureFrame != null) pictureFrame.updateImageAndShowIt();
    
    // else create a new picture frame with this picture 
-   else
-     pictureFrame = new PictureFrame(this);
+   else pictureFrame = new PictureFrame(this);
  }
  
  /**
@@ -396,8 +378,7 @@ public class SimplePicture implements DigitalPicture
   */
  public void hide()
  {
-   if (pictureFrame != null)
-     pictureFrame.setVisible(false);
+   if (pictureFrame != null) pictureFrame.setVisible(false);
  }
  
  /**
@@ -406,10 +387,8 @@ public class SimplePicture implements DigitalPicture
   */
  public void setVisible(boolean flag)
  {
-   if (flag)
-     this.show();
-   else 
-     this.hide();
+   if (flag) this.show();
+   else this.hide();
  }
 
  /**
@@ -430,12 +409,9 @@ public class SimplePicture implements DigitalPicture
  public void repaint()
  {
    // if there is a picture frame tell it to repaint
-   if (pictureFrame != null)
-     pictureFrame.repaint();
-   
+   if (pictureFrame != null) pictureFrame.repaint();
    // else create a new picture frame
-   else
-     pictureFrame = new PictureFrame(this);
+   else pictureFrame = new PictureFrame(this);
  }
  
  /**
@@ -450,12 +426,10 @@ public class SimplePicture implements DigitalPicture
    
    // set the extension
    int posDot = fileName.indexOf('.');
-   if (posDot >= 0)
-     this.extension = fileName.substring(posDot + 1);
+   if (posDot >= 0) this.extension = fileName.substring(posDot + 1);
    
    // if the current title is null use the file name
-   if (title == null)
-     title = fileName;
+   if (title == null) title = fileName;
    
    File file = new File(this.fileName);
 
@@ -463,11 +437,7 @@ public class SimplePicture implements DigitalPicture
    {
      // try adding the media path 
      file = new File(FileChooser.getMediaPath(this.fileName));
-     if (!file.canRead())
-     {
-       throw new IOException(this.fileName +
-                             " could not be opened. Check that you specified the path");
-     }
+     if (!file.canRead()) throw new IOException(this.fileName + " could not be opened. Check that you specified the path");
    }
    
    bufferedImage = ImageIO.read(file);
@@ -485,15 +455,12 @@ public class SimplePicture implements DigitalPicture
      try {
          this.loadOrFail(fileName);
          return true;
-
      } catch (Exception ex) {
          System.out.println("There was an error trying to open " + fileName);
-         bufferedImage = new BufferedImage(600,200,
-                                           BufferedImage.TYPE_INT_RGB);
+         bufferedImage = new BufferedImage(600,200, BufferedImage.TYPE_INT_RGB);
          addMessage("Couldn't load " + fileName,5,100);
          return false;
-     }
-         
+     } 
  }
 
  /**
@@ -625,8 +592,7 @@ public class SimplePicture implements DigitalPicture
    String extension = this.extension; // the default is current
    
    // create the file object
-   File file = new File(fileName);
-   File fileLoc = file.getParentFile(); // directory name
+   File file = new File(fileName), fileLoc = file.getParentFile(); // directory name
    
    // if there is no parent directory use the current media dir
    if (fileLoc == null)
@@ -638,14 +604,12 @@ public class SimplePicture implements DigitalPicture
    
    // check that you can write to the directory 
    if (!fileLoc.canWrite()) {
-        throw new IOException(fileName +
-        " could not be opened. Check to see if you can write to the directory.");
+        throw new IOException(fileName + " could not be opened. Check to see if you can write to the directory.");
    }
    
    // get the extension
    int posDot = fileName.indexOf('.');
-   if (posDot >= 0)
-       extension = fileName.substring(posDot + 1);
+   if (posDot >= 0) extension = fileName.substring(posDot + 1);
    
    // write the contents of the buffered image to the file as jpeg
    ImageIO.write(bufferedImage, extension, file);
@@ -667,8 +631,7 @@ public class SimplePicture implements DigitalPicture
          System.out.println("There was an error trying to write " + fileName);
          ex.printStackTrace();
          return false;
-     }
-         
+     }   
  }
  
  /**
@@ -688,11 +651,8 @@ public class SimplePicture implements DigitalPicture
    */
   public Rectangle2D getTransformEnclosingRect(AffineTransform trans)
   {
-    int width = getWidth();
-    int height = getHeight();
-    double maxX = width - 1;
-    double maxY = height - 1;
-    double minX, minY;
+    int width = getWidth(), height = getHeight();
+    double maxX = width - 1, maxY = height - 1, minX, minY;
     Point2D.Double p1 = new Point2D.Double(0,0);
     Point2D.Double p2 = new Point2D.Double(maxX,0);
     Point2D.Double p3 = new Point2D.Double(maxX,maxY);
@@ -743,8 +703,7 @@ public class SimplePicture implements DigitalPicture
   */
  public String toString()
  {
-   String output = "Simple Picture, filename " + fileName + 
-     " height " + getHeight() + " width " + getWidth();
+   String output = "Simple Picture, filename " + fileName + " height " + getHeight() + " width " + getWidth();
    return output;
  }
 

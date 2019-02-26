@@ -26,7 +26,6 @@ public class ColorChooser
     JFrame frame = new JFrame();
     frame.setAlwaysOnTop(true);
     
-    
     // use the color chooser to pick the color
     color = JColorChooser.showDialog(frame,"Pick a color",color);
     

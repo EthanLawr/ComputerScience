@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -22,7 +21,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
  
   // current indicies
   /** row index */
-  private int rowIndex = 0; 
+  private int rowIndex = 0;
   /** column index */
   private int colIndex = 0;
   
@@ -226,10 +225,8 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   private void setUpNextAndPreviousButtons()
   {
     // create the image icons for the buttons
-    Icon prevIcon = new ImageIcon(DigitalPicture.class.getResource("leftArrow.gif"), 
-                                  "previous index");
-    Icon nextIcon = new ImageIcon(DigitalPicture.class.getResource("rightArrow.gif"), 
-                                  "next index");
+    Icon prevIcon = new ImageIcon(DigitalPicture.class.getResource("leftArrow.gif"), "previous index"),
+    		nextIcon = new ImageIcon(DigitalPicture.class.getResource("rightArrow.gif"), "next index");
     // create the arrow buttons
     colPrevButton = new JButton(prevIcon);
     colNextButton = new JButton(nextIcon);
@@ -243,10 +240,8 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     rowPrevButton.setToolTipText("Click to go to the previous row value");
     
     // set the sizes of the buttons
-    int prevWidth = prevIcon.getIconWidth() + 2;
-    int nextWidth = nextIcon.getIconWidth() + 2;
-    int prevHeight = prevIcon.getIconHeight() + 2;
-    int nextHeight = nextIcon.getIconHeight() + 2;
+    int prevWidth = prevIcon.getIconWidth() + 2, nextWidth = nextIcon.getIconWidth() + 2,
+    		prevHeight = prevIcon.getIconHeight() + 2, nextHeight = nextIcon.getIconHeight() + 2;
     Dimension prevDimension = new Dimension(prevWidth,prevHeight);
     Dimension nextDimension = new Dimension(nextWidth, nextHeight);
     colPrevButton.setPreferredSize(prevDimension);
@@ -258,8 +253,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     colPrevButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         colIndex--;
-        if (colIndex < 0)
-          colIndex = 0;
+        if (colIndex < 0) colIndex = 0;
         displayPixelInformation(colIndex,rowIndex);
       }
     });
@@ -268,8 +262,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     rowPrevButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         rowIndex--;
-        if (rowIndex < 0)
-          rowIndex = 0;
+        if (rowIndex < 0) rowIndex = 0;
         displayPixelInformation(colIndex,rowIndex);
       }
     });
@@ -278,8 +271,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     colNextButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         colIndex++;
-        if (colIndex >= picture.getWidth())
-          colIndex = picture.getWidth() - 1;
+        if (colIndex >= picture.getWidth()) colIndex = picture.getWidth() - 1;
         displayPixelInformation(colIndex,rowIndex);
       }
     });
@@ -288,8 +280,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     rowNextButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent evt) {
         rowIndex++;
-        if (rowIndex >= picture.getHeight())
-          rowIndex = picture.getHeight() - 1;
+        if (rowIndex >= picture.getHeight()) rowIndex = picture.getHeight() - 1;
         displayPixelInformation(colIndex,rowIndex);
       }
     });
@@ -406,8 +397,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     infoPanel.setLayout(new BorderLayout());
     
     // create the font
-    Font largerFont = new Font(infoPanel.getFont().getName(),
-                               infoPanel.getFont().getStyle(),14);
+    Font largerFont = new Font(infoPanel.getFont().getName(), infoPanel.getFont().getStyle(),14);
     
     // create the pixel location panel
     JPanel locationPanel = createLocationPanel(largerFont);
@@ -435,35 +425,24 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     
     // only do this if the image is larger than normal
     if (zoomFactor > 1) {
-      
       // get the rectangle that defines the current view
       JViewport viewport = scrollPane.getViewport();
       Rectangle rect = viewport.getViewRect();
-      int rectMinX = (int) rect.getX();
-      int rectWidth = (int) rect.getWidth();
-      int rectMaxX = rectMinX + rectWidth - 1;
-      int rectMinY = (int) rect.getY();
-      int rectHeight = (int) rect.getHeight();
-      int rectMaxY = rectMinY + rectHeight - 1;
+      int rectMinX = (int) rect.getX(), rectWidth = (int) rect.getWidth(), rectMaxX = rectMinX + rectWidth - 1,
+    		  rectMinY = (int) rect.getY(), rectHeight = (int) rect.getHeight(), rectMaxY = rectMinY + rectHeight - 1;
       
       // get the maximum possible x and y index
-      int macolIndexX = (int) (picture.getWidth() * zoomFactor) - rectWidth - 1;
-      int macolIndexY = (int) (picture.getHeight() * zoomFactor) - rectHeight - 1;
+      int macolIndexX = (int) (picture.getWidth() * zoomFactor) - rectWidth - 1, macolIndexY = (int) (picture.getHeight() * zoomFactor) - rectHeight - 1;
       
       // calculate how to position the current position in the middle of the viewing
       // area
-      int viewX = xPos - (int) (rectWidth / 2);
-      int viewY = yPos - (int) (rectHeight / 2);
+      int viewX = xPos - (int) (rectWidth / 2), viewY = yPos - (int) (rectHeight / 2);
       
       // reposition the viewX and viewY if outside allowed values
-      if (viewX < 0)
-        viewX = 0;
-      else if (viewX > macolIndexX)
-        viewX = macolIndexX;
-      if (viewY < 0)
-        viewY = 0;
-      else if (viewY > macolIndexY)
-        viewY = macolIndexY;
+      if (viewX < 0) viewX = 0;
+      else if (viewX > macolIndexX) viewX = macolIndexX;
+      if (viewY < 0) viewY = 0;
+      else if (viewY > macolIndexY) viewY = macolIndexY;
       
       // move the viewport upper left point
       viewport.scrollRectToVisible(new Rectangle(viewX,viewY,rectWidth,rectHeight));
@@ -481,8 +460,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     zoomFactor = factor;
     
     // calculate the new width and height and get an image that size
-    int width = (int) (picture.getWidth()*zoomFactor);
-    int height = (int) (picture.getHeight()*zoomFactor);
+    int width = (int) (picture.getWidth()*zoomFactor), height = (int) (picture.getHeight()*zoomFactor);
     BufferedImage bimg = picture.getBufferedImage();
     
     // set the scroll image icon to the new image
@@ -524,10 +502,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   private boolean isLocationInPicture(int column, int row)
   {
     boolean result = false; // the default is false
-    if (column >= 0 && column < picture.getWidth() &&
-        row >= 0 && row < picture.getHeight())
-      result = true;
-    
+    if (column >= 0 && column < picture.getWidth() && row >= 0 && row < picture.getHeight()) result = true;
     return result;
   }
   
@@ -539,8 +514,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    */
   public void displayPixelInformation(String xString, String yString)
   {
-    int x = -1;
-    int y = -1;
+    int x = -1, y = -1;
     try {
       x = Integer.parseInt(xString);
       x = x - numberBase;
@@ -549,9 +523,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     } catch (Exception ex) {
     }
     
-    if (x >= 0 && y >= 0) {
-      displayPixelInformation(x,y);
-    }
+    if (x >= 0 && y >= 0) displayPixelInformation(x,y);
   }
   
   /**
@@ -578,12 +550,8 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
       gValue.setText("G: " + pixel.getGreen());
       bValue.setText("B: " + pixel.getBlue());
       colorPanel.setBackground(new Color(pixel.getRed(), pixel.getGreen(), pixel.getBlue()));
-      
     } 
-    else
-    {
-      clearInformation();
-    }
+    else clearInformation();
     
     // notify the image display of the current x and y
     imageDisplay.setCurrentX((int) (colIndex * zoomFactor));
@@ -598,12 +566,10 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   {
     
     // get the cursor x and y
-    int cursorX = e.getX();
-    int cursorY = e.getY();
+    int cursorX = e.getX(), cursorY = e.getY();
     
     // get the x and y in the original (not scaled image)
-    int pictureX = (int) (cursorX / zoomFactor + numberBase);
-    int pictureY = (int) (cursorY / zoomFactor + numberBase);
+    int pictureX = (int) (cursorX / zoomFactor + numberBase), pictureY = (int) (cursorY / zoomFactor + numberBase);
     
     // display the information for this x and y
     displayPixelInformation(pictureX,pictureY);
@@ -697,10 +663,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   public void actionPerformed(ActionEvent a)
   {
     
-    if(a.getActionCommand().equals("Update"))
-    {
-      this.repaint();
-    }
+    if(a.getActionCommand().equals("Update")) this.repaint();
     
     if(a.getActionCommand().equals("25%"))
     {
@@ -757,29 +720,21 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   /**
    * Class for establishing the focus for the textfields
    */
-  private class PictureExplorerFocusTraversalPolicy
-    extends FocusTraversalPolicy {
-    
+  private class PictureExplorerFocusTraversalPolicy extends FocusTraversalPolicy {
     /**
      * Method to get the next component for focus
      */
-    public Component getComponentAfter(Container focusCycleRoot,
-                                       Component aComponent) {
-      if (aComponent.equals(colValue))
-        return rowValue;
-      else 
-        return colValue;
+    public Component getComponentAfter(Container focusCycleRoot, Component aComponent) {
+      if (aComponent.equals(colValue)) return rowValue;
+      else return colValue;
     }
     
     /**
      * Method to get the previous component for focus
      */
-    public Component getComponentBefore(Container focusCycleRoot,
-                                        Component aComponent) {
-      if (aComponent.equals(colValue))
-        return rowValue;
-      else 
-        return colValue;
+    public Component getComponentBefore(Container focusCycleRoot, Component aComponent) {
+      if (aComponent.equals(colValue)) return rowValue;
+      else return colValue;
     }
     
     public Component getDefaultComponent(Container focusCycleRoot) {
@@ -800,8 +755,11 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    */
   public static void main( String args[])
   {
-    Picture pix = new Picture("beach.jpg");
+    Picture pix = new Picture("flower2.jpg");
+    //Picture smallP = pix.scale(0.25, 0.25);
+    //smallP.write("smallkai.jpg");
     pix.explore();
+    //Picture p = new SimplePicture();       
   }
   
 }

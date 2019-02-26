@@ -316,12 +316,9 @@ public class Pixel
   */
  public double colorDistance(Color testColor)
  {
-   double redDistance = this.getRed() - testColor.getRed();
-   double greenDistance = this.getGreen() - testColor.getGreen();
-   double blueDistance = this.getBlue() - testColor.getBlue();
-   double distance = Math.sqrt(redDistance * redDistance + 
-                               greenDistance * greenDistance +
-                               blueDistance * blueDistance);
+   double redDistance = this.getRed() - testColor.getRed(), greenDistance = this.getGreen() - testColor.getGreen(), 
+		   blueDistance = this.getBlue() - testColor.getBlue(), distance = Math.sqrt(redDistance * redDistance +
+		   greenDistance * greenDistance + blueDistance * blueDistance);
    return distance;
  }
  
@@ -333,12 +330,9 @@ public class Pixel
   */
  public static double colorDistance(Color color1,Color color2)
  {
-   double redDistance = color1.getRed() - color2.getRed();
-   double greenDistance = color1.getGreen() - color2.getGreen();
-   double blueDistance = color1.getBlue() - color2.getBlue();
-   double distance = Math.sqrt(redDistance * redDistance + 
-                               greenDistance * greenDistance +
-                               blueDistance * blueDistance);
+   double redDistance = color1.getRed() - color2.getRed(), greenDistance = color1.getGreen() - color2.getGreen(),
+		   blueDistance = color1.getBlue() - color2.getBlue(), distance = Math.sqrt(redDistance * redDistance +
+		   greenDistance * greenDistance + blueDistance * blueDistance);
    return distance;
  }
  
@@ -358,11 +352,7 @@ public class Pixel
    */
   public String toString()
   {
-    return "Pixel row=" + getRow() + 
-      " col=" + getCol() +
-      " red=" + getRed() + 
-      " green=" + getGreen() + 
-      " blue=" + getBlue();
+    return "Pixel row=" + getRow() + " col=" + getCol() + " red=" + getRed() + " green=" + getGreen() + " blue=" + getBlue();
   }
 
 }
