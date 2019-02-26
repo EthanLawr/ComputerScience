@@ -1,0 +1,9 @@
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\bin\Debug\Chapter8_Program8_Slotz.exe.config
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\bin\Debug\Chapter8_Program8_Slotz.exe
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\bin\Debug\Chapter8_Program8_Slotz.pdb
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\obj\Debug\Chapter8_Program8_Slotz.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\obj\Debug\Chapter8_Program8_Slotz.Form1.resources
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\obj\Debug\Chapter8_Program8_Slotz.Properties.Resources.resources
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\obj\Debug\Chapter8_Program8_Slotz.csproj.GenerateResource.Cache
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\obj\Debug\Chapter8_Program8_Slotz.exe
+H:\Comp 2\projects\Chapter8_Program8_Slotz_Solution\Chapter8_Program8_Slotz\obj\Debug\Chapter8_Program8_Slotz.pdb
