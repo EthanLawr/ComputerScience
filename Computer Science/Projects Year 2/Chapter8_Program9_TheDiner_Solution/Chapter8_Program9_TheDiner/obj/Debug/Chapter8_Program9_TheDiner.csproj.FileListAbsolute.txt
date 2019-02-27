@@ -1,0 +1,9 @@
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\bin\Debug\Chapter8_Program9_TheDiner.exe.config
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\bin\Debug\Chapter8_Program9_TheDiner.exe
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\bin\Debug\Chapter8_Program9_TheDiner.pdb
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\obj\Debug\Chapter8_Program9_TheDiner.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\obj\Debug\Chapter8_Program9_TheDiner.Form1.resources
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\obj\Debug\Chapter8_Program9_TheDiner.Properties.Resources.resources
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\obj\Debug\Chapter8_Program9_TheDiner.csproj.GenerateResource.Cache
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\obj\Debug\Chapter8_Program9_TheDiner.exe
+H:\Comp 2\projects\Chapter8_Program9_TheDiner_Solution\Chapter8_Program9_TheDiner\obj\Debug\Chapter8_Program9_TheDiner.pdb
