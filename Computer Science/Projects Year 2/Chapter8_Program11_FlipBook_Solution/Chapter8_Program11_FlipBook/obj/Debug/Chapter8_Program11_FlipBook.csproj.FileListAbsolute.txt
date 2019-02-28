@@ -1,0 +1,9 @@
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\bin\Debug\Chapter8_Program11_FlipBook.exe.config
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\bin\Debug\Chapter8_Program11_FlipBook.exe
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\bin\Debug\Chapter8_Program11_FlipBook.pdb
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\obj\Debug\Chapter8_Program11_FlipBook.csprojResolveAssemblyReference.cache
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\obj\Debug\Chapter8_Program11_FlipBook.Form1.resources
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\obj\Debug\Chapter8_Program11_FlipBook.Properties.Resources.resources
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\obj\Debug\Chapter8_Program11_FlipBook.csproj.GenerateResource.Cache
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\obj\Debug\Chapter8_Program11_FlipBook.exe
+H:\Comp 2\projects\Chapter8_Program11_FlipBook_Solution\Chapter8_Program11_FlipBook\obj\Debug\Chapter8_Program11_FlipBook.pdb
