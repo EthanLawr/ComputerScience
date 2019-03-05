@@ -50,41 +50,55 @@ namespace Chapter8_Program8_Slotz
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        { 
-                m += 10;
-                l += 10;
-                if (m <= 100)
+        {
+            m += 10;
+            l += 10;
+            if (l >= 350)
+            {
+                timer1.Enabled = false;
+                m = 0;
+                l = 0;
+                if (int.Parse(label1.Text) == 1 && int.Parse(label2.Text) == 1 &&
+                    int.Parse(label3.Text) == 1)
                 {
-                    // "Animation" and end value
-                    label1.Text = myRandom.Next(1, 4).ToString();
-                    label2.Text = myRandom.Next(1, 4).ToString();
-                    label3.Text = myRandom.Next(1, 4).ToString();
-                }
-                else if (m <= 120) m = 0;
-
-                while (l >= 350)
+                    // Starts +4 counter
+                    label6.BringToFront();
+                    timer2.Start();
+                    label6.Text = "+4";
+                    label6.ForeColor = Color.Black;
+                    label5.Text = (int.Parse(label5.Text) + 4).ToString();
+                    MessageBox.Show("You Won!", "Good job! You won 4 tokens!", MessageBoxButtons.OK);
+                } else if (int.Parse(label1.Text) == 2 && int.Parse(label2.Text) == 2 &&
+                    int.Parse(label3.Text) == 2)
                 {
-                    timer1.Stop();
-                    if (int.Parse(label1.Text) == int.Parse(label2.Text) && int.Parse(label2.Text) == int.Parse(label3.Text) && 
-                        int.Parse(label1.Text) == int.Parse(label3.Text))
-                    {
-                        // Starts +8 counter
-                        label6.BringToFront();
-                        timer2.Start();
-                        label4.ForeColor = Color.Black;
-                        label6.ForeColor = Color.Black;
-                        label5.Text = (int.Parse(label5.Text) + 8).ToString();                        
-                        MessageBox.Show("You Won!", "Good job! You won 8 tokens!", MessageBoxButtons.OK);
-                    }
-                    m = 0;
-                    l = 0;
-                    timer1.Enabled = false;
-                    break;
+                    // Starts +8 counter
+                    label6.BringToFront();
+                    timer2.Start();
+                    label6.Text = "+8";
+                    label6.ForeColor = Color.Black;
+                    label5.Text = (int.Parse(label5.Text) + 8).ToString();
+                    MessageBox.Show("You Won!", "Good job! You won 8 tokens!", MessageBoxButtons.OK);
+                } else if (int.Parse(label1.Text) == 3 && int.Parse(label2.Text) == 3 &&
+                   int.Parse(label3.Text) == 3)
+                {
+                    // Starts +8 counter
+                    label6.BringToFront();
+                    timer2.Start();
+                    label6.Text = "+12";
+                    label6.ForeColor = Color.Black;
+                    label5.Text = (int.Parse(label5.Text) + 8).ToString();
+                    MessageBox.Show("You Won!", "Good job! You won 12 tokens!", MessageBoxButtons.OK);
                 }
-            
-            
 
 
+            } else if (m > 15)
+            {
+                // "Animation" and end value
+                label1.Text = myRandom.Next(1, 4).ToString();
+                label2.Text = myRandom.Next(1, 4).ToString();
+                label3.Text = myRandom.Next(1, 4).ToString();
+                m = 0;
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -97,6 +111,7 @@ namespace Chapter8_Program8_Slotz
                 label6.ForeColor = BackColor;
             }
         }
+
         private void timer3_Tick(object sender, EventArgs e)
         {
             int fadingSpeed = 10;
