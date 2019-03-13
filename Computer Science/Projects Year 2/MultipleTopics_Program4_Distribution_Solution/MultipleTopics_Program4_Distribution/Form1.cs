@@ -19,17 +19,22 @@ namespace MultipleTopics_Program4_Distribution
         private void MakeHistogram(Label[] labels, int[] values)
         {
             // Calculate a scale so the largest
-            // value fits nicely on the form.
+            // value fits well on the form.
             int available_height = labels[0].Bottom - 5;
             int max = values.Max();
             float scale = available_height / (float)max;
-
+            int y = 0;
+            foreach (int x in values) y += x;
+            // Scaling of x
+            label23.Text = "X = " + (int)(y*scale);
             for (int i = 0; i < labels.Length; i++)
             {
                 int height = (int)(scale * values[i]);
+               
                 labels[i].Top = labels[i].Bottom - height;
                 labels[i].Height = height;
-                labels[i].Text = values[i].ToString();
+                // Scaling of X
+                labels[i].Text = new string('X', height/10);
             }
             
         }
@@ -47,9 +52,10 @@ namespace MultipleTopics_Program4_Distribution
                 int index = new_value - 2;
                 counts[index]++;
             }
-
+            // Labels go into the method
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10, label11 };
             MakeHistogram(labels, counts);
         }
+
     }
 }
