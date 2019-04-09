@@ -1,9 +1,0 @@
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\bin\Debug\Fish_Aquarium_Project.exe.config
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\obj\Debug\Fish_Aquarium_Project.csprojResolveAssemblyReference.cache
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\obj\Debug\Fish_Aquarium_Project.Form1.resources
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\obj\Debug\Fish_Aquarium_Project.Properties.Resources.resources
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\obj\Debug\Fish_Aquarium_Project.csproj.GenerateResource.Cache
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\bin\Debug\Fish_Aquarium_Project.exe
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\bin\Debug\Fish_Aquarium_Project.pdb
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\obj\Debug\Fish_Aquarium_Project.exe
-H:\Comp 2\projects\Fish_Aquarium_Project_Solution\Fish_Aquarium_Project\obj\Debug\Fish_Aquarium_Project.pdb
