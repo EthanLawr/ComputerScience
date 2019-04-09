@@ -66,6 +66,7 @@ namespace MultipleTopics_SortingUsingref_Program1
 
         public static void BubbleSorter(ref int x, ref int y)
         {
+            // Sorts ints least to greatest
             if (x > y)
             {
                 int temp = x;
@@ -76,6 +77,7 @@ namespace MultipleTopics_SortingUsingref_Program1
 
         public static void BubbleSorterString(ref string x, ref string y)
         {
+            // Sorts strings a - z 
             if (string.Compare(x, y) > 0)
             {
                 string temp = x;
@@ -89,7 +91,6 @@ namespace MultipleTopics_SortingUsingref_Program1
             // This uses an array and reassigns each value using the bubble sorting method. It can work with an array of any usable size
             for (int z = 0; z != array.Length; z++) for (int i = 0; i < array.Length - 1; i++) BubbleSorter(ref array[i], ref array[i + 1]);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             label1.Text = "";
@@ -133,6 +134,7 @@ namespace MultipleTopics_SortingUsingref_Program1
                         BubbleSorterString(ref newArray[0], ref newArray[1]);
                         BubbleSorterString(ref newArray[1], ref newArray[2]);
                         lineCount++;
+                        // Allows the lines to stay on the form
                         if (lineCount == 1)
                         {
                             foreach (string x in newArray) label2.Text += x + " ";
