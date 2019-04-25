@@ -22,7 +22,6 @@ namespace Fish_Aquarium_Project
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-           
             TopMost = true;  //makes fish show over other programs
 
             Size = Screen.PrimaryScreen.Bounds.Size + (new Size(20, 20));
@@ -30,7 +29,6 @@ namespace Fish_Aquarium_Project
             FormBorderStyle = FormBorderStyle.None; //also necessary so no borders will be shown
             BackColor = Color.Black;
             TransparencyKey = Color.Black; //mandatory, it makes black color transparent (won't be shown)
-
 
             timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Interval = 40;
@@ -42,7 +40,7 @@ namespace Fish_Aquarium_Project
         {
             foreach(Fish s in fishes)
             {
-                s.Swim();
+                s.Swim(timer1);
             }
             /* if (i >= 40)  //if we go over 40 fish 
              {
@@ -52,7 +50,6 @@ namespace Fish_Aquarium_Project
 
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Array.Resize(ref fishes, fishes.Length + 1);
@@ -60,11 +57,6 @@ namespace Fish_Aquarium_Project
             Controls.Add(fishes[i]);  //each picturebox created must be added to the form
             i++;
 
-        }
-        private void CallToChildThread()
-        {
-
-              //each picturebox created must be added to the form
         }
     }
 }

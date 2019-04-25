@@ -69,5 +69,15 @@ namespace Fish_Aquarium_Project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo_1511804472014_fa7b871cd6a9 {
+            get {
+                object obj = ResourceManager.GetObject("photo-1511804472014-fa7b871cd6a9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

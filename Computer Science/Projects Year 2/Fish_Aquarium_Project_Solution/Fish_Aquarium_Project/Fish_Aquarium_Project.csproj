@@ -86,6 +86,9 @@
   <ItemGroup>
     <None Include="Resources\image0.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1511804472014-fa7b871cd6a9.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

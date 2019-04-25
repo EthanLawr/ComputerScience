@@ -39,12 +39,16 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Fish_Aquarium_Project.Properties.Resources.image0;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(20, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 71);
+            this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
