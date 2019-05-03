@@ -73,9 +73,9 @@ namespace Fish_Aquarium_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_1511804472014_fa7b871cd6a9 {
+        internal static System.Drawing.Bitmap shroom {
             get {
-                object obj = ResourceManager.GetObject("photo-1511804472014-fa7b871cd6a9", resourceCulture);
+                object obj = ResourceManager.GetObject("shroom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

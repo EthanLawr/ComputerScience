@@ -16,12 +16,14 @@ namespace Fish_Aquarium_Project
         int i = 0;
         //Timer t;
         Fish[] fishes = new Fish[0];
+        Food[] food = new Food[0];
         public Form1()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             TopMost = true;  //makes fish show over other programs
 
             Size = Screen.PrimaryScreen.Bounds.Size + (new Size(20, 20));
@@ -38,17 +40,24 @@ namespace Fish_Aquarium_Project
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            foreach(Fish s in fishes)
-            {
-                s.Swim(timer1);
+            for (int f = 0; f < fishes.Length; f++) {
+                int[] hunger = fishes[f].GetHunger();
+                fishes[f].Swim(timer1);
+                if (hunger[0] > hunger[1])
+                {
+                    fishes[f].Dispose();
+                    RemoveAt(ref fishes, f);
+                    i--;
+                }
             }
-            /* if (i >= 40)  //if we go over 40 fish 
-             {
-                 timer1.Stop();  // Stops making new fish
-                 return;
-             }*/
-
-
+        }
+        public static void RemoveAt<T>(ref T[] arr, int index)
+        {
+            for (int a = index; a < arr.Length - 1; a++) arr[a] = arr[a + 1];
+            // moving elements downwards, to fill the gap at [index]
+            // finally, let's decrement Array's size by one
+            Array.Resize(ref arr, arr.Length - 1);
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,6 +65,11 @@ namespace Fish_Aquarium_Project
             fishes[i] = new Fish(10,10);
             Controls.Add(fishes[i]);  //each picturebox created must be added to the form
             i++;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
     }
