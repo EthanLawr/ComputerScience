@@ -13,10 +13,10 @@ namespace Fish_Aquarium_Project
     public partial class Form1 : Form
     {
         public Random r = new Random();
-        int i = 0;
+        int i = 0, g = 0;
         //Timer t;
         Fish[] fishes = new Fish[0];
-        Food[] food = new Food[0];
+        Food[] foods = new Food[0];
         public Form1()
         {
             InitializeComponent();
@@ -42,12 +42,13 @@ namespace Fish_Aquarium_Project
         {
             for (int f = 0; f < fishes.Length; f++) {
                 int[] hunger = fishes[f].GetHunger();
-                fishes[f].Swim(timer1);
+                fishes[f].Swim(timer1, ref foods, ref g);
                 if (hunger[0] > hunger[1])
                 {
                     fishes[f].Dispose();
                     RemoveAt(ref fishes, f);
                     i--;
+                    
                 }
             }
         }
@@ -70,7 +71,10 @@ namespace Fish_Aquarium_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Array.Resize(ref foods, foods.Length + 1);
+            foods[g] = new Food(10, 10);
+            Controls.Add(foods[g]);  //each picturebox created must be added to the form
+            g++;
         }
     }
 }

@@ -17,9 +17,11 @@ namespace Fish_Aquarium_Project
         //private Label fishLabel;
         private PictureBox fishPic;//you'll do this instead of a label
         private Random randy = new Random();
-        private Point end, velocity, acceleration;
+        private Point end, acceleration;
+        private bool followingFood = false;
         private int hunger, hungerMax;
         private double radius = 0, angle = 0;
+        private Food followedFood;
         //?? food
         //?? weight
         private int speed_left = 4, speed_top = 4, orig_Speed_Left = 4, orig_Speed_Top = 4;
@@ -63,48 +65,81 @@ namespace Fish_Aquarium_Project
             return fishPic;
         }
 
-        public void Swim(Timer timer1)
+        public void Swim(Timer timer1, ref Food[] FoodArray, ref int FoodArrayLength)
         {
             hunger++;
-            
-            //if (hunger > 85)
-            //{
-            //Changes the color of the fish if the get too hungry
-            //}
-            /*if (true)//always "turned on" right now
+            if (FoodArray.Length > 0 && !FoodArray.Contains(followedFood))
             {
-                x += 2;//moves the fish to the right 2
-                y += 2;//moves the fish down 2
-            }*/
+                Point[] foodDistanceArray = new Point[FoodArray.Length];
+                int[] foodDistanceArray2 = new int[FoodArray.Length];
+                int minValue = 1000;
+                Point ClosestFood = new Point(0,0);
+                Func<Point, Point, int> getLength = (p1, p2) => (int)Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2)); // C^2 = A^2 + B^2
 
-            Rectangle s = Rectangle(fishPic);
-            if (s.Contains(end))
-            {
-                end = new Point(randy.Next(10, 1280), randy.Next(10, 1024));
-                if (end.X > Location.X)
+                for (int f = 0; f < FoodArray.Length; f++)
                 {
-                    Image = Properties.Resources.image0;
-                    Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                    foodDistanceArray[f] = new Point(FoodArray[f].GetLocation()[0], FoodArray[f].GetLocation()[1]);
+                    foodDistanceArray2[f] = getLength(foodDistanceArray[f], Location);
                 }
-                if (end.X < Location.X) Image = Properties.Resources.image0;
-                angle = 0;
-                radius = Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2));
+                for (int f = 0; f < foodDistanceArray2.Length; f++)
+                {
+                    if (minValue > foodDistanceArray2[f])
+                    {
+                        minValue = foodDistanceArray2[f];
+                        end = foodDistanceArray[f];
+                        followingFood = true;
+                        followedFood = FoodArray[f];
+                        
+                    }
+                }
+                if (Left < ClosestFood.X) speed_left = orig_Speed_Left;
+                else if (Right > ClosestFood.X) speed_left = -orig_Speed_Left;
+                if (Top < ClosestFood.Y) speed_top = orig_Speed_Top;
+                else if (Bottom > ClosestFood.Y) speed_top = -orig_Speed_Top;
+                Left += speed_left;     //move the fish
+                Top += speed_top;
+            } else
+            {
+                Rectangle s = Rectangle(fishPic);
+                if (s.Contains(end))
+                {
+
+                    if (followingFood == true && !followedFood.Disposing && s.Contains(followedFood.GetLocation()[0], followedFood.GetLocation()[1]))
+                    {
+                        hunger = 0;
+                        followedFood.Dispose();
+                        RemoveAt(ref FoodArray, Array.IndexOf(FoodArray, followedFood));
+                        FoodArrayLength--;
+                        followingFood = false;
+                    }
+                    end = new Point(randy.Next(10, 1280), randy.Next(10, 1024));
+                    if (end.X > Location.X)
+                    {
+                        Image = Properties.Resources.image0;
+                        Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                    }
+                    if (end.X < Location.X) Image = Properties.Resources.image0;
+                    angle = 0;
+                    radius = Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2));
+                }
+                //Math.Pow(Math.Pow(Math.Abs(location.X - Left), 2) + Math.Pow(Math.Abs(location.Y - Top), 2), 0.1);
+                //Console.WriteLine("X: " + Math.Abs(location.X - Left).ToString() + " Y: " + Math.Abs(location.Y - Top).ToString());
+                Console.WriteLine(Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2)).ToString());
+                //if (Left <= end.X && Left + Width >= end.X)  speed_left = 0;
+                if (Left < end.X) speed_left = orig_Speed_Left;
+                else if (Right > end.X) speed_left = -orig_Speed_Left;
+                //if (Top <= end.Y && Top + Height >= end.Y) speed_top = 0;
+                if (Top < end.Y) speed_top = orig_Speed_Top;
+                else if (Bottom > end.Y) speed_top = -orig_Speed_Top; //*/
+                                                                      //CircularTween();
+                Left += speed_left;     //move the fish
+                Top += speed_top;
             }
-            //Math.Pow(Math.Pow(Math.Abs(location.X - Left), 2) + Math.Pow(Math.Abs(location.Y - Top), 2), 0.1);
-            //Console.WriteLine("X: " + Math.Abs(location.X - Left).ToString() + " Y: " + Math.Abs(location.Y - Top).ToString());
-            Console.WriteLine(Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2)).ToString());
-            //if (Left <= end.X && Left + Width >= end.X)  speed_left = 0;
-            if (Left < end.X) speed_left = orig_Speed_Left;
-            else if (Right > end.X) speed_left = -orig_Speed_Left;
-            //if (Top <= end.Y && Top + Height >= end.Y) speed_top = 0;
-            if (Top < end.Y) speed_top = orig_Speed_Top;
-            else if (Bottom > end.Y) speed_top = -orig_Speed_Top; //*/
-            //CircularTween();
-            Left += speed_left;     //move the fish
-            Top += speed_top;
+            
+
+           
             
         }
-
         /*public void CircularTween()
         {
             //angle += Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2))/360.0;
@@ -149,6 +184,15 @@ namespace Fish_Aquarium_Project
                     }
                 }
             }
+        }
+
+        public static void RemoveAt<T>(ref T[] arr, int index)
+        {
+            for (int a = index; a < arr.Length - 1; a++) arr[a] = arr[a + 1];
+            // moving elements downwards, to fill the gap at [index]
+            // finally, let's decrement Array's size by one
+            Array.Resize(ref arr, arr.Length - 1);
+
         }
     }
 }
