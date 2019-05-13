@@ -68,6 +68,8 @@ namespace Fish_Aquarium_Project
         public void Swim(Timer timer1, ref Food[] FoodArray, ref int FoodArrayLength)
         {
             hunger++;
+                            
+
             if (FoodArray.Length > 0 && !FoodArray.Contains(followedFood))
             {
                 Point[] foodDistanceArray = new Point[FoodArray.Length];
@@ -79,7 +81,7 @@ namespace Fish_Aquarium_Project
                 for (int f = 0; f < FoodArray.Length; f++)
                 {
                     foodDistanceArray[f] = new Point(FoodArray[f].GetLocation()[0], FoodArray[f].GetLocation()[1]);
-                    foodDistanceArray2[f] = getLength(foodDistanceArray[f], Location);
+                    foodDistanceArray2[f] = getLength(foodDistanceArray[f], new Point(Location.X + (Size.Height/2), Location.Y + (Size.Height / 2)));
                 }
                 for (int f = 0; f < foodDistanceArray2.Length; f++)
                 {
@@ -92,6 +94,12 @@ namespace Fish_Aquarium_Project
                         
                     }
                 }
+                if (end.X > Location.X)
+                {
+                    Image = Properties.Resources.image0;
+                    Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                }
+                if (end.X < Location.X) Image = Properties.Resources.image0;
                 if (Left < ClosestFood.X) speed_left = orig_Speed_Left;
                 else if (Right > ClosestFood.X) speed_left = -orig_Speed_Left;
                 if (Top < ClosestFood.Y) speed_top = orig_Speed_Top;
@@ -104,11 +112,18 @@ namespace Fish_Aquarium_Project
                 if (s.Contains(end))
                 {
 
-                    if (followingFood == true && !followedFood.Disposing && s.Contains(followedFood.GetLocation()[0], followedFood.GetLocation()[1]))
+                    if (followedFood != null && followedFood.IsDisposed == true)
+                    {
+                        followedFood = null;
+                        followingFood = false;
+                    }
+                    if (followingFood == true && followedFood != null && s.Contains(followedFood.GetLocation()[0], followedFood.GetLocation()[1]))
                     {
                         hunger = 0;
                         followedFood.Dispose();
-                        RemoveAt(ref FoodArray, Array.IndexOf(FoodArray, followedFood));
+                        FoodArray[Array.IndexOf(FoodArray, followedFood)] = FoodArray[FoodArray.Length - 1];
+                        //for (int a = Array.IndexOf(FoodArray, followedFood); a < FoodArray.Length - 1; a++) FoodArray[a] = FoodArray[a + 1];
+                        Array.Resize(ref FoodArray, FoodArray.Length - 1);
                         FoodArrayLength--;
                         followingFood = false;
                     }
@@ -122,9 +137,31 @@ namespace Fish_Aquarium_Project
                     angle = 0;
                     radius = Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2));
                 }
+                if (followingFood == true && followedFood != null && followedFood.IsDisposed)
+                {
+                    followedFood = null;
+                    followingFood = false;
+                    end = new Point(randy.Next(10, 1280), randy.Next(10, 1024));
+                    if (end.X > Location.X)
+                    {
+                        Image = Properties.Resources.image0;
+                        Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                    }
+                    if (end.X < Location.X) Image = Properties.Resources.image0;
+                }
+                if (followingFood == true && followedFood != null && !followedFood.IsDisposed)
+                {
+                    end = new Point(followedFood.GetLocation()[0], followedFood.GetLocation()[1]);
+                    if (end.X > Location.X)
+                    {
+                        Image = Properties.Resources.image0;
+                        Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                    }
+                    if (end.X < Location.X) Image = Properties.Resources.image0;
+                }
                 //Math.Pow(Math.Pow(Math.Abs(location.X - Left), 2) + Math.Pow(Math.Abs(location.Y - Top), 2), 0.1);
                 //Console.WriteLine("X: " + Math.Abs(location.X - Left).ToString() + " Y: " + Math.Abs(location.Y - Top).ToString());
-                Console.WriteLine(Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2)).ToString());
+                //  Console.WriteLine(Math.Sqrt(Math.Pow(Math.Abs(end.X - Left), 2) + Math.Pow(Math.Abs(end.Y - Top), 2)).ToString());
                 //if (Left <= end.X && Left + Width >= end.X)  speed_left = 0;
                 if (Left < end.X) speed_left = orig_Speed_Left;
                 else if (Right > end.X) speed_left = -orig_Speed_Left;
@@ -184,15 +221,6 @@ namespace Fish_Aquarium_Project
                     }
                 }
             }
-        }
-
-        public static void RemoveAt<T>(ref T[] arr, int index)
-        {
-            for (int a = index; a < arr.Length - 1; a++) arr[a] = arr[a + 1];
-            // moving elements downwards, to fill the gap at [index]
-            // finally, let's decrement Array's size by one
-            Array.Resize(ref arr, arr.Length - 1);
-
         }
     }
 }

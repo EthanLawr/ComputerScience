@@ -54,7 +54,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button1.BackgroundImage = global::Fish_Aquarium_Project.Properties.Resources.image0;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;

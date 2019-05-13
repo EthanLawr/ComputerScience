@@ -40,15 +40,29 @@ namespace Fish_Aquarium_Project
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (foods.Length <= 0) button1.BackColor = SystemColors.ControlDarkDark;
+            else button1.BackColor = SystemColors.ButtonFace;
             for (int f = 0; f < fishes.Length; f++) {
                 int[] hunger = fishes[f].GetHunger();
                 fishes[f].Swim(timer1, ref foods, ref g);
+
                 if (hunger[0] > hunger[1])
                 {
                     fishes[f].Dispose();
                     RemoveAt(ref fishes, f);
                     i--;
                     
+                }
+            }
+            for (int f = 0; f < foods.Length; f++)
+            {
+                bool t = foods[f].Fall(timer1, ref foods, ref g);
+                if (t == false)
+                {
+                    foods[f].Dispose();
+                    foods[Array.IndexOf(foods, foods[f])] = foods[foods.Length - 1];
+                    Array.Resize(ref foods, foods.Length - 1);
+                    g--;
                 }
             }
         }
@@ -62,11 +76,14 @@ namespace Fish_Aquarium_Project
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Array.Resize(ref fishes, fishes.Length + 1);
-            fishes[i] = new Fish(10,10);
-            Controls.Add(fishes[i]);  //each picturebox created must be added to the form
-            i++;
-
+            //if (foods.Length <= 0) MessageBox.Show("Give the fish some food before spawning it in!", "Wait that's abuse", MessageBoxButtons.OK);
+            //else
+            //{
+                Array.Resize(ref fishes, fishes.Length + 1);
+                fishes[i] = new Fish(10, 10);
+                Controls.Add(fishes[i]);  //each picturebox created must be added to the form
+                i++;
+            //}
         }
 
         private void button2_Click(object sender, EventArgs e)
