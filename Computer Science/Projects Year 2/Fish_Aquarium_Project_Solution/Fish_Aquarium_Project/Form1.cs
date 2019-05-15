@@ -23,7 +23,7 @@ namespace Fish_Aquarium_Project
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             TopMost = true;  //makes fish show over other programs
 
             Size = Screen.PrimaryScreen.Bounds.Size + (new Size(20, 20));
@@ -42,28 +42,44 @@ namespace Fish_Aquarium_Project
         {
             if (foods.Length <= 0) button1.BackColor = SystemColors.ControlDarkDark;
             else button1.BackColor = SystemColors.ButtonFace;
-            for (int f = 0; f < fishes.Length; f++) {
+            for (int f = 0; f < fishes.Length; f++)
+            {
                 int[] hunger = fishes[f].GetHunger();
-                fishes[f].Swim(timer1, ref foods, ref g);
+                //Control.BeginInvoke(fishes[f].Swim(timer1, ref foods, ref g));
+                
+                fishes[f].Swim(timer1, ref foods, ref g); // runs on UI thread
+                
 
-                if (hunger[0] > hunger[1])
+                //fishes[f].Swim(timer1, ref foods, ref g);
+                if (hunger[0] > hunger[1] && fishes[f].dead == false)
                 {
-                    fishes[f].Dispose();
-                    RemoveAt(ref fishes, f);
-                    i--;
-                    
+                    fishes[f].dead = true;
+                    fishes[f].Image = Properties.Resources.image1;
+                    //fishes[f].Dispose();
+                    //RemoveAt(ref fishes, f);
+                    //Controls.Remove(fishes[f]);
+                    //i--;
+                }
+                if (fishes[f].Location.X > 1280 || fishes[f].Location.Y > 1000 || fishes[f].Location.X < 0 - Size.Width || fishes[f].Location.Y < 0)
+                {
+                    return false;
                 }
             }
             for (int f = 0; f < foods.Length; f++)
             {
-                bool t = foods[f].Fall(timer1, ref foods, ref g);
-                if (t == false)
-                {
-                    foods[f].Dispose();
-                    foods[Array.IndexOf(foods, foods[f])] = foods[foods.Length - 1];
-                    Array.Resize(ref foods, foods.Length - 1);
-                    g--;
-                }
+                Invoke((MethodInvoker)delegate {
+
+
+                    bool t = foods[f].Fall(timer1, ref foods, ref g);
+                    if (t == false)
+                    {
+                        foods[f].Dispose();
+                        foods[Array.IndexOf(foods, foods[f])] = foods[foods.Length - 1];
+                        Array.Resize(ref foods, foods.Length - 1);
+                        Controls.Remove(foods[f]);
+                        g--;
+                    }
+                });
             }
         }
         public static void RemoveAt<T>(ref T[] arr, int index)
@@ -72,17 +88,17 @@ namespace Fish_Aquarium_Project
             // moving elements downwards, to fill the gap at [index]
             // finally, let's decrement Array's size by one
             Array.Resize(ref arr, arr.Length - 1);
-            
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
             //if (foods.Length <= 0) MessageBox.Show("Give the fish some food before spawning it in!", "Wait that's abuse", MessageBoxButtons.OK);
             //else
             //{
-                Array.Resize(ref fishes, fishes.Length + 1);
-                fishes[i] = new Fish(10, 10);
-                Controls.Add(fishes[i]);  //each picturebox created must be added to the form
-                i++;
+            Array.Resize(ref fishes, fishes.Length + 1);
+            fishes[i] = new Fish(10, 10);
+            Controls.Add(fishes[i]);  //each picturebox created must be added to the form
+            i++;
             //}
         }
 

@@ -45,13 +45,48 @@ namespace Fish_Aquarium_Project
 
         public bool Fall(Timer timmy, ref Food[] FoodArray, ref int FoodArrayLength)
         {
-            Location = new Point(Location.X+direction, Location.Y+speed);
-            if (Location.X > 1280 || Location.Y > 1000 || Location.X < 0-Size.Width)
+            Location = new Point(Location.X + direction, Location.Y + speed);
+            if (Location.X > 1280 || Location.Y > 1000 || Location.X < 0 - Size.Width || Location.Y < 0)
             {
                 return false;
             }
             return true;
-                
+
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        // Paint background with underlying graphics from other controls
+        {
+            Invoke((MethodInvoker)delegate
+            {
+                base.OnPaintBackground(e);
+                Graphics g = e.Graphics;
+
+                if (Parent != null)
+                {
+                    // Take each control in turn
+                    int index = Parent.Controls.GetChildIndex(this);
+                    for (int i = Parent.Controls.Count - 1; i > index; i--)
+                    {
+                        Control c = Parent.Controls[i];
+
+                        // Check it's visible and overlaps this control
+                        if (c.Bounds.IntersectsWith(Bounds) && c.Visible)
+                        {
+
+                            // Load appearance of underlying control and redraw it on this background
+                            Bitmap bmp = new Bitmap(c.Width, c.Height, g);
+                            c.DrawToBitmap(bmp, c.ClientRectangle);
+                            g.TranslateTransform(c.Left - Left, c.Top - Top);
+                            g.DrawImageUnscaled(bmp, Point.Empty);
+                            g.TranslateTransform(Left - c.Left, Top - c.Top);
+                            bmp.Dispose();
+
+
+                        }
+                    }
+                }
+            });
         }
     }
 }
