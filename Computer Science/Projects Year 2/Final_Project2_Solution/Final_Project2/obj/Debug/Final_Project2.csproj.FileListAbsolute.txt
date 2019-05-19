@@ -1,0 +1,10 @@
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\bin\Debug\Final_Project2.exe.config
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\bin\Debug\Final_Project2.exe
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\bin\Debug\Final_Project2.pdb
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.csprojResolveAssemblyReference.cache
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.Form1.resources
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.Properties.Resources.resources
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.csproj.GenerateResource.Cache
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.csproj.CoreCompileInputs.cache
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.exe
+c:\users\ethan lawrence\Desktop\Visual Studio\Projects\Final_Project2_Solution\Final_Project2\obj\Debug\Final_Project2.pdb
