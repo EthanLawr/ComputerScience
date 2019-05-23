@@ -19,7 +19,8 @@ namespace Final_Project2
             {
                 healthMax *= 10;
                 boss = true;
-            } else
+            }
+            else
             {
                 boss = false;
             }

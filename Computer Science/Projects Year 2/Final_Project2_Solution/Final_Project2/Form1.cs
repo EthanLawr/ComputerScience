@@ -13,8 +13,9 @@ namespace Final_Project2
     public partial class Form1 : Form
     {
         public static Enemy Patient = new Enemy();
-        public static int cash = (int)Properties.Settings.Default.Cash, DamagePerClick = Properties.Settings.Default.CashClickLevel,
-            currentRound = Properties.Settings.Default.RoundMax, enemiesKilledThisRound = 0;
+        public static ClickerHero ClickingHero = new ClickerHero();
+
+        public static int cash = (int)Properties.Settings.Default.Cash, currentRound = Properties.Settings.Default.RoundMax, enemiesKilledThisRound = 0;
         public static double Dps = Properties.Settings.Default.DpsHero1Level;
         public Form1()
         {
@@ -30,13 +31,13 @@ namespace Final_Project2
                 timer1.Interval = 50;
                 timer1.Start();
             });
-            
+
             label1.Text = "Cash: $" + cash;
-            label2.Text = "Level: " + Properties.Settings.Default.CashClickLevel;
+            label2.Text = "Level: " + ClickingHero.Level;
             label4.Text = "Current Round: " + currentRound.ToString();
             label8.Text = "Highest Round: " + Properties.Settings.Default.RoundMax;
             button3.Text = "$" + (int)(50 * Math.Pow(1.07, Properties.Settings.Default.DpsHero1Level));
-            button2.Text = $"${(int)(20 * Math.Pow(1.075, Properties.Settings.Default.CashClickLevel))}";
+            button2.Text = $"${ClickingHero.Cost}";
             label5.Text = "Health Left: " + Patient.healthRemaining.ToString() + "/" + Patient.healthMax.ToString();
             progressBar1.Maximum = Patient.healthMax;
             progressBar1.Value = Patient.healthMax;
@@ -48,7 +49,7 @@ namespace Final_Project2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Patient.healthRemaining -= DamagePerClick;
+            Patient.healthRemaining -= ClickingHero.DamagePerClick;
             if (0 >= Patient.healthRemaining)
             {
                 if (Patient.boss) enemiesKilledThisRound += 5;
@@ -106,7 +107,8 @@ namespace Final_Project2
                     label4.Text = "Current Round: " + currentRound.ToString();
                 }
 #pragma warning disable CS0168 // Variable is declared but never used
-            } catch (Exception f)
+            }
+            catch (Exception f)
 #pragma warning restore CS0168 // Variable is declared but never used
             {
                 MessageBox.Show("That is not a valid round to go to.");
@@ -157,24 +159,44 @@ namespace Final_Project2
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            //int cost = (int)((Math.Pow(int.Parse(label2.Text.Substring(7)), 3) / 6) + (int.Parse(label2.Text.Substring(7)) * 1.5));
-            int cost = (int)(20 * Math.Pow(1.075, Properties.Settings.Default.CashClickLevel));
-            if (cost > cash) MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
-            else
+            if (cash > ClickingHero.UpgradeCost && ClickingHero.Level >= ClickingHero.UpgradeLevelRequirement && ClickingHero.DamageMultipliers <= 2)
             {
-
-                cash -= cost;
-                Properties.Settings.Default.CashClickLevel++;
-                DamagePerClick++;
+                cash -= ClickingHero.UpgradeCost;
+                ClickingHero.DamageMultipliers++;
+                ClickingHero.UpdateDamage();
                 Properties.Settings.Default.Cash = cash;
                 label1.Text = "Cash: $" + cash;
-                label2.Text = "Level: " + Properties.Settings.Default.CashClickLevel;
-                button2.Text = $"${(int)(20 * Math.Pow(1.075, Properties.Settings.Default.CashClickLevel))}";
+                button5.Text = "$" + ClickingHero.UpgradeCost;
+                Properties.Settings.Default.ClickerHeroUpgrades++;
                 Properties.Settings.Default.Save();
             }
+            else
+            {
+                MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
+            }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ClickingHero.AttemptUpgrade(cash))
+            {
+                cash -= ClickingHero.Cost;
+                ClickingHero.BaseDamagePerClick++;
+                Properties.Settings.Default.Cash = cash;
+                label1.Text = "Cash: $" + cash;
+                label2.Text = "Level: " + ++Properties.Settings.Default.CashClickLevel;
+                button2.Text = $"${ClickingHero.Cost}";
+                Properties.Settings.Default.Save();
+                ClickingHero.Level = Properties.Settings.Default.CashClickLevel;
+                ClickingHero.UpdateDamage();
+            } else
+            {
+                MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             int cost = (int)(50 * Math.Pow(1.07, Properties.Settings.Default.DpsHero1Level));

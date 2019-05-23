@@ -8,66 +8,97 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Final_Project2.Properties {
-    
-    
+namespace Final_Project2.Properties
+{
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public double Cash {
-            get {
+        public double Cash
+        {
+            get
+            {
                 return ((double)(this["Cash"]));
             }
-            set {
+            set
+            {
                 this["Cash"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int CashClickLevel {
-            get {
+        public int CashClickLevel
+        {
+            get
+            {
                 return ((int)(this["CashClickLevel"]));
             }
-            set {
+            set
+            {
                 this["CashClickLevel"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int RoundMax {
-            get {
+        public int RoundMax
+        {
+            get
+            {
                 return ((int)(this["RoundMax"]));
             }
-            set {
+            set
+            {
                 this["RoundMax"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int DpsHero1Level {
-            get {
+        public int DpsHero1Level
+        {
+            get
+            {
                 return ((int)(this["DpsHero1Level"]));
             }
-            set {
+            set
+            {
                 this["DpsHero1Level"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ClickerHeroUpgrades
+        {
+            get
+            {
+                return ((int)(this["ClickerHeroUpgrades"]));
+            }
+            set
+            {
+                this["ClickerHeroUpgrades"] = value;
             }
         }
     }

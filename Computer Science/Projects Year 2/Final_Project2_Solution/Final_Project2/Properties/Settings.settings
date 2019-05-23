@@ -1,18 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Final_Project2.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="Cash" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-    <Setting Name="CashClickLevel" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
-    <Setting Name="RoundMax" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
-    <Setting Name="DpsHero1Level" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-  </Settings>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
 </SettingsFile>
