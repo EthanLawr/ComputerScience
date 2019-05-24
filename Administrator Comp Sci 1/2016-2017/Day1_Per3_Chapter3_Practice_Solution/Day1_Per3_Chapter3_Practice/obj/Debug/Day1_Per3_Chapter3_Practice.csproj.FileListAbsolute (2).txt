@@ -1,6 +1,0 @@
-H:\Computer Science 2016-2017\Projects\Day1_Per3_Chapter3_Practice_Solution\Day1_Per3_Chapter3_Practice\bin\Debug\Day1_Per3_Chapter3_Practice.exe.config
-H:\Computer Science 2016-2017\Projects\Day1_Per3_Chapter3_Practice_Solution\Day1_Per3_Chapter3_Practice\bin\Debug\Day1_Per3_Chapter3_Practice.exe
-H:\Computer Science 2016-2017\Projects\Day1_Per3_Chapter3_Practice_Solution\Day1_Per3_Chapter3_Practice\bin\Debug\Day1_Per3_Chapter3_Practice.pdb
-H:\Computer Science 2016-2017\Projects\Day1_Per3_Chapter3_Practice_Solution\Day1_Per3_Chapter3_Practice\obj\Debug\Day1_Per3_Chapter3_Practice.csprojResolveAssemblyReference.cache
-H:\Computer Science 2016-2017\Projects\Day1_Per3_Chapter3_Practice_Solution\Day1_Per3_Chapter3_Practice\obj\Debug\Day1_Per3_Chapter3_Practice.exe
-H:\Computer Science 2016-2017\Projects\Day1_Per3_Chapter3_Practice_Solution\Day1_Per3_Chapter3_Practice\obj\Debug\Day1_Per3_Chapter3_Practice.pdb
