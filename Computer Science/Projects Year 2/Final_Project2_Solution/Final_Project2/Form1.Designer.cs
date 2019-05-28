@@ -46,6 +46,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -218,11 +221,38 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(376, 179);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(62, 41);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Reset";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(297, 107);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(68, 57);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "$100";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 344);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
@@ -267,6 +297,9 @@
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Timer timer2;
     }
 }
 

@@ -14,9 +14,10 @@ namespace Final_Project2
     {
         public static Enemy Patient = new Enemy();
         public static ClickerHero ClickingHero = new ClickerHero();
+        public static DpsHero1 DpsHeroOne = new DpsHero1();
 
         public static int cash = (int)Properties.Settings.Default.Cash, currentRound = Properties.Settings.Default.RoundMax, enemiesKilledThisRound = 0;
-        public static double Dps = Properties.Settings.Default.DpsHero1Level;
+        public static double Dps = DpsHeroOne.Dps;
         public Form1()
         {
             InitializeComponent();
@@ -31,13 +32,20 @@ namespace Final_Project2
                 timer1.Interval = 50;
                 timer1.Start();
             });
-
+            Invoke((MethodInvoker)delegate
+            {
+                timer2.Tick += new EventHandler(timer2_Tick);
+                timer2.Interval = 1000;
+                timer2.Start();
+            });
             label1.Text = "Cash: $" + cash;
             label2.Text = "Level: " + ClickingHero.Level;
             label4.Text = "Current Round: " + currentRound.ToString();
             label8.Text = "Highest Round: " + Properties.Settings.Default.RoundMax;
-            button3.Text = "$" + (int)(50 * Math.Pow(1.07, Properties.Settings.Default.DpsHero1Level));
+            button3.Text = $"${DpsHeroOne.Cost}";
             button2.Text = $"${ClickingHero.Cost}";
+            button5.Text = $"${ClickingHero.UpgradeCost}";
+            button7.Text = $"${DpsHeroOne.UpgradeCost}";
             label5.Text = "Health Left: " + Patient.healthRemaining.ToString() + "/" + Patient.healthMax.ToString();
             progressBar1.Maximum = Patient.healthMax;
             progressBar1.Value = Patient.healthMax;
@@ -117,7 +125,7 @@ namespace Final_Project2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Patient.healthRemaining -= Dps / 20.0000;
+            Patient.healthRemaining -= Math.Round(Dps / 20.0000, 2);
             if (0 >= Patient.healthRemaining)
             {
                 if (Patient.boss) enemiesKilledThisRound += 5;
@@ -161,7 +169,7 @@ namespace Final_Project2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (cash > ClickingHero.UpgradeCost && ClickingHero.Level >= ClickingHero.UpgradeLevelRequirement && ClickingHero.DamageMultipliers <= 2)
+            if (cash > ClickingHero.UpgradeCost && ClickingHero.Level >= ClickingHero.UpgradeLevelRequirement && ClickingHero.DamageMultipliers <= 6)
             {
                 cash -= ClickingHero.UpgradeCost;
                 ClickingHero.DamageMultipliers++;
@@ -178,6 +186,45 @@ namespace Final_Project2
             }
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var Confirmation = MessageBox.Show("Do you really want to reset?", "Confirmation Message", MessageBoxButtons.YesNo);
+            if (Confirmation == DialogResult.Yes)
+            {
+                Properties.Settings.Default.Reset();
+                Application.Restart();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (cash > DpsHeroOne.UpgradeCost && DpsHeroOne.Level >= DpsHeroOne.UpgradeLevelRequirement && DpsHeroOne.DamageMultipliers <= 5)
+            {
+                cash -= DpsHeroOne.UpgradeCost;
+                DpsHeroOne.DamageMultipliers++;
+                DpsHeroOne.UpdateDamage();
+                Properties.Settings.Default.Cash = cash;
+                label1.Text = "Cash: $" + cash;
+                button7.Text = "$" + DpsHeroOne.UpgradeCost;
+                Properties.Settings.Default.DpsHero1Upgrades++;
+                Dps = DpsHeroOne.Dps;
+
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            ClickingHero.UpdateDamage();
+            ClickingHero.UpdateCost();
+            DpsHeroOne.UpdateDamage();
+            DpsHeroOne.UpdateCost();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (ClickingHero.AttemptUpgrade(cash))
@@ -187,6 +234,7 @@ namespace Final_Project2
                 Properties.Settings.Default.Cash = cash;
                 label1.Text = "Cash: $" + cash;
                 label2.Text = "Level: " + ++Properties.Settings.Default.CashClickLevel;
+                ClickingHero.UpdateCost();
                 button2.Text = $"${ClickingHero.Cost}";
                 Properties.Settings.Default.Save();
                 ClickingHero.Level = Properties.Settings.Default.CashClickLevel;
@@ -199,19 +247,24 @@ namespace Final_Project2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int cost = (int)(50 * Math.Pow(1.07, Properties.Settings.Default.DpsHero1Level));
-            if (cost > cash) MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
-            else
+            if (DpsHeroOne.AttemptUpgrade(cash))
             {
-
-                cash -= cost;
-                Properties.Settings.Default.DpsHero1Level++;
-                Properties.Settings.Default.Cash = cash;
-                Dps++;
+                DpsHeroOne.BaseDPS++;
+                Properties.Settings.Default.DpsHero1Level += 1;
+                cash -= DpsHeroOne.Cost;
                 label1.Text = "Cash: $" + cash;
                 label7.Text = "Level: " + Properties.Settings.Default.DpsHero1Level;
-                button3.Text = $"${(int)(50 * Math.Pow(1.07, Properties.Settings.Default.DpsHero1Level))}";
+                DpsHeroOne.Level = Properties.Settings.Default.DpsHero1Level;
+                DpsHeroOne.UpdateCost();
+                DpsHeroOne.UpdateDamage();
+                Dps = DpsHeroOne.Dps;
+                Properties.Settings.Default.Cash = cash;
+                button3.Text = $"${DpsHeroOne.Cost}";
                 Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
             }
         }
     }

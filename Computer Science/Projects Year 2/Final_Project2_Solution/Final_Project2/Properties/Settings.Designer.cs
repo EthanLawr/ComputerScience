@@ -101,5 +101,20 @@ namespace Final_Project2.Properties
                 this["ClickerHeroUpgrades"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DpsHero1Upgrades
+        {
+            get
+            {
+                return ((int)(this["DpsHero1Upgrades"]));
+            }
+            set
+            {
+                this["DpsHero1Upgrades"] = value;
+            }
+        }
     }
 }
