@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,21 +11,21 @@ public class TextAdventure {
 	public static ArrayList<String> Commands = new ArrayList<String>();
 	public static CommandCheck CommandInstructor = new CommandCheck(Commands);
 	public static Location PlayerPosition = new Location();
+	public static Player Character = new Player();
+	public static Enemy Foe = new Enemy();
 	public static String input = "";
-	public static void main(String[] args) {
-		try {
+	public static void main(String[] args) throws IOException {
+		StoryFileReader fuck = new StoryFileReader();
+		System.out.print("Hello! Welcome to City Z. We are in huge danger. There are mon" +
+		"sters running about everywhere and we are losing quite a bit of hope.\nWe are glad" +
+				"that you could regain consciousness.");
 			StoryFileReader StoryReader = new StoryFileReader(1, PlayerPosition);
 			System.out.print(PlayerPosition.roomDescription);
 			PlayerPosition.DirectionDisplay();
 			while (CommandInstructor.AliveOrPlaying) {
 				userInputMethod(">");
 				CommandInstructor.CommandSeek(input);
-			}
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
+			}		
 	}
 	 // Method for a Nasty Gram in a user input
     public static String userInputMethod(String x) {

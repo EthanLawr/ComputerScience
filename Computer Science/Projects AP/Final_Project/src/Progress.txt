@@ -1,0 +1,4 @@
+1%south,north%~Hideout~This is the center of the hideout. There are a few people here that look scared.\r
+2%south%~Head of the Hideout~Welcome to the Head of the Hideout. You can't do anything here, so stop wasting your time and let us be.\r
+3%west,east,north%~Outside the Hideout~You see a cloudy scene with not much to go on. Smoke is in the air so you can't see the top of any buildings, but it looks|like a run down city for the most part. Behind you and in front of you is a wall of broken down cars. To the sides of you are|pathways that go to your sides.\r
+4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.\r
