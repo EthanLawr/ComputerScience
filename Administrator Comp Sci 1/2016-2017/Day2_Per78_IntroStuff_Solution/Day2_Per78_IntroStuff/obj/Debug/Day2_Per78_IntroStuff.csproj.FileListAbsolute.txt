@@ -1,9 +1,0 @@
-H:\Computer Science 2016-2017\Projects\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\bin\Debug\Day2_Per78_IntroStuff.exe.config
-H:\Computer Science 2016-2017\Projects\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\bin\Debug\Day2_Per78_IntroStuff.exe
-H:\Computer Science 2016-2017\Projects\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\bin\Debug\Day2_Per78_IntroStuff.pdb
-H:\Computer Science 2016-2017\Projects\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\obj\Debug\Day2_Per78_IntroStuff.csprojResolveAssemblyReference.cache
-H:\Computer Science 2016-2017\Projects\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\obj\Debug\Day2_Per78_IntroStuff.exe
-H:\Computer Science 2016-2017\Projects\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\obj\Debug\Day2_Per78_IntroStuff.pdb
-S:\Shared\Lynch Dan\Computer Science\Computer Science I\2016-2017\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\bin\Debug\Day2_Per78_IntroStuff.exe.config
-S:\Shared\Lynch Dan\Computer Science\Computer Science I\2016-2017\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\obj\Debug\Day2_Per78_IntroStuff.exe
-S:\Shared\Lynch Dan\Computer Science\Computer Science I\2016-2017\Day2_Per78_IntroStuff_Solution\Day2_Per78_IntroStuff\obj\Debug\Day2_Per78_IntroStuff.pdb
