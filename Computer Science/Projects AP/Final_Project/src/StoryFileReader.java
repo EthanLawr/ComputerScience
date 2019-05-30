@@ -35,43 +35,49 @@ public class StoryFileReader {
 
 	}
 	public StoryFileReader() throws IOException {
-		Scanner sc = new Scanner(StoryFile), pg = new Scanner(Progress);
+		Scanner sc = new Scanner(StoryFile);
 
 		String nextLine = "";
 		while (sc.hasNextLine()) {
-			nextLine += sc.nextLine() + "\\r\n";
+			nextLine += sc.nextLine() + "\n";
 		}
 		FileWriter writer = new FileWriter(Progress);
-        writer.write(nextLine);writer.close();
+        writer.write(nextLine);
+        writer.close();
 		sc.close();
 
-	}/*
-	public static void OverWriteLine(int x) throws FileNotFoundException {
-		Scanner sc = new Scanner(StoryFile);
-		while (sc.hasNextLine()) {
-			String nextLine = sc.nextLine();
-			if (Integer.parseInt(nextLine.substring(0,1)) == x) {
-				File file = new File("file.txt");
-	             BufferedReader reader = new BufferedReader(new FileReader(file));
-	             String line = "", oldtext = "";
-	             while((line = sc.nextLine()) != null)
-	                 {
-	                 oldtext += line + "\r\n";
-	             }
-	             sc.close();
-	             // replace a word in a file
-	             //String newtext = oldtext.replaceAll("drink", "Love");
-	            
-	             //To replace a line in a file
-	             String newtext = oldtext.replaceAll("This is test string 20000", "blah blah blah");
-	            
-	             FileWriter writer = new FileWriter("file.txt");
-	             writer.write(newtext);writer.close();
-		}
-		
+	}
+	public static void OverWriteLine(String Replaced, String Replacer){
+		File fileToBeModified = new File(Progress.getAbsolutePath());
+		BufferedReader sc = null;
+        
+        FileWriter writer = null;
+		try {
+			sc = new BufferedReader(new FileReader(fileToBeModified));
 
-	        
-	
-		}
-	}*/
+			String line = sc.readLine();
+	        String nextLine = "";
+	        while (line != null) 
+	        {
+				nextLine += line + "\n";
+			}
+			nextLine.replaceAll(Replaced, Replacer);
+			writer = new FileWriter(fileToBeModified);
+	        writer.write(nextLine);
+		} catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try
+            {
+            	sc.close();
+                writer.close();
+            } 
+            catch (IOException e) 
+            {
+                e.printStackTrace();
+            }
+        }
+		
+		
+	}
 }

@@ -15,7 +15,7 @@ public class TextAdventure {
 	public static Enemy Foe = new Enemy();
 	public static String input = "";
 	public static void main(String[] args) throws IOException {
-		StoryFileReader fuck = new StoryFileReader();
+		StoryFileReader NewStorySave = new StoryFileReader();
 		System.out.print("Hello! Welcome to City Z. We are in huge danger. There are mon" +
 		"sters running about everywhere and we are losing quite a bit of hope.\nWe are glad" +
 				"that you could regain consciousness.");

@@ -17,17 +17,17 @@ public class Location
 		directionsArray = directions.split(",");
 	    for (String s : directionsArray) System.out.print(s + " ");
 	}
-	public boolean MovementCheck(String x, String DirectionCheckingFor) {
-		if (DirectionCheckingFor == "north" && (x.equals("north") || x.equals("n"))) return true;
-		else if (DirectionCheckingFor == "south" && (x.equals("south") || x.equals("s"))) return true;
-		else if (DirectionCheckingFor == "east" && (x.equals("east") || x.equals("e"))) return true;
-		else if (DirectionCheckingFor == "west" && (x.equals("west") || x.equals("w"))) return true;
-		else if (DirectionCheckingFor == "up" && (x.equals("up") || x.equals("u"))) return true;
-		else if (DirectionCheckingFor == "down" && (x.equals("down") || x.equals("d"))) return true;
-		else if (DirectionCheckingFor == "northeast" && (x.equals("northeast") || x.equals("ne"))) return true;
-		else if (DirectionCheckingFor == "northwest" && (x.equals("northwest") || x.equals("nw"))) return true;
-		else if (DirectionCheckingFor == "southeast" && (x.equals("southeast") || x.equals("se"))) return true;
-		else if (DirectionCheckingFor == "southwest" && (x.equals("southwest") || x.equals("sw"))) return true;
+	public static boolean MovementCheck(String x, String DirectionCheckingFor) {
+		if (DirectionCheckingFor.equals("north") && (x.trim().equals("north") || x.trim().equals("n"))) return true;
+		else if (DirectionCheckingFor.equals("south") && (x.trim().equals("south") || x.trim().equals("s"))) return true;
+		else if (DirectionCheckingFor.equals("east") && (x.trim().equals("east") || x.trim().equals("e"))) return true;
+		else if (DirectionCheckingFor.equals("west") && (x.trim().equals("west") || x.trim().equals("w"))) return true;
+		else if (DirectionCheckingFor.equals("up") && (x.trim().equals("up") || x.trim().equals("u"))) return true;
+		else if (DirectionCheckingFor.equals("down") && (x.trim().equals("down") || x.trim().equals("d"))) return true;
+		else if (DirectionCheckingFor.equals("northeast") && (x.trim().equals("northeast") || x.trim().equals("ne"))) return true;
+		else if (DirectionCheckingFor.equals("northwest") && (x.trim().equals("northwest") || x.trim().equals("nw"))) return true;
+		else if (DirectionCheckingFor.equals("southeast") && (x.trim().equals("southeast") || x.trim().equals("se"))) return true;
+		else if (DirectionCheckingFor.equals("southwest") && (x.trim().equals("southwest") || x.trim().equals("sw"))) return true;
 		else return false;
 	}
 	
