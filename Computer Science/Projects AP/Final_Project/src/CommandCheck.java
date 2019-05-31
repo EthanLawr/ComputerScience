@@ -65,12 +65,14 @@ public class CommandCheck {
 				System.out.println();
 			}
 		} else if (x.startsWith("loot")) {
-			if (x.equals("all")) {
+			if (x.equals("loot all") || x.equals("loot knife")) {
 				if (StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 1) {
 					System.out.println("You picked up a knife.");
 					StoryFileReader.OverWriteLine("4+1+%east%~Dead end~There used to be an injured goblin here. Now there is only a knife.",
 						"4+2+%east%~Dead end~There used to be an injured goblin here.");
 					Player.Inventory.add("Knife");
+				} else {
+					System.out.println("There's nothing to pick up!");
 				}
 			} else {
 				System.out.println("There's nothing to pick up!");
@@ -120,7 +122,7 @@ public class CommandCheck {
 		}
 	}
 
-	public void Fight(int x) { 
+	public void Fight(int x) throws IOException { 
 		if (x == 0) {
 			Enemy.newEnemy(30, 18, 3, 10, 1);
 			Enemy.HealthRemaining = 13;
@@ -144,7 +146,7 @@ public class CommandCheck {
 						System.out.println("You punched the goblin and did " + damage + " damage.");
 						System.out.print("Congratulations! You have defeated the goblin and gained 20 Exp. You are now " + 
 					"level 2.\nThe knife it was holding dropped onto the ground.");
-						StoryFileReader.OverWriteLine("4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.\r\n", 
+						StoryFileReader.OverWriteLine("4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.", 
 							"4+1+%east%~Dead end~There used to be an injured goblin here. Now there is only a knife.");
 						
 					}
