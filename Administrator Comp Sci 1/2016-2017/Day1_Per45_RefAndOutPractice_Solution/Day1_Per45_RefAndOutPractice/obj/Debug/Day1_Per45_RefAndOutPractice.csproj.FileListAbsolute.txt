@@ -1,6 +1,0 @@
-H:\Computer Science 2016-2017\Projects\Day1_Per45_RefAndOutPractice_Solution\Day1_Per45_RefAndOutPractice\bin\Debug\Day1_Per45_RefAndOutPractice.exe.config
-H:\Computer Science 2016-2017\Projects\Day1_Per45_RefAndOutPractice_Solution\Day1_Per45_RefAndOutPractice\bin\Debug\Day1_Per45_RefAndOutPractice.exe
-H:\Computer Science 2016-2017\Projects\Day1_Per45_RefAndOutPractice_Solution\Day1_Per45_RefAndOutPractice\bin\Debug\Day1_Per45_RefAndOutPractice.pdb
-H:\Computer Science 2016-2017\Projects\Day1_Per45_RefAndOutPractice_Solution\Day1_Per45_RefAndOutPractice\obj\Debug\Day1_Per45_RefAndOutPractice.csprojResolveAssemblyReference.cache
-H:\Computer Science 2016-2017\Projects\Day1_Per45_RefAndOutPractice_Solution\Day1_Per45_RefAndOutPractice\obj\Debug\Day1_Per45_RefAndOutPractice.exe
-H:\Computer Science 2016-2017\Projects\Day1_Per45_RefAndOutPractice_Solution\Day1_Per45_RefAndOutPractice\obj\Debug\Day1_Per45_RefAndOutPractice.pdb
