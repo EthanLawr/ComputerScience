@@ -1,0 +1,43 @@
+using System;
+using System.Text.RegularExpressions;
+public class Program
+{
+	public static void Main()
+	{
+		string y = "wtowwtwotwootoowtwwwttowtowt";
+		Console.WriteLine(y);
+		Edit(ref y);
+		Console.WriteLine(y);
+		UnEdit(ref y);
+		Console.WriteLine(y);
+	}
+	public static void Edit(ref string x) {
+		x = x.Replace("w", "88");
+		x = x.Replace("o", "84");
+		x = x.Replace("t", "a8");
+	}
+	public static void UnEdit(ref string x) {
+		for (int g = 0; g < Regex.Matches(x,"88").Count; g++) {
+			if (x.IndexOf("88") % 2 == 0) {
+			int i = x.IndexOf("88");
+			x = x.Remove(i, i + 2);
+			x = x.Insert(i, "w");
+		}
+		}
+		for (int g = 0; g < Regex.Matches(x,"84").Count; g++) {
+			if (x.IndexOf("84") % 2 == 0) {
+			int i = x.IndexOf("84");
+			x = x.Remove(i, i + 2);
+			x = x.Insert(i, "o");
+		}
+		}
+		for (int g = 0; g < Regex.Matches(x, "a8").Count; g++) {
+			if (x.IndexOf("a8") % 2 == 0) {
+			int i = x.IndexOf("a8");
+			x = x.Remove(i, i + 2);
+			x = x.Insert(i, "t");
+		}
+		}
+		
+	}
+}
