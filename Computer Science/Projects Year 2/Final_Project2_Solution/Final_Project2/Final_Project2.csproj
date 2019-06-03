@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClickerHero.cs" />
+    <Compile Include="DpsHero2.cs" />
     <Compile Include="IDpsCharacter.cs" />
     <Compile Include="DpsHero1.cs" />
     <Compile Include="Enemy.cs" />
@@ -83,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomMadeCursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

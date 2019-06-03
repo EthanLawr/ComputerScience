@@ -72,20 +72,7 @@ namespace Final_Project2.Properties
             }
         }
 
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int DpsHero1Level
-        {
-            get
-            {
-                return ((int)(this["DpsHero1Level"]));
-            }
-            set
-            {
-                this["DpsHero1Level"] = value;
-            }
-        }
+       
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -105,6 +92,21 @@ namespace Final_Project2.Properties
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DpsHero1Level
+        {
+            get
+            {
+                return ((int)(this["DpsHero1Level"]));
+            }
+            set
+            {
+                this["DpsHero1Level"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int DpsHero1Upgrades
         {
             get
@@ -114,6 +116,36 @@ namespace Final_Project2.Properties
             set
             {
                 this["DpsHero1Upgrades"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DpsHero2Level
+        {
+            get
+            {
+                return ((int)(this["DpsHero2Level"]));
+            }
+            set
+            {
+                this["DpsHero2Level"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DpsHero2Upgrades
+        {
+            get
+            {
+                return ((int)(this["DpsHero2Upgrades"]));
+            }
+            set
+            {
+                this["DpsHero2Upgrades"] = value;
             }
         }
     }

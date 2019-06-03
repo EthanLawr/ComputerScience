@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Final_Project2
 {
-    public class DpsHero1 : IDpsCharacter
+    public class DpsHero2 : IDpsCharacter
     {
-        public int Cost = 0, Level = Properties.Settings.Default.DpsHero1Level, BaseDPS = Properties.Settings.Default.DpsHero1Level * 5;
-        public int Dps = 0, UpgradeCost = 500, UpgradeLevelRequirement = 10;
-        public int DamageMultipliers = Properties.Settings.Default.DpsHero1Upgrades;
+        public int Cost = 0, Level = Properties.Settings.Default.DpsHero2Level, BaseDPS = Properties.Settings.Default.DpsHero2Level*22;
+        public int Dps = 0, UpgradeCost = 2500, UpgradeLevelRequirement = 10;
+        public int DamageMultipliers = Properties.Settings.Default.DpsHero2Upgrades;
         public bool AttemptUpgrade(int Cash)
         {
             Form1.DpsHeroOne.UpdateCost();
@@ -19,43 +19,43 @@ namespace Final_Project2
         }
         public void UpdateCost()
         {
-            Cost = (int)(50 * Math.Pow(1.075, Properties.Settings.Default.DpsHero1Level));
+            Cost = (int)(250 * Math.Pow(1.075, Properties.Settings.Default.DpsHero2Level));
         }
         public void UpdateDamage()
         {
-            BaseDPS = Properties.Settings.Default.DpsHero1Level * 5;
+            BaseDPS = Properties.Settings.Default.DpsHero2Level * 22;
             if (DamageMultipliers == 0)
             {
                 Dps = BaseDPS;
-                UpgradeCost = 500;
+                UpgradeCost = 2500;
                 UpgradeLevelRequirement = 10;
             }
             else if (DamageMultipliers == 1)
             {
-                Dps = BaseDPS * 2;
-                UpgradeCost = 1250;
+                Dps = BaseDPS *2 ;
+                UpgradeCost = 6250;
                 UpgradeLevelRequirement = 25;
             }
             else if (DamageMultipliers == 2)
             {
                 Dps = BaseDPS * 4;
-                UpgradeCost = 5000;
+                UpgradeCost = 25000;
                 UpgradeLevelRequirement = 50;
             }
             else if (DamageMultipliers == 3)
             {
-                Dps = BaseDPS * 8;
-                UpgradeCost = 40000;
+                Dps = BaseDPS* 8;
+                UpgradeCost = 200000;
                 UpgradeLevelRequirement = 75;
             }
             else if (DamageMultipliers == 4)
             {
                 Dps = BaseDPS * 16;
-                UpgradeCost = 80000;
+                UpgradeCost = 2000000;
                 UpgradeLevelRequirement = 100;
             }
         }
-        public DpsHero1()
+        public DpsHero2()
         {
             UpdateCost();
             UpdateDamage();

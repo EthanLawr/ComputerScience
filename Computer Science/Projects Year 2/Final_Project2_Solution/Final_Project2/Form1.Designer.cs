@@ -49,6 +49,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.button8 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -81,13 +87,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Location = new System.Drawing.Point(370, 36);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 58);
             this.button2.TabIndex = 2;
             this.button2.Text = "Upgrade";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
@@ -163,13 +170,14 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Location = new System.Drawing.Point(370, 106);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(68, 58);
             this.button3.TabIndex = 7;
             this.button3.Text = "Upgrade";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
@@ -213,17 +221,18 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
             this.button5.Location = new System.Drawing.Point(297, 37);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(68, 57);
             this.button5.TabIndex = 16;
             this.button5.Text = "$100";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(376, 179);
+            this.button6.Location = new System.Drawing.Point(376, 271);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(62, 41);
             this.button6.TabIndex = 17;
@@ -233,12 +242,13 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.SystemColors.Control;
             this.button7.Location = new System.Drawing.Point(297, 107);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(68, 57);
             this.button7.TabIndex = 18;
             this.button7.Text = "$100";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // timer2
@@ -246,11 +256,78 @@
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.Control;
+            this.button8.Location = new System.Drawing.Point(297, 175);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(68, 57);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "$100";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 194);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Second dps";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 174);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Level: ";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.Control;
+            this.button9.Location = new System.Drawing.Point(370, 174);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(68, 58);
+            this.button9.TabIndex = 19;
+            this.button9.Text = "Upgrade";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(294, 7);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Total Dps:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(154, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Click Damage:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 344);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -300,6 +377,12 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         public System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button button8;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 
