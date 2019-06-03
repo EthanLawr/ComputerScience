@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class TextAdventure {
@@ -33,13 +34,17 @@ public class TextAdventure {
             Scanner userInput = new Scanner(System.in);
             System.out.print("\n" + x);
             String string = userInput.nextLine();
-            if (string.length() == 0) return userInputMethod("You must enter a string with atleast one character!");
+            if (string.length() == 0) return userInputMethod(">");
             input = string.toLowerCase();
             return null;
         } catch (Exception e) {
             System.out.print("You entered an invalid string. ");
-            return userInputMethod(x);
+            return userInputMethod(">");
         }
+    }
+    
+    public static void ArrayListSort(ArrayList<String> x) {
+    	Collections.sort(x, String.CASE_INSENSITIVE_ORDER);
     }
     
     
