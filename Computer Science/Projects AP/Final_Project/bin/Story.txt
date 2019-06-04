@@ -3,3 +3,7 @@
 3%west,east,north%~Outside the Hideout~You see a cloudy scene with not much to go on. Smoke is in the air so you can't see the top of any buildings, but it looks|like a run down city for the most part. Behind you and in front of you is a wall of broken down cars. To the sides of you are|pathways that go to your sides.
 4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.
 5+0+%west%~Vine Filled Dead end~There is a barricade of vines that can be cut with a knife here. There must be a knife somewhere around here...
+6+0+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by two yellow glowing spirits. 
+7+0+%west,south,east%~Skeleton Hideout Entrance~There are many bones here and a hideout where the sounds of moving bones can be heard.
+8+0+%southeast,east%~Prophet Tree~There is a large tree that has blue glowing leaves here and an old man too. He seems like he might be dangerous. |His aura has great magical power.
+9+0+%Directions%~LocationName~Description

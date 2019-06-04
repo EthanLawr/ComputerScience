@@ -45,7 +45,5 @@ public class TextAdventure {
     
     public static void ArrayListSort(ArrayList<String> x) {
     	Collections.sort(x, String.CASE_INSENSITIVE_ORDER);
-    }
-    
-    
+    }  
 }
