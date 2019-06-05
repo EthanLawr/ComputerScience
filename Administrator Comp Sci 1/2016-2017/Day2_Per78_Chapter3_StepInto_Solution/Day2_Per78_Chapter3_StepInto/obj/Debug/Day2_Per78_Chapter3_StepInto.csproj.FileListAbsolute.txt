@@ -1,6 +1,0 @@
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter3_StepInto_Solution\Day2_Per78_Chapter3_StepInto\bin\Debug\Day2_Per78_Chapter3_StepInto.exe.config
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter3_StepInto_Solution\Day2_Per78_Chapter3_StepInto\bin\Debug\Day2_Per78_Chapter3_StepInto.exe
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter3_StepInto_Solution\Day2_Per78_Chapter3_StepInto\bin\Debug\Day2_Per78_Chapter3_StepInto.pdb
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter3_StepInto_Solution\Day2_Per78_Chapter3_StepInto\obj\Debug\Day2_Per78_Chapter3_StepInto.csprojResolveAssemblyReference.cache
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter3_StepInto_Solution\Day2_Per78_Chapter3_StepInto\obj\Debug\Day2_Per78_Chapter3_StepInto.exe
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter3_StepInto_Solution\Day2_Per78_Chapter3_StepInto\obj\Debug\Day2_Per78_Chapter3_StepInto.pdb
