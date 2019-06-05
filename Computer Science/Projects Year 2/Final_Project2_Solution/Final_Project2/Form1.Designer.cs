@@ -55,6 +55,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -317,11 +318,22 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Click Damage:";
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(258, 272);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(112, 39);
+            this.button10.TabIndex = 25;
+            this.button10.Text = "Save File";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 344);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button8);
@@ -383,6 +395,7 @@
         public System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button10;
     }
 }
 

@@ -1,65 +1,32 @@
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
-DpsHero2Level 63
-CashClickLevel 101
-DpsHero1Upgrades 4
-DpsHero1Level 82
-Cash 9549
-DpsHero2Upgrades 3
-RoundMax 51
-ClickerHeroUpgrades 7
+63
+101
+4
+82
+9549
+3
+51
+7
+63
+101
+4
+82
+9549
+3
+51
+7
+63
+101
+4
+82
+9549
+3
+51
+7
+63
+101
+4
+82
+9549
+3
+51
+7

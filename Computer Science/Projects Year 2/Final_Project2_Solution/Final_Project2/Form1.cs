@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Final_Project2
@@ -28,26 +29,8 @@ namespace Final_Project2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[][] newArray = new string[Properties.Settings.Default.Properties.Count][];
-            int i = 0;
-            string saveFileText = "";
-            foreach (SettingsProperty currentProperty in Properties.Settings.Default.Properties)
-            {
-                saveFileText += currentProperty.Name + " " + Properties.Settings.Default[currentProperty.Name].ToString() + "\n";
-            }
-            using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter("TextFile1.txt", true))
-            {
-                file.Write(saveFileText);
-                file.Close();
-            }
-            
-            //System.IO.File.Encrypt("TextFile1.txt");
-            string text = System.IO.File.ReadAllText("TextFile1.txt");
-            
-            MessageBox.Show(saveFileText);
-
-            this.Cursor = new Cursor(GetType(), "CustomMadeCursor.cur");
+            Encryption.AutoEncrypt();
+            Cursor = new Cursor(GetType(), "CustomMadeCursor.cur");
             Patient.EnemyUnit(Properties.Settings.Default.RoundMax);
             Invoke((MethodInvoker)delegate
             {
@@ -313,6 +296,19 @@ namespace Final_Project2
             {
                 MessageBox.Show("You are unable to purchase this upgrade.", "Oh no!", MessageBoxButtons.OK);
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.Count > 1)
+            {
+                MessageBox.Show("Please close the window before trying to open it again! We don't need duplicates here!");
+            } else
+            {
+                Form2 f2 = new Form2();
+                f2.Show();
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
