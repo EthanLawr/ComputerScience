@@ -1,6 +1,0 @@
-H:\Computer Science 2017-2018\Projects\Day2_Per78_Ch2_SetUpPractice_Solution\Day2_Per78_Ch2_SetUpPractice\bin\Debug\Day2_Per78_Ch2_SetUpPractice.exe.config
-H:\Computer Science 2017-2018\Projects\Day2_Per78_Ch2_SetUpPractice_Solution\Day2_Per78_Ch2_SetUpPractice\bin\Debug\Day2_Per78_Ch2_SetUpPractice.exe
-H:\Computer Science 2017-2018\Projects\Day2_Per78_Ch2_SetUpPractice_Solution\Day2_Per78_Ch2_SetUpPractice\bin\Debug\Day2_Per78_Ch2_SetUpPractice.pdb
-H:\Computer Science 2017-2018\Projects\Day2_Per78_Ch2_SetUpPractice_Solution\Day2_Per78_Ch2_SetUpPractice\obj\Debug\Day2_Per78_Ch2_SetUpPractice.csprojResolveAssemblyReference.cache
-H:\Computer Science 2017-2018\Projects\Day2_Per78_Ch2_SetUpPractice_Solution\Day2_Per78_Ch2_SetUpPractice\obj\Debug\Day2_Per78_Ch2_SetUpPractice.exe
-H:\Computer Science 2017-2018\Projects\Day2_Per78_Ch2_SetUpPractice_Solution\Day2_Per78_Ch2_SetUpPractice\obj\Debug\Day2_Per78_Ch2_SetUpPractice.pdb

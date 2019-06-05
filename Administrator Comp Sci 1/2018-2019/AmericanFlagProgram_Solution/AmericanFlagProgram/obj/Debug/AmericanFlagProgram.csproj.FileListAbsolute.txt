@@ -1,6 +1,0 @@
-H:\Computer Science 2018-2019\Projects\AmericanFlagProgram_Solution\AmericanFlagProgram\bin\Debug\AmericanFlagProgram.exe.config
-H:\Computer Science 2018-2019\Projects\AmericanFlagProgram_Solution\AmericanFlagProgram\bin\Debug\AmericanFlagProgram.exe
-H:\Computer Science 2018-2019\Projects\AmericanFlagProgram_Solution\AmericanFlagProgram\bin\Debug\AmericanFlagProgram.pdb
-H:\Computer Science 2018-2019\Projects\AmericanFlagProgram_Solution\AmericanFlagProgram\obj\Debug\AmericanFlagProgram.csprojResolveAssemblyReference.cache
-H:\Computer Science 2018-2019\Projects\AmericanFlagProgram_Solution\AmericanFlagProgram\obj\Debug\AmericanFlagProgram.exe
-H:\Computer Science 2018-2019\Projects\AmericanFlagProgram_Solution\AmericanFlagProgram\obj\Debug\AmericanFlagProgram.pdb

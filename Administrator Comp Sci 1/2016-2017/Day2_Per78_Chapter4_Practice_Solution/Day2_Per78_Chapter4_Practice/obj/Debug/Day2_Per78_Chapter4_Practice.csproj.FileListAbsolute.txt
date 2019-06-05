@@ -1,9 +1,0 @@
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\bin\Debug\Day2_Per78_Chapter4_Practice.exe.config
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\bin\Debug\Day2_Per78_Chapter4_Practice.exe
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\bin\Debug\Day2_Per78_Chapter4_Practice.pdb
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\obj\Debug\Day2_Per78_Chapter4_Practice.csprojResolveAssemblyReference.cache
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\obj\Debug\Day2_Per78_Chapter4_Practice.exe
-H:\Computer Science 2016-2017\Projects\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\obj\Debug\Day2_Per78_Chapter4_Practice.pdb
-\\noc-sdrives\crs\Shared\Lynch Dan\Computer Science\Computer Science I\2016-2017\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\bin\Debug\Day2_Per78_Chapter4_Practice.exe.config
-\\noc-sdrives\crs\Shared\Lynch Dan\Computer Science\Computer Science I\2016-2017\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\obj\Debug\Day2_Per78_Chapter4_Practice.exe
-\\noc-sdrives\crs\Shared\Lynch Dan\Computer Science\Computer Science I\2016-2017\Day2_Per78_Chapter4_Practice_Solution\Day2_Per78_Chapter4_Practice\obj\Debug\Day2_Per78_Chapter4_Practice.pdb

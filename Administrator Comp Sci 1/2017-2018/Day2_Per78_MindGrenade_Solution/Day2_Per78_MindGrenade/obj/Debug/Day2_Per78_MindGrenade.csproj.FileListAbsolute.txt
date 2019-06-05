@@ -1,6 +1,0 @@
-H:\Computer Science 2017-2018\Projects\Day2_Per78_MindGrenade_Solution\Day2_Per78_MindGrenade\bin\Debug\Day2_Per78_MindGrenade.exe.config
-H:\Computer Science 2017-2018\Projects\Day2_Per78_MindGrenade_Solution\Day2_Per78_MindGrenade\bin\Debug\Day2_Per78_MindGrenade.exe
-H:\Computer Science 2017-2018\Projects\Day2_Per78_MindGrenade_Solution\Day2_Per78_MindGrenade\bin\Debug\Day2_Per78_MindGrenade.pdb
-H:\Computer Science 2017-2018\Projects\Day2_Per78_MindGrenade_Solution\Day2_Per78_MindGrenade\obj\Debug\Day2_Per78_MindGrenade.csprojResolveAssemblyReference.cache
-H:\Computer Science 2017-2018\Projects\Day2_Per78_MindGrenade_Solution\Day2_Per78_MindGrenade\obj\Debug\Day2_Per78_MindGrenade.exe
-H:\Computer Science 2017-2018\Projects\Day2_Per78_MindGrenade_Solution\Day2_Per78_MindGrenade\obj\Debug\Day2_Per78_MindGrenade.pdb

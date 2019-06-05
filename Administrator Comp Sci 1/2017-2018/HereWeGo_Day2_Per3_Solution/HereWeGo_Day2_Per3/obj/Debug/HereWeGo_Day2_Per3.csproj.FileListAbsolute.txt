@@ -1,6 +1,0 @@
-H:\Computer Science 2017-2018\Projects\HereWeGo_Day2_Per3_Solution\HereWeGo_Day2_Per3\bin\Debug\HereWeGo_Day2_Per3.exe.config
-H:\Computer Science 2017-2018\Projects\HereWeGo_Day2_Per3_Solution\HereWeGo_Day2_Per3\bin\Debug\HereWeGo_Day2_Per3.exe
-H:\Computer Science 2017-2018\Projects\HereWeGo_Day2_Per3_Solution\HereWeGo_Day2_Per3\bin\Debug\HereWeGo_Day2_Per3.pdb
-H:\Computer Science 2017-2018\Projects\HereWeGo_Day2_Per3_Solution\HereWeGo_Day2_Per3\obj\Debug\HereWeGo_Day2_Per3.csprojResolveAssemblyReference.cache
-H:\Computer Science 2017-2018\Projects\HereWeGo_Day2_Per3_Solution\HereWeGo_Day2_Per3\obj\Debug\HereWeGo_Day2_Per3.exe
-H:\Computer Science 2017-2018\Projects\HereWeGo_Day2_Per3_Solution\HereWeGo_Day2_Per3\obj\Debug\HereWeGo_Day2_Per3.pdb

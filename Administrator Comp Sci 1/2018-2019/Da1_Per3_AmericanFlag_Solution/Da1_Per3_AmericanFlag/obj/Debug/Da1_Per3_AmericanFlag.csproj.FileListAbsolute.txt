@@ -1,6 +1,0 @@
-H:\Computer Science 2018-2019\Projects\Da1_Per3_AmericanFlag_Solution\Da1_Per3_AmericanFlag\bin\Debug\Da1_Per3_AmericanFlag.exe.config
-H:\Computer Science 2018-2019\Projects\Da1_Per3_AmericanFlag_Solution\Da1_Per3_AmericanFlag\bin\Debug\Da1_Per3_AmericanFlag.exe
-H:\Computer Science 2018-2019\Projects\Da1_Per3_AmericanFlag_Solution\Da1_Per3_AmericanFlag\bin\Debug\Da1_Per3_AmericanFlag.pdb
-H:\Computer Science 2018-2019\Projects\Da1_Per3_AmericanFlag_Solution\Da1_Per3_AmericanFlag\obj\Debug\Da1_Per3_AmericanFlag.csprojResolveAssemblyReference.cache
-H:\Computer Science 2018-2019\Projects\Da1_Per3_AmericanFlag_Solution\Da1_Per3_AmericanFlag\obj\Debug\Da1_Per3_AmericanFlag.exe
-H:\Computer Science 2018-2019\Projects\Da1_Per3_AmericanFlag_Solution\Da1_Per3_AmericanFlag\obj\Debug\Da1_Per3_AmericanFlag.pdb

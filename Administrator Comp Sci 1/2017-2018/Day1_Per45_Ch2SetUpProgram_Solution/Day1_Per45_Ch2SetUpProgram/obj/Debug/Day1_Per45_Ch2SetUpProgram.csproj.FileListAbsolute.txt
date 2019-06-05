@@ -1,6 +1,0 @@
-H:\Computer Science 2017-2018\Projects\Day1_Per45_Ch2SetUpProgram_Solution\Day1_Per45_Ch2SetUpProgram\bin\Debug\Day1_Per45_Ch2SetUpProgram.exe.config
-H:\Computer Science 2017-2018\Projects\Day1_Per45_Ch2SetUpProgram_Solution\Day1_Per45_Ch2SetUpProgram\bin\Debug\Day1_Per45_Ch2SetUpProgram.exe
-H:\Computer Science 2017-2018\Projects\Day1_Per45_Ch2SetUpProgram_Solution\Day1_Per45_Ch2SetUpProgram\bin\Debug\Day1_Per45_Ch2SetUpProgram.pdb
-H:\Computer Science 2017-2018\Projects\Day1_Per45_Ch2SetUpProgram_Solution\Day1_Per45_Ch2SetUpProgram\obj\Debug\Day1_Per45_Ch2SetUpProgram.csprojResolveAssemblyReference.cache
-H:\Computer Science 2017-2018\Projects\Day1_Per45_Ch2SetUpProgram_Solution\Day1_Per45_Ch2SetUpProgram\obj\Debug\Day1_Per45_Ch2SetUpProgram.exe
-H:\Computer Science 2017-2018\Projects\Day1_Per45_Ch2SetUpProgram_Solution\Day1_Per45_Ch2SetUpProgram\obj\Debug\Day1_Per45_Ch2SetUpProgram.pdb
