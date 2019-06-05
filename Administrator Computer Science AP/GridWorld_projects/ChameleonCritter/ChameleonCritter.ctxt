@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=actors
-comment0.target=void\ processActors(ArrayList<Actor>)
-comment1.params=loc
-comment1.target=void\ makeMove(Location)
-numComments=2

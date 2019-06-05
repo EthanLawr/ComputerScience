@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=ArrayList<Actor>\ getActors()
-comment1.target=ArrayList<Location>\ getMoveLocations()
-comment2.params=loc
-comment2.target=void\ makeMove(Location)
-numComments=3
