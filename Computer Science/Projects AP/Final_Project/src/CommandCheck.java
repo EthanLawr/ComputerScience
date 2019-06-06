@@ -285,21 +285,31 @@ public class CommandCheck {
 		}
 		else if (x == 3) {
 			Random randy = new Random();
-			int i = randy.nextInt(1);
+			int i = randy.nextInt(22);
 			String[] SpawnSkelly = Enemy.SkeletonBaseLayout[i][i].split(",");
-			Enemy.newEnemy(SpawnSkelly[0], SpawnSkelly[1],Integer.parseInt(SpawnSkelly[2]), Integer.parseInt(SpawnSkelly[3]),
-					Integer.parseInt(SpawnSkelly[4]),Integer.parseInt(SpawnSkelly[5]), Integer.parseInt(SpawnSkelly[6]), 
-					Integer.parseInt(SpawnSkelly[7]));
-			boolean winner = Player.Fight();
-			if (winner) {
-				Player.LevelUp();
-				if (Location.stateOfRoom == 0) {
-					StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(), 
-							Enemy.SkeletonBaseLayout[i].toString());
+			if  (SpawnSkelly[0].equals("Potion")) {
+				Player.HealthRemaining = Health;
+				System.out.print("Your health has been fully restored");
+				StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(), 
+						Enemy.SkeletonBaseLayout[randy.nextInt(22)].toString());
 						StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
 						TextAdventure.PlayerPosition.DirectionDisplay();
+			} else {
+				Enemy.newEnemy(SpawnSkelly[0], SpawnSkelly[1],Integer.parseInt(SpawnSkelly[2]), Integer.parseInt(SpawnSkelly[3]),
+					Integer.parseInt(SpawnSkelly[4]),Integer.parseInt(SpawnSkelly[5]), Integer.parseInt(SpawnSkelly[6]), 
+					Integer.parseInt(SpawnSkelly[7]));
+				boolean winner = Player.Fight();
+				if (winner) {
+				Player.LevelUp();
+					if (Location.stateOfRoom == 0) {
+						StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(), 
+						Enemy.SkeletonBaseLayout[i].toString());
+						StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
+						TextAdventure.PlayerPosition.DirectionDisplay();
+					}
 				}
 			}
+			
 		}
 	}
 }
