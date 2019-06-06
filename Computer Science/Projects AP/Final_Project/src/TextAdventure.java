@@ -1,9 +1,8 @@
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
+@SuppressWarnings("unused")
 public class TextAdventure {
 	// Ethan Lawrence
 	// This program will ask a user to enter a SCRABBLE word and then it will determine its point value
@@ -16,6 +15,7 @@ public class TextAdventure {
 	public static Enemy Foe = new Enemy();
 	public static String input = "";
 	public static void main(String[] args) throws IOException {
+		TextAdventure.ArrayListSort(TextAdventure.Commands);
 		StoryFileReader NewStorySave = new StoryFileReader();
 		System.out.print("Hello! Welcome to City Z. We are in huge danger. There are mon" +
 		"sters running about everywhere and we are losing quite a bit of hope.\nWe are glad" +

@@ -1,11 +1,10 @@
 import java.util.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 public class StoryFileReader {
 	private static File StoryFile = new File("C:\\Users\\1005939\\eclipse-workspace\\Final_Project\\src\\Story.txt");
 	private static File Progress = new File("C:\\Users\\1005939\\eclipse-workspace\\Final_Project\\src\\Progress.txt");
 	public static int lineLookedFor = 0;
+	@SuppressWarnings("static-access")
 	public StoryFileReader(int x, Location y) throws FileNotFoundException {
 		Scanner sc = new Scanner(Progress);
 		int startIndexOfLocation = 0, endIndexOfLocation = 0, startIndexOfDirections = 0, endIndexOfDirections = 0;
