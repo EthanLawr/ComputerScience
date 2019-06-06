@@ -6,9 +6,9 @@ import java.util.Random;
 @SuppressWarnings("unused")
 public class CommandCheck {
 	public boolean AliveOrPlaying = true;
-	public CommandCheck(ArrayList<String> x) {
+	public CommandCheck(ArrayList < String > x) {
 		// Setting up commands
-		for (String s : Location.allDirectionNames) x.add(s);
+		for (String s: Location.allDirectionNames) x.add(s);
 		x.add("help");
 		x.add("go");
 		x.add("kill");
@@ -26,17 +26,19 @@ public class CommandCheck {
 		x = x.trim();
 		if (Arrays.stream(Location.allDirectionNames).anyMatch(x::equals)) {
 			Move(x);
-		}
-		else if (x.startsWith("go")) {
+		} else if (x.startsWith("go")) {
 			if (x.equals("go")) System.out.print("Go where?");
 			x = x.substring(3);
-			for (String s : Location.allDirectionNames) if (x.equals(s)) { Move(x);} // some movement
+			for (String s: Location.allDirectionNames)
+				if (x.equals(s)) {
+					Move(x);
+				} // some movement
 		} else if (x.equals("help")) {
-			for (int i=0; i < TextAdventure.Commands.size(); i++) {
+			for (int i = 0; i < TextAdventure.Commands.size(); i++) {
 				System.out.print(TextAdventure.Commands.get(i) + " ");
 				if (i % 15 == 0 && i >= 15) System.out.println();
 			}
-		} else if (x.startsWith("kill")){
+		} else if (x.startsWith("kill")) {
 			if (x.equals("kill me") || x.equals("kill self") || x.equals("kill myself")) {
 				if (Player.weapon.equals("Hands")) {
 					System.out.println("You tried to strangle yourself but ended up passing out instead...");
@@ -45,7 +47,7 @@ public class CommandCheck {
 					System.out.println("You stabbed yourself and died.");
 					MoveHelper(1);
 				}
-			} else if(x.trim().equals("kill")) System.out.print("Kill who?");
+			} else if (x.trim().equals("kill")) System.out.print("Kill who?");
 			else {
 				System.out.print("Select something valid to kill");
 			}
@@ -60,7 +62,7 @@ public class CommandCheck {
 			if (x.equals("equip knife") && Player.Inventory.get(0).equals("Knife") && !Player.weapon.equals("Knife")) {
 				Player.weapon = "Knife";
 				System.out.print("Equipped a knife. You now have more attack.");
-			    Player.CheckStats();
+				Player.CheckStats();
 			} else if (x.equals("equip knife") && Player.weapon.equals("Knife")) {
 				System.out.print("You already have the knife equipped.");
 			} else {
@@ -94,10 +96,10 @@ public class CommandCheck {
 					Player.Inventory.add("Rope");
 					StoryFileReader StoryReader = new StoryFileReader(2, TextAdventure.PlayerPosition);
 					TextAdventure.PlayerPosition.DirectionDisplay();
-				} else if ((StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 1) || (StoryFileReader.lineLookedFor == 2 && Location.stateOfRoom == 0) ){
-						System.out.print("Pick what up?");
-					} else
-					System.out.print("There's nothing to pick up.");			
+				} else if ((StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 1) || (StoryFileReader.lineLookedFor == 2 && Location.stateOfRoom == 0)) {
+					System.out.print("Pick what up?");
+				} else
+					System.out.print("There's nothing to pick up.");
 			} else if (x.equals("knife")) {
 				if (StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 1) {
 					System.out.print("You picked the knife up.");
@@ -129,13 +131,12 @@ public class CommandCheck {
 		} else if (x.startsWith("fight")) {
 			if (x.trim().equals("fight")) {
 				System.out.print("Fight who?");
-			}
-			else if (x.substring(6).equals("goblin") && StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 0) {
+			} else if (x.substring(6).equals("goblin") && StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 0) {
 				Fight(0);
 			} else if (x.substring(6).equals("skeleton") && StoryFileReader.lineLookedFor == 7 && Location.stateOfRoom == 0) {
 				Fight(1);
-			} else if (x.substring(6).equals("spirit") || x.substring(6).equals("glowing spirit") && 
-					StoryFileReader.lineLookedFor == 7 && (Location.stateOfRoom == 0 || Location.stateOfRoom == 1)) {
+			} else if (x.substring(6).equals("spirit") || x.substring(6).equals("glowing spirit") &&
+				StoryFileReader.lineLookedFor == 7 && (Location.stateOfRoom == 0 || Location.stateOfRoom == 1)) {
 				Fight(2);
 			} else {
 				System.out.print("Fight who?");
@@ -146,8 +147,8 @@ public class CommandCheck {
 			} else if (x.trim().equals("cut vines")) {
 				if (StoryFileReader.lineLookedFor == 5 && Location.stateOfRoom == 0) {
 					System.out.print("You cut the vines up revealing a pathway to the outside world");
-					StoryFileReader.OverWriteLine("5+0+%west%~Vine Filled Dead end~There is a barricade of vines that can be cut with a knife here. There must be a knife somewhere around here...", 
-							"5+1+%west, northeast, northwest, north%~Outside of the Hideout Territory~There is an intersection ahead.");
+					StoryFileReader.OverWriteLine("5+0+%west%~Vine Filled Dead end~There is a barricade of vines that can be cut with a knife here. There must be a knife somewhere around here...",
+						"5+1+%west, northeast, northwest, north%~Outside of the Hideout Territory~There is an intersection ahead.");
 					StoryFileReader StoryReader = new StoryFileReader(5, TextAdventure.PlayerPosition);
 				} else if (StoryFileReader.lineLookedFor == 5 && Location.stateOfRoom != 0) {
 					System.out.println("You already cut the vines here!");
@@ -160,14 +161,14 @@ public class CommandCheck {
 		} else if (x.startsWith("look")) {
 			if (StoryFileReader.lineLookedFor == 8 && Location.stateOfRoom == 0) {
 				System.out.print("The old man started to talk. He showed you the path to light. He knew everything. Then suddenly he was gone and you were" +
-			 "\nout of your vision, but still in a trance. The tree was gone too. All that was left was some armor where the tree used to be. " + 
-			 "\nYou picked up the armor, and you were still in a trance. You then put it on without a second thought. Suddenly a shrine appeared as you put it on." +
-			 "\nEquipped Armor. Your defense was raised. You may also heal yourself here.");
+					"\nout of your vision, but still in a trance. The tree was gone too. All that was left was some armor where the tree used to be. " +
+					"\nYou picked up the armor, and you were still in a trance. You then put it on without a second thought. Suddenly a shrine appeared as you put it on." +
+					"\nEquipped Armor. Your defense was raised. You may also heal yourself here.");
 				Player.armor = "Magic Armor";
 				TextAdventure.Commands.add("heal");
 				TextAdventure.ArrayListSort(TextAdventure.Commands);
 				StoryFileReader.OverWriteLine("8+0+%southeast,east%~Prophet Tree~There is a large tree that has blue glowing leaves here and an old man too. He seems like he might be dangerous. |His aura has great magical power.",
-						"8+1+%southeast,east%~Prophet Shrine~There is a shrine here. You may heal yourself when you want to here.");
+					"8+1+%southeast,east%~Prophet Shrine~There is a shrine here. You may heal yourself when you want to here.");
 				StoryFileReader StoryReader = new StoryFileReader(8, TextAdventure.PlayerPosition);
 			} else MoveHelper(StoryFileReader.lineLookedFor);
 		} else if (x.startsWith("heal")) {
@@ -180,53 +181,53 @@ public class CommandCheck {
 			System.out.print("\nWeapon: " + Player.weapon + "\tArmor: " + Player.armor);
 		} else {
 			System.out.print("Please enter something valid to do! Your input (" + TextAdventure.input + ") " +
-		"was not recognized as a command!");
+				"was not recognized as a command!");
 		}
 	}
-	
+
 	public void Move(String x) {
-    	if (Arrays.stream(Location.allDirectionNames).anyMatch(x::equals)) {
-    		if (StoryFileReader.lineLookedFor == 1) {
-    			if (Location.MovementCheck(x, "north")) MoveHelper(2);
-    			else if (Location.MovementCheck(x, "south")) MoveHelper(3);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 2) {
-    			if (Location.MovementCheck(x, "south")) MoveHelper(1);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 3) {
-    			if (Location.MovementCheck(x, "north")) MoveHelper(1); 
-    			else if (Location.MovementCheck(x, "west")) MoveHelper(4);
-    			else if (Location.MovementCheck(x, "east")) MoveHelper(5);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 4) {
-    			if (Location.MovementCheck(x, "east")) MoveHelper(3);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 5) {
-    			if (Location.MovementCheck(x, "west")) MoveHelper(3);
-    			else if (Location.MovementCheck(x, "northwest") && Location.stateOfRoom != 0) MoveHelper(8);
-    			else if (Location.MovementCheck(x, "north") && Location.stateOfRoom != 0) MoveHelper(7);
-    			else if (Location.MovementCheck(x, "northeast") && Location.stateOfRoom != 0) MoveHelper(6);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 6) {
-    			if (Location.MovementCheck(x, "west")) MoveHelper(7);
-    			else if (Location.MovementCheck(x, "southwest")) MoveHelper(5);
-    			else System.out.print("You can't move in that direction!");
-            } else if (StoryFileReader.lineLookedFor == 7) {
-            	if (Location.MovementCheck(x, "east")) MoveHelper(6);
-    			else if (Location.MovementCheck(x, "south")) MoveHelper(5);
-    			else if (Location.MovementCheck(x, "west")) MoveHelper(8);
-    			else if (Location.MovementCheck(x, "down") && Location.stateOfRoom != 0) MoveHelper(9);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 8) {
-    			if (Location.MovementCheck(x, "east")) MoveHelper(7);
-    			else if (Location.MovementCheck(x, "southeast")) MoveHelper(5);
-    			else System.out.print("You can't move in that direction!");
-    		} else if (StoryFileReader.lineLookedFor == 9) {
-    			if (Location.MovementCheck(x, Location.directionsArray[0])) MoveHelper(9);
-    			else System.out.print("You can't move in that direction!");
-    		}
-    	}
-    }
+		if (Arrays.stream(Location.allDirectionNames).anyMatch(x::equals)) {
+			if (StoryFileReader.lineLookedFor == 1) {
+				if (Location.MovementCheck(x, "north")) MoveHelper(2);
+				else if (Location.MovementCheck(x, "south")) MoveHelper(3);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 2) {
+				if (Location.MovementCheck(x, "south")) MoveHelper(1);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 3) {
+				if (Location.MovementCheck(x, "north")) MoveHelper(1);
+				else if (Location.MovementCheck(x, "west")) MoveHelper(4);
+				else if (Location.MovementCheck(x, "east")) MoveHelper(5);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 4) {
+				if (Location.MovementCheck(x, "east")) MoveHelper(3);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 5) {
+				if (Location.MovementCheck(x, "west")) MoveHelper(3);
+				else if (Location.MovementCheck(x, "northwest") && Location.stateOfRoom != 0) MoveHelper(8);
+				else if (Location.MovementCheck(x, "north") && Location.stateOfRoom != 0) MoveHelper(7);
+				else if (Location.MovementCheck(x, "northeast") && Location.stateOfRoom != 0) MoveHelper(6);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 6) {
+				if (Location.MovementCheck(x, "west")) MoveHelper(7);
+				else if (Location.MovementCheck(x, "southwest")) MoveHelper(5);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 7) {
+				if (Location.MovementCheck(x, "east")) MoveHelper(6);
+				else if (Location.MovementCheck(x, "south")) MoveHelper(5);
+				else if (Location.MovementCheck(x, "west")) MoveHelper(8);
+				else if (Location.MovementCheck(x, "down") && Location.stateOfRoom != 0) MoveHelper(9);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 8) {
+				if (Location.MovementCheck(x, "east")) MoveHelper(7);
+				else if (Location.MovementCheck(x, "southeast")) MoveHelper(5);
+				else System.out.print("You can't move in that direction!");
+			} else if (StoryFileReader.lineLookedFor == 9) {
+				if (Location.MovementCheck(x, Location.directionsArray[0])) MoveHelper(9);
+				else System.out.print("You can't move in that direction!");
+			}
+		}
+	}
 	public void MoveHelper(int x) {
 		try {
 			StoryFileReader StoryReader = new StoryFileReader(x, TextAdventure.PlayerPosition);
@@ -237,7 +238,7 @@ public class CommandCheck {
 		}
 	}
 
-	public void Fight(int x) throws IOException { 
+	public void Fight(int x) throws IOException {
 		if (x == 0) {
 			Enemy.newEnemy("Injured Goblin", "stabbed you with a knife", 30, 18, 3, 10, 1, 20);
 			Enemy.HealthRemaining = 13;
@@ -245,71 +246,69 @@ public class CommandCheck {
 			if (winner) {
 				System.out.print("\nThe knife it was holding dropped onto the ground.\n");
 				Player.LevelUp();
-				StoryFileReader.OverWriteLine("4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.", 
+				StoryFileReader.OverWriteLine("4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.",
 					"4+1+%east%~Dead end~There used to be an injured goblin here. Now there is only a knife.");
 				StoryFileReader StoryReader = new StoryFileReader(4, TextAdventure.PlayerPosition);
 				TextAdventure.PlayerPosition.DirectionDisplay();
 			} else {
 				MoveHelper(1);
 			}
-		} else if (x == 1 ) {
+		} else if (x == 1) {
 			Enemy.newEnemy("Guard Skeleton", "stabbed you with a spear", 80, 25, 10, 70, 5, 30);
 			boolean winner = Player.Fight();
 			if (winner) {
 				System.out.print("You may now enter the hideout.");
 				Player.LevelUp();
-				StoryFileReader.OverWriteLine("7+0+%west,south,east,down%~Skeleton Hideout Entrance~There is a skeleton guarding a large hole in the ground, guarding it. |You can either fight it to get inside the hole or run away.", 
-						"7+1+%west,south,east, down%~Skeleton Hideout Entrance~There is a large hole in the ground that you can go into.");
-					StoryFileReader StoryReader = new StoryFileReader(7, TextAdventure.PlayerPosition);
-					TextAdventure.PlayerPosition.DirectionDisplay();
+				StoryFileReader.OverWriteLine("7+0+%west,south,east,down%~Skeleton Hideout Entrance~There is a skeleton guarding a large hole in the ground, guarding it. |You can either fight it to get inside the hole or run away.",
+					"7+1+%west,south,east, down%~Skeleton Hideout Entrance~There is a large hole in the ground that you can go into.");
+				StoryFileReader StoryReader = new StoryFileReader(7, TextAdventure.PlayerPosition);
+				TextAdventure.PlayerPosition.DirectionDisplay();
 			}
-		}
-		else if (x == 2) {
+		} else if (x == 2) {
 			Enemy.newEnemy("Angelic Knight", "shot you with a beam of light", 300, 50, 20, 30, 20, 500);
 			boolean winner = Player.Fight();
 			if (winner) {
 				Player.LevelUp();
 				if (Location.stateOfRoom == 0) {
-					StoryFileReader.OverWriteLine("6+0+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by two yellow glowing spirits.", 
-							"6+1+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by one yellow glowing spirit.");
-						StoryFileReader StoryReader = new StoryFileReader(6, TextAdventure.PlayerPosition);
-						TextAdventure.PlayerPosition.DirectionDisplay();
+					StoryFileReader.OverWriteLine("6+0+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by two yellow glowing spirits.",
+						"6+1+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by one yellow glowing spirit.");
+					StoryFileReader StoryReader = new StoryFileReader(6, TextAdventure.PlayerPosition);
+					TextAdventure.PlayerPosition.DirectionDisplay();
 				} else if (Location.stateOfRoom == 1) {
 					System.out.println("The doors appeared to open as the spirit dissipated in the wind...");
-					StoryFileReader.OverWriteLine("6+1+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by one yellow glowing spirit.", 
-							"6+2+%southwest,west,east%~The Great Door~There is a set of doors that are tall as buildings in front of you, but they are open. Beyond them are glowing fields that look like heaven.");
-						StoryFileReader StoryReader = new StoryFileReader(6, TextAdventure.PlayerPosition);
-						TextAdventure.PlayerPosition.DirectionDisplay();
+					StoryFileReader.OverWriteLine("6+1+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by one yellow glowing spirit.",
+						"6+2+%southwest,west,east%~The Great Door~There is a set of doors that are tall as buildings in front of you, but they are open. Beyond them are glowing fields that look like heaven.");
+					StoryFileReader StoryReader = new StoryFileReader(6, TextAdventure.PlayerPosition);
+					TextAdventure.PlayerPosition.DirectionDisplay();
 				}
 			}
-		}
-		else if (x == 3) {
+		} else if (x == 3) {
 			Random randy = new Random();
 			int i = randy.nextInt(22);
 			String[] SpawnSkelly = Enemy.SkeletonBaseLayout[i][i].split(",");
-			if  (SpawnSkelly[0].equals("Potion")) {
+			if (SpawnSkelly[0].equals("Potion")) {
 				Player.HealthRemaining = Health;
 				System.out.print("Your health has been fully restored");
-				StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(), 
-						Enemy.SkeletonBaseLayout[randy.nextInt(22)].toString());
-						StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
-						TextAdventure.PlayerPosition.DirectionDisplay();
+				StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(),
+					Enemy.SkeletonBaseLayout[randy.nextInt(22)].toString());
+				StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
+				TextAdventure.PlayerPosition.DirectionDisplay();
 			} else {
-				Enemy.newEnemy(SpawnSkelly[0], SpawnSkelly[1],Integer.parseInt(SpawnSkelly[2]), Integer.parseInt(SpawnSkelly[3]),
-					Integer.parseInt(SpawnSkelly[4]),Integer.parseInt(SpawnSkelly[5]), Integer.parseInt(SpawnSkelly[6]), 
+				Enemy.newEnemy(SpawnSkelly[0], SpawnSkelly[1], Integer.parseInt(SpawnSkelly[2]), Integer.parseInt(SpawnSkelly[3]),
+					Integer.parseInt(SpawnSkelly[4]), Integer.parseInt(SpawnSkelly[5]), Integer.parseInt(SpawnSkelly[6]),
 					Integer.parseInt(SpawnSkelly[7]));
 				boolean winner = Player.Fight();
 				if (winner) {
-				Player.LevelUp();
+					Player.LevelUp();
 					if (Location.stateOfRoom == 0) {
-						StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(), 
-						Enemy.SkeletonBaseLayout[i].toString());
+						StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(),
+							Enemy.SkeletonBaseLayout[i].toString());
 						StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
 						TextAdventure.PlayerPosition.DirectionDisplay();
 					}
 				}
 			}
-			
+
 		}
 	}
 }
