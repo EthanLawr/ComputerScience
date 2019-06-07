@@ -3,9 +3,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
+
 @SuppressWarnings("unused")
 public class CommandCheck {
 	public boolean AliveOrPlaying = true;
+	public static Random randy = new Random();
 	public CommandCheck(ArrayList < String > x) {
 		// Setting up commands
 		for (String s: Location.allDirectionNames) x.add(s);
@@ -42,9 +45,13 @@ public class CommandCheck {
 			if (x.equals("kill me") || x.equals("kill self") || x.equals("kill myself")) {
 				if (Player.weapon.equals("Hands")) {
 					System.out.println("You tried to strangle yourself but ended up passing out instead...");
+					StoryFileReader.ResetProgressionPartial();
 					MoveHelper(1);
 				} else if (Player.weapon.equals("Knife")) {
 					System.out.println("You stabbed yourself and died.");
+					StoryFileReader.ResetProgressionPartial();
+					Player.Exp = 0;
+					Player.Level = 0;
 					MoveHelper(1);
 				}
 			} else if (x.trim().equals("kill")) System.out.print("Kill who?");
@@ -80,7 +87,7 @@ public class CommandCheck {
 			x = x.trim();
 			if (x.equals("all")) {
 				if (StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 1) {
-					System.out.print("You picked the knife up.");
+					System.out.print("You picked the knife up. ");
 					StoryFileReader.OverWriteLine("4+1+%east%~Dead end~There used to be an injured goblin here. Now there is only a knife.",
 						"4+2+%east%~Dead end~There used to be an injured goblin here.");
 					Player.Inventory.add("Knife");
@@ -102,7 +109,7 @@ public class CommandCheck {
 					System.out.print("There's nothing to pick up.");
 			} else if (x.equals("knife")) {
 				if (StoryFileReader.lineLookedFor == 4 && Location.stateOfRoom == 1) {
-					System.out.print("You picked the knife up.");
+					System.out.print("You picked the knife up. ");
 					StoryFileReader.OverWriteLine("4+1+%east%~Dead end~There used to be an injured goblin here. Now there is only a knife.",
 						"4+2+%east%~Dead end~There used to be an injured goblin here.");
 					Player.Inventory.add("Knife");
@@ -185,7 +192,7 @@ public class CommandCheck {
 		}
 	}
 
-	public void Move(String x) {
+	public void Move(String x) throws IOException {
 		if (Arrays.stream(Location.allDirectionNames).anyMatch(x::equals)) {
 			if (StoryFileReader.lineLookedFor == 1) {
 				if (Location.MovementCheck(x, "north")) MoveHelper(2);
@@ -223,7 +230,18 @@ public class CommandCheck {
 				else if (Location.MovementCheck(x, "southeast")) MoveHelper(5);
 				else System.out.print("You can't move in that direction!");
 			} else if (StoryFileReader.lineLookedFor == 9) {
-				if (Location.MovementCheck(x, Location.directionsArray[0])) MoveHelper(9);
+
+				if (Location.MovementCheck(x, Location.directionsArray[0])) {
+					if (Player.randomlyGeneratedRoomsEntered > 10) {
+						if (randy.nextInt(5) == 0) {
+							MoveHelper(0);
+							Fight(4);
+						} else {
+							Fight(3);
+						}
+					}else Fight(3);
+
+				}
 				else System.out.print("You can't move in that direction!");
 			}
 		}
@@ -260,12 +278,18 @@ public class CommandCheck {
 				System.out.print("You may now enter the hideout.");
 				Player.LevelUp();
 				StoryFileReader.OverWriteLine("7+0+%west,south,east,down%~Skeleton Hideout Entrance~There is a skeleton guarding a large hole in the ground, guarding it. |You can either fight it to get inside the hole or run away.",
-					"7+1+%west,south,east, down%~Skeleton Hideout Entrance~There is a large hole in the ground that you can go into.");
+					"7+1+%west,south,east,down%~Skeleton Hideout Entrance~There is a large hole in the ground that you can go into.");
 				StoryFileReader StoryReader = new StoryFileReader(7, TextAdventure.PlayerPosition);
 				TextAdventure.PlayerPosition.DirectionDisplay();
+			} else {
+				StoryFileReader.ResetProgressionPartial();
+				Player.Exp = 0;
+				Player.Level = 0;
+				Player.HealthRemaining = 100;
+				MoveHelper(1);
 			}
 		} else if (x == 2) {
-			Enemy.newEnemy("Angelic Knight", "shot you with a beam of light", 300, 50, 20, 30, 20, 500);
+			Enemy.newEnemy("Angelic Knight", "shot you with a beam of light", 300, 50, 40, 100, 20, 500);
 			boolean winner = Player.Fight();
 			if (winner) {
 				Player.LevelUp();
@@ -280,19 +304,48 @@ public class CommandCheck {
 						"6+2+%southwest,west,east%~The Great Door~There is a set of doors that are tall as buildings in front of you, but they are open. Beyond them are glowing fields that look like heaven.");
 					StoryFileReader StoryReader = new StoryFileReader(6, TextAdventure.PlayerPosition);
 					TextAdventure.PlayerPosition.DirectionDisplay();
+					TextAdventure.CommandInstructor.AliveOrPlaying = false;
 				}
+			} else {
+				StoryFileReader.ResetProgressionPartial();
+				Player.Exp = 0;
+				Player.Level = 0;
+				MoveHelper(1);
+				Player.HealthRemaining = 100;
 			}
 		} else if (x == 3) {
-			Random randy = new Random();
-			int i = randy.nextInt(22);
-			String[] SpawnSkelly = Enemy.SkeletonBaseLayout[i][i].split(",");
-			if (SpawnSkelly[0].equals("Potion")) {
-				Player.HealthRemaining = Health;
-				System.out.print("Your health has been fully restored");
-				StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(),
-					Enemy.SkeletonBaseLayout[randy.nextInt(22)].toString());
-				StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
-				TextAdventure.PlayerPosition.DirectionDisplay();
+			Player.randomlyGeneratedRoomsEntered++;
+			int i = randy.nextInt(Enemy.SkeletonBaseLayout.length);
+			String[] SpawnSkelly = Enemy.SkeletonBaseLayout[i][1].split(",");
+			//Enemy.SkeletonBaseLayout[i][0]
+			String desc = Enemy.SkeletonBaseLayout[i][0].substring(Enemy.SkeletonBaseLayout[i][0].lastIndexOf('~')+1);
+			System.out.println(desc);
+			StoryFileReader.OverWriteLine(Location.roomDescription, desc);
+			StoryFileReader.OverWriteLine("9+0+%" + Location.directionsArray[0], "9+0+%" +Enemy.SkeletonBaseLayout[i][0]
+					.substring(Enemy.SkeletonBaseLayout[i][0].indexOf('%') + 1, Enemy.SkeletonBaseLayout[i][0].lastIndexOf('%')));
+			StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
+
+			if (SpawnSkelly[0].startsWith("Potion")) {
+				String Answer = ForceQuestion("Would you like to drink the potion? (yes/no)");
+				if (Answer.equals("yes")) {
+					if (SpawnSkelly[0].equals("Potion1")) {
+						System.out.print("\nYou drank the potion and felt greater than ever! You feel stronger somehow...");
+						Player.Exp += ((Math.pow(Player.Level, 1.75) + 20 * (Player.Level + 1)) - Player.Exp);
+						Player.LevelUp();
+						TextAdventure.PlayerPosition.DirectionDisplay();
+					} else if (SpawnSkelly[0].equals("Potion")) {
+						System.out.print("\nYou drank the potion and feel restored. Your health has been completely returned.");
+						TextAdventure.PlayerPosition.DirectionDisplay();
+					} else if (SpawnSkelly[0].equals("Potion2")) {
+						System.out.print("\nYou drank the potion and feel nauseous. You suddenly passed out.");
+						MoveHelper(1);
+						StoryFileReader.ResetProgressionPartial();
+						Player.randomlyGeneratedRoomsEntered = 0;
+					}
+				} else {
+					TextAdventure.PlayerPosition.DirectionDisplay();
+				}
+
 			} else {
 				Enemy.newEnemy(SpawnSkelly[0], SpawnSkelly[1], Integer.parseInt(SpawnSkelly[2]), Integer.parseInt(SpawnSkelly[3]),
 					Integer.parseInt(SpawnSkelly[4]), Integer.parseInt(SpawnSkelly[5]), Integer.parseInt(SpawnSkelly[6]),
@@ -300,15 +353,61 @@ public class CommandCheck {
 				boolean winner = Player.Fight();
 				if (winner) {
 					Player.LevelUp();
-					if (Location.stateOfRoom == 0) {
-						StoryFileReader.OverWriteLine(Enemy.SkeletonBaseLayout[i].toString(),
-							Enemy.SkeletonBaseLayout[i].toString());
-						StoryFileReader StoryReader = new StoryFileReader(9, TextAdventure.PlayerPosition);
-						TextAdventure.PlayerPosition.DirectionDisplay();
-					}
+					TextAdventure.PlayerPosition.DirectionDisplay();
+				} else {
+					MoveHelper(1);
+					StoryFileReader.ResetProgressionPartial();
+					Player.randomlyGeneratedRoomsEntered = 0;
 				}
 			}
 
+
+		} else if (x == 4) {
+
+			Enemy.newEnemy("Giant Death Knight", "struck you with it's great sword", 500, 80, 4, 300, 100, 300);
+			System.out.println("");
+			Player.CheckStats();
+			System.out.print("As the large being gets ready to fight you, you can't help but feel you are especially powerful right now. \nYou took a look at your stats a second before the fight.");
+			Player.DisplayStats();
+			System.out.println("");
+			boolean winner = Player.Fight();
+			if (winner) {
+				Enemy.Name = "None";
+				Player.CheckStats();
+				Player.LevelUp();
+				if (Player.Inventory.contains("Rope")) {
+					System.out.println("\nYou used your rope to get out of the boss hideout! Now that you were " +
+							"strong there were only two opponents left to fight. The spirits.");
+					Player.Inventory.remove("Rope");
+					System.out.print("\nYou no longer have rope.");
+					MoveHelper(7);
+				} else {
+					System.out.print("You have no rope! You are stuck here until you die!");
+					StoryFileReader.ResetProgressionPartial();
+					Player.Exp = 0;
+					Player.Level = 0;
+					MoveHelper(1);
+					Player.HealthRemaining = 100;
+				}
+
+			} else {
+				StoryFileReader.ResetProgressionPartial();
+				Player.Exp = 0;
+				Player.Level = 0;
+				MoveHelper(1);
+			}
 		}
+	}
+
+	public String ForceQuestion(String x) {
+			Scanner userInput = new Scanner(System.in);
+			System.out.print(x);
+			String string = userInput.nextLine();
+			string = string.toLowerCase().trim();
+			if (!string.equals("yes") && !string.equals("no")) {
+				System.out.print("Enter a valid answer (yes/no)\n");
+				ForceQuestion(x);
+			}
+			return string;
 	}
 }

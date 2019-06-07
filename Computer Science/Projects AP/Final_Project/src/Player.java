@@ -4,12 +4,13 @@ public class Player {
 
 	public static double Health = 100, Exp = 0, Attack = 10, Speed = 10, HealthRemaining = 100, Defense = 10, Level = 0;
 	public static ArrayList < String > Inventory = new ArrayList < String > ();
+	public static int randomlyGeneratedRoomsEntered = 0;
 	public static String weapon = "Hands", armor = "None", AttackName = "punched";
 	public Player() {
 
 	}
 	public static void LevelUp() {
-		if (Exp >= Math.pow(Level, Math.pow(Level, 1.75) + 20 * (Level + 1))) {
+		if (Exp >= Math.pow(Level, 1.75) + 20 * (Level + 1)) {
 			while (Exp >= Math.pow(Level, 1.75) + 20 * (Level + 1)) {
 				Level += 1;
 			}
@@ -22,7 +23,7 @@ public class Player {
 	}
 	public static void CheckStats() {
 		if (weapon.equals("Hands")) {
-			Attack = 10;
+			Attack = 4;
 			AttackName = "punched";
 		}
 		if (weapon.equals("Knife")) {
@@ -32,21 +33,28 @@ public class Player {
 		Attack += Level;
 		Health = 100 + (5 * Level);
 		if (Player.armor.equals("Magic Armor")) {
-			Defense = 10 + (5 * Level) + 100;
-		} else Defense = 10 + (5 * Level);
+			Defense = 10 + (4.8 * Level) + 100;
+		} else Defense = 10 + (2 * Level);
 		Speed = 10 + (2 * Level);
+		if (armor.equals("Magic Armor") && Enemy.Name.equals("Giant Death Knight")) {
+			Attack *= 2;
+			Defense *= 2;
+			Speed *= 2;
+		}
+
 	}
 	public static void DisplayStats() {
 		CheckStats();
-		System.out.print("Health: " + NForm(Health) + "/" + NForm(HealthRemaining) + "\tDefense: " + NForm(Defense) +
-			"\nAttack: " + NForm(Attack) + "\tSpeed: " + NForm(Speed));
+		System.out.print("Health: " + NForm(HealthRemaining) + "/" + NForm(Health) + "\tDefense: " + NForm(Defense) +
+			"\nAttack: " + NForm(Attack) + "\tSpeed: " + NForm(Speed) + "\nExp: " + NForm(Exp) + "/" +
+				NForm((Math.pow(Level, 1.75) + 20 * (Level + 1))));
 	}
 	public static boolean Fight() {
 		CheckStats();
 		System.out.print("The " + Enemy.Name + " has " + NForm(Enemy.HealthRemaining) + " health left. What will you do?\nYou can do the following: attack");
 		while (Enemy.HealthRemaining > 0 && HealthRemaining > 0) {
 			TextAdventure.userInputMethod(">");
-			if (TextAdventure.input.equals("attack")) {
+			if (TextAdventure.input.trim().toLowerCase().equals("attack")) {
 				// (ArmorValue) / ( 200 + ( (HeroLvl) * 20) )
 				if (Enemy.Speed < Speed) {
 					int damage = (int)(Attack - (Attack * (Enemy.Defense / (200 + (Enemy.Level * 20)))));
@@ -92,6 +100,8 @@ public class Player {
 				}
 
 
+			} else {
+				System.out.print("Please choose a valid option during the battle.");
 			}
 		}
 		return false;

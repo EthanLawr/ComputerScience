@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 public class StoryFileReader {
-	private static File StoryFile = new File("C:\\Users\\1005939\\eclipse-workspace\\Final_Project\\src\\Story.txt");
-	private static File Progress = new File("C:\\Users\\1005939\\eclipse-workspace\\Final_Project\\src\\Progress.txt");
+	private static File StoryFile = new File("src/Story.txt");
+	private static File Progress = new File("src/Progress.txt");
 	public static int lineLookedFor = 0;
 	@SuppressWarnings("static-access")
 	public StoryFileReader(int x, Location y) throws FileNotFoundException {
@@ -12,6 +12,7 @@ public class StoryFileReader {
 			String nextLine = sc.nextLine();
 			
 			if (Integer.parseInt(nextLine.substring(0,1)) == x) {
+				Location.rawDesc = nextLine;
 				while (nextLine.contains("|")) nextLine = nextLine.replace('|','\n');
 				startIndexOfLocation = nextLine.indexOf('~');
 				endIndexOfLocation = nextLine.lastIndexOf('~');
@@ -23,6 +24,8 @@ public class StoryFileReader {
 				y.roomDescription = nextLine.substring(endIndexOfLocation + 1);
 				y.roomTitle = nextLine.substring(startIndexOfLocation, endIndexOfLocation);
 				y.directions = nextLine.substring(startIndexOfDirections, endIndexOfDirections);
+
+				//System.out.print(Location.rawData);
 				lineLookedFor = x;
 				break;
 			}
@@ -42,6 +45,21 @@ public class StoryFileReader {
         writer.close();
 		sc.close();
 
+	}
+	public static void ResetProgressionPartial() throws IOException {
+		Scanner sc = new Scanner(StoryFile);
+
+		String nextLine = "";
+		while (sc.hasNextLine()) {
+			nextLine += sc.nextLine() + "\n";
+		}
+		FileWriter writer = new FileWriter(Progress);
+		writer.write(nextLine);
+		writer.close();
+		sc.close();
+		Player.Inventory = new ArrayList < String > ();
+		Player.weapon = "Hands";
+		Player.armor = "None";
 	}
 	public static void OverWriteLine(String Replaced, String Replacer) throws IOException{
 		Scanner sc = new Scanner(Progress);

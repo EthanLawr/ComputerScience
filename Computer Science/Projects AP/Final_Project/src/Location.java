@@ -1,6 +1,7 @@
 public class Location {
 	// Member variables
-	public String roomTitle, roomDescription, directions;
+	public String roomTitle, directions;
+	public static String roomDescription, rawDesc = "";
 	public static String[] directionsArray;
 	public static final String[] DirectionName = {
 			"north",

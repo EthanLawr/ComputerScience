@@ -2,10 +2,10 @@
 2+0+%south%~Head of the Hideout~This is the head of the hideout. There is nothing here.
 3+0+%west,east,north%~Outside the Hideout~You see a cloudy scene with not much to go on. Smoke is in the air so you can't see the top of any buildings, but it looks|like a run down city for the most part. Behind you and in front of you is a wall of broken down cars. To the sides of you are|pathways that go to your sides.
 4+2+%east%~Dead end~There used to be an injured goblin here.
-5+0+%west%~Vine Filled Dead end~There is a barricade of vines that can be cut with a knife here. There must be a knife somewhere around here...
-6+0+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by two yellow glowing spirits. 
-7+0+%west,south,east,down%~Skeleton Hideout Entrance~There is a skeleton guarding a large hole in the ground, guarding it. |You can either fight it to get inside the hole or run away.
-8+0+%southeast,east%~Prophet Tree~There is a large tree that has blue glowing leaves here and an old man too. He seems like he might be dangerous. |His aura has great magical power.
-9+0+%north%~Skeleton Hideout~As you enter the hole behind you closed and the walls moved. Torches were lit and you vision came back. |You immediately knew this maze was a mistake to enter.
+5+1+%west, northeast, northwest, north%~Outside of the Hideout Territory~There is an intersection ahead.
+6+2+%southwest,west,east%~The Great Door~There is a set of doors that are tall as buildings in front of you, but they are open. Beyond them are glowing fields that look like heaven. 
+7+1+%west,south,east,down%~Skeleton Hideout Entrance~There is a large hole in the ground that you can go into.
+8+1+%southeast,east%~Prophet Shrine~There is a shrine here. You may heal yourself when you want to here.
+9+0+%northwest%~Skeleton Hideout~As you enter the hole behind you closed and the walls moved. Torches were lit and you vision came back. |You immediately knew this maze was a mistake to enter.
 0+0+%up%~Skeleton Boss Hideout~One final skeleton is left. He has a giant sword, about the size of your body. You must fight him to get out of this labyrinth
 #+0+%Directions%~LocationName~Description

@@ -18,87 +18,139 @@ public class Enemy {
 	public static String[][] SkeletonBaseLayout = {
 		{
 			"9+1+%east%~Skeleton Hideout~You ventured further and came upon a skeleton that has no items.",
-			"Basic Skeleton,punched you,30,10,16,10,5,30"
+			"Basic Skeleton,punched you,60,10,16,10,5,30"
 		},
 		{
 			"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton with an axe.",
-			"Axe Skeleton,swung it's axe at you,30,30,11,13,8,50"
+			"Axe Skeleton,swung it's axe at you,50,30,11,13,8,50"
 		},
 		{
 			"9+1+%north%~Skeleton Hideout~You ventured further and came upon a skeleton with fire coming from its hands.",
-			"Fire Caster Skeleton,shot fire at you,20,25,20,5,10,50"
+			"Fire Caster Skeleton,shot fire at you,40,25,20,5,10,50"
 		},
 		{
-			"9+1+%south%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor",
-			"Knight Skeleton,swung it's sword at you,40,20,6,40,20,125"
+			"9+1+%south%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor.",
+			"Knight Skeleton,swung it's sword at you,80,20,6,239,20,125"
 		},
+			{
+					"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor.",
+					"Knight Skeleton,swung it's sword at you,43,20,6,532,60,125"
+			},
+			{
+					"9+1+%east%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor.",
+					"Knight Skeleton,swung it's sword at you,75,20,6,60,20,125"
+			},
 		{
 			"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton that has no items.",
-			"Basic Skeleton,punched you,30,10,16,10,5,30"
+			"Basic Skeleton,punched you,45,10,16,10,5,30"
 		},
 		{
 			"9+1+%north%~Skeleton Hideout~You ventured further and came upon a skeleton that has no items.",
-			"Basic Skeleton,punched you,30,10,16,10,5,30"
+			"Basic Skeleton,punched you,91,10,16,10,5,30"
 		},
 		{
 			"9+1+%southwest%~Skeleton Hideout~You ventured further and came upon a skeleton with an axe.",
-			"Axe Skeleton,swung it's axe at you,30,30,11,13,8,50"
+			"Axe Skeleton,swung it's axe at you,43,30,11,13,8,50"
 		},
 		{
 			"9+1+%southeast%~Skeleton Hideout~You ventured further and came upon a skeleton with fire coming from its hands.",
-			"Fire Caster Skeleton,shot fire at you,20,25,20,5,10,50"
+			"Fire Caster Skeleton,shot fire at you,23,25,20,5,10,50"
 		},
 		{
 			"9+1+%northeast%~Skeleton Hideout~You ventured further and came upon a skeleton with an axe.",
-			"Axe Skeleton,swung it's axe at you,30,30,11,13,8,50"
+			"Axe Skeleton,swung it's axe at you,49,30,11,13,8,50"
 		},
 		{
 			"9+1+%northwest%~Skeleton Hideout~You ventured further and came upon a skeleton with fire coming from its hands.",
-			"Fire Caster Skeleton,shot fire at you,20,25,20,5,10,50"
+			"Fire Caster Skeleton,shot fire at you,49,25,20,5,10,50"
 		},
 		{
-			"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton with a key",
-			"Key holder,punched you,30,10,20,15,3,20"
+			"9+1+%west%~Skeleton Hideout~You ventured further and came upon a golden skeleton.",
+			"Golden Skeleton,punched you,100,20,30,30,50,10"
 		},
+			{
+					"9+1+%east%~Skeleton Hideout~You ventured further and came upon a skeleton that has no items.",
+					"Basic Skeleton,punched you,60,10,16,10,5,30"
+			},
+			{
+					"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton with an axe.",
+					"Axe Skeleton,swung it's axe at you,50,30,11,13,8,50"
+			},
+			{
+					"9+1+%north%~Skeleton Hideout~You ventured further and came upon a skeleton with fire coming from its hands.",
+					"Fire Caster Skeleton,shot fire at you,40,25,20,5,10,50"
+			},
+			{
+					"9+1+%south%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor.",
+					"Knight Skeleton,swung it's sword at you,80,20,6,239,20,125"
+			},
+			{
+					"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor.",
+					"Knight Skeleton,swung it's sword at you,43,20,6,532,60,125"
+			},
+			{
+					"9+1+%east%~Skeleton Hideout~You ventured further and came upon a skeleton with a long sword and knights armor.",
+					"Knight Skeleton,swung it's sword at you,75,20,6,60,20,125"
+			},
+			{
+					"9+1+%west%~Skeleton Hideout~You ventured further and came upon a skeleton that has no items.",
+					"Basic Skeleton,punched you,45,10,16,10,5,30"
+			},
+			{
+					"9+1+%north%~Skeleton Hideout~You ventured further and came upon a skeleton that has no items.",
+					"Basic Skeleton,punched you,91,10,16,10,5,30"
+			},
+			{
+					"9+1+%southwest%~Skeleton Hideout~You ventured further and came upon a skeleton with an axe.",
+					"Axe Skeleton,swung it's axe at you,43,30,11,13,8,50"
+			},
+			{
+					"9+1+%southeast%~Skeleton Hideout~You ventured further and came upon a skeleton with fire coming from its hands.",
+					"Fire Caster Skeleton,shot fire at you,23,25,20,5,10,50"
+			},
+			{
+					"9+1+%northeast%~Skeleton Hideout~You ventured further and came upon a skeleton with an axe.",
+					"Axe Skeleton,swung it's axe at you,49,30,11,13,8,50"
+			},
+			{
+					"9+1+%northwest%~Skeleton Hideout~You ventured further and came upon a skeleton with fire coming from its hands.",
+					"Fire Caster Skeleton,shot fire at you,49,25,20,5,10,50"
+			},
+			{
+					"9+1+%west%~Skeleton Hideout~You ventured further and came upon a golden skeleton.",
+					"Golden Skeleton,punched you,100,20,30,30,50,10"
+			},
 		{
-			"9+1+%northwest%~Skeleton Hideout~You ventured further and came upon a red potion",
+			"9+1+%northwest%~Skeleton Hideout~You ventured further and came upon a red potion.",
 			"Potion"
 		},
 		{
-			"9+1+%northeast%~Skeleton Hideout~You ventured further and came upon a purple potion",
+			"9+1+%southeast%~Skeleton Hideout~You ventured further and came upon a green potion.",
+			"Potion2"
+		},
+		{
+			"9+1+%north%~Skeleton Hideout~You ventured further and came upon a orange potion.",
+			"Potion1"
+		},
+		{
+			"9+1+%east%~Skeleton Hideout~You ventured further and came upon a black potion.",
+			"Potion2"
+		},
+		{
+			"9+1+%north%~Skeleton Hideout~You ventured further and came upon a red potion.",
 			"Potion"
 		},
 		{
-			"9+1+%southeast%~Skeleton Hideout~You ventured further and came upon a green potion",
-			"Potion"
+			"9+1+%southwest%~Skeleton Hideout~You ventured further and came upon a green potion.",
+			"Potion2"
 		},
 		{
-			"9+1+%north%~Skeleton Hideout~You ventured further and came upon a orange potion",
-			"Potion"
+			"9+1+%northeast%~Skeleton Hideout~You ventured further and came upon a orange potion.",
+			"Potion1"
 		},
 		{
-			"9+1+%east%~Skeleton Hideout~You ventured further and came upon a black potion",
-			"Potion"
-		},
-		{
-			"9+1+%north%~Skeleton Hideout~You ventured further and came upon a red potion",
-			"Potion"
-		},
-		{
-			"9+1+%south%~Skeleton Hideout~You ventured further and came upon a purple potion",
-			"Potion"
-		},
-		{
-			"9+1+%southwest%~Skeleton Hideout~You ventured further and came upon a green potion",
-			"Potion"
-		},
-		{
-			"9+1+%northeast%~Skeleton Hideout~You ventured further and came upon a orange potion",
-			"Potion"
-		},
-		{
-			"9+1+%west%~Skeleton Hideout~You ventured further and came upon a black potion",
-			"Potion"
+			"9+1+%west%~Skeleton Hideout~You ventured further and came upon a black potion.",
+			"Potion2"
 		},
 
 	};

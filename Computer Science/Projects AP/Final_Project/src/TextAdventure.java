@@ -26,7 +26,12 @@ public class TextAdventure {
 			while (CommandInstructor.AliveOrPlaying) {
 				userInputMethod(">");
 				CommandInstructor.CommandSeek(input);
-			}		
+			}
+			System.out.println("You stepped into the plains and the doors shut behind you.");
+			System.out.println("You left a massacre behind you and let yourself go into the heavens of life");
+			System.out.println("Here you could prosper forever, outside of that hell");
+			System.out.println("\n\n\nCONGRATULATIONS");
+			System.out.println("YOU WON");
 	}
 	 // Method for a Nasty Gram in a user input
     public static String userInputMethod(String x) {
