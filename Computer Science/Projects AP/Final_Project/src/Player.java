@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Player {
 
@@ -54,7 +55,7 @@ public class Player {
 		System.out.print("The " + Enemy.Name + " has " + NForm(Enemy.HealthRemaining) + " health left. What will you do?\nYou can do the following: attack");
 		while (Enemy.HealthRemaining > 0 && HealthRemaining > 0) {
 			TextAdventure.userInputMethod(">");
-			if (TextAdventure.input.trim().toLowerCase().equals("attack")) {
+			if (SpellingCheckOnAttack(TextAdventure.input.trim().toLowerCase())) {
 				// (ArmorValue) / ( 200 + ( (HeroLvl) * 20) )
 				if (Enemy.Speed < Speed) {
 					int damage = (int)(Attack - (Attack * (Enemy.Defense / (200 + (Enemy.Level * 20)))));
@@ -110,4 +111,13 @@ public class Player {
 	public static int NForm(double x) {
 		return (int) Math.round(x);
 	}
+	
+    private static boolean SpellingCheckOnAttack(String str)
+    {
+    	String[] words = { "attack", "atack", "sttack", "zttack", "qttack", "artack", "agtack", "aytack", "atrack", "atgack",
+    			"atyack", "attsck", "attzck", "attqck", "attadk", "attavk", "attaxk", "attaci", "attaco", "attacl",
+    			"attacm", "attacc" };
+        return (Arrays.asList(words).contains(str));
+    }
+    
 }

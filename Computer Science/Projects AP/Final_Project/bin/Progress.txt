@@ -1,7 +1,7 @@
 1+0+%south,north%~Hideout~This is the center of the hideout. There are a few people here that look scared.
-2+0+%south%~Head of the Hideout~This is the head of the hideout. There is a rope on the floor.
+2+0+%south%~Head of the Hideout~This is the head of the hideout. There is nothing here.
 3+0+%west,east,north%~Outside the Hideout~You see a cloudy scene with not much to go on. Smoke is in the air so you can't see the top of any buildings, but it looks|like a run down city for the most part. Behind you and in front of you is a wall of broken down cars. To the sides of you are|pathways that go to your sides.
-4+0+%east%~Goblin's Last Stand~There is a small goblin with a dagger in front of you. You can try knocking it out to get its dagger, and it's pretty beat up. |You can choose to fight or run.
+4+2+%east%~Dead end~There used to be an injured goblin here.
 5+0+%west%~Vine Filled Dead end~There is a barricade of vines that can be cut with a knife here. There must be a knife somewhere around here...
 6+0+%southwest,west%~The Great Door~There is a set of doors that are tall as buildings in front of you, guarded by two yellow glowing spirits. 
 7+0+%west,south,east,down%~Skeleton Hideout Entrance~There is a skeleton guarding a large hole in the ground, guarding it. |You can either fight it to get inside the hole or run away.

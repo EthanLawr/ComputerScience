@@ -57,6 +57,7 @@ public class StoryFileReader {
 		writer.write(nextLine);
 		writer.close();
 		sc.close();
+		Player.randomlyGeneratedRoomsEntered = 0;
 		Player.Inventory = new ArrayList < String > ();
 		Player.weapon = "Hands";
 		Player.armor = "None";
@@ -73,29 +74,5 @@ public class StoryFileReader {
 		FileWriter writer = new FileWriter(Progress);
         writer.write(nextLine);
         writer.close();
-		
-		//Progress = new File("C:\\Users\\1005939\\eclipse-workspace\\Final_Project\\src\\Progress.txt");
-		//File fileToBeModified = new File(Progress.getPath());
-		/*BufferedReader sc = null;
-        
-        FileWriter writer = null;
-		try {
-			sc = new BufferedReader(new FileReader(fileToBeModified));
-	        String nextLine = "", line = "";
-	        while (line != null) 
-	        {
-	        	line = sc.readLine();
-				nextLine += line + "\n";
-			}
-	        sc.close();
-			
-			writer = new FileWriter("Progress.txt");
-	        writer.write(nextLine);
-            writer.close();
-		} catch (IOException e) {
-            e.printStackTrace();
-        } */
-		
-		
 	}
 }
