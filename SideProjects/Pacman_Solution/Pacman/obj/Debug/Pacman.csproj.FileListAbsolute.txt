@@ -1,9 +1,0 @@
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\obj\Debug\Pacman.csprojResolveAssemblyReference.cache
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\obj\Debug\Pacman.Properties.Resources.resources
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\obj\Debug\Pacman.csproj.GenerateResource.Cache
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\obj\Debug\Pacman.csproj.CoreCompileInputs.cache
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\bin\Debug\Pacman.exe.config
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\bin\Debug\Pacman.exe
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\bin\Debug\Pacman.pdb
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\obj\Debug\Pacman.exe
-C:\Users\Ethan Lawrence\Desktop\Visual Studio\Projects\Pacman_Solution\Pacman\obj\Debug\Pacman.pdb
