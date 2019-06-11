@@ -14,10 +14,10 @@ namespace Final_Project2.Properties
 
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    internal sealed partial class Settings : System.Configuration.ApplicationSettingsBase
     {
 
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        private static Settings defaultInstance = ((Settings)(Synchronized(new Settings())));
 
         public static Settings Default
         {
@@ -27,9 +27,9 @@ namespace Final_Project2.Properties
             }
         }
 
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [System.Configuration.UserScopedSettingAttribute()]
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [System.Configuration.DefaultSettingValueAttribute("0")]
         public double Cash
         {
             get
@@ -42,9 +42,9 @@ namespace Final_Project2.Properties
             }
         }
 
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [System.Configuration.UserScopedSetting()]
+        [System.Diagnostics.DebuggerNonUserCode()]
+        [System.Configuration.DefaultSettingValue("1")]
         public int CashClickLevel
         {
             get
@@ -106,7 +106,7 @@ namespace Final_Project2.Properties
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValue("0")]
         public int DpsHero1Upgrades
         {
             get
@@ -119,8 +119,8 @@ namespace Final_Project2.Properties
             }
         }
 
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [System.Configuration.UserScopedSetting()]
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int DpsHero2Level
         {

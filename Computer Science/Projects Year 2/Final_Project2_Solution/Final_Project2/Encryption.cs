@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
+﻿using System.Configuration;
 using System.IO;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 namespace Final_Project2
 {
     static class Encryption
@@ -73,7 +69,27 @@ namespace Final_Project2
             }
             else return false;
         }
+        // Saves to file
         public static void AutoEncrypt()
+        {
+            string saveFileText = "";
+            foreach (SettingsProperty currentProperty in Properties.Settings.Default.Properties)
+            {
+                saveFileText += Properties.Settings.Default[currentProperty.Name].ToString() + "\n";
+            }
+            Encrypt(ref saveFileText);
+            try
+            {
+                File.Delete(@"h:\comp 2\projects\final_project2_solution\final_project2\textfile1.txt");
+                File.AppendAllText(@"h:\comp 2\projects\final_project2_solution\final_project2\textfile1.txt", saveFileText);
+
+            } catch (System.Exception f)
+            {
+                // Do nothing
+            }
+        }
+        // Restarts Program
+        public static void AutoEncrypt(int x)
         {
             string saveFileText = "";
             foreach (SettingsProperty currentProperty in Properties.Settings.Default.Properties)
@@ -83,6 +99,8 @@ namespace Final_Project2
             Encrypt(ref saveFileText);
             File.Delete(@"h:\comp 2\projects\final_project2_solution\final_project2\textfile1.txt");
             File.AppendAllText(@"h:\comp 2\projects\final_project2_solution\final_project2\textfile1.txt", saveFileText);
+            System.Windows.Forms.Application.Exit();
         }
+        
     }
 }

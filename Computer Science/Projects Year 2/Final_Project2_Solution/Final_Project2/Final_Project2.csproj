@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +100,11 @@
     <EmbeddedResource Include="CustomMadeCursor.cur" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\220px-Blooper_%28mario%29.png" />
+    <None Include="Resources\ef6e92a2b2c94b5fb7b9bedb3ba007eeb1b2844c_hq.jpg" />
+    <None Include="Resources\GoombaNSMB.png" />
+    <None Include="Resources\Shy_Guy_%28Mario%29.png" />
+    <None Include="Resources\Spiny_Artwork_-_New_Super_Mario_Bros._2.png" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
